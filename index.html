@@ -1,181 +1,916 @@
 <!DOCTYPE html>
-<html lang="fr" data-l="fr">
+<html lang="fr" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mohamed Bistarine — e-Portfolio (ENSEEIHT)</title>
-<meta name="description" content="e-Portfolio de Mohamed Bistarine : parcours, projets, mobilité, engagement, sport, projet professionnel.">
-<link rel="stylesheet" href="style.css?v=4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Bistarine | e-Portfolio Ingénieur Sciences du Numérique — ENSEEIHT (N7)</title>
+  <meta name="description" content="e-Portfolio académique et professionnel de Mohamed Bistarine, élève-ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7).">
+  <!-- Polices Google Fonts : Inter + Plus Jakarta Sans + Space Grotesk (UI) & JetBrains Mono + Fira Code + IBM Plex Mono (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lang-fr">
 
-<div class="top">
-<header>
-  <a class="brand" href="#welcome">Mohamed Bistarine</a>
-  <div class="tools">
-    <button id="fr" aria-pressed="true">FR</button>
-    <button id="en" aria-pressed="false">EN</button>
-    <button id="theme" aria-label="Mode clair / sombre">&#9680;</button>
-  </div>
-</header>
+  <!-- ==================== BARRE DE NAVIGATION PRINCIPALE (6 ONGLETS N7) ==================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" data-tab-target="home">
+        <span class="logo-badge">MB</span>
+        <div class="logo-text">
+          <span class="logo-name">Mohamed Bistarine</span>
+          <span class="logo-sub" data-fr="Ingénieur SN · ENSEEIHT (N7)" data-en="Digital Sciences Eng. · ENSEEIHT (N7)">Ingénieur SN · ENSEEIHT (N7)</span>
+        </div>
+      </a>
 
-<!-- 6 onglets imposés (cadre ePortfolio N7) -->
-<nav aria-label="Navigation principale">
-  <a href="#welcome"><span lang="fr">Accueil</span><span lang="en">Welcome</span></a>
-  <a href="#course"><span lang="fr">Cursus d’ingénieur</span><span lang="en">Engineering course</span></a>
-  <a href="#mobility"><span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span></a>
-  <a href="#civic"><span lang="fr">Durabilité et engagement</span><span lang="en">Sustainability &amp; engagement</span></a>
-  <a href="#sport"><span lang="fr">Sport et autres activités</span><span lang="en">Sport &amp; other activities</span></a>
-  <a href="#career"><span lang="fr">Projet professionnel</span><span lang="en">Career development</span></a>
-</nav>
-</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
 
-<main>
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-tab-target="home" data-fr="Welcome" data-en="Welcome">Welcome</a></li>
+          <li><a href="#engineering" class="nav-link" data-tab-target="engineering" data-fr="Cursus Ingénieur" data-en="Engineering Course">Cursus Ingénieur</a></li>
+          <li><a href="#mobility" class="nav-link" data-tab-target="mobility" data-fr="Mobilité Internationale" data-en="International Mobility">Mobilité Internationale</a></li>
+          <li><a href="#sustainability" class="nav-link" data-tab-target="sustainability" data-fr="Engagement & Durabilité" data-en="Sustainability & Civic">Engagement & Durabilité</a></li>
+          <li><a href="#activities" class="nav-link" data-tab-target="activities" data-fr="Sport & Activités" data-en="Sport & Activities">Sport & Activités</a></li>
+          <li><a href="#career" class="nav-link nav-highlight" data-tab-target="career" data-fr="Carrière & Projet Pro" data-en="Career Development">Carrière & Projet Pro</a></li>
+        </ul>
+      </nav>
 
-<!-- ========== WELCOME ========== -->
-<section id="welcome">
-  <div class="hero">
-    <div class="photo"><span lang="fr">Votre photo<br>(assets/photo.jpg)</span><span lang="en">Your photo<br>(assets/photo.jpg)</span></div>
-    <div>
-      <h1>Mohamed Bistarine</h1>
-      <p class="lead"><span lang="fr">Étudiant ingénieur à l’ENSEEIHT (filière SN, 1re année). Je crée une IA capable de jouer aux échecs de façon optimale et j’optimise des modèles de stabilité asymptotique pour les systèmes complexes.</span><span lang="en">Engineering student at ENSEEIHT (SN track, 1st year). I am building an AI that plays chess optimally and optimising asymptotic-stability models for complex systems.</span></p>
-      <div class="links">
-        <a class="btn off" data-link="linkedin" aria-disabled="true" title="Lien à ajouter / Link to add">LinkedIn</a>
-        <a class="btn off" data-link="cvfr" aria-disabled="true" title="Lien à ajouter / Link to add">CV (FR)</a>
-        <a class="btn off" data-link="cven" aria-disabled="true" title="Lien à ajouter / Link to add">CV (EN)</a>
-        <a class="btn alt off" data-link="github" aria-disabled="true" title="Lien à ajouter / Link to add">GitHub</a>
-        <a class="btn alt off" data-link="email" aria-disabled="true" title="Lien à ajouter / Link to add">Email</a>
-        <a class="btn alt" href="#career"><span lang="fr">Vidéo de présentation</span><span lang="en">Pitch video</span></a>
+      <div class="header-controls">
+        <button class="control-btn lang-btn" id="langToggleBtn" title="Switch Language FR / EN">
+          <span class="lang-indicator active-lang" id="ind-fr">FR</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-indicator" id="ind-en">EN</span>
+        </button>
+        <button class="control-btn theme-btn" id="themeToggleBtn" title="Basculer Mode Clair / Sombre">🌓</button>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="sub"><span lang="fr">Mon parcours</span><span lang="en">My background</span></div>
-  <ol class="steps" aria-label="Chronologie"><li class="step"><time>20XX</time><h3><span lang="fr">Baccalauréat</span><span lang="en">Baccalaureate</span></h3><p><span lang="fr">Baccalauréat marocain, série SMB, au lycée Mohammed Al Baqali.</span><span lang="en">Moroccan baccalaureate, SMB track, at Mohammed Al Baqali high school.</span></p><p class="ph s"></p></li><li class="step"><time>20XX</time><h3><span lang="fr">Classes préparatoires</span><span lang="en">Preparatory classes</span></h3><p><span lang="fr">MPSI à la CPGE Réda Slawi, puis MP à Al Qalam.</span><span lang="en">MPSI at CPGE Réda Slawi, then MP at Al Qalam.</span></p><p class="ph s"></p></li><li class="step"><time>2026</time><h3><span lang="fr">ENSEEIHT</span><span lang="en">ENSEEIHT</span></h3><p><span lang="fr">1re année, filière SN. LV2 : allemand.</span><span lang="en">1st year, SN track. Second language: German.</span></p><p class="ph s"></p></li><li class="step"><time>20XX</time><h3><span lang="fr">Objectif</span><span lang="en">Goal</span></h3><p><span lang="fr">Stages en données, optimisation et innovation logicielle ; mobilité internationale.</span><span lang="en">Internships in data, optimisation and software innovation; international mobility.</span></p><p class="ph s"></p></li></ol>
-  <div class="grid">
-    <div class="card accent"><h3><span lang="fr">Mon projet</span><span lang="en">My project</span></h3><p><span lang="fr">Créer un modèle d’IA capable de jouer aux échecs de façon optimale et optimiser des modèles existants de stabilité asymptotique pour les systèmes complexes.</span><span lang="en">Build an AI model able to play chess optimally and optimise existing asymptotic-stability models for complex systems.</span></p><p class="ph s"></p></div>
-    <div class="card"><h3><span lang="fr">Ma situation actuelle</span><span lang="en">My current status</span></h3><dl><dt data-fr="Statut" data-en="Status"></dt><dd><span lang="fr">Étudiant en 1re année, ENSEEIHT, filière SN</span><span lang="en">1st-year student, ENSEEIHT, SN track</span></dd><dt data-fr="Disponibilité" data-en="Availability"></dt><dd class="ph s"></dd><dt data-fr="Domaine visé" data-en="Target field"></dt><dd><span lang="fr">Gestion des données, optimisation de modèles, innovation logicielle</span><span lang="en">Data management, model optimisation, software innovation</span></dd><dt data-fr="Contact" data-en="Contact"></dt><dd class="ph s"></dd></dl></div>
-  </div>
-</section>
+  <main class="main-content">
 
-<!-- ========== ENGINEERING COURSE ========== -->
-<section id="course" hidden>
-  <h2><span lang="fr">Cursus d’ingénieur</span><span lang="en">Engineering course</span></h2>
-  <p class="lead"><span lang="fr">Pour chaque projet : contexte, rôle, méthode, résultat, enseignements.</span><span lang="en">For each project: context, role, method, outcome, lessons.</span></p>
-  <div class="card accent"><h3><span lang="fr">Ma formation</span><span lang="en">My programme</span></h3><p><span lang="fr">Étudiant en 1re année à l’ENSEEIHT, filière SN. LV2 : allemand.</span><span lang="en">1st-year student at ENSEEIHT, SN track. Second language: German.</span></p><p class="ph s"></p></div>
-  <div class="sub"><span lang="fr">Projets</span><span lang="en">Projects</span></div>
-  <div class="grid"><article class="card"><h3><span lang="fr">IA pour les échecs</span><span lang="en">Chess AI</span></h3><div class="tags"><span><span lang="fr">Intelligence artificielle</span><span lang="en">Artificial intelligence</span></span><span><span lang="fr">Échecs</span><span lang="en">Chess</span></span><span>Python</span></div><dl><dt data-fr="Contexte" data-en="Context"></dt><dd><span lang="fr">Projet personnel en cours : créer un modèle capable de jouer aux échecs de façon optimale.</span><span lang="en">Ongoing personal project: build a model able to play chess optimally.</span></dd><dt data-fr="Mon rôle" data-en="My role"></dt><dd class="ph s"></dd><dt data-fr="Méthode" data-en="Method"></dt><dd class="ph s"></dd><dt data-fr="Résultat" data-en="Outcome"></dt><dd><span lang="fr">En cours</span><span lang="en">In progress</span></dd><dt data-fr="Enseignements" data-en="Lessons"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl><div class="links"><a class="btn alt off" data-link="p1repo" aria-disabled="true" title="Lien à ajouter / Link to add">GitHub</a><a class="btn alt off" data-link="p1report" aria-disabled="true" title="Lien à ajouter / Link to add"><span lang="fr">Rapport</span><span lang="en">Report</span></a></div></article><article class="card"><h3><span lang="fr">Stabilité asymptotique des systèmes complexes</span><span lang="en">Asymptotic stability of complex systems</span></h3><div class="tags"><span><span lang="fr">Stabilité asymptotique</span><span lang="en">Asymptotic stability</span></span><span><span lang="fr">Systèmes complexes</span><span lang="en">Complex systems</span></span><span><span lang="fr">Optimisation</span><span lang="en">Optimisation</span></span></div><dl><dt data-fr="Contexte" data-en="Context"></dt><dd><span lang="fr">Projet personnel en cours : optimiser des modèles existants de stabilité asymptotique.</span><span lang="en">Ongoing personal project: optimise existing asymptotic-stability models.</span></dd><dt data-fr="Mon rôle" data-en="My role"></dt><dd class="ph s"></dd><dt data-fr="Méthode" data-en="Method"></dt><dd class="ph s"></dd><dt data-fr="Résultat" data-en="Outcome"></dt><dd><span lang="fr">En cours</span><span lang="en">In progress</span></dd><dt data-fr="Enseignements" data-en="Lessons"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl><div class="links"><a class="btn alt off" data-link="p2repo" aria-disabled="true" title="Lien à ajouter / Link to add">GitHub</a><a class="btn alt off" data-link="p2report" aria-disabled="true" title="Lien à ajouter / Link to add"><span lang="fr">Rapport</span><span lang="en">Report</span></a></div></article></div>
-  <div class="sub"><span lang="fr">Compétences techniques</span><span lang="en">Technical skills</span></div>
-  <div class="card"><div class="tags"><span>Python</span><span>Ada</span></div><p class="ph s"></p></div>
-  <div class="sub"><span lang="fr">Productions</span><span lang="en">Productions</span></div>
-  <div class="card"><p class="ph"></p></div>
-</section>
+    <!-- ==================== ONGLET 1 : WELCOME (#home) ==================== -->
+    <section id="home" class="tab-section active-section">
+      <div class="container">
+        
+        <!-- Hero Banner -->
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="pulse-dot"></span>
+              <span data-fr="Toulouse INP - ENSEEIHT (N7) · Département Sciences du Numérique (2026-2027)" data-en="Toulouse INP - ENSEEIHT (N7) · Digital Sciences Department (2026-2027)">Toulouse INP - ENSEEIHT (N7) · Département Sciences du Numérique (2026-2027)</span>
+            </div>
 
-<!-- ========== INTERNATIONAL MOBILITY ========== -->
-<section id="mobility" hidden>
-  <h2><span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span></h2>
-  <p class="lead"><span lang="fr">Langues et préparation à la mobilité. Mes destinations visées figurent dans « Projet professionnel ».</span><span lang="en">Languages and mobility preparation. My target destinations are in “Career development”.</span></p>
-  <div class="grid">
-    <article class="card accent"><h3><span lang="fr">Langues</span><span lang="en">Languages</span></h3><div class="tags"><span><span lang="fr">Arabe</span><span lang="en">Arabic</span></span><span><span lang="fr">Français</span><span lang="en">French</span></span><span><span lang="fr">Anglais</span><span lang="en">English</span></span></div><dl><dt data-fr="Langues maîtrisées" data-en="Fluent in"></dt><dd><span lang="fr">Arabe, français, anglais</span><span lang="en">Arabic, French, English</span></dd><dt data-fr="À apprendre" data-en="To learn"></dt><dd><span lang="fr">Chinois et japonais</span><span lang="en">Chinese and Japanese</span></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article>
-    <article class="card"><h3><span lang="fr">LV2 : allemand</span><span lang="en">Second language: German</span></h3><dl><dt data-fr="Cadre" data-en="Setting"></dt><dd><span lang="fr">LV2 à l’ENSEEIHT</span><span lang="en">Second language at ENSEEIHT</span></dd><dt data-fr="Niveau" data-en="Level"></dt><dd class="ph s"></dd><dt data-fr="Objectif" data-en="Goal"></dt><dd><span lang="fr">Mobilité en Allemagne</span><span lang="en">Mobility in Germany</span></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article>
-    <article class="card"><h3><span lang="fr">PCE et autres expériences</span><span lang="en">PCE and other experiences</span></h3><dl><dt data-fr="Destination" data-en="Destination"></dt><dd class="ph s"></dd><dt data-fr="Période" data-en="Period"></dt><dd class="ph s"></dd><dt data-fr="Ce que j’y fais" data-en="What I do"></dt><dd class="ph s"></dd><dt data-fr="Ce que j’apprends" data-en="What I learn"></dt><dd class="ph s"></dd></dl></article>
-  </div>
-</section>
+            <h1 class="hero-title">
+              <span data-fr="Mohamed Bistarine" data-en="Mohamed Bistarine">Mohamed Bistarine</span>
+              <span class="hero-gradient-text" data-fr="Élève-Ingénieur en Sciences du Numérique" data-en="Digital Sciences & Computer Engineering Student">Élève-Ingénieur en Sciences du Numérique</span>
+            </h1>
 
-<!-- ========== SUSTAINABILITY & CIVIC ENGAGEMENT ========== -->
-<section id="civic" hidden>
-  <h2><span lang="fr">Développement durable et engagement citoyen</span><span lang="en">Sustainability &amp; civic engagement</span></h2>
-  <div class="grid">
-    <div class="card"><h3><span lang="fr">Engagement citoyen</span><span lang="en">Civic engagement</span></h3><p class="ph"></p></div>
-    <div class="card"><h3><span lang="fr">Développement durable</span><span lang="en">Sustainability</span></h3><p class="ph"></p></div>
-  </div>
-</section>
+            <p class="hero-lead" data-fr="Passionné par l'architecture logicielle, l'intelligence artificielle et les systèmes numériques haute performance. Actuellement élève-ingénieur à l'ENSEEIHT (Toulouse), je conçois des solutions techniques rigoureuses, scalables et responsables. [À COMPLÉTER : Ajoutez 1 phrase sur votre parcours pré-N7 et votre spécialisation visée]." data-en="Passionate about software architecture, artificial intelligence, and high-performance digital systems. Currently pursuing my Master of Engineering in Digital Sciences at ENSEEIHT (Toulouse), I build rigorous, scalable, and responsible solutions. [TO COMPLETE: Add 1 sentence about your pre-N7 background and target specialization].">
+              Passionné par l'architecture logicielle, l'intelligence artificielle et les systèmes numériques haute performance. Actuellement élève-ingénieur à l'ENSEEIHT (Toulouse), je conçois des solutions techniques rigoureuses, scalables et responsables. [À COMPLÉTER : Ajoutez 1 phrase sur votre parcours pré-N7 et votre spécialisation visée].
+            </p>
 
-<!-- ========== SPORT & OTHER ACTIVITIES ========== -->
-<section id="sport" hidden>
-  <h2><span lang="fr">Sport et autres activités</span><span lang="en">Sport & other activities</span></h2>
-  <div class="grid">
-    <article class="card accent"><h3><span lang="fr">Échecs</span><span lang="en">Chess</span></h3><div class="tags"><span><span lang="fr">Club Najah Souss</span><span lang="en">Najah Souss club</span></span><span><span lang="fr">Tournois nationaux</span><span lang="en">National tournaments</span></span><span><span lang="fr">Tournois internationaux</span><span lang="en">International tournaments</span></span></div><dl><dt data-fr="Activité" data-en="Activity"></dt><dd><span lang="fr">Joueur d’échecs au club Najah Souss</span><span lang="en">Chess player at the Najah Souss club</span></dd><dt data-fr="Compétitions" data-en="Competitions"></dt><dd><span lang="fr">Tournois nationaux et internationaux</span><span lang="en">National and international tournaments</span></dd><dt data-fr="Résultats" data-en="Results"></dt><dd class="ph s"></dd><dt data-fr="Ce que ça m’apporte" data-en="What it brings me"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article>
-    <article class="card"><h3><span lang="fr">Autres activités</span><span lang="en">Other activities</span></h3><p class="ph"></p></article>
-  </div>
-</section>
+            <!-- Tags de spécialités SN -->
+            <div class="tech-tag-row">
+              <span class="tech-tag">Informatique & Télécoms</span>
+              <span class="tech-tag" data-fr="[Spécialité 1 : ex. Génie Logiciel]" data-en="[Specialty 1: e.g. Software Engineering]">[Spécialité 1 : ex. Génie Logiciel]</span>
+              <span class="tech-tag" data-fr="[Spécialité 2 : ex. IA, HPC & Big Data]" data-en="[Specialty 2: e.g. AI, HPC & Big Data]">[Spécialité 2 : ex. IA, HPC & Big Data]</span>
+              <span class="tech-tag" data-fr="[Spécialité 3 : ex. Réseaux & Cybersécurité]" data-en="[Specialty 3: e.g. Networks & Cybersecurity]">[Spécialité 3 : ex. Réseaux & Cybersécurité]</span>
+            </div>
 
-<!-- ========== CAREER DEVELOPMENT ========== -->
-<section id="career" hidden>
-  <h2><span lang="fr">Projet professionnel</span><span lang="en">Career development</span></h2>
-  <p class="lead"><span lang="fr">Les stages que je vise et l’orientation professionnelle que j’en tire.</span><span lang="en">The internships I am aiming for and the career direction they support.</span></p>
-  <div class="sub"><span lang="fr">Mon projet professionnel</span><span lang="en">My career project</span></div>
-  <div class="card accent"><dl><dt data-fr="Métier visé" data-en="Target role"></dt><dd class="ph s"></dd><dt data-fr="Secteur" data-en="Industry"></dt><dd class="ph s"></dd><dt data-fr="Stages visés" data-en="Targeted internships"></dt><dd><span lang="fr">Gestion des données, optimisation de modèles, innovation logicielle</span><span lang="en">Data management, model optimisation, software innovation</span></dd><dt data-fr="Pourquoi ce choix" data-en="Why this choice"></dt><dd class="ph s"></dd><dt data-fr="Prochaine étape" data-en="Next step"></dt><dd class="ph s"></dd></dl></div>
-  <div class="sub"><span lang="fr">Stages visés</span><span lang="en">Targeted internships</span></div>
-  <div class="grid"><article class="card"><h3><span lang="fr">Gestion des données</span><span lang="en">Data management</span></h3><dl><dt data-fr="Objectif" data-en="Goal"></dt><dd><span lang="fr">Améliorer ma gestion des données.</span><span lang="en">Improve my data management skills.</span></dd><dt data-fr="Missions envisagées" data-en="Envisioned tasks"></dt><dd class="ph s"></dd><dt data-fr="Lien avec mes projets" data-en="Link with my projects"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Optimisation des modèles</span><span lang="en">Model optimisation</span></h3><dl><dt data-fr="Objectif" data-en="Goal"></dt><dd><span lang="fr">Améliorer l’optimisation de modèles.</span><span lang="en">Improve my model optimisation skills.</span></dd><dt data-fr="Missions envisagées" data-en="Envisioned tasks"></dt><dd class="ph s"></dd><dt data-fr="Lien avec mes projets" data-en="Link with my projects"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Innovation logicielle</span><span lang="en">Software innovation</span></h3><dl><dt data-fr="Objectif" data-en="Goal"></dt><dd><span lang="fr">Développer l’innovation logicielle.</span><span lang="en">Develop software innovation skills.</span></dd><dt data-fr="Missions envisagées" data-en="Envisioned tasks"></dt><dd class="ph s"></dd><dt data-fr="Lien avec mes projets" data-en="Link with my projects"></dt><dd class="ph s"></dd><dt data-fr="Plus de détails" data-en="More details"></dt><dd class="ph s"></dd></dl></article></div>
-  <div class="sub"><span lang="fr">Mes documents</span><span lang="en">My documents</span></div>
-  <div class="links"><a class="btn off" data-link="cvfr" aria-disabled="true" title="Lien à ajouter / Link to add">CV (FR)</a><a class="btn off" data-link="cven" aria-disabled="true" title="Lien à ajouter / Link to add">CV (EN)</a><a class="btn alt off" data-link="linkedin" aria-disabled="true" title="Lien à ajouter / Link to add">LinkedIn</a></div>
-  <div class="sub"><span lang="fr">Vidéo de présentation (anglais, 2 à 3 minutes)</span><span lang="en">Elevator pitch video (English, 2–3 minutes)</span></div>
-  <!-- Remplacez le contenu de .video par : <iframe src="LIEN_EMBED" allowfullscreen></iframe> ou <video controls src="assets/pitch.mp4"></video> -->
-  <div class="video"><span lang="fr">Emplacement de la vidéo : présent, passé (très bref), futur.</span><span lang="en">Video slot: present, past (very brief), future.</span></div>
-  <div class="sub"><span lang="fr">Modèles professionnels</span><span lang="en">Professional role models</span></div>
-  <div class="grid"><article class="card"><h3><span lang="fr">Modèle 1</span><span lang="en">Role model 1</span></h3><dl><dt data-fr="Nom et poste" data-en="Name and role"></dt><dd class="ph s"></dd><dt data-fr="Entreprise" data-en="Company"></dt><dd class="ph s"></dd><dt data-fr="Parcours" data-en="Background"></dt><dd class="ph s"></dd><dt data-fr="Ce que j’en retiens" data-en="What I take from it"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Modèle 2</span><span lang="en">Role model 2</span></h3><dl><dt data-fr="Nom et poste" data-en="Name and role"></dt><dd class="ph s"></dd><dt data-fr="Entreprise" data-en="Company"></dt><dd class="ph s"></dd><dt data-fr="Parcours" data-en="Background"></dt><dd class="ph s"></dd><dt data-fr="Ce que j’en retiens" data-en="What I take from it"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Modèle 3</span><span lang="en">Role model 3</span></h3><dl><dt data-fr="Nom et poste" data-en="Name and role"></dt><dd class="ph s"></dd><dt data-fr="Entreprise" data-en="Company"></dt><dd class="ph s"></dd><dt data-fr="Parcours" data-en="Background"></dt><dd class="ph s"></dd><dt data-fr="Ce que j’en retiens" data-en="What I take from it"></dt><dd class="ph s"></dd></dl></article></div>
-  <div class="sub"><span lang="fr">Mobilités internationales visées</span><span lang="en">Targeted international mobility</span></div>
-  <div class="grid"><article class="card"><h3><span lang="fr">Allemagne</span><span lang="en">Germany</span></h3><dl><dt data-fr="Langue" data-en="Language"></dt><dd><span lang="fr">Allemand</span><span lang="en">German</span></dd><dt data-fr="Période" data-en="Period"></dt><dd class="ph s"></dd><dt data-fr="Objectif" data-en="Goal"></dt><dd class="ph s"></dd><dt data-fr="Modèle associé" data-en="Linked role model"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Chine</span><span lang="en">China</span></h3><dl><dt data-fr="Langue" data-en="Language"></dt><dd><span lang="fr">Chinois (à apprendre)</span><span lang="en">Chinese (to learn)</span></dd><dt data-fr="Période" data-en="Period"></dt><dd class="ph s"></dd><dt data-fr="Objectif" data-en="Goal"></dt><dd class="ph s"></dd><dt data-fr="Modèle associé" data-en="Linked role model"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">États-Unis</span><span lang="en">United States</span></h3><dl><dt data-fr="Langue" data-en="Language"></dt><dd><span lang="fr">Anglais</span><span lang="en">English</span></dd><dt data-fr="Période" data-en="Period"></dt><dd class="ph s"></dd><dt data-fr="Objectif" data-en="Goal"></dt><dd class="ph s"></dd><dt data-fr="Modèle associé" data-en="Linked role model"></dt><dd class="ph s"></dd></dl></article><article class="card"><h3><span lang="fr">Japon</span><span lang="en">Japan</span></h3><dl><dt data-fr="Langue" data-en="Language"></dt><dd><span lang="fr">Japonais (à apprendre)</span><span lang="en">Japanese (to learn)</span></dd><dt data-fr="Période" data-en="Period"></dt><dd class="ph s"></dd><dt data-fr="Objectif" data-en="Goal"></dt><dd class="ph s"></dd><dt data-fr="Modèle associé" data-en="Linked role model"></dt><dd class="ph s"></dd></dl></article></div>
-</section>
+            <!-- Boutons d'action prioritaires (Livrables CAM Module 1) -->
+            <div class="cta-group">
+              <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">
+                <span>📄</span>
+                <span data-fr="Télécharger CV (English)" data-en="Download Resume (EN)">Télécharger CV (English)</span>
+              </a>
+              <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">
+                <span>📄</span>
+                <span data-fr="Télécharger CV (Français)" data-en="Download CV (French)">Télécharger CV (Français)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-outline">
+                <span>🔗</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">
+                <span>💻</span>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
 
-</main>
+          <!-- Carte d'identité numérique Ingénieur SN -->
+          <aside class="profile-card">
+            <div class="profile-header">
+              <div class="avatar-placeholder">
+                <!-- Pour afficher votre photo, placez profile.jpg dans assets/ et remplacez <span>MB</span> par : <img src="assets/profile.jpg" alt="Mohamed Bistarine"> -->
+                <span>MB</span>
+              </div>
+              <div>
+                <h2 class="profile-card-name">Mohamed Bistarine</h2>
+                <p class="mono-label">ID: N7-SN-2026 // TOULOUSE INP</p>
+              </div>
+            </div>
 
-<footer><div>© Mohamed Bistarine, ENSEEIHT &nbsp;|&nbsp; Version 4 (18/10/2026)</div></footer>
+            <div class="terminal-box">
+              <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">bistarine@n7-sn:~</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="cmd">$ whoami</span><br><span data-fr="Élève-Ingénieur Sciences du Numérique (FISE)" data-en="Digital Sciences Engineering Student (FISE)">Élève-Ingénieur Sciences du Numérique (FISE)</span></p>
+                <p><span class="cmd">$ location</span><br>Toulouse, Occitanie, France 📍</p>
+                <p><span class="cmd">$ target_objective</span><br><span data-fr="[À COMPLÉTER : Recherche de stage en IA / Software Engineering]" data-en="[TO COMPLETE: Seeking Internship in AI / Software Engineering]">[À COMPLÉTER : Recherche de stage en IA / Software Engineering]</span></p>
+                <p><span class="cmd">$ core_strengths</span><br><span data-fr="Pensée analytique · Rigueur · Adaptabilité · Travail d'équipe" data-en="Analytical thinking · Rigor · Adaptability · Teamwork">Pensée analytique · Rigueur · Adaptabilité · Travail d'équipe</span></p>
+              </div>
+            </div>
+          </aside>
+        </div>
 
-<script>
-(function(){
-  var ids=['welcome','course','mobility','civic','sport','career'],root=document.documentElement;
-  function route(){
-    var h=location.hash.slice(1); if(ids.indexOf(h)<0)h='welcome';
-    ids.forEach(function(id){
-      document.getElementById(id).hidden=(id!==h);
-      document.querySelector('nav a[href="#'+id+'"]').setAttribute('aria-current',id===h?'page':'false');
+        <!-- Section Livrable Obligatoire : Elevator Pitch Video (UVP 2-3 min en Anglais) -->
+        <div class="uvp-showcase-card">
+          <div class="uvp-info">
+            <span class="section-eyebrow">CAM MODULE 1 DELIVERABLE · UNIQUE VALUE PROPOSAL</span>
+            <h2 class="section-title" data-fr="Vidéo Elevator Pitch (UVP en Anglais — 2 à 3 min)" data-en="Elevator Pitch Video (UVP in English — 2 to 3 min)">Vidéo Elevator Pitch (UVP en Anglais — 2 à 3 min)</h2>
+            <p class="section-desc" data-fr="Conformément au référentiel du Soft Skills Center de l'ENSEEIHT, cette présentation vidéo en anglais expose ma proposition de valeur unique (UVP) structurée en trois temps : mon positionnement actuel à l'N7, mon parcours antérieur, et mes ambitions d'ingénieur." data-en="In accordance with the ENSEEIHT Soft Skills Center framework, this 2-3 minute video pitch in English communicates my Unique Value Proposal (UVP) structured in three clear stages: Present, brief Past, and Future career vision.">
+              Conformément au référentiel du Soft Skills Center de l'ENSEEIHT, cette présentation vidéo en anglais expose ma proposition de valeur unique (UVP) structurée en trois temps : mon positionnement actuel à l'N7, mon parcours antérieur, et mes ambitions d'ingénieur.
+            </p>
+
+            <div class="uvp-structure-steps">
+              <div class="uvp-step">
+                <span class="step-badge">01. PRESENT</span>
+                <p data-fr="Étudiant en Sciences du Numérique à l'N7, compétences techniques clés et valeurs de travail." data-en="Digital Sciences student at N7, core technical competencies, and engineering work ethic.">Étudiant en Sciences du Numérique à l'N7, compétences techniques clés et valeurs de travail.</p>
+              </div>
+              <div class="uvp-step">
+                <span class="step-badge">02. BRIEF PAST</span>
+                <p data-fr="[À COMPLÉTER : CPGE / Licence / BUT], fondations mathématiques et premiers projets déclencheurs." data-en="[TO COMPLETE: Preparatory classes / BSc], mathematical foundations, and key trigger projects.">[À COMPLÉTER : CPGE / Licence / BUT], fondations mathématiques et premiers projets déclencheurs.</p>
+              </div>
+              <div class="uvp-step">
+                <span class="step-badge">03. FUTURE</span>
+                <p data-fr="Spécialisation visée en 2A/3A, projet de mobilité internationale et impact recherché en entreprise." data-en="Target 2A/3A track, international mobility goal, and value brought to future employers.">Spécialisation visée en 2A/3A, projet de mobilité internationale et impact recherché en entreprise.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uvp-video-wrapper">
+            <!-- Placez votre fichier vidéo dans assets/uvp_pitch.mp4 ou remplacez par un iframe YouTube/Vimeo -->
+            <video controls preload="metadata" poster="assets/video_poster.jpg" class="html5-video">
+              <source src="assets/uvp_pitch.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+            </video>
+            <p class="video-caption mono-label" data-fr="Fichier : assets/uvp_pitch.mp4 (Durée cible : 2:00 – 3:00 · Langue : Anglais)" data-en="File: assets/uvp_pitch.mp4 (Target duration: 2:00 – 3:00 · Language: English)">Fichier : assets/uvp_pitch.mp4 (Durée cible : 2:00 – 3:00 · Langue : Anglais)</p>
+          </div>
+        </div>
+
+        <!-- Accès rapide aux sections clés de l'e-Portfolio N7 -->
+        <div class="pillars-overview">
+          <h3 class="subsection-heading" data-fr="Exploration Rapide des Piliers de mon e-Portfolio N7 (S5 → S10)" data-en="Quick Exploration of My N7 e-Portfolio Pillars (S5 → S10)">Exploration Rapide des Piliers de mon e-Portfolio N7 (S5 → S10)</h3>
+          <div class="cards-grid-3">
+            <div class="nav-preview-card" data-jump="engineering">
+              <span class="card-number">01 // SN</span>
+              <h4 data-fr="Cursus Ingénieur & Projets" data-en="Engineering Course & Projects">Cursus Ingénieur & Projets</h4>
+              <p data-fr="Unités d'enseignement S5–S9, réalisations logicielles décrites selon la méthode STAR et stack technique." data-en="S5–S9 coursework, software projects structured with the STAR method, and technical stack.">Unités d'enseignement S5–S9, réalisations logicielles décrites selon la méthode STAR et stack technique.</p>
+            </div>
+            <div class="nav-preview-card" data-jump="mobility">
+              <span class="card-number">02 // INTL</span>
+              <h4 data-fr="Mobilité Internationale" data-en="International Mobility">Mobilité Internationale</h4>
+              <p data-fr="3 projets de mobilité (17 semaines min.) alignés sur mes Role Models, compétences PCE et langues (B2+)." data-en="3 mobility projects (17+ weeks) aligned with Role Models, PCE communications, and languages (B2+).">3 projets de mobilité (17 semaines min.) alignés sur mes Role Models, compétences PCE et langues (B2+).</p>
+            </div>
+            <div class="nav-preview-card" data-jump="career">
+              <span class="card-number">03 // CAM</span>
+              <h4 data-fr="Carrière & 3 Role Models" data-en="Career Dev & 3 Role Models">Carrière & 3 Role Models</h4>
+              <p data-fr="Projet professionnel (PEP), analyse de 3 profils My Job Glasses / Alumni, stages S6-S8-S10 et CVs." data-en="Career project (PEP), analysis of 3 My Job Glasses / Alumni profiles, S6-S8-S10 internships, and CVs.">Projet professionnel (PEP), analyse de 3 profils My Job Glasses / Alumni, stages S6-S8-S10 et CVs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ONGLET 2 : ENGINEERING COURSE (#engineering) ==================== -->
+    <section id="engineering" class="tab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">DÉPARTEMENT SCIENCES DU NUMÉRIQUE · RNCP 40939</span>
+          <h2 class="section-title" data-fr="Formation d'Ingénieur & Projets Techniques" data-en="Engineering Coursework & Technical Productions">Formation d'Ingénieur & Projets Techniques</h2>
+          <p class="section-desc" data-fr="Le département Sciences du Numérique (Informatique et Télécommunications) de l'ENSEEIHT forme des ingénieurs maîtrisant les fondements mathématiques, logiciels et réseaux tout en développant une expertise pointue de S5 à S10." data-en="The Digital Sciences (Computer Science & Telecommunications) department at ENSEEIHT trains engineers to master mathematical, software, and network fundamentals while developing deep specialization from S5 to S10.">
+            Le département Sciences du Numérique (Informatique et Télécommunications) de l'ENSEEIHT forme des ingénieurs maîtrisant les fondements mathématiques, logiciels et réseaux tout en développant une expertise pointue de S5 à S10.
+          </p>
+        </div>
+
+        <!-- Sous-onglets de Engineering Course (Exigence diapo 23 : + sub-tabs for projects & productions) -->
+        <div class="subtab-nav" data-subtab-group="eng">
+          <button class="subtab-btn active" data-subtab-target="eng-projects" data-fr="Projets & Productions (Méthode STAR)" data-en="Projects & Productions (STAR Method)">Projets & Productions (Méthode STAR)</button>
+          <button class="subtab-btn" data-subtab-target="eng-courses" data-fr="Programme Académique (S5 – S9)" data-en="Academic Curriculum (S5 – S9)">Programme Académique (S5 – S9)</button>
+          <button class="subtab-btn" data-subtab-target="eng-skills" data-fr="Compétences & Stack Technique" data-en="Technical Stack & WEF Skills">Compétences & Stack Technique</button>
+        </div>
+
+        <!-- SOUS-ONGLET 2.1 : PROJETS & PRODUCTIONS (MÉTHODE STAR) -->
+        <div id="eng-projects" class="subtab-panel active-subpanel" data-subtab-parent="eng">
+          <div class="cards-grid-2">
+            
+            <!-- Carte Projet 1 -->
+            <article class="star-card">
+              <div class="star-card-header">
+                <span class="mono-badge" data-fr="PROJET ACADÉMIQUE N7 · S5/S6" data-en="N7 ACADEMIC PROJECT · S5/S6">PROJET ACADÉMIQUE N7 · S5/S6</span>
+                <span class="tech-pill">C / Python / Linux</span>
+              </div>
+              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 1 — ex. Mini-Shell Unix ou Compilateur / Analyse de Données]" data-en="[TO COMPLETE: Project 1 Title — e.g. Unix Mini-Shell or Compiler / Data Analysis]">[À COMPLÉTER : Titre du Projet 1 — ex. Mini-Shell Unix ou Compilateur / Analyse de Données]</h3>
+              
+              <div class="star-list">
+                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Contexte du bureau d'études ou projet individuel/équipe à l'N7, durée]." data-en="<b>Situation:</b> [TO COMPLETE: Context of the engineering lab or team project at N7, duration]."><b>Situation :</b> [À COMPLÉTER : Contexte du bureau d'études ou projet individuel/équipe à l'N7, durée].</p></div>
+                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Objectif technique précis et contraintes de performance ou de mémoire]." data-en="<b>Task:</b> [TO COMPLETE: Specific technical objective and performance or memory constraints]."><b>Tâche :</b> [À COMPLÉTER : Objectif technique précis et contraintes de performance ou de mémoire].</p></div>
+                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Architecture choisie, algorithmes implémentés, tests unitaires et gestion Git]." data-en="<b>Action:</b> [TO COMPLETE: Chosen architecture, implemented algorithms, unit testing, and Git workflow]."><b>Action :</b> [À COMPLÉTER : Architecture choisie, algorithmes implémentés, tests unitaires et gestion Git].</p></div>
+                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Résultat quantifié, ex. 100% des tests passés, réduction du temps d'exécution de X%, note obtenue]." data-en="<b>Result:</b> [TO COMPLETE: Quantified outcome, e.g. 100% test pass rate, X% execution time reduction, grade]."><b>Résultat :</b> [À COMPLÉTER : Résultat quantifié, ex. 100% des tests passés, réduction du temps d'exécution de X%, note obtenue].</p></div>
+                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Compétences consolidées et lien avec votre futur stage]." data-en="<b>And beyond?:</b> [TO COMPLETE: Consolidated skills and link to your future internship]."><b>Et après ? :</b> [À COMPLÉTER : Compétences consolidées et lien avec votre futur stage].</p></div>
+              </div>
+              <div class="star-card-footer">
+                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Voir le dépôt GitHub →" data-en="View GitHub Repository →">Voir le dépôt GitHub →</a>
+              </div>
+            </article>
+
+            <!-- Carte Projet 2 -->
+            <article class="star-card">
+              <div class="star-card-header">
+                <span class="mono-badge" data-fr="PROJET LOGICIEL / POO · S6" data-en="SOFTWARE / OOP PROJECT · S6">PROJET LOGICIEL / POO · S6</span>
+                <span class="tech-pill">Java / MVC / Git</span>
+              </div>
+              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 2 — ex. Application Orientée Objet ou Simulateur Réseau]" data-en="[TO COMPLETE: Project 2 Title — e.g. Object-Oriented Application or Network Simulator]">[À COMPLÉTER : Titre du Projet 2 — ex. Application Orientée Objet ou Simulateur Réseau]</h3>
+              
+              <div class="star-list">
+                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Projet en équipe de X étudiants dans le cadre de l'UE Technologie Objet / Réseaux]." data-en="<b>Situation:</b> [TO COMPLETE: Team project of X students within the Object Technology / Networks course]."><b>Situation :</b> [À COMPLÉTER : Projet en équipe de X étudiants dans le cadre de l'UE Technologie Objet / Réseaux].</p></div>
+                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Concevoir une architecture modulaire respectant les principes de conception objet]." data-en="<b>Task:</b> [TO COMPLETE: Design a modular architecture adhering to object-oriented design principles]."><b>Tâche :</b> [À COMPLÉTER : Concevoir une architecture modulaire respectant les principes de conception objet].</p></div>
+                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Modélisation UML, développement des composants critiques, revue de code]." data-en="<b>Action:</b> [TO COMPLETE: UML modeling, development of core components, code reviews]."><b>Action :</b> [À COMPLÉTER : Modélisation UML, développement des composants critiques, revue de code].</p></div>
+                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Application fonctionnelle livrée dans les délais avec documentation complète]." data-en="<b>Result:</b> [TO COMPLETE: Fully functional application delivered on schedule with complete documentation]."><b>Résultat :</b> [À COMPLÉTER : Application fonctionnelle livrée dans les délais avec documentation complète].</p></div>
+                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Maîtrise du travail collaboratif Git et du génie logiciel]." data-en="<b>And beyond?:</b> [TO COMPLETE: Mastery of collaborative Git workflows and software engineering]."><b>Et après ? :</b> [À COMPLÉTER : Maîtrise du travail collaboratif Git et du génie logiciel].</p></div>
+              </div>
+              <div class="star-card-footer">
+                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Voir le code source →" data-en="View Source Code →">Voir le code source →</a>
+              </div>
+            </article>
+
+            <!-- Carte Projet 3 (Projet Personnel / Hackathon / TIPE) -->
+            <article class="star-card">
+              <div class="star-card-header">
+                <span class="mono-badge" data-fr="PROJET PERSONNEL / RECHERCHE" data-en="PERSONAL / RESEARCH PROJECT">PROJET PERSONNEL / RECHERCHE</span>
+                <span class="tech-pill">Python / AI / Data</span>
+              </div>
+              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 3 — ex. Modèle de Machine Learning, TIPE ou Concours de Code]" data-en="[TO COMPLETE: Project 3 Title — e.g. Machine Learning Model, TIPE, or Coding Contest]">[À COMPLÉTER : Titre du Projet 3 — ex. Modèle de Machine Learning, TIPE ou Concours de Code]</h3>
+              
+              <div class="star-list">
+                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Initiative personnelle, concours de programmation ou projet de recherche TIPE]." data-en="<b>Situation:</b> [TO COMPLETE: Personal initiative, coding competition, or research project]."><b>Situation :</b> [À COMPLÉTER : Initiative personnelle, concours de programmation ou projet de recherche TIPE].</p></div>
+                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Problématique scientifique ou algorithmique résolue]." data-en="<b>Task:</b> [TO COMPLETE: Scientific or algorithmic problem addressed]."><b>Tâche :</b> [À COMPLÉTER : Problématique scientifique ou algorithmique résolue].</p></div>
+                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Prétraitement des données, entraînement/optimisation algorithmique, validation]." data-en="<b>Action:</b> [TO COMPLETE: Data preprocessing, algorithmic training/optimization, validation]."><b>Action :</b> [À COMPLÉTER : Prétraitement des données, entraînement/optimisation algorithmique, validation].</p></div>
+                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Précision atteinte, gain de performance ou démonstrateur opérationnel]." data-en="<b>Result:</b> [TO COMPLETE: Accuracy achieved, performance gain, or working demonstrator]."><b>Résultat :</b> [À COMPLÉTER : Précision atteinte, gain de performance ou démonstrateur opérationnel].</p></div>
+                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Confirmation de mon intérêt pour l'IA, la Data ou les systèmes critiques]." data-en="<b>And beyond?:</b> [TO COMPLETE: Confirmed my strong interest in AI, Data, or critical systems]."><b>Et après ? :</b> [À COMPLÉTER : Confirmation de mon intérêt pour l'IA, la Data ou les systèmes critiques].</p></div>
+              </div>
+              <div class="star-card-footer">
+                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Consulter la documentation →" data-en="Read Documentation →">Consulter la documentation →</a>
+              </div>
+            </article>
+
+            <!-- Carte Projet 4 (Ce Portfolio GitHub Pages) -->
+            <article class="star-card">
+              <div class="star-card-header">
+                <span class="mono-badge" data-fr="PRODUCTION CAM MODULE 1 · S5" data-en="CAM MODULE 1 PRODUCTION · S5">PRODUCTION CAM MODULE 1 · S5</span>
+                <span class="tech-pill">HTML5 / CSS3 / JS / Git</span>
+              </div>
+              <h3 class="star-card-title" data-fr="Architecture de cet e-Portfolio Bilingue sur GitHub Pages" data-en="Bilingual e-Portfolio Architecture on GitHub Pages">Architecture de cet e-Portfolio Bilingue sur GitHub Pages</h3>
+              
+              <div class="star-list">
+                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> Conception de ma vitrine numérique personnelle pour le module Marketing & Self-Branding à l'N7." data-en="<b>Situation:</b> Designing my personal digital showcase for the N7 Marketing & Self-Branding module."><b>Situation :</b> Conception de ma vitrine numérique personnelle pour le module Marketing & Self-Branding à l'N7.</p></div>
+                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> Développer un site web pérenne, conforme RGPD, bilingue (FR/EN) et structuré autour des 6 onglets N7." data-en="<b>Task:</b> Build a lifelong, GDPR-friendly, bilingual (FR/EN) website structured around the 6 mandatory N7 tabs."><b>Tâche :</b> Développer un site web pérenne, conforme RGPD, bilingue (FR/EN) et structuré autour des 6 onglets N7.</p></div>
+                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> Codage intégral en HTML5/CSS3 sémantique sans dépendance lourde, moteur de traduction DOM instantané et déploiement continu via GitHub Pages." data-en="<b>Action:</b> Full semantic HTML5/CSS3 coding with zero heavy dependencies, instant DOM translation engine, and continuous deployment via GitHub Pages."><b>Action :</b> Codage intégral en HTML5/CSS3 sémantique sans dépendance lourde, moteur de traduction DOM instantané et déploiement continu via GitHub Pages.</p></div>
+                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> Temps de chargement immédiat, zéro cookie tiers et accessibilité directe pour les recruteurs et le jury PPP." data-en="<b>Result:</b> Instant loading speed, zero third-party tracking cookies, and direct accessibility for recruiters and PPP juries."><b>Résultat :</b> Temps de chargement immédiat, zéro cookie tiers et accessibilité directe pour les recruteurs et le jury PPP.</p></div>
+                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> Support modulaire prêt à accueillir mes livrables et projets de S6 à S10." data-en="<b>And beyond?:</b> Modular platform ready to host my S6 to S10 engineering deliverables and projects."><b>Et après ? :</b> Support modulaire prêt à accueillir mes livrables et projets de S6 à S10.</p></div>
+              </div>
+              <div class="star-card-footer">
+                <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" class="link-arrow" data-fr="Voir le dépôt Mohamed_Bistarine →" data-en="View Mohamed_Bistarine Repo →">Voir le dépôt Mohamed_Bistarine →</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- SOUS-ONGLET 2.2 : PROGRAMME ACADÉMIQUE SN (S5 - S9) -->
+        <div id="eng-courses" class="subtab-panel" data-subtab-parent="eng">
+          <div class="cards-grid-3">
+            
+            <div class="semester-card">
+              <div class="semester-header">
+                <span class="mono-badge">1A · SEMESTRE 5 (30 ECTS)</span>
+                <h4 data-fr="Fondements Sciences du Numérique" data-en="Digital Sciences Foundations">Fondements Sciences du Numérique</h4>
+              </div>
+              <ul class="course-list">
+                <li data-fr="<b>Programmation Impérative</b> (Algorithmique, structures de données, projets) — 5 ECTS" data-en="<b>Imperative Programming</b> (Algorithms, data structures, projects) — 5 ECTS"><b>Programmation Impérative</b> (Algorithmique, structures de données, projets) — 5 ECTS</li>
+                <li data-fr="<b>Modélisation & Architecture</b> (Modélisation formelle, architecture des ordinateurs) — 5 ECTS" data-en="<b>Modeling & Architecture</b> (Formal modeling, computer architecture) — 5 ECTS"><b>Modélisation & Architecture</b> (Modélisation formelle, architecture des ordinateurs) — 5 ECTS</li>
+                <li data-fr="<b>Intégration & Probabilités</b> (Théorie de la mesure, intégration de Lebesgue, probabilités) — 5 ECTS" data-en="<b>Integration & Probability</b> (Measure theory, Lebesgue integration, probability) — 5 ECTS"><b>Intégration & Probabilités</b> (Théorie de la mesure, intégration de Lebesgue, probabilités) — 5 ECTS</li>
+                <li data-fr="<b>Analyse Numérique & Statistiques</b> (Optimisation, EDP, statistiques) — 5 ECTS" data-en="<b>Numerical Analysis & Statistics</b> (Optimization, PDEs, statistics) — 5 ECTS"><b>Analyse Numérique & Statistiques</b> (Optimisation, EDP, statistiques) — 5 ECTS</li>
+                <li data-fr="<b>Automatique & Analyse de Données</b> (Théorie du contrôle, analyse de données) — 5 ECTS" data-en="<b>Control Theory & Data Analysis</b> (Control theory, data analysis) — 5 ECTS"><b>Automatique & Analyse de Données</b> (Théorie du contrôle, analyse de données) — 5 ECTS</li>
+                <li data-fr="<b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, Anglais, LV2, RSE, EPS) — 5 ECTS" data-en="<b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, English, LV2, CSR, Sports) — 5 ECTS"><b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, Anglais, LV2, RSE, EPS) — 5 ECTS</li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <span class="mono-badge">1A · SEMESTRE 6 (30 ECTS)</span>
+                <h4 data-fr="Systèmes, Réseaux & Objet" data-en="Systems, Networks & OOP">Systèmes, Réseaux & Objet</h4>
+              </div>
+              <ul class="course-list">
+                <li data-fr="<b>Technologie Objet</b> (POO en Java, conception orientée objet, projets) — 5 ECTS" data-en="<b>Object-Oriented Technology</b> (Java OOP, object-oriented design, projects) — 5 ECTS"><b>Technologie Objet</b> (POO en Java, conception orientée objet, projets) — 5 ECTS</li>
+                <li data-fr="<b>Réseaux</b> (Protocoles Internet, architectures réseaux locaux et télécoms) — 5 ECTS" data-en="<b>Computer Networks</b> (Internet protocols, local and telecom network architectures) — 5 ECTS"><b>Réseaux</b> (Protocoles Internet, architectures réseaux locaux et télécoms) — 5 ECTS</li>
+                <li data-fr="<b>Calcul Scientifique & Apprentissage</b> (Algèbre numérique, Machine Learning) — 5 ECTS" data-en="<b>Scientific Computing & Learning</b> (Numerical computing, Machine Learning) — 5 ECTS"><b>Calcul Scientifique & Apprentissage</b> (Algèbre numérique, Machine Learning) — 5 ECTS</li>
+                <li data-fr="<b>Télécommunications & Signal</b> (Communications numériques, traitement du signal) — 5 ECTS" data-en="<b>Telecommunications & Signal</b> (Digital communications, signal processing) — 5 ECTS"><b>Télécommunications & Signal</b> (Communications numériques, traitement du signal) — 5 ECTS</li>
+                <li data-fr="<b>Soft & Human Skills S6</b> (Modules CAM Leadership/Entrepreneurship/Managership/Citizenship, EPS, Stage 6 sem. min.) — 5 ECTS" data-en="<b>Soft & Human Skills S6</b> (CAM Leadership/Entrepreneurship/Managership/Citizenship, Sports, 6+ week internship) — 5 ECTS"><b>Soft & Human Skills S6</b> (Modules CAM Leadership/Entrepreneurship/Managership/Citizenship, EPS, Stage 6 sem. min.) — 5 ECTS</li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <span class="mono-badge">2A & 3A · SEMESTRES 7, 8 & 9</span>
+                <h4 data-fr="Spécialisation & Parcours Visé" data-en="Specialization & Target Track">Spécialisation & Parcours Visé</h4>
+              </div>
+              <ul class="course-list">
+                <li data-fr="<b>Enseignements Avancés 2A (S7/S8) :</b> Programmation Fonctionnelle & Traduction des Langages, Théorie des Automates & Graphes, Génie du Logiciel & des Systèmes, Optimisation, Systèmes Concurrents & Communicants, Apprentissage Machine." data-en="<b>Advanced 2A Coursework (S7/S8):</b> Functional Programming & Language Translation, Automata & Graph Theory, Software & Systems Engineering, Optimization, Concurrent & Communicating Systems, Machine Learning."><b>Enseignements Avancés 2A (S7/S8) :</b> Programmation Fonctionnelle & Traduction des Langages, Théorie des Automates & Graphes, Génie du Logiciel & des Systèmes, Optimisation, Systèmes Concurrents & Communicants, Apprentissage Machine.</li>
+                <li data-fr="<b>Parcours 2A/3A Ciblé :</b> [À COMPLÉTER : Choisir parmi Systèmes logiciels / HPC et Big Data / Image et multimédia / Infrastructure du Big Data et IoT / Systèmes et réseaux embarqués / Télécommunications sans fil et objets connectés / Cybersécurité TLS-SEC / Parcours ModIA]." data-en="<b>Target 2A/3A Track:</b> [TO COMPLETE: Select among Software Systems / HPC & Big Data / Image & Multimedia / Big Data & IoT Infrastructure / Embedded Systems & Networks / Wireless Telecoms & IoT / Cybersecurity TLS-SEC / ModIA Track]."><b>Parcours 2A/3A Ciblé :</b> [À COMPLÉTER : Choisir parmi Systèmes logiciels / HPC et Big Data / Image et multimédia / Infrastructure du Big Data et IoT / Systèmes et réseaux embarqués / Télécommunications sans fil et objets connectés / Cybersécurité TLS-SEC / Parcours ModIA].</li>
+                <li data-fr="<b>Formation Initiale Antérieure :</b> [À COMPLÉTER : Votre CPGE (MP, MPI, PSI, PC, PT, TSI, Prépa INP) ou Licence/BUT, établissement, ville et années]." data-en="<b>Prior Academic Education:</b> [TO COMPLETE: Your Preparatory Classes (MP, MPI, PSI, PC, PT, TSI, Prépa INP) or BSc/BUT, institution, city, and years]."><b>Formation Initiale Antérieure :</b> [À COMPLÉTER : Votre CPGE (MP, MPI, PSI, PC, PT, TSI, Prépa INP) ou Licence/BUT, établissement, ville et années].</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SOUS-ONGLET 2.3 : COMPÉTENCES & STACK TECHNIQUE -->
+        <div id="eng-skills" class="subtab-panel" data-subtab-parent="eng">
+          <div class="cards-grid-2">
+            
+            <div class="skill-box">
+              <h3 data-fr="Hard Skills — Stack Sciences du Numérique" data-en="Hard Skills — Digital Sciences Stack">Hard Skills — Stack Sciences du Numérique</h3>
+              <div class="skill-category">
+                <span class="mono-label" data-fr="LANGAGES DE PROGRAMMATION" data-en="PROGRAMMING LANGUAGES">LANGAGES DE PROGRAMMATION</span>
+                <div class="tech-tag-row">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">C</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Ada</span>
+                  <span class="tech-tag">OCaml</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Bash / Shell</span>
+                  <span class="tech-tag">HTML5 / CSS3 / JS</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="mono-label" data-fr="DATA SCIENCE, CALCUL & MODÉLISATION" data-en="DATA SCIENCE, COMPUTING & MODELING">DATA SCIENCE, CALCUL & MODÉLISATION</span>
+                <div class="tech-tag-row">
+                  <span class="tech-tag">Scikit-learn</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">Pandas / Matplotlib</span>
+                  <span class="tech-tag">MATLAB / Simulink</span>
+                  <span class="tech-tag">UML / Méthodes Formelles</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="mono-label" data-fr="SYSTÈMES, RÉSEAUX & OUTILS" data-en="SYSTEMS, NETWORKS & TOOLS">SYSTÈMES, RÉSEAUX & OUTILS</span>
+                <div class="tech-tag-row">
+                  <span class="tech-tag">Linux</span>
+                  <span class="tech-tag">Git / GitHub / GitLab</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Wireshark / Protocoles Réseaux</span>
+                  <span class="tech-tag">LaTeX</span>
+                  <span class="tech-tag">VS Code</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <h3 data-fr="Core Skills 2025–2030 (Référentiel WEF & N7 Soft Skills)" data-en="Core Skills 2025–2030 (WEF & N7 Soft Skills Framework)">Core Skills 2025–2030 (Référentiel WEF & N7 Soft Skills)</h3>
+              <p class="small-note" data-fr="Compétences transversales développées à l'N7 et alignées sur le rapport Future of Jobs 2025 du World Economic Forum étudié en cours CAM :" data-en="Transversal competencies developed at N7 and aligned with the World Economic Forum Future of Jobs Report 2025 studied in CAM class:">
+                Compétences transversales développées à l'N7 et alignées sur le rapport Future of Jobs 2025 du World Economic Forum étudié en cours CAM :
+              </p>
+              <ul class="wef-skills-list">
+                <li>
+                  <strong data-fr="1. Analytical Thinking & Creative Thinking" data-en="1. Analytical Thinking & Creative Thinking">1. Analytical Thinking & Creative Thinking</strong>
+                  <span data-fr="Décomposition mathématique et résolution structurée de problèmes d'ingénierie complexes." data-en="Mathematical decomposition and structured resolution of complex engineering problems.">Décomposition mathématique et résolution structurée de problèmes d'ingénierie complexes.</span>
+                </li>
+                <li>
+                  <strong data-fr="2. AI & Big Data · Networks & Cybersecurity · Technological Literacy" data-en="2. AI & Big Data · Networks & Cybersecurity · Technological Literacy">2. AI & Big Data · Networks & Cybersecurity · Technological Literacy</strong>
+                  <span data-fr="Compétences technologiques en plus forte croissance d'ici 2030 selon le rapport WEF 2025." data-en="Fastest-growing technological skills by 2030 according to the WEF 2025 report.">Compétences technologiques en plus forte croissance d'ici 2030 selon le rapport WEF 2025.</span>
+                </li>
+                <li>
+                  <strong data-fr="3. Resilience, Flexibility, Agility & Lifelong Learning" data-en="3. Resilience, Flexibility, Agility & Lifelong Learning">3. Resilience, Flexibility, Agility & Lifelong Learning</strong>
+                  <span data-fr="Capacité d'adaptation rapide et curiosité scientifique continue." data-en="Rapid adaptability and continuous scientific curiosity.">Capacité d'adaptation rapide et curiosité scientifique continue.</span>
+                </li>
+                <li>
+                  <strong data-fr="4. Leadership, Social Influence & Active Listening" data-en="4. Leadership, Social Influence & Active Listening">4. Leadership, Social Influence & Active Listening</strong>
+                  <span data-fr="Travail collaboratif en bureaux d'études et communication bilingue." data-en="Collaborative teamwork in engineering labs and bilingual communication.">Travail collaboratif en bureaux d'études et communication bilingue.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ONGLET 3 : INTERNATIONAL MOBILITY (#mobility) ==================== -->
+    <section id="mobility" class="tab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">STRATÉGIE INTERNATIONALE N7 · EXIGENCE CTI (17 SEMAINES MIN. EN FISE)</span>
+          <h2 class="section-title" data-fr="Mobilité Internationale & Compétences Interculturelles" data-en="International Mobility & Intercultural Skills">Mobilité Internationale & Compétences Interculturelles</h2>
+          <p class="section-desc" data-fr="Pour valider le diplôme d'ingénieur N7 sous statut étudiant (FISE), une mobilité internationale d'au moins 17 semaines est requise d'ici le semestre S9 (9 semaines en apprentissage). Conformément au barème CAM Module 1, voici mes 3 projets de mobilité directement alignés sur mes 3 Role Models professionnels." data-en="To validate the N7 Engineering degree under student status (FISE), a minimum of 17 weeks of international mobility is required by semester S9 (9 weeks for apprentices). In accordance with the CAM Module 1 rubric, below are my 3 mobility projects directly aligned with my 3 Role Models.">
+            Pour valider le diplôme d'ingénieur N7 sous statut étudiant (FISE), une mobilité internationale d'au moins 17 semaines est requise d'ici le semestre S9 (9 semaines en apprentissage). Conformément au barème CAM Module 1, voici mes 3 projets de mobilité directement alignés sur mes 3 Role Models professionnels.
+          </p>
+        </div>
+
+        <!-- Sous-onglets Mobilité (Exigence diapo 23 : + sub-tabs for PCE, LV2, etc.) -->
+        <div class="subtab-nav" data-subtab-group="mob">
+          <button class="subtab-btn active" data-subtab-target="mob-projects" data-fr="3 Projets de Mobilité Alignés (Livrable 1er Nov.)" data-en="3 Aligned Mobility Projects (Nov 1st Deliverable)">3 Projets de Mobilité Alignés (Livrable 1er Nov.)</button>
+          <button class="subtab-btn" data-subtab-target="mob-languages" data-fr="Langues, PCE & LV2 (Objectif B2+)" data-en="Languages, PCE & LV2 (B2+ Target)">Langues, PCE & LV2 (Objectif B2+)</button>
+        </div>
+
+        <!-- SOUS-ONGLET 3.1 : 3 PROJETS DE MOBILITÉ ALIGNÉS -->
+        <div id="mob-projects" class="subtab-panel active-subpanel" data-subtab-parent="mob">
+          <div class="cards-grid-3">
+            
+            <!-- Mobilité 1 -->
+            <article class="mobility-card">
+              <div class="mobility-top">
+                <span class="mono-badge">PROJET DE MOBILITÉ #1 · S9</span>
+                <span class="align-badge" data-fr="Aligné sur Role Model #1" data-en="Aligned with Role Model #1">Aligné sur Role Model #1</span>
+              </div>
+              <h3 data-fr="[Option 1 : ex. Échange Académique / Double Diplôme — EPFL (Suisse), Georgia Tech (USA) ou Imperial College (UK)]" data-en="[Option 1: e.g. Academic Exchange / Double Degree — EPFL (Switzerland), Georgia Tech (USA) or Imperial College (UK)]">[Option 1 : ex. Échange Académique / Double Diplôme — EPFL (Suisse), Georgia Tech (USA) ou Imperial College (UK)]</h3>
+              <p class="mobility-meta" data-fr="<b>Type :</b> Semestre d'études S9 ou Double Diplôme (17+ semaines) · <b>Langue :</b> Anglais / Français" data-en="<b>Type:</b> S9 Academic Semester or Double Degree (17+ weeks) · <b>Language:</b> English / French"><b>Type :</b> Semestre d'études S9 ou Double Diplôme (17+ semaines) · <b>Langue :</b> Anglais / Français</p>
+              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Expliquez pourquoi les cours de cette université partenaire de l'N7 (ex. IA, HPC ou Systèmes Logiciels) correspondent à la trajectoire du Role Model #1]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Explain why the curriculum of this N7 partner university (e.g. AI, HPC, or Software Systems) matches Role Model #1's career path].">
+                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Expliquez pourquoi les cours de cette université partenaire de l'N7 (ex. IA, HPC ou Systèmes Logiciels) correspondent à la trajectoire du Role Model #1].
+              </p>
+            </article>
+
+            <!-- Mobilité 2 -->
+            <article class="mobility-card">
+              <div class="mobility-top">
+                <span class="mono-badge">PROJET DE MOBILITÉ #2 · S9</span>
+                <span class="align-badge" data-fr="Aligné sur Role Model #2" data-en="Aligned with Role Model #2">Aligné sur Role Model #2</span>
+              </div>
+              <h3 data-fr="[Option 2 : ex. Semestre Erasmus+ — Politecnico di Torino (Italie) ou Universidad Politécnica de Madrid (Espagne)]" data-en="[Option 2: e.g. Erasmus+ Semester — Politecnico di Torino (Italy) or Universidad Politécnica de Madrid (Spain)]">[Option 2 : ex. Semestre Erasmus+ — Politecnico di Torino (Italie) ou Universidad Politécnica de Madrid (Espagne)]</h3>
+              <p class="mobility-meta" data-fr="<b>Type :</b> Mobilité Académique Erasmus+ S9 (17+ semaines) · <b>Financement :</b> Bourse Erasmus+ / Occitanie" data-en="<b>Type:</b> Erasmus+ S9 Academic Mobility (17+ weeks) · <b>Funding:</b> Erasmus+ / Occitanie Grant"><b>Type :</b> Mobilité Académique Erasmus+ S9 (17+ semaines) · <b>Financement :</b> Bourse Erasmus+ / Occitanie</p>
+              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Parmi les 80+ accords Erasmus+ de l'N7, détaillez les cours ciblés dans votre Learning Agreement et l'ouverture européenne illustrée par votre Role Model #2]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Among N7's 80+ Erasmus+ agreements, detail the target courses in your Learning Agreement and the European exposure illustrated by Role Model #2].">
+                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Parmi les 80+ accords Erasmus+ de l'N7, détaillez les cours ciblés dans votre Learning Agreement et l'ouverture européenne illustrée par votre Role Model #2].
+              </p>
+            </article>
+
+            <!-- Mobilité 3 -->
+            <article class="mobility-card">
+              <div class="mobility-top">
+                <span class="mono-badge">PROJET DE MOBILITÉ #3 · S8 / S10</span>
+                <span class="align-badge" data-fr="Aligné sur Role Model #3" data-en="Aligned with Role Model #3">Aligné sur Role Model #3</span>
+              </div>
+              <h3 data-fr="[Option 3 : ex. Stage R&D en Entreprise ou Laboratoire à l'Étranger — National Institute of Informatics (Japon), Europe ou Amérique]" data-en="[Option 3: e.g. International R&D Corporate or Lab Internship — National Institute of Informatics (Japan), Europe or Americas]">[Option 3 : ex. Stage R&D en Entreprise ou Laboratoire à l'Étranger — National Institute of Informatics (Japon), Europe ou Amérique]</h3>
+              <p class="mobility-meta" data-fr="<b>Type :</b> Stage international en entreprise ou laboratoire (17+ semaines) · <b>Langue :</b> Anglais" data-en="<b>Type:</b> International corporate or research lab internship (17+ weeks) · <b>Language:</b> English"><b>Type :</b> Stage international en entreprise ou laboratoire (17+ semaines) · <b>Langue :</b> Anglais</p>
+              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Immersion directe dans une équipe d'ingénierie logicielle ou de R&D internationale, en adéquation avec le parcours du Role Model #3]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Direct immersion in an international software engineering or R&D team, matching Role Model #3's trajectory].">
+                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Immersion directe dans une équipe d'ingénierie logicielle ou de R&D internationale, en adéquation avec le parcours du Role Model #3].
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- SOUS-ONGLET 3.2 : LANGUES, PCE & LV2 -->
+        <div id="mob-languages" class="subtab-panel" data-subtab-parent="mob">
+          <div class="cards-grid-2">
+            
+            <div class="skill-box">
+              <h3 data-fr="Compétences Linguistiques (CECRL)" data-en="Language Proficiency (CEFR)">Compétences Linguistiques (CECRL)</h3>
+              <ul class="lang-proficiency-list">
+                <li>
+                  <div class="lang-head"><strong>🇬🇧 / 🇺🇸 English (PCE — Professional Communication & English)</strong><span class="mono-badge">B2+ Target S9</span></div>
+                  <p data-fr="Langue de travail scientifique et technique. Rédaction de documentation logicielle, pitchs techniques de 5 minutes et vidéo UVP. [À COMPLÉTER : Niveau actuel et score visé]." data-en="Scientific and technical working language. Software documentation writing, 5-minute technical pitches, and UVP video. [TO COMPLETE: Current level and target score].">Langue de travail scientifique et technique. Rédaction de documentation logicielle, pitchs techniques de 5 minutes et vidéo UVP. [À COMPLÉTER : Niveau actuel et score visé].</p>
+                </li>
+                <li>
+                  <div class="lang-head"><strong>🇫🇷 Français</strong><span class="mono-badge">C1 / C2 · Bilingue</span></div>
+                  <p data-fr="Maîtrise académique et professionnelle complète dans le cadre des études supérieures scientifiques et d'ingénieur à Toulouse." data-en="Full academic and professional command used throughout higher STEM and engineering studies in Toulouse.">Maîtrise académique et professionnelle complète dans le cadre des études supérieures scientifiques et d'ingénieur à Toulouse.</p>
+                </li>
+                <li>
+                  <div class="lang-head"><strong data-fr="🌍 [Langue Maternelle / Autre Langue : ex. Arabe]" data-en="🌍 [Native / Additional Language: e.g. Arabic]">🌍 [Langue Maternelle / Autre Langue : ex. Arabe]</strong><span class="mono-badge">C2 / Native</span></div>
+                  <p data-fr="[À COMPLÉTER : Précisez vos langues maternelles ou additionnelles et votre ouverture interculturelle]." data-en="[TO COMPLETE: Specify your native or additional languages and intercultural background].">[À COMPLÉTER : Précisez vos langues maternelles ou additionnelles et votre ouverture interculturelle].</p>
+                </li>
+                <li>
+                  <div class="lang-head"><strong data-fr="🇪🇸 / 🇩🇪 LV2 à l'ENSEEIHT : [À COMPLÉTER : Espagnol / Allemand / Autre]" data-en="🇪🇸 / 🇩🇪 Second Foreign Language (LV2 at N7): [TO COMPLETE: Spanish / German / Other]">🇪🇸 / 🇩🇪 LV2 à l'ENSEEIHT : [À COMPLÉTER : Espagnol / Allemand / Autre]</strong><span class="mono-badge">LV2 N7</span></div>
+                  <p data-fr="[À COMPLÉTER : Apprentissage linguistique suivi au Soft Skills Center de l'N7]." data-en="[TO COMPLETE: Language coursework pursued at the N7 Soft Skills Center].">[À COMPLÉTER : Apprentissage linguistique suivi au Soft Skills Center de l'N7].</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-box">
+              <h3 data-fr="Expériences Interculturelles & Productions PCE" data-en="Intercultural Experiences & PCE Deliverables">Expériences Interculturelles & Productions PCE</h3>
+              <p data-fr="[À COMPLÉTER : Décrivez ici vos expériences internationales passées (études, voyages, projets multiculturels) ainsi que vos livrables de cours PCE]." data-en="[TO COMPLETE: Describe your past international experiences (studies, travel, multicultural projects) as well as your PCE coursework deliverables].">
+                [À COMPLÉTER : Décrivez ici vos expériences internationales passées (études, voyages, projets multiculturels) ainsi que vos livrables de cours PCE].
+              </p>
+              <div class="pce-deliverables-box">
+                <span class="mono-label">LIVRABLES PCE & COMMUNICATION EN ANGLAIS (S5–S8)</span>
+                <ul class="course-list">
+                  <li data-fr="<b>Pitch RSE en Anglais (S5) :</b> Proposition de projet RSE (Pitch de 5 minutes + diaporama en anglais)." data-en="<b>CSR Pitch in English (S5):</b> CSR project proposal (5-minute oral pitch + slideshow in English)."><b>Pitch RSE en Anglais (S5) :</b> Proposition de projet RSE (Pitch de 5 minutes + diaporama en anglais).</li>
+                  <li data-fr="<b>Professional Communication & English (S7) :</b> Pitch de 5 minutes + diaporama en anglais." data-en="<b>Professional Communication & English (S7):</b> 5-minute pitch + slideshow in English."><b>Professional Communication & English (S7) :</b> Pitch de 5 minutes + diaporama en anglais.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ONGLET 4 : SUSTAINABILITY & CIVIC ENGAGEMENT (#sustainability) ==================== -->
+    <section id="sustainability" class="tab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ENGAGEMENT CITOYEN & DÉMARCHE TEDDn7 · VALIDATION 40H S9</span>
+          <h2 class="section-title" data-fr="Développement Durable & Engagement Civique" data-en="Sustainability & Civic Engagement">Développement Durable & Engagement Civique</h2>
+          <p class="section-desc" data-fr="L'obtention du diplôme d'ingénieur de l'ENSEEIHT requiert la validation de 40 heures d'engagement civique d'ici le semestre S9. En tant que futur ingénieur du numérique, j'articule mon engagement autour de la solidarité citoyenne et de la responsabilité environnementale." data-en="Graduating from ENSEEIHT requires validating 40 hours of civic engagement by semester S9. As a future digital sciences engineer, I structure my commitment around civic solidarity and environmental stewardship.">
+            L'obtention du diplôme d'ingénieur de l'ENSEEIHT requiert la validation de 40 heures d'engagement civique d'ici le semestre S9. En tant que futur ingénieur du numérique, j'articule mon engagement autour de la solidarité citoyenne et de la responsabilité environnementale.
+          </p>
+        </div>
+
+        <!-- Barre de suivi du quota de 40h -->
+        <div class="quota-tracker-card">
+          <div class="quota-info">
+            <span class="mono-label">VALIDATION DIPLÔME N7 · QUOTA D'ENGAGEMENT CIVIQUE (S5 → S9)</span>
+            <h3 data-fr="Objectif Réglementaire : 40 Heures d'Engagement Citoyen" data-en="Regulatory Requirement: 40 Hours of Civic Engagement">Objectif Réglementaire : 40 Heures d'Engagement Citoyen</h3>
+          </div>
+          <div class="quota-badge-box">
+            <span class="quota-number" data-fr="[À COMPLÉTER : ex. En cours / 40h]" data-en="[TO COMPLETE: e.g. In progress / 40h]">[À COMPLÉTER : ex. En cours / 40h]</span>
+          </div>
+        </div>
+
+        <div class="cards-grid-3">
+          
+          <article class="civic-card">
+            <span class="card-number">01 // GREEN IT & TEDDn7</span>
+            <h3 data-fr="Vision du Numérique Durable" data-en="Sustainable Digital Engineering Vision">Vision du Numérique Durable</h3>
+            <p data-fr="En cohérence avec le projet <b>TEDDn7</b> de Toulouse INP-ENSEEIHT et la compétence <i>Environmental Stewardship</i> (Top 10 WEF 2030), j'intègre les enjeux de sobriété numérique et d'optimisation des ressources de calcul dans mes projets. [À COMPLÉTER : Ajoutez votre vision personnelle ou sujet de pitch RSE S5]." data-en="In line with Toulouse INP-ENSEEIHT's <b>TEDDn7</b> initiative and <i>Environmental Stewardship</i> (WEF Top 10 skill by 2030), I integrate digital sobriety and computing resource optimization into my projects. [TO COMPLETE: Add your personal vision or S5 CSR pitch topic].">
+              En cohérence avec le projet <b>TEDDn7</b> de Toulouse INP-ENSEEIHT et la compétence <i>Environmental Stewardship</i> (Top 10 WEF 2030), j'intègre les enjeux de sobriété numérique et d'optimisation des ressources de calcul dans mes projets. [À COMPLÉTER : Ajoutez votre vision personnelle ou sujet de pitch RSE S5].
+            </p>
+          </article>
+
+          <article class="civic-card">
+            <span class="card-number">02 // SOLIDARITÉ & ÉDUCATION</span>
+            <h3 data-fr="Tutorat Académique & Bénévolat" data-en="Academic Tutoring & Volunteering">Tutorat Académique & Bénévolat</h3>
+            <p data-fr="[À COMPLÉTER : Décrivez vos actions d'engagement citoyen passées ou actuelles : tutorat scientifique / soutien scolaire, engagement au sein d'associations étudiantes comme HUMAN7, collectes solidaires ou bénévolat local]." data-en="[TO COMPLETE: Describe your past or current civic engagement actions: STEM tutoring / academic mentoring, involvement in student humanitarian associations such as HUMAN7, charity drives, or local volunteering].">
+              [À COMPLÉTER : Décrivez vos actions d'engagement citoyen passées ou actuelles : tutorat scientifique / soutien scolaire, engagement au sein d'associations étudiantes comme HUMAN7, collectes solidaires ou bénévolat local].
+            </p>
+          </article>
+
+          <article class="civic-card">
+            <span class="card-number">03 // INCLUSION & CITOYENNETÉ</span>
+            <h3 data-fr="Diversité, Inclusion & Éthique" data-en="Diversity, Inclusion & Ethics">Diversité, Inclusion & Éthique</h3>
+            <p data-fr="[À COMPLÉTER : Retour réflexif sur les actions de sensibilisation à l'N7 (ex. pièce de théâtre sur la diversité et l'inclusion en début d'études, éthique du numérique et travail inclusif en équipe)]." data-en="[TO COMPLETE: Reflective feedback on N7 awareness initiatives (e.g. diversity & inclusion theater play at the start of studies, digital ethics, and inclusive teamwork)].">
+              [À COMPLÉTER : Retour réflexif sur les actions de sensibilisation à l'N7 (ex. pièce de théâtre sur la diversité et l'inclusion en début d'études, éthique du numérique et travail inclusif en équipe)].
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ONGLET 5 : SPORT & OTHER ACTIVITIES (#activities) ==================== -->
+    <section id="activities" class="tab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ÉQUILIBRE DE VIE, VIE ASSOCIATIVE N7 & SOFT SKILLS</span>
+          <h2 class="section-title" data-fr="Activités Sportives, Associatives & Centres d'Intérêt" data-en="Sports, Extracurricular Activities & Interests">Activités Sportives, Associatives & Centres d'Intérêt</h2>
+          <p class="section-desc" data-fr="La pratique sportive régulière et l'investissement associatif sur le campus de Toulouse nourrissent directement mes qualités d'ingénieur : constance dans l'effort, gestion de la pression et intelligence collective." data-en="Regular athletic practice and student club involvement on the Toulouse campus directly strengthen my core engineering traits: consistency, pressure management, and collective intelligence.">
+            La pratique sportive régulière et l'investissement associatif sur le campus de Toulouse nourrissent directement mes qualités d'ingénieur : constance dans l'effort, gestion de la pression et intelligence collective.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          
+          <article class="activity-card">
+            <div class="activity-icon">⚽ / 🏃‍♂️</div>
+            <h3 data-fr="[Sport 1 : ex. Football / Course à pied / Sport collectif]" data-en="[Sport 1: e.g. Football / Running / Team Sport]">[Sport 1 : ex. Football / Course à pied / Sport collectif]</h3>
+            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : COHÉSION & PRISE DE DÉCISION" data-en="TRANSFERRABLE SKILLS: TEAMWORK & FAST DECISION-MAKING">COMPÉTENCES TRANSVERSALES : COHÉSION & PRISE DE DÉCISION</p>
+            <p data-fr="[À COMPLÉTER : Décrivez votre pratique sportive (en EPS à l'N7 ou en club), votre régularité et ce que cette discipline vous apporte dans la réussite de projets collectifs]." data-en="[TO COMPLETE: Describe your athletic practice (at N7 sports classes or in a club), consistency, and how this discipline helps you succeed in team projects].">
+              [À COMPLÉTER : Décrivez votre pratique sportive (en EPS à l'N7 ou en club), votre régularité et ce que cette discipline vous apporte dans la réussite de projets collectifs].
+            </p>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-icon">🏋️‍♂️ / 🏓</div>
+            <h3 data-fr="[Sport 2 / Discipline : ex. Musculation / Tennis / Natation]" data-en="[Sport 2 / Discipline: e.g. Fitness / Tennis / Swimming]">[Sport 2 / Discipline : ex. Musculation / Tennis / Natation]</h3>
+            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : RIGUEUR & PROGRESSION ITÉRATIVE" data-en="TRANSFERRABLE SKILLS: DISCIPLINE & ITERATIVE PROGRESS">COMPÉTENCES TRANSVERSALES : RIGUEUR & PROGRESSION ITÉRATIVE</p>
+            <p data-fr="[À COMPLÉTER : Expliquez comment la discipline personnelle, le suivi de la progression et la persévérance dans ce sport se traduisent dans votre méthode de travail d'ingénieur]." data-en="[TO COMPLETE: Explain how personal discipline, tracking progress, and perseverance in this sport translate into your engineering work ethic].">
+              [À COMPLÉTER : Expliquez comment la discipline personnelle, le suivi de la progression et la persévérance dans ce sport se traduisent dans votre méthode de travail d'ingénieur].
+            </p>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-icon">🚀 / 🤝</div>
+            <h3 data-fr="[Vie Associative N7 & Loisirs : ex. Net7, TVn7, Clubs N7]" data-en="[N7 Student Clubs & Hobbies: e.g. Net7, TVn7, N7 Clubs]">[Vie Associative N7 & Loisirs : ex. Net7, TVn7, Clubs N7]</h3>
+            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : ENGAGEMENT & CRÉATIVITÉ" data-en="TRANSFERRABLE SKILLS: COMMITMENT & CREATIVITY">COMPÉTENCES TRANSVERSALES : ENGAGEMENT & CRÉATIVITÉ</p>
+            <p data-fr="[À COMPLÉTER : Précisez les clubs de l'ENSEEIHT ou associations que vous avez rejoints ainsi que vos centres d'intérêt personnels]." data-en="[TO COMPLETE: Specify the ENSEEIHT clubs or associations you joined as well as your personal hobbies and interests].">
+              [À COMPLÉTER : Précisez les clubs de l'ENSEEIHT ou associations que vous avez rejoints ainsi que vos centres d'intérêt personnels].
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ONGLET 6 : CAREER DEVELOPMENT (#career) ==================== -->
+    <section id="career" class="tab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">LIVRABLE ÉVALUÉ CAM L3-S5 · DÉPÔT MOODLE 1ER NOVEMBRE</span>
+          <h2 class="section-title" data-fr="Développement de Carrière & Projet Professionnel (CAREER PROJECT)" data-en="Career Development & Professional Project (CAREER PROJECT)">Développement de Carrière & Projet Professionnel (CAREER PROJECT)</h2>
+          <p class="section-desc" data-fr="Cette section regroupe l'ensemble des livrables exigés pour l'évaluation du Module 1 de Marketing (Self-Branding) : mon Projet Professionnel (PEP), l'analyse de 3 profils de Role Models associés à mes 3 projets de mobilité internationale, mes stages (S6, S8, S10) et mes CV en français et en anglais." data-en="This section consolidates all evaluated deliverables required for Marketing Module 1 (Self-Branding): my Career Project (PEP), the analysis of 3 Role Model profiles aligned with my 3 international mobility projects, my internships (S6, S8, S10), and my CVs in English and French.">
+            Cette section regroupe l'ensemble des livrables exigés pour l'évaluation du Module 1 de Marketing (Self-Branding) : mon Projet Professionnel (PEP), l'analyse de 3 profils de Role Models associés à mes 3 projets de mobilité internationale, mes stages (S6, S8, S10) et mes CV en français et en anglais.
+          </p>
+        </div>
+
+        <!-- Sous-onglets Career Development (Exigence diapo 23 : + sub-tabs for internships, PEP, etc.) -->
+        <div class="subtab-nav" data-subtab-group="car">
+          <button class="subtab-btn active" data-subtab-target="car-rolemodels" data-fr="Projet Pro (PEP) & 3 Role Models (My Job Glasses)" data-en="Career Project (PEP) & 3 Role Models (My Job Glasses)">Projet Pro (PEP) & 3 Role Models (My Job Glasses)</button>
+          <button class="subtab-btn" data-subtab-target="car-internships" data-fr="Stages (S6, S8, S10) & Expériences" data-en="Internships (S6, S8, S10) & Experience">Stages (S6, S8, S10) & Expériences</button>
+          <button class="subtab-btn" data-subtab-target="car-cvs" data-fr="CVs (FR / EN) & Stratégie Réseau" data-en="Resumes (EN / FR) & Networking Strategy">CVs (FR / EN) & Stratégie Réseau</button>
+        </div>
+
+        <!-- SOUS-ONGLET 6.1 : CAREER PROJECT & 3 ROLE MODELS ANALYZED -->
+        <div id="car-rolemodels" class="subtab-panel active-subpanel" data-subtab-parent="car">
+          
+          <div class="pep-vision-banner">
+            <h3 data-fr="Mon Projet Professionnel Personnalisé (PEP) en Sciences du Numérique" data-en="My Personal Professional Project (PEP) in Digital Sciences">Mon Projet Professionnel Personnalisé (PEP) en Sciences du Numérique</h3>
+            <p data-fr="[À COMPLÉTER : Résumez en 3-4 lignes votre objectif de carrière : quel métier d'ingénieur du numérique visez-vous (ex. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) et dans quels secteurs partenaires de l'N7 (Aéronautique & Espace, Défense, Éditeurs Logiciels, ESN/Conseil, Télécoms, Énergie) ?]" data-en="[TO COMPLETE: Summarize in 3-4 lines your career goal: what digital engineering role are you targeting (e.g. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) and in which N7 partner sectors (Aerospace, Defense, Software Editors, IT Consulting, Telecoms, Energy)?]">
+              [À COMPLÉTER : Résumez en 3-4 lignes votre objectif de carrière : quel métier d'ingénieur du numérique visez-vous (ex. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) et dans quels secteurs partenaires de l'N7 (Aéronautique & Espace, Défense, Éditeurs Logiciels, ESN/Conseil, Télécoms, Énergie) ?]
+            </p>
+          </div>
+
+          <h3 class="subsection-heading" data-fr="Analyse de 3 Profils de Role Models & Alignement Mobilité Internationale" data-en="3 Analyzed Role Model Profiles & International Mobility Alignment">Analyse de 3 Profils de Role Models & Alignement Mobilité Internationale</h3>
+          <div class="cards-grid-3">
+            
+            <!-- Role Model 1 -->
+            <article class="rolemodel-card">
+              <div class="rm-header">
+                <span class="mono-badge">ROLE MODEL #1 · MY JOB GLASSES / ALUMNI</span>
+                <h4 data-fr="[Nom Prénom ou Profil #1]" data-en="[Full Name or Profile #1]">[Nom Prénom ou Profil #1]</h4>
+                <p class="rm-role" data-fr="[Poste actuel : ex. Ingénieur IA / Data Scientist chez Airbus ou Thales]" data-en="[Current Role: e.g. AI Engineer / Data Scientist at Airbus or Thales]">[Poste actuel : ex. Ingénieur IA / Data Scientist chez Airbus ou Thales]</p>
+              </div>
+              <ul class="rm-details">
+                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Diplômé N7 SN ou équivalent, spécialisation suivie et évolution professionnelle]." data-en="<b>Education & Path:</b> [TO COMPLETE: N7 SN graduate or equivalent, specialization track, and career progression]."><b>Parcours & Formation :</b> [À COMPLÉTER : Diplômé N7 SN ou équivalent, spécialisation suivie et évolution professionnelle].</li>
+                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Compétences techniques et humaines soulignées lors de l'entretien]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Technical and soft skills highlighted during the interview]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Compétences techniques et humaines soulignées lors de l'entretien].</li>
+                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Ce que cet échange My Job Glasses / Alumni apporte à votre propre projet]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: How this My Job Glasses / Alumni interview informs your own career plan]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Ce que cet échange My Job Glasses / Alumni apporte à votre propre projet].</li>
+              </ul>
+              <div class="rm-mobility-link">
+                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#1)" data-en="ALIGNED INTERNATIONAL MOBILITY (#1)">MOBILITÉ INTERNATIONALE ALIGNÉE (#1)</span>
+                <p data-fr="➔ <b>[Destination #1 : ex. EPFL / Georgia Tech / Imperial College]</b> : Alignement direct avec l'expertise académique requise pour ce profil." data-en="➔ <b>[Destination #1: e.g. EPFL / Georgia Tech / Imperial College]</b>: Direct alignment with the academic expertise required for this profile.">➔ <b>[Destination #1 : ex. EPFL / Georgia Tech / Imperial College]</b> : Alignement direct avec l'expertise académique requise pour ce profil.</p>
+              </div>
+            </article>
+
+            <!-- Role Model 2 -->
+            <article class="rolemodel-card">
+              <div class="rm-header">
+                <span class="mono-badge">ROLE MODEL #2 · MY JOB GLASSES / ALUMNI</span>
+                <h4 data-fr="[Nom Prénom ou Profil #2]" data-en="[Full Name or Profile #2]">[Nom Prénom ou Profil #2]</h4>
+                <p class="rm-role" data-fr="[Poste actuel : ex. Software & Cloud Architect chez Amadeus ou Capgemini]" data-en="[Current Role: e.g. Software & Cloud Architect at Amadeus or Capgemini]">[Poste actuel : ex. Software & Cloud Architect chez Amadeus ou Capgemini]</p>
+              </div>
+              <ul class="rm-details">
+                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Formation d'ingénieur informatique, mobilité académique et évolution]." data-en="<b>Education & Path:</b> [TO COMPLETE: Computer engineering degree, academic exchange, and career progression]."><b>Parcours & Formation :</b> [À COMPLÉTER : Formation d'ingénieur informatique, mobilité académique et évolution].</li>
+                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Architecture logicielle, systèmes distribués, gestion de projet Agile]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Software architecture, distributed systems, Agile project management]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Architecture logicielle, systèmes distribués, gestion de projet Agile].</li>
+                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Conseils reçus sur le choix des stages et l'ouverture internationale]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: Advice received regarding internship selection and international exposure]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Conseils reçus sur le choix des stages et l'ouverture internationale].</li>
+              </ul>
+              <div class="rm-mobility-link">
+                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#2)" data-en="ALIGNED INTERNATIONAL MOBILITY (#2)">MOBILITÉ INTERNATIONALE ALIGNÉE (#2)</span>
+                <p data-fr="➔ <b>[Destination #2 : ex. Politecnico di Torino / UPM Madrid]</b> : Semestre Erasmus+ orienté génie logiciel et systèmes distribués." data-en="➔ <b>[Destination #2: e.g. Politecnico di Torino / UPM Madrid]</b>: Erasmus+ semester focused on software engineering and distributed systems.">➔ <b>[Destination #2 : ex. Politecnico di Torino / UPM Madrid]</b> : Semestre Erasmus+ orienté génie logiciel et systèmes distribués.</p>
+              </div>
+            </article>
+
+            <!-- Role Model 3 -->
+            <article class="rolemodel-card">
+              <div class="rm-header">
+                <span class="mono-badge">ROLE MODEL #3 · MY JOB GLASSES / ALUMNI</span>
+                <h4 data-fr="[Nom Prénom ou Profil #3]" data-en="[Full Name or Profile #3]">[Nom Prénom ou Profil #3]</h4>
+                <p class="rm-role" data-fr="[Poste actuel : ex. Cybersecurity / Embedded Systems Engineer chez Collins Aerospace ou Sopra Steria]" data-en="[Current Role: e.g. Cybersecurity / Embedded Systems Engineer at Collins Aerospace or Sopra Steria]">[Poste actuel : ex. Cybersecurity / Embedded Systems Engineer chez Collins Aerospace ou Sopra Steria]</p>
+              </div>
+              <ul class="rm-details">
+                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Parcours SN réseaux/sécurité ou systèmes embarqués, expérience internationale]." data-en="<b>Education & Path:</b> [TO COMPLETE: SN networks/security or embedded systems track, international experience]."><b>Parcours & Formation :</b> [À COMPLÉTER : Parcours SN réseaux/sécurité ou systèmes embarqués, expérience internationale].</li>
+                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Sécurité des réseaux, systèmes temps réel, normes industrielles]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Network security, real-time systems, industrial standards]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Sécurité des réseaux, systèmes temps réel, normes industrielles].</li>
+                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Vision des enjeux de cybersécurité et de fiabilité des systèmes]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: Insights into cybersecurity and critical systems reliability]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Vision des enjeux de cybersécurité et de fiabilité des systèmes].</li>
+              </ul>
+              <div class="rm-mobility-link">
+                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#3)" data-en="ALIGNED INTERNATIONAL MOBILITY (#3)">MOBILITÉ INTERNATIONALE ALIGNÉE (#3)</span>
+                <p data-fr="➔ <b>[Destination #3 : ex. Stage R&D International en Entreprise ou au NII Japon]</b> : Immersion industrielle ou académique à l'international." data-en="➔ <b>[Destination #3: e.g. International R&D Internship in Industry or NII Japan]</b>: Industrial or academic R&D immersion abroad.">➔ <b>[Destination #3 : ex. Stage R&D International en Entreprise ou au NII Japon]</b> : Immersion industrielle ou académique à l'international.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- SOUS-ONGLET 6.2 : STAGES S6, S8, S10 & EXPÉRIENCES -->
+        <div id="car-internships" class="subtab-panel" data-subtab-parent="car">
+          <div class="cards-grid-3">
+            
+            <div class="internship-card">
+              <span class="mono-badge">STAGE 1A (SEMESTRE 6) · 6 SEMAINES MIN.</span>
+              <h4 data-fr="[Stage S6 : En recherche / À venir]" data-en="[S6 Internship: Seeking / Upcoming]">[Stage S6 : En recherche / À venir]</h4>
+              <p data-fr="<b>Objectif :</b> Première expérience en entreprise ou laboratoire (6 semaines minimum en fin de 1A) pour appliquer les fondamentaux du département SN." data-en="<b>Objective:</b> First corporate or lab experience (minimum 6 weeks at the end of Year 1) to apply Digital Sciences fundamentals.">
+                <b>Objectif :</b> Première expérience en entreprise ou laboratoire (6 semaines minimum en fin de 1A) pour appliquer les fondamentaux du département SN.
+              </p>
+              <p data-fr="<b>Expériences Antérieures :</b> [À COMPLÉTER : Ajoutez ici vos stages passés, jobs étudiants ou projets professionnels déjà réalisés avec la méthode STAR]." data-en="<b>Prior Experience:</b> [TO COMPLETE: Add your past internships, student jobs, or professional projects here using the STAR method].">
+                <b>Expériences Antérieures :</b> [À COMPLÉTER : Ajoutez ici vos stages passés, jobs étudiants ou projets professionnels déjà réalisés avec la méthode STAR].
+              </p>
+            </div>
+
+            <div class="internship-card">
+              <span class="mono-badge">STAGE 2A (SEMESTRE 8) · 8 SEMAINES MIN.</span>
+              <h4 data-fr="Stage d'Application Ingénieur (2ème Année)" data-en="Engineering Application Internship (Year 2)">Stage d'Application Ingénieur (2ème Année)</h4>
+              <p data-fr="<b>Objectif :</b> Stage technique d'au moins 8 semaines en France ou à l'étranger, ciblant une équipe R&D ou d'ingénierie logicielle (tests, intégration continue, revue de code)." data-en="<b>Objective:</b> Minimum 8-week technical internship in France or abroad, targeting an R&D or software engineering team (testing, CI/CD, code reviews).">
+                <b>Objectif :</b> Stage technique d'au moins 8 semaines en France ou à l'étranger, ciblant une équipe R&D ou d'ingénierie logicielle (tests, intégration continue, revue de code).
+              </p>
+            </div>
+
+            <div class="internship-card">
+              <span class="mono-badge">STAGE 3A PFE (SEMESTRE 10) · 5 À 6 MOIS</span>
+              <h4 data-fr="Stage de Fin d'Études Ingénieur (3ème Année)" data-en="Final Year Engineering Internship (Year 3)">Stage de Fin d'Études Ingénieur (3ème Année)</h4>
+              <p data-fr="<b>Objectif :</b> Stage de fin d'études de 5 à 6 mois (mars à septembre en S10) en entreprise ou laboratoire, en France ou à l'étranger, validant le diplôme d'ingénieur Grade de Master (Bac+5)." data-en="<b>Objective:</b> 5-to-6-month final-year internship (March to September in S10) in industry or a research lab, in France or abroad, validating the Master's level Engineering degree (Bac+5).">
+                <b>Objectif :</b> Stage de fin d'études de 5 à 6 mois (mars à septembre en S10) en entreprise ou laboratoire, en France ou à l'étranger, validant le diplôme d'ingénieur Grade de Master (Bac+5).
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SOUS-ONGLET 6.3 : CVs (FR / EN) & STRATÉGIE RÉSEAU -->
+        <div id="car-cvs" class="subtab-panel" data-subtab-parent="car">
+          <div class="cards-grid-2">
+            
+            <div class="cv-download-box">
+              <span class="mono-badge">CURRICULUM VITAE · FORMAT STAR</span>
+              <h3 data-fr="Mes CV en Anglais et en Français" data-en="My Resumes in English and French">Mes CV en Anglais et en Français</h3>
+              <p data-fr="Mes deux CV sont conçus sur une page, adaptés aux mots-clés techniques du secteur numérique et rédigés selon la méthode STAR enseignée au Soft Skills Center." data-en="Both of my one-page resumes are tailored with technical keywords for the digital sector and written using the STAR method taught at the Soft Skills Center.">
+                Mes deux CV sont conçus sur une page, adaptés aux mots-clés techniques du secteur numérique et rédigés selon la méthode STAR enseignée au Soft Skills Center.
+              </p>
+              <div class="cta-group">
+                <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">📄 Download English CV (PDF)</a>
+                <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">📄 Télécharger CV Français (PDF)</a>
+              </div>
+            </div>
+
+            <div class="cv-download-box">
+              <span class="mono-badge">E-REPUTATION & PROFESSIONAL NETWORKING</span>
+              <h3 data-fr="Présence en Ligne & Réseau Professionnel" data-en="Online Presence & Professional Networking">Présence en Ligne & Réseau Professionnel</h3>
+              <p data-fr="Retrouvez mon profil LinkedIn bilingue (FR/EN), mes dépôts de code sur GitHub et ma démarche de réseautage via My Job Glasses et les alumni N7." data-en="Connect with me via my bilingual LinkedIn profile (EN/FR), explore my code repositories on GitHub, and follow my networking initiatives via My Job Glasses and N7 alumni.">
+                Retrouvez mon profil LinkedIn bilingue (FR/EN), mes dépôts de code sur GitHub et ma démarche de réseautage via My Job Glasses et les alumni N7.
+              </p>
+              <div class="cta-group">
+                <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-outline">🔗 LinkedIn Profile (EN/FR)</a>
+                <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">💻 GitHub Portfolio Repo</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PIED DE PAGE & CONTACT ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-badge">MB</span>
+          <span class="logo-name">Mohamed Bistarine</span>
+        </div>
+        <p class="footer-desc" data-fr="Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). e-Portfolio conforme au référentiel CAM 2026-2027." data-en="Digital Sciences Engineering Student at Toulouse INP - ENSEEIHT (N7). e-Portfolio compliant with the 2026-2027 CAM framework.">
+          Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). e-Portfolio conforme au référentiel CAM 2026-2027.
+        </p>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="mono-label" data-fr="COORDONNÉES DIRECTES" data-en="DIRECT CONTACT">COORDONNÉES DIRECTES</h4>
+        <ul class="contact-list">
+          <li>📍 <span>Toulouse, France (Toulouse INP - ENSEEIHT)</span></li>
+          <li>📧 <a href="mailto:mohamed.bistarine@etu.inp-n7.fr">mohamed.bistarine@etu.inp-n7.fr</a> <span class="small-note" data-fr="[À VÉRIFIER]" data-en="[TO VERIFY]">[À VÉRIFIER]</span></li>
+          <li>🔗 <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">github.com/medbistarine-ship-it/Mohamed_Bistarine</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026–2027 Mohamed Bistarine · Toulouse INP - ENSEEIHT (N7) · Hosted on GitHub Pages (GDPR Friendly, Zero Tracking).</p>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPT JAVASCRIPT : NAVIGATION, SOUS-ONGLETS, LANGUE FR/EN & THÈME ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Gestion de la langue Bilingue (FR / EN)
+      const langToggleBtn = document.getElementById('langToggleBtn');
+      const indFr = document.getElementById('ind-fr');
+      const indEn = document.getElementById('ind-en');
+      let currentLang = localStorage.getItem('mb_portfolio_lang') || 'fr';
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        localStorage.setItem('mb_portfolio_lang', lang);
+
+        indFr.classList.toggle('active-lang', lang === 'fr');
+        indEn.classList.toggle('active-lang', lang === 'en');
+
+        const translatableElements = document.querySelectorAll('[data-fr][data-en]');
+        translatableElements.forEach(el => {
+          el.innerHTML = el.getAttribute(`data-${lang}`);
+        });
+      }
+
+      langToggleBtn.addEventListener('click', () => {
+        applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+      });
+
+      applyLanguage(currentLang);
+
+      // 2. Gestion du Thème Clair / Sombre (Dark Mode)
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      let currentTheme = localStorage.getItem('mb_portfolio_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      themeToggleBtn.addEventListener('click', () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        localStorage.setItem('mb_portfolio_theme', currentTheme);
+      });
+
+      // 3. Navigation par Onglets Principaux (#home, #engineering, #mobility, #sustainability, #activities, #career)
+      const navLinks = document.querySelectorAll('[data-tab-target]');
+      const sections = document.querySelectorAll('.tab-section');
+      const mainNav = document.getElementById('mainNav');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+      function activateTab(tabId) {
+        const targetSection = document.getElementById(tabId);
+        if (!targetSection) return;
+
+        sections.forEach(sec => sec.classList.remove('active-section'));
+        targetSection.classList.add('active-section');
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.toggle('active', link.getAttribute('data-tab-target') === tabId);
+        });
+
+        mainNav.classList.remove('nav-open');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const target = link.getAttribute('data-tab-target');
+          if (target) {
+            e.preventDefault();
+            history.pushState(null, '', `#${target}`);
+            activateTab(target);
+          }
+        });
+      });
+
+      document.querySelectorAll('[data-jump]').forEach(card => {
+        card.addEventListener('click', () => {
+          const target = card.getAttribute('data-jump');
+          history.pushState(null, '', `#${target}`);
+          activateTab(target);
+        });
+      });
+
+      function handleHashChange() {
+        const hash = window.location.hash.replace('#', '') || 'home';
+        activateTab(hash);
+      }
+      window.addEventListener('hashchange', handleHashChange);
+      handleHashChange();
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+      });
+
+      // 4. Gestion des Sous-Onglets (Sub-tabs dans Engineering, Mobility, Career)
+      const subtabButtons = document.querySelectorAll('.subtab-btn');
+      subtabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const group = btn.parentElement.getAttribute('data-subtab-group');
+          const targetId = btn.getAttribute('data-subtab-target');
+
+          btn.parentElement.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          document.querySelectorAll(`.subtab-panel[data-subtab-parent="${group}"]`).forEach(panel => {
+            panel.classList.toggle('active-subpanel', panel.id === targetId);
+          });
+        });
+      });
     });
-    window.scrollTo(0,0);
-  }
-  function setLang(l){
-    root.dataset.l=l; root.lang=l;
-    document.getElementById('fr').setAttribute('aria-pressed',l==='fr');
-    document.getElementById('en').setAttribute('aria-pressed',l==='en');
-    try{localStorage.setItem('l',l)}catch(e){}
-  }
-  document.getElementById('fr').onclick=function(){setLang('fr')};
-  document.getElementById('en').onclick=function(){setLang('en')};
-  document.getElementById('theme').onclick=function(){
-    var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
-    root.dataset.theme=dark?'light':'dark';
-    try{localStorage.setItem('t',root.dataset.theme)}catch(e){}
-  };
-  try{var t=localStorage.getItem('t');if(t)root.dataset.theme=t;var l=localStorage.getItem('l');if(l)setLang(l);}catch(e){}
-  window.addEventListener('hashchange',route); route();
-})();
-</script>
-<script>
-/* ===== À REMPLIR : vos liens. Laissez '' tant que le lien n'existe pas : le bouton reste grisé, sans erreur. ===== */
-var LINKS={
-  linkedin:'',   /* ex. https://www.linkedin.com/in/votre-profil */
-  github:'',     /* ex. https://github.com/medbistarine-ship-it */
-  email:'',      /* ex. prenom.nom@etu.toulouse-inp.fr */
-  cvfr:'assets/CV_FR.pdf', cven:'assets/CV_EN.pdf',  /* activés tout seuls dès que les PDF sont déposés dans assets/ */
-  p1repo:'',p1report:'',p2repo:'',p2report:''
-};
-(function(){
-  function enable(a,v){
-    a.href=(a.dataset.link==='email'&&v.indexOf('mailto:')!==0)?'mailto:'+v:v;
-    if(/^https?:/.test(v)){a.target='_blank';a.rel='noopener'}
-    a.classList.remove('off');a.removeAttribute('aria-disabled');a.removeAttribute('title');
-  }
-  document.querySelectorAll('a[data-link]').forEach(function(a){
-    var v=LINKS[a.dataset.link]; if(!v)return;
-    if(/^(https?:|mailto:)/.test(v)||a.dataset.link==='email'){enable(a,v);return}
-    fetch(v,{method:'HEAD'}).then(function(r){if(r.ok)enable(a,v)}).catch(function(){});
-  });
-  var ph=document.querySelector('.photo');
-  if(ph)fetch('assets/photo.jpg',{method:'HEAD'}).then(function(r){
-    if(r.ok)ph.innerHTML='<img src="assets/photo.jpg" alt="Photo de Mohamed Bistarine">';
-  }).catch(function(){});
-})();
-</script>
+  </script>
 </body>
 </html>
