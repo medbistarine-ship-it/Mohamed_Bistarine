@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Bistarine | e-Portfolio Ingénieur Sciences du Numérique — ENSEEIHT (N7)</title>
-  <meta name="description" content="e-Portfolio académique et professionnel de Mohamed Bistarine, élève-ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7).">
-  <!-- Polices Google Fonts : Inter + Plus Jakarta Sans + Space Grotesk (UI) & JetBrains Mono + Fira Code + IBM Plex Mono (Code) -->
+  <title>Mohamed Bistarine | Ingénieur Sciences du Numérique — ENSEEIHT (N7)</title>
+  <meta name="description" content="e-Portfolio de Mohamed Bistarine — Élève-Ingénieur à Toulouse INP-ENSEEIHT (N7), spécialisé en Optimisation Mathématique, IA, Théorie des Jeux et Asservissement.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="lang-fr">
+
+  <!-- Effet visuel d'arrière-plan léger (Grille mathématique économe en données) -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
   <!-- ==================== BARRE DE NAVIGATION PRINCIPALE (6 ONGLETS N7) ==================== -->
   <header class="site-header" id="top">
@@ -20,7 +22,7 @@
         <span class="logo-badge">MB</span>
         <div class="logo-text">
           <span class="logo-name">Mohamed Bistarine</span>
-          <span class="logo-sub" data-fr="Ingénieur SN · ENSEEIHT (N7)" data-en="Digital Sciences Eng. · ENSEEIHT (N7)">Ingénieur SN · ENSEEIHT (N7)</span>
+          <span class="logo-sub" data-fr="Ingénieur SN · Optimisation & IA · N7" data-en="Digital Sciences Eng. · Optimization & AI · N7">Ingénieur SN · Optimisation & IA · N7</span>
         </div>
       </a>
 
@@ -28,12 +30,12 @@
 
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link active" data-tab-target="home" data-fr="Welcome" data-en="Welcome">Welcome</a></li>
-          <li><a href="#engineering" class="nav-link" data-tab-target="engineering" data-fr="Cursus Ingénieur" data-en="Engineering Course">Cursus Ingénieur</a></li>
-          <li><a href="#mobility" class="nav-link" data-tab-target="mobility" data-fr="Mobilité Internationale" data-en="International Mobility">Mobilité Internationale</a></li>
-          <li><a href="#sustainability" class="nav-link" data-tab-target="sustainability" data-fr="Engagement & Durabilité" data-en="Sustainability & Civic">Engagement & Durabilité</a></li>
-          <li><a href="#activities" class="nav-link" data-tab-target="activities" data-fr="Sport & Activités" data-en="Sport & Activities">Sport & Activités</a></li>
-          <li><a href="#career" class="nav-link nav-highlight" data-tab-target="career" data-fr="Carrière & Projet Pro" data-en="Career Development">Carrière & Projet Pro</a></li>
+          <li><a href="#home" class="nav-link active" data-tab-target="home" data-fr="1. Welcome" data-en="1. Welcome">1. Welcome</a></li>
+          <li><a href="#engineering" class="nav-link" data-tab-target="engineering" data-fr="2. Cursus & Projets" data-en="2. Engineering Course">2. Cursus & Projets</a></li>
+          <li><a href="#mobility" class="nav-link" data-tab-target="mobility" data-fr="3. Mobilité (DE/JP/CN)" data-en="3. Mobility (DE/JP/CN)">3. Mobilité (DE/JP/CN)</a></li>
+          <li><a href="#sustainability" class="nav-link" data-tab-target="sustainability" data-fr="4. Engagement & RSE" data-en="4. Sustainability & Civic">4. Engagement & RSE</a></li>
+          <li><a href="#activities" class="nav-link" data-tab-target="activities" data-fr="5. Échecs FIDE & Sports" data-en="5. FIDE Chess & Sports">5. Échecs FIDE & Sports</a></li>
+          <li><a href="#career" class="nav-link nav-highlight" data-tab-target="career" data-fr="6. Carrière & PEP" data-en="6. Career & PEP">6. Carrière & PEP</a></li>
         </ul>
       </nav>
 
@@ -43,7 +45,7 @@
           <span class="lang-sep">/</span>
           <span class="lang-indicator" id="ind-en">EN</span>
         </button>
-        <button class="control-btn theme-btn" id="themeToggleBtn" title="Basculer Mode Clair / Sombre">🌓</button>
+        <button class="control-btn theme-btn" id="themeToggleBtn" title="Mode Sombre / Clair">🌓</button>
       </div>
     </div>
   </header>
@@ -53,135 +55,162 @@
     <!-- ==================== ONGLET 1 : WELCOME (#home) ==================== -->
     <section id="home" class="tab-section active-section">
       <div class="container">
-        
-        <!-- Hero Banner -->
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="status-pill">
-              <span class="pulse-dot"></span>
-              <span data-fr="Toulouse INP - ENSEEIHT (N7) · Département Sciences du Numérique (2026-2027)" data-en="Toulouse INP - ENSEEIHT (N7) · Digital Sciences Department (2026-2027)">Toulouse INP - ENSEEIHT (N7) · Département Sciences du Numérique (2026-2027)</span>
-            </div>
 
-            <h1 class="hero-title">
-              <span data-fr="Mohamed Bistarine" data-en="Mohamed Bistarine">Mohamed Bistarine</span>
-              <span class="hero-gradient-text" data-fr="Élève-Ingénieur en Sciences du Numérique" data-en="Digital Sciences & Computer Engineering Student">Élève-Ingénieur en Sciences du Numérique</span>
-            </h1>
-
-            <p class="hero-lead" data-fr="Passionné par l'architecture logicielle, l'intelligence artificielle et les systèmes numériques haute performance. Actuellement élève-ingénieur à l'ENSEEIHT (Toulouse), je conçois des solutions techniques rigoureuses, scalables et responsables. [À COMPLÉTER : Ajoutez 1 phrase sur votre parcours pré-N7 et votre spécialisation visée]." data-en="Passionate about software architecture, artificial intelligence, and high-performance digital systems. Currently pursuing my Master of Engineering in Digital Sciences at ENSEEIHT (Toulouse), I build rigorous, scalable, and responsible solutions. [TO COMPLETE: Add 1 sentence about your pre-N7 background and target specialization].">
-              Passionné par l'architecture logicielle, l'intelligence artificielle et les systèmes numériques haute performance. Actuellement élève-ingénieur à l'ENSEEIHT (Toulouse), je conçois des solutions techniques rigoureuses, scalables et responsables. [À COMPLÉTER : Ajoutez 1 phrase sur votre parcours pré-N7 et votre spécialisation visée].
-            </p>
-
-            <!-- Tags de spécialités SN -->
-            <div class="tech-tag-row">
-              <span class="tech-tag">Informatique & Télécoms</span>
-              <span class="tech-tag" data-fr="[Spécialité 1 : ex. Génie Logiciel]" data-en="[Specialty 1: e.g. Software Engineering]">[Spécialité 1 : ex. Génie Logiciel]</span>
-              <span class="tech-tag" data-fr="[Spécialité 2 : ex. IA, HPC & Big Data]" data-en="[Specialty 2: e.g. AI, HPC & Big Data]">[Spécialité 2 : ex. IA, HPC & Big Data]</span>
-              <span class="tech-tag" data-fr="[Spécialité 3 : ex. Réseaux & Cybersécurité]" data-en="[Specialty 3: e.g. Networks & Cybersecurity]">[Spécialité 3 : ex. Réseaux & Cybersécurité]</span>
-            </div>
-
-            <!-- Boutons d'action prioritaires (Livrables CAM Module 1) -->
-            <div class="cta-group">
-              <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">
-                <span>📄</span>
-                <span data-fr="Télécharger CV (English)" data-en="Download Resume (EN)">Télécharger CV (English)</span>
-              </a>
-              <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">
-                <span>📄</span>
-                <span data-fr="Télécharger CV (Français)" data-en="Download CV (French)">Télécharger CV (Français)</span>
-              </a>
-              <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-outline">
-                <span>🔗</span>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">
-                <span>💻</span>
-                <span>GitHub</span>
-              </a>
-            </div>
+        <!-- SOUS-PARTIE ENCADRÉE 1.1 : IDENTITÉ & PROPOSITION DE VALEUR -->
+        <div class="framed-subsection anim-stagger-1">
+          <div class="subsection-topbar">
+            <span class="topbar-code">01.A // PROFIL INGÉNIEUR SCIENCES DU NUMÉRIQUE</span>
+            <span class="topbar-status" data-fr="Toulouse INP - ENSEEIHT (N7) · Promo 2026-2029" data-en="Toulouse INP - ENSEEIHT (N7) · Class of 2026-2029">Toulouse INP - ENSEEIHT (N7) · Promo 2026-2029</span>
           </div>
 
-          <!-- Carte d'identité numérique Ingénieur SN -->
-          <aside class="profile-card">
-            <div class="profile-header">
-              <div class="avatar-placeholder">
-                <!-- Pour afficher votre photo, placez profile.jpg dans assets/ et remplacez <span>MB</span> par : <img src="assets/profile.jpg" alt="Mohamed Bistarine"> -->
-                <span>MB</span>
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="status-pill">
+                <span class="pulse-dot"></span>
+                <span data-fr="Mathématiques Appliquées · Optimisation de Modèles · Asservissement & IA" data-en="Applied Mathematics · Model Optimization · Control Systems & AI">Mathématiques Appliquées · Optimisation de Modèles · Asservissement & IA</span>
               </div>
-              <div>
-                <h2 class="profile-card-name">Mohamed Bistarine</h2>
-                <p class="mono-label">ID: N7-SN-2026 // TOULOUSE INP</p>
+
+              <h1 class="hero-title">
+                <span>Mohamed Bistarine</span>
+                <span class="hero-gradient-text" data-fr="Ingénierie Mathématique, Optimisation & Systèmes Intelligents" data-en="Mathematical Engineering, Optimization & Intelligent Systems">Ingénierie Mathématique, Optimisation & Systèmes Intelligents</span>
+              </h1>
+
+              <p class="hero-lead" data-fr="Élève-ingénieur en Sciences du Numérique à l'ENSEEIHT (Toulouse) après une CPGE MPSI/MP à Agadir. Passionné par la démonstration mathématique, l'analyse de données et l'optimisation de modèles, je conçois des algorithmes haute précision pour les systèmes d'asservissement, d'estimation et l'intelligence artificielle stratégique." data-en="Digital Sciences engineering student at ENSEEIHT (Toulouse) following intensive MPSI/MP preparatory classes in Agadir. Driven by mathematical proofs, data analysis, and model optimization, I design high-precision algorithms for control systems, state estimation, and strategic AI.">
+                Élève-ingénieur en Sciences du Numérique à l'ENSEEIHT (Toulouse) après une CPGE MPSI/MP à Agadir. Passionné par la démonstration mathématique, l'analyse de données et l'optimisation de modèles, je conçois des algorithmes haute précision pour les systèmes d'asservissement, d'estimation et l'intelligence artificielle stratégique.
+              </p>
+
+              <!-- Indicateurs Clés Synthétiques (Économie de données & Impact visuel) -->
+              <div class="kpi-strip">
+                <div class="kpi-item">
+                  <span class="kpi-val">Ada · C · MATLAB</span>
+                  <span class="kpi-lbl" data-fr="Socle Technique S5" data-en="Core S5 Tech Stack">Socle Technique S5</span>
+                </div>
+                <div class="kpi-item">
+                  <span class="kpi-val">MPSI → MP</span>
+                  <span class="kpi-lbl" data-fr="CPGE Reda Slaoui & Al Qalam" data-en="Reda Slaoui & Al Qalam CPGE">CPGE Reda Slaoui & Al Qalam</span>
+                </div>
+                <div class="kpi-item">
+                  <span class="kpi-val">Elo 1643 FIDE</span>
+                  <span class="kpi-lbl" data-fr="Échecs & Théorie des Jeux" data-en="FIDE Chess & Game Theory">Échecs & Théorie des Jeux</span>
+                </div>
+                <div class="kpi-item">
+                  <span class="kpi-val">DE · JP · CN</span>
+                  <span class="kpi-lbl" data-fr="Cibles Mobilité (TUM...)" data-en="Mobility Targets (TUM...)">Cibles Mobilité (TUM...)</span>
+                </div>
+              </div>
+
+              <div class="cta-group">
+                <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">
+                  <span>📄</span>
+                  <span data-fr="CV Anglais (PDF)" data-en="English Resume (PDF)">CV Anglais (PDF)</span>
+                </a>
+                <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">
+                  <span>📄</span>
+                  <span data-fr="CV Français (PDF)" data-en="French CV (PDF)">CV Français (PDF)</span>
+                </a>
+                <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener" class="btn btn-outline">
+                  <span>♟️</span>
+                  <span>Profil FIDE #9047077</span>
+                </a>
+                <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">
+                  <span>💻</span>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
 
-            <div class="terminal-box">
-              <div class="terminal-bar">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="terminal-title">bistarine@n7-sn:~</span>
+            <!-- Terminal Synthétique Ingénieur -->
+            <aside class="profile-card">
+              <div class="profile-header">
+                <div class="avatar-placeholder"><span>MB</span></div>
+                <div>
+                  <h2 class="profile-card-name">Mohamed Bistarine</h2>
+                  <p class="mono-label">N7-SN // MATH & OPTIMIZATION</p>
+                </div>
               </div>
-              <div class="terminal-body">
-                <p><span class="cmd">$ whoami</span><br><span data-fr="Élève-Ingénieur Sciences du Numérique (FISE)" data-en="Digital Sciences Engineering Student (FISE)">Élève-Ingénieur Sciences du Numérique (FISE)</span></p>
-                <p><span class="cmd">$ location</span><br>Toulouse, Occitanie, France 📍</p>
-                <p><span class="cmd">$ target_objective</span><br><span data-fr="[À COMPLÉTER : Recherche de stage en IA / Software Engineering]" data-en="[TO COMPLETE: Seeking Internship in AI / Software Engineering]">[À COMPLÉTER : Recherche de stage en IA / Software Engineering]</span></p>
-                <p><span class="cmd">$ core_strengths</span><br><span data-fr="Pensée analytique · Rigueur · Adaptabilité · Travail d'équipe" data-en="Analytical thinking · Rigor · Adaptability · Teamwork">Pensée analytique · Rigueur · Adaptabilité · Travail d'équipe</span></p>
-              </div>
-            </div>
-          </aside>
-        </div>
 
-        <!-- Section Livrable Obligatoire : Elevator Pitch Video (UVP 2-3 min en Anglais) -->
-        <div class="uvp-showcase-card">
-          <div class="uvp-info">
-            <span class="section-eyebrow">CAM MODULE 1 DELIVERABLE · UNIQUE VALUE PROPOSAL</span>
-            <h2 class="section-title" data-fr="Vidéo Elevator Pitch (UVP en Anglais — 2 à 3 min)" data-en="Elevator Pitch Video (UVP in English — 2 to 3 min)">Vidéo Elevator Pitch (UVP en Anglais — 2 à 3 min)</h2>
-            <p class="section-desc" data-fr="Conformément au référentiel du Soft Skills Center de l'ENSEEIHT, cette présentation vidéo en anglais expose ma proposition de valeur unique (UVP) structurée en trois temps : mon positionnement actuel à l'N7, mon parcours antérieur, et mes ambitions d'ingénieur." data-en="In accordance with the ENSEEIHT Soft Skills Center framework, this 2-3 minute video pitch in English communicates my Unique Value Proposal (UVP) structured in three clear stages: Present, brief Past, and Future career vision.">
-              Conformément au référentiel du Soft Skills Center de l'ENSEEIHT, cette présentation vidéo en anglais expose ma proposition de valeur unique (UVP) structurée en trois temps : mon positionnement actuel à l'N7, mon parcours antérieur, et mes ambitions d'ingénieur.
-            </p>
-
-            <div class="uvp-structure-steps">
-              <div class="uvp-step">
-                <span class="step-badge">01. PRESENT</span>
-                <p data-fr="Étudiant en Sciences du Numérique à l'N7, compétences techniques clés et valeurs de travail." data-en="Digital Sciences student at N7, core technical competencies, and engineering work ethic.">Étudiant en Sciences du Numérique à l'N7, compétences techniques clés et valeurs de travail.</p>
+              <div class="terminal-box">
+                <div class="terminal-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="terminal-title">bistarine@n7-sn:~</span>
+                </div>
+                <div class="terminal-body">
+                  <p><span class="cmd">$ education</span><br><span data-fr="• 2026–2029 : ENSEEIHT (N7) — Sciences du Numérique<br>• 2025–2026 : CPGE MP — G.S. Al Qalam (Agadir)<br>• 2024–2025 : CPGE MPSI — Lycée Reda Slaoui<br>• 2024 : Bac Sciences Math. B (Lycée Mohamed Al Baqali)" data-en="• 2026–2029: ENSEEIHT (N7) — Digital Sciences<br>• 2025–2026: CPGE MP — Al Qalam (Agadir)<br>• 2024–2025: CPGE MPSI — Lycée Reda Slaoui<br>• 2024: Bac Math Sciences B (Mohamed Al Baqali HS)">• 2026–2029 : ENSEEIHT (N7) — Sciences du Numérique<br>• 2025–2026 : CPGE MP — G.S. Al Qalam (Agadir)<br>• 2024–2025 : CPGE MPSI — Lycée Reda Slaoui<br>• 2024 : Bac Sciences Math. B (Lycée Mohamed Al Baqali)</span></p>
+                  <p><span class="cmd">$ focus_areas</span><br><span data-fr="Preuve de théorèmes · Optimisation · Estimation & Asservissement · IA & Théorie des Jeux" data-en="Theorem Proving · Optimization · Estimation & Control · AI & Game Theory">Preuve de théorèmes · Optimisation · Estimation & Asservissement · IA & Théorie des Jeux</span></p>
+                  <p><span class="cmd">$ languages</span><br><span data-fr="Arabe (Natif) · Français (C1/C2) · Anglais (Tech) · Allemand (LV2)" data-en="Arabic (Native) · French (C1/C2) · English (Tech) · German (LV2)">Arabe (Natif) · Français (C1/C2) · Anglais (Tech) · Allemand (LV2)</span></p>
+                </div>
               </div>
-              <div class="uvp-step">
-                <span class="step-badge">02. BRIEF PAST</span>
-                <p data-fr="[À COMPLÉTER : CPGE / Licence / BUT], fondations mathématiques et premiers projets déclencheurs." data-en="[TO COMPLETE: Preparatory classes / BSc], mathematical foundations, and key trigger projects.">[À COMPLÉTER : CPGE / Licence / BUT], fondations mathématiques et premiers projets déclencheurs.</p>
-              </div>
-              <div class="uvp-step">
-                <span class="step-badge">03. FUTURE</span>
-                <p data-fr="Spécialisation visée en 2A/3A, projet de mobilité internationale et impact recherché en entreprise." data-en="Target 2A/3A track, international mobility goal, and value brought to future employers.">Spécialisation visée en 2A/3A, projet de mobilité internationale et impact recherché en entreprise.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="uvp-video-wrapper">
-            <!-- Placez votre fichier vidéo dans assets/uvp_pitch.mp4 ou remplacez par un iframe YouTube/Vimeo -->
-            <video controls preload="metadata" poster="assets/video_poster.jpg" class="html5-video">
-              <source src="assets/uvp_pitch.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture de vidéos HTML5.
-            </video>
-            <p class="video-caption mono-label" data-fr="Fichier : assets/uvp_pitch.mp4 (Durée cible : 2:00 – 3:00 · Langue : Anglais)" data-en="File: assets/uvp_pitch.mp4 (Target duration: 2:00 – 3:00 · Language: English)">Fichier : assets/uvp_pitch.mp4 (Durée cible : 2:00 – 3:00 · Langue : Anglais)</p>
+            </aside>
           </div>
         </div>
 
-        <!-- Accès rapide aux sections clés de l'e-Portfolio N7 -->
-        <div class="pillars-overview">
-          <h3 class="subsection-heading" data-fr="Exploration Rapide des Piliers de mon e-Portfolio N7 (S5 → S10)" data-en="Quick Exploration of My N7 e-Portfolio Pillars (S5 → S10)">Exploration Rapide des Piliers de mon e-Portfolio N7 (S5 → S10)</h3>
-          <div class="cards-grid-3">
-            <div class="nav-preview-card" data-jump="engineering">
-              <span class="card-number">01 // SN</span>
-              <h4 data-fr="Cursus Ingénieur & Projets" data-en="Engineering Course & Projects">Cursus Ingénieur & Projets</h4>
-              <p data-fr="Unités d'enseignement S5–S9, réalisations logicielles décrites selon la méthode STAR et stack technique." data-en="S5–S9 coursework, software projects structured with the STAR method, and technical stack.">Unités d'enseignement S5–S9, réalisations logicielles décrites selon la méthode STAR et stack technique.</p>
+        <!-- SOUS-PARTIE ENCADRÉE 1.2 : VIDÉO ELEVATOR PITCH (UVP 2-3 MIN) -->
+        <div class="framed-subsection anim-stagger-2">
+          <div class="subsection-topbar">
+            <span class="topbar-code">01.B // LIVRABLE CAM MODULE 1 — UNIQUE VALUE PROPOSAL</span>
+            <span class="topbar-status" data-fr="Format : 2 à 3 min en Anglais (Present · Past · Future)" data-en="Format: 2–3 min in English (Present · Past · Future)">Format : 2 à 3 min en Anglais (Present · Past · Future)</span>
+          </div>
+
+          <div class="uvp-grid">
+            <div class="uvp-info">
+              <h2 class="section-title" data-fr="Vidéo Elevator Pitch (UVP en Anglais)" data-en="Elevator Pitch Video (UVP in English)">Vidéo Elevator Pitch (UVP en Anglais)</h2>
+              <p class="section-desc" data-fr="Présentation synthétique de ma trajectoire : de la rigueur mathématique des classes préparatoires marocaines (MPSI/MP) et de la compétition échiquéenne FIDE jusqu'à l'optimisation de systèmes d'asservissement et d'IA à l'ENSEEIHT." data-en="Concise pitch of my trajectory: from the mathematical rigor of Moroccan preparatory classes (MPSI/MP) and FIDE chess competition to control systems optimization and AI at ENSEEIHT.">
+                Présentation synthétique de ma trajectoire : de la rigueur mathématique des classes préparatoires marocaines (MPSI/MP) et de la compétition échiquéenne FIDE jusqu'à l'optimisation de systèmes d'asservissement et d'IA à l'ENSEEIHT.
+              </p>
+
+              <div class="uvp-structure-steps">
+                <div class="uvp-step">
+                  <span class="step-badge">01. PRESENT</span>
+                  <p data-fr="Élève-ingénieur SN à l'N7 : Ada, C, MATLAB, Allemand et modélisation mathématique." data-en="SN Engineering student at N7: Ada, C, MATLAB, German, and mathematical modeling.">Élève-ingénieur SN à l'N7 : Ada, C, MATLAB, Allemand et modélisation mathématique.</p>
+                </div>
+                <div class="uvp-step">
+                  <span class="step-badge">02. BRIEF PAST</span>
+                  <p data-fr="Bac SMB (2024), CPGE MPSI (Reda Slaoui) & MP (Al Qalam), joueur FIDE (1643 Elo)." data-en="Bac SMB (2024), MPSI (Reda Slaoui) & MP (Al Qalam), FIDE Chess player (1643 Elo).">Bac SMB (2024), CPGE MPSI (Reda Slaoui) & MP (Al Qalam), joueur FIDE (1643 Elo).</p>
+                </div>
+                <div class="uvp-step">
+                  <span class="step-badge">03. FUTURE</span>
+                  <p data-fr="Optimisation d'asservissement/estimation et mobilité vers TUM (Allemagne), Japon et Chine." data-en="Control/estimation optimization and mobility to TUM (Germany), Japan, and China.">Optimisation d'asservissement/estimation et mobilité vers TUM (Allemagne), Japon et Chine.</p>
+                </div>
+              </div>
             </div>
-            <div class="nav-preview-card" data-jump="mobility">
-              <span class="card-number">02 // INTL</span>
-              <h4 data-fr="Mobilité Internationale" data-en="International Mobility">Mobilité Internationale</h4>
-              <p data-fr="3 projets de mobilité (17 semaines min.) alignés sur mes Role Models, compétences PCE et langues (B2+)." data-en="3 mobility projects (17+ weeks) aligned with Role Models, PCE communications, and languages (B2+).">3 projets de mobilité (17 semaines min.) alignés sur mes Role Models, compétences PCE et langues (B2+).</p>
+
+            <div class="uvp-video-wrapper">
+              <video controls preload="metadata" poster="assets/video_poster.jpg" class="html5-video">
+                <source src="assets/uvp_pitch.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption mono-label" data-fr="Fichier : assets/uvp_pitch.mp4 (2–3 min · English)" data-en="File: assets/uvp_pitch.mp4 (2–3 min · English)">Fichier : assets/uvp_pitch.mp4 (2–3 min · English)</p>
             </div>
-            <div class="nav-preview-card" data-jump="career">
-              <span class="card-number">03 // CAM</span>
-              <h4 data-fr="Carrière & 3 Role Models" data-en="Career Dev & 3 Role Models">Carrière & 3 Role Models</h4>
-              <p data-fr="Projet professionnel (PEP), analyse de 3 profils My Job Glasses / Alumni, stages S6-S8-S10 et CVs." data-en="Career project (PEP), analysis of 3 My Job Glasses / Alumni profiles, S6-S8-S10 internships, and CVs.">Projet professionnel (PEP), analyse de 3 profils My Job Glasses / Alumni, stages S6-S8-S10 et CVs.</p>
-            </div>
+          </div>
+        </div>
+
+        <!-- SOUS-PARTIE ENCADRÉE 1.3 : NAVIGATION RAPIDE VERS LES 5 AUTRES ONGLETS -->
+        <div class="framed-subsection anim-stagger-3">
+          <div class="subsection-topbar">
+            <span class="topbar-code">01.C // ACCÈS DIRECT AUX SECTIONS DU PORTFOLIO</span>
+            <span class="topbar-status" data-fr="Cliquez sur une carte élargie pour ouvrir la section" data-en="Click any wide card to open the section">Cliquez sur une carte élargie pour ouvrir la section</span>
+          </div>
+
+          <div class="wide-nav-grid">
+            <button class="wide-portal-btn" data-jump="engineering">
+              <span class="portal-num">02 // SN</span>
+              <span class="portal-title" data-fr="Cursus Ingénieur & Projets" data-en="Engineering Course & Projects">Cursus Ingénieur & Projets</span>
+              <span class="portal-desc" data-fr="IA Échecs, Asservissement, Ada/C/MATLAB & Parcours Bac SMB → MPSI → MP → N7" data-en="Chess AI, Control Optimization, Ada/C/MATLAB & Academic Path">IA Échecs, Asservissement, Ada/C/MATLAB & Parcours Bac SMB → MPSI → MP → N7</span>
+            </button>
+            <button class="wide-portal-btn" data-jump="mobility">
+              <span class="portal-num">03 // INTL</span>
+              <span class="portal-title" data-fr="Mobilité : Allemagne, Japon, Chine" data-en="Mobility: Germany, Japan, China">Mobilité : Allemagne, Japon, Chine</span>
+              <span class="portal-desc" data-fr="Échange académique TUM Munich, R&D au Japon (NII) et en Chine + Allemand LV2" data-en="TUM Munich Exchange, R&D in Japan (NII) & China + German LV2">Échange académique TUM Munich, R&D au Japon (NII) et en Chine + Allemand LV2</span>
+            </button>
+            <button class="wide-portal-btn" data-jump="activities">
+              <span class="portal-num">05 // SPORT</span>
+              <span class="portal-title" data-fr="Échecs FIDE & Sports" data-en="FIDE Chess & Sports">Échecs FIDE & Sports</span>
+              <span class="portal-desc" data-fr="Classement FIDE 1643, Football (Olympique Dcheira), Natation, Basket & Volley" data-en="FIDE Rating 1643, Football (Olympique Dcheira), Swimming, Basketball & Volleyball">Classement FIDE 1643, Football (Olympique Dcheira), Natation, Basket & Volley</span>
+            </button>
+            <button class="wide-portal-btn" data-jump="career">
+              <span class="portal-num">06 // PEP</span>
+              <span class="portal-title" data-fr="Carrière, Asservissement & Role Models" data-en="Career, Control Systems & Role Models">Carrière, Asservissement & Role Models</span>
+              <span class="portal-desc" data-fr="Stabilisation précise de programmes d'estimation, 3 Role Models & Stages" data-en="Precision stabilization of estimation programs, 3 Role Models & Internships">Stabilisation précise de programmes d'estimation, 3 Role Models & Stages</span>
+            </button>
           </div>
         </div>
 
@@ -191,223 +220,189 @@
     <!-- ==================== ONGLET 2 : ENGINEERING COURSE (#engineering) ==================== -->
     <section id="engineering" class="tab-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header anim-stagger-1">
           <span class="section-eyebrow">DÉPARTEMENT SCIENCES DU NUMÉRIQUE · RNCP 40939</span>
-          <h2 class="section-title" data-fr="Formation d'Ingénieur & Projets Techniques" data-en="Engineering Coursework & Technical Productions">Formation d'Ingénieur & Projets Techniques</h2>
-          <p class="section-desc" data-fr="Le département Sciences du Numérique (Informatique et Télécommunications) de l'ENSEEIHT forme des ingénieurs maîtrisant les fondements mathématiques, logiciels et réseaux tout en développant une expertise pointue de S5 à S10." data-en="The Digital Sciences (Computer Science & Telecommunications) department at ENSEEIHT trains engineers to master mathematical, software, and network fundamentals while developing deep specialization from S5 to S10.">
-            Le département Sciences du Numérique (Informatique et Télécommunications) de l'ENSEEIHT forme des ingénieurs maîtrisant les fondements mathématiques, logiciels et réseaux tout en développant une expertise pointue de S5 à S10.
+          <h2 class="section-title" data-fr="Cursus Académique, Modélisation & Projets Techniques" data-en="Academic Curriculum, Mathematical Modeling & Projects">Cursus Académique, Modélisation & Projets Techniques</h2>
+          <p class="section-desc" data-fr="Sélectionnez l'un des 3 boutons élargis ci-dessous pour explorer mes projets d'optimisation et d'IA (méthode STAR), mon parcours académique (N7 + CPGE) ou ma boîte à outils mathématique et logicielle." data-en="Select one of the 3 wide buttons below to explore my optimization and AI projects (STAR method), my academic trajectory (N7 + CPGE), or my mathematical and software toolkit.">
+            Sélectionnez l'un des 3 boutons élargis ci-dessous pour explorer mes projets d'optimisation et d'IA (méthode STAR), mon parcours académique (N7 + CPGE) ou ma boîte à outils mathématique et logicielle.
           </p>
         </div>
 
-        <!-- Sous-onglets de Engineering Course (Exigence diapo 23 : + sub-tabs for projects & productions) -->
-        <div class="subtab-nav" data-subtab-group="eng">
-          <button class="subtab-btn active" data-subtab-target="eng-projects" data-fr="Projets & Productions (Méthode STAR)" data-en="Projects & Productions (STAR Method)">Projets & Productions (Méthode STAR)</button>
-          <button class="subtab-btn" data-subtab-target="eng-courses" data-fr="Programme Académique (S5 – S9)" data-en="Academic Curriculum (S5 – S9)">Programme Académique (S5 – S9)</button>
-          <button class="subtab-btn" data-subtab-target="eng-skills" data-fr="Compétences & Stack Technique" data-en="Technical Stack & WEF Skills">Compétences & Stack Technique</button>
+        <!-- BOUTONS DE SOUS-PAGES ÉLARGIS (Exigence utilisateur : boutons larges et informatifs) -->
+        <div class="subtab-wide-nav anim-stagger-2" data-subtab-group="eng">
+          <button class="subtab-wide-btn active" data-subtab-target="eng-projects">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 2.1</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Projets d'Innovation & Optimisation (STAR)" data-en="Innovation & Optimization Projects (STAR)">Projets d'Innovation & Optimisation (STAR)</strong>
+            <span class="swb-desc" data-fr="TIPE & IA « Évaluation et décision dans un moteur d'échecs », Stabilisation d'Asservissement & Ada/C" data-en="TIPE & AI 'Evaluation and Decision-Making in a Chess Engine', Control Stabilization & Ada/C">TIPE & IA « Évaluation et décision dans un moteur d'échecs », Stabilisation d'Asservissement & Ada/C</span>
+          </button>
+
+          <button class="subtab-wide-btn" data-subtab-target="eng-courses">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 2.2</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Parcours Académique (N7, MP, MPSI, Bac SMB)" data-en="Academic Trajectory (N7, MP, MPSI, Bac SMB)">Parcours Académique (N7, MP, MPSI, Bac SMB)</strong>
+            <span class="swb-desc" data-fr="ENSEEIHT S5–S9, CPGE MP (Al Qalam), CPGE MPSI (Lycée Reda Slaoui) & Bac SMB 2024 (Mohamed Al Baqali)" data-en="ENSEEIHT S5–S9, MP (Al Qalam), MPSI (Lycée Reda Slaoui) & 2024 SMB Baccalaureate">ENSEEIHT S5–S9, CPGE MP (Al Qalam), CPGE MPSI (Lycée Reda Slaoui) & Bac SMB 2024 (Mohamed Al Baqali)</span>
+          </button>
+
+          <button class="subtab-wide-btn" data-subtab-target="eng-skills">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 2.3</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Compétences Mathématiques & Stack" data-en="Mathematical & Technical Stack">Compétences Mathématiques & Stack</strong>
+            <span class="swb-desc" data-fr="Ada, C, MATLAB, Preuve de Théorèmes, Optimisation de Modèles, Analyse de Données & Compétences WEF" data-en="Ada, C, MATLAB, Theorem Proving, Model Optimization, Data Analysis & WEF Skills">Ada, C, MATLAB, Preuve de Théorèmes, Optimisation de Modèles, Analyse de Données & Compétences WEF</span>
+          </button>
         </div>
 
         <!-- SOUS-ONGLET 2.1 : PROJETS & PRODUCTIONS (MÉTHODE STAR) -->
         <div id="eng-projects" class="subtab-panel active-subpanel" data-subtab-parent="eng">
-          <div class="cards-grid-2">
-            
-            <!-- Carte Projet 1 -->
-            <article class="star-card">
-              <div class="star-card-header">
-                <span class="mono-badge" data-fr="PROJET ACADÉMIQUE N7 · S5/S6" data-en="N7 ACADEMIC PROJECT · S5/S6">PROJET ACADÉMIQUE N7 · S5/S6</span>
-                <span class="tech-pill">C / Python / Linux</span>
-              </div>
-              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 1 — ex. Mini-Shell Unix ou Compilateur / Analyse de Données]" data-en="[TO COMPLETE: Project 1 Title — e.g. Unix Mini-Shell or Compiler / Data Analysis]">[À COMPLÉTER : Titre du Projet 1 — ex. Mini-Shell Unix ou Compilateur / Analyse de Données]</h3>
-              
-              <div class="star-list">
-                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Contexte du bureau d'études ou projet individuel/équipe à l'N7, durée]." data-en="<b>Situation:</b> [TO COMPLETE: Context of the engineering lab or team project at N7, duration]."><b>Situation :</b> [À COMPLÉTER : Contexte du bureau d'études ou projet individuel/équipe à l'N7, durée].</p></div>
-                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Objectif technique précis et contraintes de performance ou de mémoire]." data-en="<b>Task:</b> [TO COMPLETE: Specific technical objective and performance or memory constraints]."><b>Tâche :</b> [À COMPLÉTER : Objectif technique précis et contraintes de performance ou de mémoire].</p></div>
-                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Architecture choisie, algorithmes implémentés, tests unitaires et gestion Git]." data-en="<b>Action:</b> [TO COMPLETE: Chosen architecture, implemented algorithms, unit testing, and Git workflow]."><b>Action :</b> [À COMPLÉTER : Architecture choisie, algorithmes implémentés, tests unitaires et gestion Git].</p></div>
-                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Résultat quantifié, ex. 100% des tests passés, réduction du temps d'exécution de X%, note obtenue]." data-en="<b>Result:</b> [TO COMPLETE: Quantified outcome, e.g. 100% test pass rate, X% execution time reduction, grade]."><b>Résultat :</b> [À COMPLÉTER : Résultat quantifié, ex. 100% des tests passés, réduction du temps d'exécution de X%, note obtenue].</p></div>
-                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Compétences consolidées et lien avec votre futur stage]." data-en="<b>And beyond?:</b> [TO COMPLETE: Consolidated skills and link to your future internship]."><b>Et après ? :</b> [À COMPLÉTER : Compétences consolidées et lien avec votre futur stage].</p></div>
-              </div>
-              <div class="star-card-footer">
-                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Voir le dépôt GitHub →" data-en="View GitHub Repository →">Voir le dépôt GitHub →</a>
-              </div>
-            </article>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">2.1 // RÉALISATIONS TECHNIQUES & SCIENTIFIQUES (MÉTHODE STAR)</span>
+              <span class="topbar-status" data-fr="3 Projets Structurants Encadrés" data-en="3 Framed Core Projects">3 Projets Structurants Encadrés</span>
+            </div>
 
-            <!-- Carte Projet 2 -->
-            <article class="star-card">
-              <div class="star-card-header">
-                <span class="mono-badge" data-fr="PROJET LOGICIEL / POO · S6" data-en="SOFTWARE / OOP PROJECT · S6">PROJET LOGICIEL / POO · S6</span>
-                <span class="tech-pill">Java / MVC / Git</span>
-              </div>
-              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 2 — ex. Application Orientée Objet ou Simulateur Réseau]" data-en="[TO COMPLETE: Project 2 Title — e.g. Object-Oriented Application or Network Simulator]">[À COMPLÉTER : Titre du Projet 2 — ex. Application Orientée Objet ou Simulateur Réseau]</h3>
-              
-              <div class="star-list">
-                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Projet en équipe de X étudiants dans le cadre de l'UE Technologie Objet / Réseaux]." data-en="<b>Situation:</b> [TO COMPLETE: Team project of X students within the Object Technology / Networks course]."><b>Situation :</b> [À COMPLÉTER : Projet en équipe de X étudiants dans le cadre de l'UE Technologie Objet / Réseaux].</p></div>
-                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Concevoir une architecture modulaire respectant les principes de conception objet]." data-en="<b>Task:</b> [TO COMPLETE: Design a modular architecture adhering to object-oriented design principles]."><b>Tâche :</b> [À COMPLÉTER : Concevoir une architecture modulaire respectant les principes de conception objet].</p></div>
-                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Modélisation UML, développement des composants critiques, revue de code]." data-en="<b>Action:</b> [TO COMPLETE: UML modeling, development of core components, code reviews]."><b>Action :</b> [À COMPLÉTER : Modélisation UML, développement des composants critiques, revue de code].</p></div>
-                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Application fonctionnelle livrée dans les délais avec documentation complète]." data-en="<b>Result:</b> [TO COMPLETE: Fully functional application delivered on schedule with complete documentation]."><b>Résultat :</b> [À COMPLÉTER : Application fonctionnelle livrée dans les délais avec documentation complète].</p></div>
-                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Maîtrise du travail collaboratif Git et du génie logiciel]." data-en="<b>And beyond?:</b> [TO COMPLETE: Mastery of collaborative Git workflows and software engineering]."><b>Et après ? :</b> [À COMPLÉTER : Maîtrise du travail collaboratif Git et du génie logiciel].</p></div>
-              </div>
-              <div class="star-card-footer">
-                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Voir le code source →" data-en="View Source Code →">Voir le code source →</a>
-              </div>
-            </article>
+            <div class="cards-grid-3">
+              <!-- Projet 1 : TIPE & IA Échecs -->
+              <article class="star-card">
+                <div class="star-card-header">
+                  <span class="mono-badge" data-fr="TIPE MP & PROJET IA · THÉORIE DES JEUX" data-en="MP TIPE & AI PROJECT · GAME THEORY">TIPE MP & PROJET IA · THÉORIE DES JEUX</span>
+                  <span class="tech-pill">Minimax / Alpha-Bêta / IA</span>
+                </div>
+                <h3 class="star-card-title" data-fr="Évaluation et Décision dans un Moteur d'Échecs" data-en="Evaluation and Decision-Making in a Chess Engine">Évaluation et Décision dans un Moteur d'Échecs</h3>
+                <div class="star-list">
+                  <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> Travail de recherche (TIPE en CPGE MP) et projet personnel de joueur FIDE (Elo 1643) visant à formaliser mathématiquement la décision échiquéenne." data-en="<b>Situation:</b> MP preparatory class research (TIPE) and personal project as a FIDE player (1643 Elo) to mathematically formalize chess decision-making."><b>Situation :</b> Travail de recherche (TIPE en CPGE MP) et projet personnel de joueur FIDE (Elo 1643) visant à formaliser mathématiquement la décision échiquéenne.</p></div>
+                  <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> Concevoir une fonction d'évaluation positionnelle précise et un algorithme de décision optimal face à l'explosion combinatoire." data-en="<b>Task:</b> Design an accurate positional evaluation function and an optimal decision algorithm capable of overcoming combinatorial explosion."><b>Tâche :</b> Concevoir une fonction d'évaluation positionnelle précise et un algorithme de décision optimal face à l'explosion combinatoire.</p></div>
+                  <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> Modélisation par la théorie des jeux à somme nulle, exploration d'arbres Minimax avec élagage Alpha-Bêta et pondération mathématique des critères stratégiques." data-en="<b>Action:</b> Zero-sum game theory modeling, Minimax tree search with Alpha-Beta pruning, and mathematical weighting of strategic heuristics."><b>Action :</b> Modélisation par la théorie des jeux à somme nulle, exploration d'arbres Minimax avec élagage Alpha-Bêta et pondération mathématique des critères stratégiques.</p></div>
+                  <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> Réduction drastique du nombre de nœuds évalués à profondeur égale et sélection fiable des coups optimaux sous contrainte de temps." data-en="<b>Result:</b> Drastic reduction of evaluated nodes at equal depth and reliable selection of optimal moves under strict time constraints."><b>Résultat :</b> Réduction drastique du nombre de nœuds évalués à profondeur égale et sélection fiable des coups optimaux sous contrainte de temps.</p></div>
+                  <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> Extension vers des modèles d'IA génériques pour jeux de stratégie complexes et apprentissage par renforcement." data-en="<b>And beyond?:</b> Extension toward general strategy game AI models and reinforcement learning in 2A/3A SN."><b>Et après ? :</b> Extension vers des modèles d'IA génériques pour jeux de stratégie complexes et apprentissage par renforcement.</p></div>
+                </div>
+              </article>
 
-            <!-- Carte Projet 3 (Projet Personnel / Hackathon / TIPE) -->
-            <article class="star-card">
-              <div class="star-card-header">
-                <span class="mono-badge" data-fr="PROJET PERSONNEL / RECHERCHE" data-en="PERSONAL / RESEARCH PROJECT">PROJET PERSONNEL / RECHERCHE</span>
-                <span class="tech-pill">Python / AI / Data</span>
-              </div>
-              <h3 class="star-card-title" data-fr="[À COMPLÉTER : Titre du Projet 3 — ex. Modèle de Machine Learning, TIPE ou Concours de Code]" data-en="[TO COMPLETE: Project 3 Title — e.g. Machine Learning Model, TIPE, or Coding Contest]">[À COMPLÉTER : Titre du Projet 3 — ex. Modèle de Machine Learning, TIPE ou Concours de Code]</h3>
-              
-              <div class="star-list">
-                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> [À COMPLÉTER : Initiative personnelle, concours de programmation ou projet de recherche TIPE]." data-en="<b>Situation:</b> [TO COMPLETE: Personal initiative, coding competition, or research project]."><b>Situation :</b> [À COMPLÉTER : Initiative personnelle, concours de programmation ou projet de recherche TIPE].</p></div>
-                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> [À COMPLÉTER : Problématique scientifique ou algorithmique résolue]." data-en="<b>Task:</b> [TO COMPLETE: Scientific or algorithmic problem addressed]."><b>Tâche :</b> [À COMPLÉTER : Problématique scientifique ou algorithmique résolue].</p></div>
-                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> [À COMPLÉTER : Prétraitement des données, entraînement/optimisation algorithmique, validation]." data-en="<b>Action:</b> [TO COMPLETE: Data preprocessing, algorithmic training/optimization, validation]."><b>Action :</b> [À COMPLÉTER : Prétraitement des données, entraînement/optimisation algorithmique, validation].</p></div>
-                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> [À COMPLÉTER : Précision atteinte, gain de performance ou démonstrateur opérationnel]." data-en="<b>Result:</b> [TO COMPLETE: Accuracy achieved, performance gain, or working demonstrator]."><b>Résultat :</b> [À COMPLÉTER : Précision atteinte, gain de performance ou démonstrateur opérationnel].</p></div>
-                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> [À COMPLÉTER : Confirmation de mon intérêt pour l'IA, la Data ou les systèmes critiques]." data-en="<b>And beyond?:</b> [TO COMPLETE: Confirmed my strong interest in AI, Data, or critical systems]."><b>Et après ? :</b> [À COMPLÉTER : Confirmation de mon intérêt pour l'IA, la Data ou les systèmes critiques].</p></div>
-              </div>
-              <div class="star-card-footer">
-                <a href="https://github.com/medbistarine-ship-it" target="_blank" class="link-arrow" data-fr="Consulter la documentation →" data-en="Read Documentation →">Consulter la documentation →</a>
-              </div>
-            </article>
+              <!-- Projet 2 : Optimisation Asservissement & Estimation -->
+              <article class="star-card">
+                <div class="star-card-header">
+                  <span class="mono-badge" data-fr="PROJET SCIENTIFIQUE · AUTOMATIQUE & DATA" data-en="SCIENTIFIC PROJECT · CONTROL & DATA">PROJET SCIENTIFIQUE · AUTOMATIQUE & DATA</span>
+                  <span class="tech-pill">MATLAB / C / Optimisation</span>
+                </div>
+                <h3 class="star-card-title" data-fr="Optimisation de la Stabilisation d'Asservissement & Estimation" data-en="Control Stabilization & State Estimation Optimization">Optimisation de la Stabilisation d'Asservissement & Estimation</h3>
+                <div class="star-list">
+                  <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> Étude des systèmes dynamiques soumis à des bruits de mesure et à de fortes contraintes physiques." data-en="<b>Situation:</b> Study of dynamical systems subject to measurement noise and strict physical constraints."><b>Situation :</b> Étude des systèmes dynamiques soumis à des bruits de mesure et à de fortes contraintes physiques.</p></div>
+                  <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> Démontrer la stabilité mathématique et optimiser la précision des boucles d'asservissement et d'estimation d'état." data-en="<b>Task:</b> Prove mathematical stability and optimize precision for control loops and state estimation."><b>Tâche :</b> Démontrer la stabilité mathématique et optimiser la précision des boucles d'asservissement et d'estimation d'état.</p></div>
+                  <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> Résolution analytique d'équations différentielles, analyse statistique des données capteurs et simulation numérique sous MATLAB." data-en="<b>Action:</b> Analytical resolution of differential equations, statistical sensor data analysis, and numerical simulation in MATLAB."><b>Action :</b> Résolution analytique d'équations différentielles, analyse statistique des données capteurs et simulation numérique sous MATLAB.</p></div>
+                  <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> Modèle mathématique optimisé garantissant une convergence rapide et une erreur d'estimation minimale." data-en="<b>Result:</b> Optimized mathematical model ensuring fast convergence and minimal estimation error."><b>Résultat :</b> Modèle mathématique optimisé garantissant une convergence rapide et une erreur d'estimation minimale.</p></div>
+                  <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> Socle direct de mon projet professionnel en R&D (aéronautique, robotique et systèmes autonomes)." data-en="<b>And beyond?:</b> Direct foundation for my R&D career goal in aerospace, robotics, and autonomous systems."><b>Et après ? :</b> Socle direct de mon projet professionnel en R&D (aéronautique, robotique et systèmes autonomes).</p></div>
+                </div>
+              </article>
 
-            <!-- Carte Projet 4 (Ce Portfolio GitHub Pages) -->
-            <article class="star-card">
-              <div class="star-card-header">
-                <span class="mono-badge" data-fr="PRODUCTION CAM MODULE 1 · S5" data-en="CAM MODULE 1 PRODUCTION · S5">PRODUCTION CAM MODULE 1 · S5</span>
-                <span class="tech-pill">HTML5 / CSS3 / JS / Git</span>
-              </div>
-              <h3 class="star-card-title" data-fr="Architecture de cet e-Portfolio Bilingue sur GitHub Pages" data-en="Bilingual e-Portfolio Architecture on GitHub Pages">Architecture de cet e-Portfolio Bilingue sur GitHub Pages</h3>
-              
-              <div class="star-list">
-                <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> Conception de ma vitrine numérique personnelle pour le module Marketing & Self-Branding à l'N7." data-en="<b>Situation:</b> Designing my personal digital showcase for the N7 Marketing & Self-Branding module."><b>Situation :</b> Conception de ma vitrine numérique personnelle pour le module Marketing & Self-Branding à l'N7.</p></div>
-                <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> Développer un site web pérenne, conforme RGPD, bilingue (FR/EN) et structuré autour des 6 onglets N7." data-en="<b>Task:</b> Build a lifelong, GDPR-friendly, bilingual (FR/EN) website structured around the 6 mandatory N7 tabs."><b>Tâche :</b> Développer un site web pérenne, conforme RGPD, bilingue (FR/EN) et structuré autour des 6 onglets N7.</p></div>
-                <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> Codage intégral en HTML5/CSS3 sémantique sans dépendance lourde, moteur de traduction DOM instantané et déploiement continu via GitHub Pages." data-en="<b>Action:</b> Full semantic HTML5/CSS3 coding with zero heavy dependencies, instant DOM translation engine, and continuous deployment via GitHub Pages."><b>Action :</b> Codage intégral en HTML5/CSS3 sémantique sans dépendance lourde, moteur de traduction DOM instantané et déploiement continu via GitHub Pages.</p></div>
-                <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> Temps de chargement immédiat, zéro cookie tiers et accessibilité directe pour les recruteurs et le jury PPP." data-en="<b>Result:</b> Instant loading speed, zero third-party tracking cookies, and direct accessibility for recruiters and PPP juries."><b>Résultat :</b> Temps de chargement immédiat, zéro cookie tiers et accessibilité directe pour les recruteurs et le jury PPP.</p></div>
-                <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> Support modulaire prêt à accueillir mes livrables et projets de S6 à S10." data-en="<b>And beyond?:</b> Modular platform ready to host my S6 to S10 engineering deliverables and projects."><b>Et après ? :</b> Support modulaire prêt à accueillir mes livrables et projets de S6 à S10.</p></div>
-              </div>
-              <div class="star-card-footer">
-                <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" class="link-arrow" data-fr="Voir le dépôt Mohamed_Bistarine →" data-en="View Mohamed_Bistarine Repo →">Voir le dépôt Mohamed_Bistarine →</a>
-              </div>
-            </article>
-
+              <!-- Projet 3 : Programmation Impérative & Bas Niveau N7 -->
+              <article class="star-card">
+                <div class="star-card-header">
+                  <span class="mono-badge" data-fr="PROJET ACADÉMIQUE N7 · S5" data-en="N7 ACADEMIC PROJECT · S5">PROJET ACADÉMIQUE N7 · S5</span>
+                  <span class="tech-pill">Ada / Langage C</span>
+                </div>
+                <h3 class="star-card-title" data-fr="Algorithmique Typée & Structures de Données Critiques" data-en="Strongly-Typed Algorithms & Critical Data Structures">Algorithmique Typée & Structures de Données Critiques</h3>
+                <div class="star-list">
+                  <div class="star-item"><span class="star-letter s-tag">S</span><p data-fr="<b>Situation :</b> Formation d'ingénieur 1A au département Sciences du Numérique de l'ENSEEIHT (S5)." data-en="<b>Situation:</b> 1st-year engineering coursework in the Digital Sciences department at ENSEEIHT (S5)."><b>Situation :</b> Formation d'ingénieur 1A au département Sciences du Numérique de l'ENSEEIHT (S5).</p></div>
+                  <div class="star-item"><span class="star-letter t-tag">T</span><p data-fr="<b>Tâche :</b> Développer des programmes fiables à typage fort (Ada) et à gestion fine de la mémoire (C)." data-en="<b>Task:</b> Develop reliable software with strong typing (Ada) and fine-grained memory management (C)."><b>Tâche :</b> Développer des programmes fiables à typage fort (Ada) et à gestion fine de la mémoire (C).</p></div>
+                  <div class="star-item"><span class="star-letter a-tag">A</span><p data-fr="<b>Action :</b> Spécification formelle des préconditions/postconditions, raffinement successif, gestion des pointeurs et tests de robustesse." data-en="<b>Action:</b> Formal specification of pre/post-conditions, stepwise refinement, pointer management, and robustness testing."><b>Action :</b> Spécification formelle des préconditions/postconditions, raffinement successif, gestion des pointeurs et tests de robustesse.</p></div>
+                  <div class="star-item"><span class="star-letter r-tag">R</span><p data-fr="<b>Résultat :</b> Code modulaire sans fuite mémoire, conforme aux standards des systèmes embarqués critiques." data-en="<b>Result:</b> Memory-safe, modular code compliant with critical embedded systems standards."><b>Résultat :</b> Code modulaire sans fuite mémoire, conforme aux standards des systèmes embarqués critiques.</p></div>
+                  <div class="star-item"><span class="star-letter plus-tag">+</span><p data-fr="<b>Et après ? :</b> Préparation à l'implémentation temps réel d'algorithmes de commande en C/Ada." data-en="<b>And beyond?:</b> Readiness for real-time implementation of control algorithms in C/Ada."><b>Et après ? :</b> Préparation à l'implémentation temps réel d'algorithmes de commande en C/Ada.</p></div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
 
-        <!-- SOUS-ONGLET 2.2 : PROGRAMME ACADÉMIQUE SN (S5 - S9) -->
+        <!-- SOUS-ONGLET 2.2 : PARCOURS ACADÉMIQUE COMPLET (N7 + CPGE + BAC) -->
         <div id="eng-courses" class="subtab-panel" data-subtab-parent="eng">
-          <div class="cards-grid-3">
-            
-            <div class="semester-card">
-              <div class="semester-header">
-                <span class="mono-badge">1A · SEMESTRE 5 (30 ECTS)</span>
-                <h4 data-fr="Fondements Sciences du Numérique" data-en="Digital Sciences Foundations">Fondements Sciences du Numérique</h4>
-              </div>
-              <ul class="course-list">
-                <li data-fr="<b>Programmation Impérative</b> (Algorithmique, structures de données, projets) — 5 ECTS" data-en="<b>Imperative Programming</b> (Algorithms, data structures, projects) — 5 ECTS"><b>Programmation Impérative</b> (Algorithmique, structures de données, projets) — 5 ECTS</li>
-                <li data-fr="<b>Modélisation & Architecture</b> (Modélisation formelle, architecture des ordinateurs) — 5 ECTS" data-en="<b>Modeling & Architecture</b> (Formal modeling, computer architecture) — 5 ECTS"><b>Modélisation & Architecture</b> (Modélisation formelle, architecture des ordinateurs) — 5 ECTS</li>
-                <li data-fr="<b>Intégration & Probabilités</b> (Théorie de la mesure, intégration de Lebesgue, probabilités) — 5 ECTS" data-en="<b>Integration & Probability</b> (Measure theory, Lebesgue integration, probability) — 5 ECTS"><b>Intégration & Probabilités</b> (Théorie de la mesure, intégration de Lebesgue, probabilités) — 5 ECTS</li>
-                <li data-fr="<b>Analyse Numérique & Statistiques</b> (Optimisation, EDP, statistiques) — 5 ECTS" data-en="<b>Numerical Analysis & Statistics</b> (Optimization, PDEs, statistics) — 5 ECTS"><b>Analyse Numérique & Statistiques</b> (Optimisation, EDP, statistiques) — 5 ECTS</li>
-                <li data-fr="<b>Automatique & Analyse de Données</b> (Théorie du contrôle, analyse de données) — 5 ECTS" data-en="<b>Control Theory & Data Analysis</b> (Control theory, data analysis) — 5 ECTS"><b>Automatique & Analyse de Données</b> (Théorie du contrôle, analyse de données) — 5 ECTS</li>
-                <li data-fr="<b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, Anglais, LV2, RSE, EPS) — 5 ECTS" data-en="<b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, English, LV2, CSR, Sports) — 5 ECTS"><b>Soft & Human Skills S5</b> (CAM Marketing & e-Portfolio, Anglais, LV2, RSE, EPS) — 5 ECTS</li>
-              </ul>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">2.2 // CHRONOLOGIE ACADÉMIQUE VÉRIFIÉE (2024 → 2029)</span>
+              <span class="topbar-status" data-fr="Maroc (Agadir / Aït Melloul) ➔ France (Toulouse)" data-en="Morocco (Agadir / Aït Melloul) ➔ France (Toulouse)">Maroc (Agadir / Aït Melloul) ➔ France (Toulouse)</span>
             </div>
 
-            <div class="semester-card">
-              <div class="semester-header">
-                <span class="mono-badge">1A · SEMESTRE 6 (30 ECTS)</span>
-                <h4 data-fr="Systèmes, Réseaux & Objet" data-en="Systems, Networks & OOP">Systèmes, Réseaux & Objet</h4>
+            <div class="cards-grid-2">
+              <div class="semester-card">
+                <span class="mono-badge">2026 – 2029 · TOULOUSE, FRANCE</span>
+                <h4 data-fr="Toulouse INP - ENSEEIHT (N7) — Ingénieur Sciences du Numérique" data-en="Toulouse INP - ENSEEIHT (N7) — Digital Sciences Engineering">Toulouse INP - ENSEEIHT (N7) — Ingénieur Sciences du Numérique</h4>
+                <ul class="course-list">
+                  <li data-fr="<b>Formations actuelles (S5) :</b> Programmation en <b>Langage Ada</b> et <b>Langage C</b>, Calcul numérique & modélisation sous <b>MATLAB</b>, <b>Automatique et Analyse de données</b>, <b>Analyse numérique et Statistiques</b>, <b>Intégration et Probabilités</b>." data-en="<b>Current Coursework (S5):</b> Programming in <b>Ada</b> and <b>C</b>, Numerical computing & modeling in <b>MATLAB</b>, <b>Control Theory & Data Analysis</b>, <b>Numerical Analysis & Statistics</b>, <b>Integration & Probability</b>."><b>Formations actuelles (S5) :</b> Programmation en <b>Langage Ada</b> et <b>Langage C</b>, Calcul numérique & modélisation sous <b>MATLAB</b>, <b>Automatique et Analyse de données</b>, <b>Analyse numérique et Statistiques</b>, <b>Intégration et Probabilités</b>.</li>
+                  <li data-fr="<b>Langues & Soft Skills (S5) :</b> <b>Allemand (LV2)</b>, Anglais professionnel (PCE), Marketing & Self-Branding (CAM), Éducation Physique et Sportive." data-en="<b>Languages & Soft Skills (S5):</b> <b>German (LV2)</b>, Professional English (PCE), Marketing & Self-Branding (CAM), Physical Education."><b>Langues & Soft Skills (S5) :</b> <b>Allemand (LV2)</b>, Anglais professionnel (PCE), Marketing & Self-Branding (CAM), Éducation Physique et Sportive.</li>
+                  <li data-fr="<b>Orientation 2A/3A visée :</b> Optimisation, HPC & Big Data / Parcours ModIA (Modélisation & IA) / Systèmes Embarqués." data-en="<b>Target 2A/3A Specialization:</b> Optimization, HPC & Big Data / ModIA Track (Modeling & AI) / Embedded Systems."><b>Orientation 2A/3A visée :</b> Optimisation, HPC & Big Data / Parcours ModIA (Modélisation & IA) / Systèmes Embarqués.</li>
+                </ul>
               </div>
-              <ul class="course-list">
-                <li data-fr="<b>Technologie Objet</b> (POO en Java, conception orientée objet, projets) — 5 ECTS" data-en="<b>Object-Oriented Technology</b> (Java OOP, object-oriented design, projects) — 5 ECTS"><b>Technologie Objet</b> (POO en Java, conception orientée objet, projets) — 5 ECTS</li>
-                <li data-fr="<b>Réseaux</b> (Protocoles Internet, architectures réseaux locaux et télécoms) — 5 ECTS" data-en="<b>Computer Networks</b> (Internet protocols, local and telecom network architectures) — 5 ECTS"><b>Réseaux</b> (Protocoles Internet, architectures réseaux locaux et télécoms) — 5 ECTS</li>
-                <li data-fr="<b>Calcul Scientifique & Apprentissage</b> (Algèbre numérique, Machine Learning) — 5 ECTS" data-en="<b>Scientific Computing & Learning</b> (Numerical computing, Machine Learning) — 5 ECTS"><b>Calcul Scientifique & Apprentissage</b> (Algèbre numérique, Machine Learning) — 5 ECTS</li>
-                <li data-fr="<b>Télécommunications & Signal</b> (Communications numériques, traitement du signal) — 5 ECTS" data-en="<b>Telecommunications & Signal</b> (Digital communications, signal processing) — 5 ECTS"><b>Télécommunications & Signal</b> (Communications numériques, traitement du signal) — 5 ECTS</li>
-                <li data-fr="<b>Soft & Human Skills S6</b> (Modules CAM Leadership/Entrepreneurship/Managership/Citizenship, EPS, Stage 6 sem. min.) — 5 ECTS" data-en="<b>Soft & Human Skills S6</b> (CAM Leadership/Entrepreneurship/Managership/Citizenship, Sports, 6+ week internship) — 5 ECTS"><b>Soft & Human Skills S6</b> (Modules CAM Leadership/Entrepreneurship/Managership/Citizenship, EPS, Stage 6 sem. min.) — 5 ECTS</li>
-              </ul>
-            </div>
 
-            <div class="semester-card">
-              <div class="semester-header">
-                <span class="mono-badge">2A & 3A · SEMESTRES 7, 8 & 9</span>
-                <h4 data-fr="Spécialisation & Parcours Visé" data-en="Specialization & Target Track">Spécialisation & Parcours Visé</h4>
+              <div class="semester-card">
+                <span class="mono-badge">2024 – 2026 · AGADIR & AÏT MELLOUL, MAROC</span>
+                <h4 data-fr="Classes Préparatoires (MPSI / MP) & Baccalauréat SMB" data-en="Preparatory Classes (MPSI / MP) & SMB Baccalaureate">Classes Préparatoires (MPSI / MP) & Baccalauréat SMB</h4>
+                <ul class="course-list">
+                  <li data-fr="<b>2025 – 2026 | CPGE 2ème année — Filière MP (Mathématiques & Physique) :</b> <b>Groupe Scolaire Al Qalam</b> (Agadir, Maroc). Démonstration de théorèmes avancés, algèbre linéaire, topologie, analyse différentielle et TIPE sur <i>« Évaluation et décision dans un moteur d'échecs »</i>." data-en="<b>2025 – 2026 | CPGE Year 2 — MP Track (Mathematics & Physics):</b> <b>Groupe Scolaire Al Qalam</b> (Agadir, Morocco). Advanced theorem proving, linear algebra, topology, differential analysis, and TIPE research on <i>'Evaluation and Decision-Making in a Chess Engine'</i>."><b>2025 – 2026 | CPGE 2ème année — Filière MP (Mathématiques & Physique) :</b> <b>Groupe Scolaire Al Qalam</b> (Agadir, Maroc). Démonstration de théorèmes avancés, algèbre linéaire, topologie, analyse différentielle et TIPE sur <i>« Évaluation et décision dans un moteur d'échecs »</i>.</li>
+                  <li data-fr="<b>2024 – 2025 | CPGE 1ère année — Filière MPSI (Mathématiques, Physique et Sciences de l'Ingénieur) :</b> <b>Lycée Reda Slaoui</b> (Agadir, Maroc). Fondations rigoureuses en mathématiques pures, algorithmique et sciences de l'ingénieur (asservissement)." data-en="<b>2024 – 2025 | CPGE Year 1 — MPSI Track (Math, Physics & Engineering Sciences):</b> <b>Lycée Reda Slaoui</b> (Agadir, Morocco). Rigorous foundations in pure mathematics, algorithms, and control engineering."><b>2024 – 2025 | CPGE 1ère année — Filière MPSI (Mathématiques, Physique et Sciences de l'Ingénieur) :</b> <b>Lycée Reda Slaoui</b> (Agadir, Maroc). Fondations rigoureuses en mathématiques pures, algorithmique et sciences de l'ingénieur (asservissement).</li>
+                  <li data-fr="<b>Juin 2024 | Baccalauréat Sciences Mathématiques B (SMB) :</b> <b>Lycée Qualifiant Mohamed Al Baqali</b> (Aït Melloul, Grand Agadir, Maroc)." data-en="<b>June 2024 | Baccalaureate in Mathematical Sciences B (SMB):</b> <b>Lycée Qualifiant Mohamed Al Baqali</b> (Aït Melloul, Greater Agadir, Morocco)."><b>Juin 2024 | Baccalauréat Sciences Mathématiques B (SMB) :</b> <b>Lycée Qualifiant Mohamed Al Baqali</b> (Aït Melloul, Grand Agadir, Maroc).</li>
+                </ul>
               </div>
-              <ul class="course-list">
-                <li data-fr="<b>Enseignements Avancés 2A (S7/S8) :</b> Programmation Fonctionnelle & Traduction des Langages, Théorie des Automates & Graphes, Génie du Logiciel & des Systèmes, Optimisation, Systèmes Concurrents & Communicants, Apprentissage Machine." data-en="<b>Advanced 2A Coursework (S7/S8):</b> Functional Programming & Language Translation, Automata & Graph Theory, Software & Systems Engineering, Optimization, Concurrent & Communicating Systems, Machine Learning."><b>Enseignements Avancés 2A (S7/S8) :</b> Programmation Fonctionnelle & Traduction des Langages, Théorie des Automates & Graphes, Génie du Logiciel & des Systèmes, Optimisation, Systèmes Concurrents & Communicants, Apprentissage Machine.</li>
-                <li data-fr="<b>Parcours 2A/3A Ciblé :</b> [À COMPLÉTER : Choisir parmi Systèmes logiciels / HPC et Big Data / Image et multimédia / Infrastructure du Big Data et IoT / Systèmes et réseaux embarqués / Télécommunications sans fil et objets connectés / Cybersécurité TLS-SEC / Parcours ModIA]." data-en="<b>Target 2A/3A Track:</b> [TO COMPLETE: Select among Software Systems / HPC & Big Data / Image & Multimedia / Big Data & IoT Infrastructure / Embedded Systems & Networks / Wireless Telecoms & IoT / Cybersecurity TLS-SEC / ModIA Track]."><b>Parcours 2A/3A Ciblé :</b> [À COMPLÉTER : Choisir parmi Systèmes logiciels / HPC et Big Data / Image et multimédia / Infrastructure du Big Data et IoT / Systèmes et réseaux embarqués / Télécommunications sans fil et objets connectés / Cybersécurité TLS-SEC / Parcours ModIA].</li>
-                <li data-fr="<b>Formation Initiale Antérieure :</b> [À COMPLÉTER : Votre CPGE (MP, MPI, PSI, PC, PT, TSI, Prépa INP) ou Licence/BUT, établissement, ville et années]." data-en="<b>Prior Academic Education:</b> [TO COMPLETE: Your Preparatory Classes (MP, MPI, PSI, PC, PT, TSI, Prépa INP) or BSc/BUT, institution, city, and years]."><b>Formation Initiale Antérieure :</b> [À COMPLÉTER : Votre CPGE (MP, MPI, PSI, PC, PT, TSI, Prépa INP) ou Licence/BUT, établissement, ville et années].</li>
-              </ul>
             </div>
-
           </div>
         </div>
 
-        <!-- SOUS-ONGLET 2.3 : COMPÉTENCES & STACK TECHNIQUE -->
+        <!-- SOUS-ONGLET 2.3 : COMPÉTENCES MATHÉMATIQUES & STACK TECHNIQUE -->
         <div id="eng-skills" class="subtab-panel" data-subtab-parent="eng">
-          <div class="cards-grid-2">
-            
-            <div class="skill-box">
-              <h3 data-fr="Hard Skills — Stack Sciences du Numérique" data-en="Hard Skills — Digital Sciences Stack">Hard Skills — Stack Sciences du Numérique</h3>
-              <div class="skill-category">
-                <span class="mono-label" data-fr="LANGAGES DE PROGRAMMATION" data-en="PROGRAMMING LANGUAGES">LANGAGES DE PROGRAMMATION</span>
-                <div class="tech-tag-row">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">C</span>
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Ada</span>
-                  <span class="tech-tag">OCaml</span>
-                  <span class="tech-tag">SQL</span>
-                  <span class="tech-tag">Bash / Shell</span>
-                  <span class="tech-tag">HTML5 / CSS3 / JS</span>
-                </div>
-              </div>
-              <div class="skill-category">
-                <span class="mono-label" data-fr="DATA SCIENCE, CALCUL & MODÉLISATION" data-en="DATA SCIENCE, COMPUTING & MODELING">DATA SCIENCE, CALCUL & MODÉLISATION</span>
-                <div class="tech-tag-row">
-                  <span class="tech-tag">Scikit-learn</span>
-                  <span class="tech-tag">TensorFlow</span>
-                  <span class="tech-tag">Pandas / Matplotlib</span>
-                  <span class="tech-tag">MATLAB / Simulink</span>
-                  <span class="tech-tag">UML / Méthodes Formelles</span>
-                </div>
-              </div>
-              <div class="skill-category">
-                <span class="mono-label" data-fr="SYSTÈMES, RÉSEAUX & OUTILS" data-en="SYSTEMS, NETWORKS & TOOLS">SYSTÈMES, RÉSEAUX & OUTILS</span>
-                <div class="tech-tag-row">
-                  <span class="tech-tag">Linux</span>
-                  <span class="tech-tag">Git / GitHub / GitLab</span>
-                  <span class="tech-tag">Docker</span>
-                  <span class="tech-tag">Wireshark / Protocoles Réseaux</span>
-                  <span class="tech-tag">LaTeX</span>
-                  <span class="tech-tag">VS Code</span>
-                </div>
-              </div>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">2.3 // MATRICE DE COMPÉTENCES SCIENTIFIQUES & LOGICIELS</span>
+              <span class="topbar-status" data-fr="Théorie Mathématique & Implémentation Numérique" data-en="Mathematical Theory & Numerical Implementation">Théorie Mathématique & Implémentation Numérique</span>
             </div>
 
-            <div class="skill-box">
-              <h3 data-fr="Core Skills 2025–2030 (Référentiel WEF & N7 Soft Skills)" data-en="Core Skills 2025–2030 (WEF & N7 Soft Skills Framework)">Core Skills 2025–2030 (Référentiel WEF & N7 Soft Skills)</h3>
-              <p class="small-note" data-fr="Compétences transversales développées à l'N7 et alignées sur le rapport Future of Jobs 2025 du World Economic Forum étudié en cours CAM :" data-en="Transversal competencies developed at N7 and aligned with the World Economic Forum Future of Jobs Report 2025 studied in CAM class:">
-                Compétences transversales développées à l'N7 et alignées sur le rapport Future of Jobs 2025 du World Economic Forum étudié en cours CAM :
-              </p>
-              <ul class="wef-skills-list">
-                <li>
-                  <strong data-fr="1. Analytical Thinking & Creative Thinking" data-en="1. Analytical Thinking & Creative Thinking">1. Analytical Thinking & Creative Thinking</strong>
-                  <span data-fr="Décomposition mathématique et résolution structurée de problèmes d'ingénierie complexes." data-en="Mathematical decomposition and structured resolution of complex engineering problems.">Décomposition mathématique et résolution structurée de problèmes d'ingénierie complexes.</span>
-                </li>
-                <li>
-                  <strong data-fr="2. AI & Big Data · Networks & Cybersecurity · Technological Literacy" data-en="2. AI & Big Data · Networks & Cybersecurity · Technological Literacy">2. AI & Big Data · Networks & Cybersecurity · Technological Literacy</strong>
-                  <span data-fr="Compétences technologiques en plus forte croissance d'ici 2030 selon le rapport WEF 2025." data-en="Fastest-growing technological skills by 2030 according to the WEF 2025 report.">Compétences technologiques en plus forte croissance d'ici 2030 selon le rapport WEF 2025.</span>
-                </li>
-                <li>
-                  <strong data-fr="3. Resilience, Flexibility, Agility & Lifelong Learning" data-en="3. Resilience, Flexibility, Agility & Lifelong Learning">3. Resilience, Flexibility, Agility & Lifelong Learning</strong>
-                  <span data-fr="Capacité d'adaptation rapide et curiosité scientifique continue." data-en="Rapid adaptability and continuous scientific curiosity.">Capacité d'adaptation rapide et curiosité scientifique continue.</span>
-                </li>
-                <li>
-                  <strong data-fr="4. Leadership, Social Influence & Active Listening" data-en="4. Leadership, Social Influence & Active Listening">4. Leadership, Social Influence & Active Listening</strong>
-                  <span data-fr="Travail collaboratif en bureaux d'études et communication bilingue." data-en="Collaborative teamwork in engineering labs and bilingual communication.">Travail collaboratif en bureaux d'études et communication bilingue.</span>
-                </li>
-              </ul>
-            </div>
+            <div class="cards-grid-2">
+              <div class="skill-box">
+                <h3 data-fr="Hard Skills — Programmation & Modélisation" data-en="Hard Skills — Programming & Mathematical Modeling">Hard Skills — Programmation & Modélisation</h3>
+                <div class="skill-category">
+                  <span class="mono-label" data-fr="LANGAGES & ENVIRONNEMENTS ACTUELS (N7 S5)" data-en="CURRENT LANGUAGES & ENVIRONMENTS (N7 S5)">LANGAGES & ENVIRONNEMENTS ACTUELS (N7 S5)</span>
+                  <div class="tech-tag-row">
+                    <span class="tech-tag">Langage Ada</span>
+                    <span class="tech-tag">Langage C</span>
+                    <span class="tech-tag">MATLAB / Simulink</span>
+                    <span class="tech-tag">Python (NumPy / SciPy)</span>
+                    <span class="tech-tag">Linux / Bash</span>
+                    <span class="tech-tag">Git / GitHub</span>
+                    <span class="tech-tag">LaTeX</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <span class="mono-label" data-fr="MATHÉMATIQUES APPLIQUÉES & OPTIMISATION" data-en="APPLIED MATHEMATICS & OPTIMIZATION">MATHÉMATIQUES APPLIQUÉES & OPTIMISATION</span>
+                  <div class="tech-tag-row">
+                    <span class="tech-tag" data-fr="Démonstration de Théorèmes" data-en="Theorem Proving">Démonstration de Théorèmes</span>
+                    <span class="tech-tag" data-fr="Optimisation sous Contraintes" data-en="Constrained Optimization">Optimisation sous Contraintes</span>
+                    <span class="tech-tag" data-fr="Asservissement & Estimation" data-en="Control & State Estimation">Asservissement & Estimation</span>
+                    <span class="tech-tag" data-fr="Théorie des Jeux (Minimax)" data-en="Game Theory (Minimax)">Théorie des Jeux (Minimax)</span>
+                    <span class="tech-tag" data-fr="Analyse Statistique de Data" data-en="Statistical Data Analysis">Analyse Statistique de Data</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="skill-box">
+                <h3 data-fr="Atouts Cognitifs (Référentiel WEF 2025)" data-en="Core Cognitive Strengths (WEF 2025 Framework)">Atouts Cognitifs (Référentiel WEF 2025)</h3>
+                <ul class="wef-skills-list">
+                  <li>
+                    <strong data-fr="1. Pensée Analytique & Résolution Mathématique" data-en="1. Analytical Thinking & Mathematical Problem-Solving">1. Pensée Analytique & Résolution Mathématique</strong>
+                    <span data-fr="Passage fluide de la preuve formelle d'un théorème à l'algorithme optimisé." data-en="Seamless transition from formal theorem proving to optimized algorithm design.">Passage fluide de la preuve formelle d'un théorème à l'algorithme optimisé.</span>
+                  </li>
+                  <li>
+                    <strong data-fr="2. Vision Stratégique & Anticipation (Échecs FIDE)" data-en="2. Strategic Foresight & Calculation (FIDE Chess)">2. Vision Stratégique & Anticipation (Échecs FIDE)</strong>
+                    <span data-fr="Calcul d'arbres de possibilités profonds et gestion du temps sous haute pression." data-en="Deep calculation of decision trees and time management under high pressure.">Calcul d'arbres de possibilités profonds et gestion du temps sous haute pression.</span>
+                  </li>
+                  <li>
+                    <strong data-fr="3. Discipline & Esprit d'Équipe Multisport" data-en="3. Multi-Sport Discipline & Team Synchronization">3. Discipline & Esprit d'Équipe Multisport</strong>
+                    <span data-fr="Endurance forgée en club de football (Olympique Dcheira), natation, basket et volley." data-en="Endurance forged through club football (Olympique Dcheira), swimming, basketball, and volleyball.">Endurance forgée en club de football (Olympique Dcheira), natation, basket et volley.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -417,106 +412,124 @@
     <!-- ==================== ONGLET 3 : INTERNATIONAL MOBILITY (#mobility) ==================== -->
     <section id="mobility" class="tab-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">STRATÉGIE INTERNATIONALE N7 · EXIGENCE CTI (17 SEMAINES MIN. EN FISE)</span>
-          <h2 class="section-title" data-fr="Mobilité Internationale & Compétences Interculturelles" data-en="International Mobility & Intercultural Skills">Mobilité Internationale & Compétences Interculturelles</h2>
-          <p class="section-desc" data-fr="Pour valider le diplôme d'ingénieur N7 sous statut étudiant (FISE), une mobilité internationale d'au moins 17 semaines est requise d'ici le semestre S9 (9 semaines en apprentissage). Conformément au barème CAM Module 1, voici mes 3 projets de mobilité directement alignés sur mes 3 Role Models professionnels." data-en="To validate the N7 Engineering degree under student status (FISE), a minimum of 17 weeks of international mobility is required by semester S9 (9 weeks for apprentices). In accordance with the CAM Module 1 rubric, below are my 3 mobility projects directly aligned with my 3 Role Models.">
-            Pour valider le diplôme d'ingénieur N7 sous statut étudiant (FISE), une mobilité internationale d'au moins 17 semaines est requise d'ici le semestre S9 (9 semaines en apprentissage). Conformément au barème CAM Module 1, voici mes 3 projets de mobilité directement alignés sur mes 3 Role Models professionnels.
+        <div class="section-header anim-stagger-1">
+          <span class="section-eyebrow">STRATÉGIE INTERNATIONALE N7 · ALLEMAGNE (TUM), JAPON & CHINE</span>
+          <h2 class="section-title" data-fr="Projet de Mobilité Internationale & Pôles d'Excellence Technologique" data-en="International Mobility Plan & Global Tech Powerhouses">Projet de Mobilité Internationale & Pôles d'Excellence Technologique</h2>
+          <p class="section-desc" data-fr="Mon projet international vise trois puissances technologiques mondiales — l'Allemagne, le Japon et la Chine — afin de m'inspirer de leurs méthodes d'innovation en optimisation mathématique, automatique et intelligence artificielle." data-en="My international strategy targets three global technological powerhouses—Germany, Japan, and China—to draw inspiration from their cutting-edge engineering in mathematical optimization, control systems, and AI.">
+            Mon projet international vise trois puissances technologiques mondiales — l'Allemagne, le Japon et la Chine — afin de m'inspirer de leurs méthodes d'innovation en optimisation mathématique, automatique et intelligence artificielle.
           </p>
         </div>
 
-        <!-- Sous-onglets Mobilité (Exigence diapo 23 : + sub-tabs for PCE, LV2, etc.) -->
-        <div class="subtab-nav" data-subtab-group="mob">
-          <button class="subtab-btn active" data-subtab-target="mob-projects" data-fr="3 Projets de Mobilité Alignés (Livrable 1er Nov.)" data-en="3 Aligned Mobility Projects (Nov 1st Deliverable)">3 Projets de Mobilité Alignés (Livrable 1er Nov.)</button>
-          <button class="subtab-btn" data-subtab-target="mob-languages" data-fr="Langues, PCE & LV2 (Objectif B2+)" data-en="Languages, PCE & LV2 (B2+ Target)">Langues, PCE & LV2 (Objectif B2+)</button>
+        <!-- BOUTONS DE SOUS-PAGES ÉLARGIS MOBILITÉ -->
+        <div class="subtab-wide-nav anim-stagger-2" data-subtab-group="mob">
+          <button class="subtab-wide-btn active" data-subtab-target="mob-projects">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 3.1</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="3 Projets de Mobilité : TUM (Allemagne), Japon & Chine" data-en="3 Mobility Projects: TUM (Germany), Japan & China">3 Projets de Mobilité : TUM (Allemagne), Japon & Chine</strong>
+            <span class="swb-desc" data-fr="Détail de ma cible principale à la Technische Universität München (TUM) et de mes projets de stages R&D au Japon et en Chine" data-en="Details of my primary target at Technical University of Munich (TUM) and R&D internship plans in Japan and China">Détail de ma cible principale à la Technische Universität München (TUM) et de mes projets de stages R&D au Japon et en Chine</span>
+          </button>
+
+          <button class="subtab-wide-btn" data-subtab-target="mob-languages">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 3.2</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Préparation Linguistique : Allemand (LV2), Anglais & PCE" data-en="Language Preparation: German (LV2), English & PCE">Préparation Linguistique : Allemand (LV2), Anglais & PCE</strong>
+            <span class="swb-desc" data-fr="Apprentissage actif de l'Allemand à l'N7 pour préparer Munich, Anglais scientifique (objectif B2+) et bilinguisme Arabe/Français" data-en="Active German learning at N7 to prepare for Munich, scientific English (B2+ goal), and Arabic/French bilingualism">Apprentissage actif de l'Allemand à l'N7 pour préparer Munich, Anglais scientifique (objectif B2+) et bilinguisme Arabe/Français</span>
+          </button>
         </div>
 
-        <!-- SOUS-ONGLET 3.1 : 3 PROJETS DE MOBILITÉ ALIGNÉS -->
+        <!-- SOUS-ONGLET 3.1 : 3 PROJETS DE MOBILITÉ -->
         <div id="mob-projects" class="subtab-panel active-subpanel" data-subtab-parent="mob">
-          <div class="cards-grid-3">
-            
-            <!-- Mobilité 1 -->
-            <article class="mobility-card">
-              <div class="mobility-top">
-                <span class="mono-badge">PROJET DE MOBILITÉ #1 · S9</span>
-                <span class="align-badge" data-fr="Aligné sur Role Model #1" data-en="Aligned with Role Model #1">Aligné sur Role Model #1</span>
-              </div>
-              <h3 data-fr="[Option 1 : ex. Échange Académique / Double Diplôme — EPFL (Suisse), Georgia Tech (USA) ou Imperial College (UK)]" data-en="[Option 1: e.g. Academic Exchange / Double Degree — EPFL (Switzerland), Georgia Tech (USA) or Imperial College (UK)]">[Option 1 : ex. Échange Académique / Double Diplôme — EPFL (Suisse), Georgia Tech (USA) ou Imperial College (UK)]</h3>
-              <p class="mobility-meta" data-fr="<b>Type :</b> Semestre d'études S9 ou Double Diplôme (17+ semaines) · <b>Langue :</b> Anglais / Français" data-en="<b>Type:</b> S9 Academic Semester or Double Degree (17+ weeks) · <b>Language:</b> English / French"><b>Type :</b> Semestre d'études S9 ou Double Diplôme (17+ semaines) · <b>Langue :</b> Anglais / Français</p>
-              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Expliquez pourquoi les cours de cette université partenaire de l'N7 (ex. IA, HPC ou Systèmes Logiciels) correspondent à la trajectoire du Role Model #1]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Explain why the curriculum of this N7 partner university (e.g. AI, HPC, or Software Systems) matches Role Model #1's career path].">
-                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Expliquez pourquoi les cours de cette université partenaire de l'N7 (ex. IA, HPC ou Systèmes Logiciels) correspondent à la trajectoire du Role Model #1].
-              </p>
-            </article>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">3.1 // 3 DESTINATIONS STRATÉGIQUES ALIGNÉES (QUOTA CTI : 17 SEMAINES MIN.)</span>
+              <span class="topbar-status" data-fr="Allemagne · Japon · Chine" data-en="Germany · Japan · China">Allemagne · Japon · Chine</span>
+            </div>
 
-            <!-- Mobilité 2 -->
-            <article class="mobility-card">
-              <div class="mobility-top">
-                <span class="mono-badge">PROJET DE MOBILITÉ #2 · S9</span>
-                <span class="align-badge" data-fr="Aligné sur Role Model #2" data-en="Aligned with Role Model #2">Aligné sur Role Model #2</span>
-              </div>
-              <h3 data-fr="[Option 2 : ex. Semestre Erasmus+ — Politecnico di Torino (Italie) ou Universidad Politécnica de Madrid (Espagne)]" data-en="[Option 2: e.g. Erasmus+ Semester — Politecnico di Torino (Italy) or Universidad Politécnica de Madrid (Spain)]">[Option 2 : ex. Semestre Erasmus+ — Politecnico di Torino (Italie) ou Universidad Politécnica de Madrid (Espagne)]</h3>
-              <p class="mobility-meta" data-fr="<b>Type :</b> Mobilité Académique Erasmus+ S9 (17+ semaines) · <b>Financement :</b> Bourse Erasmus+ / Occitanie" data-en="<b>Type:</b> Erasmus+ S9 Academic Mobility (17+ weeks) · <b>Funding:</b> Erasmus+ / Occitanie Grant"><b>Type :</b> Mobilité Académique Erasmus+ S9 (17+ semaines) · <b>Financement :</b> Bourse Erasmus+ / Occitanie</p>
-              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Parmi les 80+ accords Erasmus+ de l'N7, détaillez les cours ciblés dans votre Learning Agreement et l'ouverture européenne illustrée par votre Role Model #2]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Among N7's 80+ Erasmus+ agreements, detail the target courses in your Learning Agreement and the European exposure illustrated by Role Model #2].">
-                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Parmi les 80+ accords Erasmus+ de l'N7, détaillez les cours ciblés dans votre Learning Agreement et l'ouverture européenne illustrée par votre Role Model #2].
-              </p>
-            </article>
+            <div class="cards-grid-3">
+              <!-- Destination 1 : Allemagne (TUM) -->
+              <article class="mobility-card">
+                <div class="mobility-top">
+                  <span class="mono-badge">CHOIX #1 · ALLEMAGNE 🇩🇪</span>
+                  <span class="align-badge" data-fr="Cible Académique Principale" data-en="Primary Academic Target">Cible Académique Principale</span>
+                </div>
+                <h3 data-fr="Technische Universität München (TUM) — Munich, Allemagne" data-en="Technical University of Munich (TUM) — Germany">Technische Universität München (TUM) — Munich, Allemagne</h3>
+                <p class="mobility-meta" data-fr="<b>Format :</b> Semestre académique S9 ou Stage R&D · <b>Langues :</b> Anglais & Allemand (LV2 suivie à l'N7)" data-en="<b>Format:</b> S9 Academic Exchange or R&D Internship · <b>Languages:</b> English & German (LV2 at N7)"><b>Format :</b> Semestre académique S9 ou Stage R&D · <b>Langues :</b> Anglais & Allemand (LV2 suivie à l'N7)</p>
+                <p data-fr="<b>Objectif :</b> Intégrer les départements de mathématiques appliquées, d'optimisation et de commande automatique de la TUM. Mon apprentissage actuel de l'allemand à l'ENSEEIHT prépare directement mon immersion dans l'écosystème industriel bavarois." data-en="<b>Objective:</b> Join TUM's applied mathematics, optimization, and automatic control departments. My current German coursework at ENSEEIHT directly prepares my immersion in the Bavarian tech ecosystem.">
+                  <b>Objectif :</b> Intégrer les départements de mathématiques appliquées, d'optimisation et de commande automatique de la TUM. Mon apprentissage actuel de l'allemand à l'ENSEEIHT prépare directement mon immersion dans l'écosystème industriel bavarois.
+                </p>
+              </article>
 
-            <!-- Mobilité 3 -->
-            <article class="mobility-card">
-              <div class="mobility-top">
-                <span class="mono-badge">PROJET DE MOBILITÉ #3 · S8 / S10</span>
-                <span class="align-badge" data-fr="Aligné sur Role Model #3" data-en="Aligned with Role Model #3">Aligné sur Role Model #3</span>
-              </div>
-              <h3 data-fr="[Option 3 : ex. Stage R&D en Entreprise ou Laboratoire à l'Étranger — National Institute of Informatics (Japon), Europe ou Amérique]" data-en="[Option 3: e.g. International R&D Corporate or Lab Internship — National Institute of Informatics (Japan), Europe or Americas]">[Option 3 : ex. Stage R&D en Entreprise ou Laboratoire à l'Étranger — National Institute of Informatics (Japon), Europe ou Amérique]</h3>
-              <p class="mobility-meta" data-fr="<b>Type :</b> Stage international en entreprise ou laboratoire (17+ semaines) · <b>Langue :</b> Anglais" data-en="<b>Type:</b> International corporate or research lab internship (17+ weeks) · <b>Language:</b> English"><b>Type :</b> Stage international en entreprise ou laboratoire (17+ semaines) · <b>Langue :</b> Anglais</p>
-              <p data-fr="<b>Justification académique & professionnelle :</b> [À COMPLÉTER : Immersion directe dans une équipe d'ingénierie logicielle ou de R&D internationale, en adéquation avec le parcours du Role Model #3]." data-en="<b>Academic & Career Rationale:</b> [TO COMPLETE: Direct immersion in an international software engineering or R&D team, matching Role Model #3's trajectory].">
-                <b>Justification académique & professionnelle :</b> [À COMPLÉTER : Immersion directe dans une équipe d'ingénierie logicielle ou de R&D internationale, en adéquation avec le parcours du Role Model #3].
-              </p>
-            </article>
+              <!-- Destination 2 : Japon (NII Tokyo / R&D) -->
+              <article class="mobility-card">
+                <div class="mobility-top">
+                  <span class="mono-badge">CHOIX #2 · JAPON 🇯🇵</span>
+                  <span class="align-badge" data-fr="Partenaire Officiel SN N7" data-en="Official N7 SN Partner">Partenaire Officiel SN N7</span>
+                </div>
+                <h3 data-fr="National Institute of Informatics (NII, Tokyo) ou Stage R&D au Japon" data-en="National Institute of Informatics (NII, Tokyo) or Japan R&D">National Institute of Informatics (NII, Tokyo) ou Stage R&D au Japon</h3>
+                <p class="mobility-meta" data-fr="<b>Format :</b> Stage de recherche S8/S10 ou échange (17+ semaines) · <b>Langue :</b> Anglais" data-en="<b>Format:</b> S8/S10 Research Internship or Exchange (17+ weeks) · <b>Language:</b> English"><b>Format :</b> Stage de recherche S8/S10 ou échange (17+ semaines) · <b>Langue :</b> Anglais</p>
+                <p data-fr="<b>Objectif :</b> Le NII à Tokyo est un partenaire officiel du département SN de l'ENSEEIHT. Un stage au Japon me permettra d'étudier l'optimisation des systèmes robotiques, l'asservissement de haute précision et l'IA algorithmique." data-en="<b>Objective:</b> NII in Tokyo is an official partner of ENSEEIHT's SN department. An internship in Japan will allow me to study robotics optimization, high-precision control systems, and algorithmic AI.">
+                  <b>Objectif :</b> Le NII à Tokyo est un partenaire officiel du département SN de l'ENSEEIHT. Un stage au Japon me permettra d'étudier l'optimisation des systèmes robotiques, l'asservissement de haute précision et l'IA algorithmique.
+                </p>
+              </article>
 
+              <!-- Destination 3 : Chine -->
+              <article class="mobility-card">
+                <div class="mobility-top">
+                  <span class="mono-badge">CHOIX #3 · CHINE 🇨🇳</span>
+                  <span class="align-badge" data-fr="Innovation & Big Data" data-en="Innovation & Big Data">Innovation & Big Data</span>
+                </div>
+                <h3 data-fr="Pôle Technologique en Chine — Stage R&D ou Semestre Partenaire" data-en="Tech Hub in China — R&D Internship or Partner Semester">Pôle Technologique en Chine — Stage R&D ou Semestre Partenaire</h3>
+                <p class="mobility-meta" data-fr="<b>Format :</b> Stage international ou mobilité académique S9 · <b>Langue :</b> Anglais" data-en="<b>Format:</b> International Internship or S9 Academic Mobility · <b>Language:</b> English"><b>Format :</b> Stage international ou mobilité académique S9 · <b>Langue :</b> Anglais</p>
+                <p data-fr="<b>Objectif :</b> Observer et pratiquer le déploiement à grande échelle de modèles d'intelligence artificielle, de théorie des jeux et d'optimisation basée sur les données au cœur des métropoles technologiques chinoises." data-en="<b>Objective:</b> Experience large-scale deployment of artificial intelligence models, game theory, and data-driven optimization within China's leading technological hubs.">
+                  <b>Objectif :</b> Observer et pratiquer le déploiement à grande échelle de modèles d'intelligence artificielle, de théorie des jeux et d'optimisation basée sur les données au cœur des métropoles technologiques chinoises.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
 
-        <!-- SOUS-ONGLET 3.2 : LANGUES, PCE & LV2 -->
+        <!-- SOUS-ONGLET 3.2 : LANGUES & PCE -->
         <div id="mob-languages" class="subtab-panel" data-subtab-parent="mob">
-          <div class="cards-grid-2">
-            
-            <div class="skill-box">
-              <h3 data-fr="Compétences Linguistiques (CECRL)" data-en="Language Proficiency (CEFR)">Compétences Linguistiques (CECRL)</h3>
-              <ul class="lang-proficiency-list">
-                <li>
-                  <div class="lang-head"><strong>🇬🇧 / 🇺🇸 English (PCE — Professional Communication & English)</strong><span class="mono-badge">B2+ Target S9</span></div>
-                  <p data-fr="Langue de travail scientifique et technique. Rédaction de documentation logicielle, pitchs techniques de 5 minutes et vidéo UVP. [À COMPLÉTER : Niveau actuel et score visé]." data-en="Scientific and technical working language. Software documentation writing, 5-minute technical pitches, and UVP video. [TO COMPLETE: Current level and target score].">Langue de travail scientifique et technique. Rédaction de documentation logicielle, pitchs techniques de 5 minutes et vidéo UVP. [À COMPLÉTER : Niveau actuel et score visé].</p>
-                </li>
-                <li>
-                  <div class="lang-head"><strong>🇫🇷 Français</strong><span class="mono-badge">C1 / C2 · Bilingue</span></div>
-                  <p data-fr="Maîtrise académique et professionnelle complète dans le cadre des études supérieures scientifiques et d'ingénieur à Toulouse." data-en="Full academic and professional command used throughout higher STEM and engineering studies in Toulouse.">Maîtrise académique et professionnelle complète dans le cadre des études supérieures scientifiques et d'ingénieur à Toulouse.</p>
-                </li>
-                <li>
-                  <div class="lang-head"><strong data-fr="🌍 [Langue Maternelle / Autre Langue : ex. Arabe]" data-en="🌍 [Native / Additional Language: e.g. Arabic]">🌍 [Langue Maternelle / Autre Langue : ex. Arabe]</strong><span class="mono-badge">C2 / Native</span></div>
-                  <p data-fr="[À COMPLÉTER : Précisez vos langues maternelles ou additionnelles et votre ouverture interculturelle]." data-en="[TO COMPLETE: Specify your native or additional languages and intercultural background].">[À COMPLÉTER : Précisez vos langues maternelles ou additionnelles et votre ouverture interculturelle].</p>
-                </li>
-                <li>
-                  <div class="lang-head"><strong data-fr="🇪🇸 / 🇩🇪 LV2 à l'ENSEEIHT : [À COMPLÉTER : Espagnol / Allemand / Autre]" data-en="🇪🇸 / 🇩🇪 Second Foreign Language (LV2 at N7): [TO COMPLETE: Spanish / German / Other]">🇪🇸 / 🇩🇪 LV2 à l'ENSEEIHT : [À COMPLÉTER : Espagnol / Allemand / Autre]</strong><span class="mono-badge">LV2 N7</span></div>
-                  <p data-fr="[À COMPLÉTER : Apprentissage linguistique suivi au Soft Skills Center de l'N7]." data-en="[TO COMPLETE: Language coursework pursued at the N7 Soft Skills Center].">[À COMPLÉTER : Apprentissage linguistique suivi au Soft Skills Center de l'N7].</p>
-                </li>
-              </ul>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">3.2 // PROFIL MULTILINGUE & PRÉPARATION INTERCULTURELLE</span>
+              <span class="topbar-status" data-fr="4 Langues Pratiquées" data-en="4 Languages">4 Langues Pratiquées</span>
             </div>
 
-            <div class="skill-box">
-              <h3 data-fr="Expériences Interculturelles & Productions PCE" data-en="Intercultural Experiences & PCE Deliverables">Expériences Interculturelles & Productions PCE</h3>
-              <p data-fr="[À COMPLÉTER : Décrivez ici vos expériences internationales passées (études, voyages, projets multiculturels) ainsi que vos livrables de cours PCE]." data-en="[TO COMPLETE: Describe your past international experiences (studies, travel, multicultural projects) as well as your PCE coursework deliverables].">
-                [À COMPLÉTER : Décrivez ici vos expériences internationales passées (études, voyages, projets multiculturels) ainsi que vos livrables de cours PCE].
-              </p>
-              <div class="pce-deliverables-box">
-                <span class="mono-label">LIVRABLES PCE & COMMUNICATION EN ANGLAIS (S5–S8)</span>
+            <div class="cards-grid-2">
+              <div class="skill-box">
+                <h3 data-fr="Langues de Travail & Mobilité" data-en="Working & Mobility Languages">Langues de Travail & Mobilité</h3>
+                <ul class="lang-proficiency-list">
+                  <li>
+                    <div class="lang-head"><strong>🇩🇪 Allemand (LV2 suivie à l'ENSEEIHT)</strong><span class="mono-badge">Objectif TUM Munich</span></div>
+                    <p data-fr="Apprentissage structuré au Soft Skills Center de l'N7 pour préparer mes stages en Allemagne et ma mobilité académique à la TUM." data-en="Structured learning at the N7 Soft Skills Center to prepare for internships in Germany and academic mobility at TUM.">Apprentissage structuré au Soft Skills Center de l'N7 pour préparer mes stages en Allemagne et ma mobilité académique à la TUM.</p>
+                  </li>
+                  <li>
+                    <div class="lang-head"><strong>🇬🇧 Anglais (PCE — Professional Communication)</strong><span class="mono-badge">Objectif B2+ CTI</span></div>
+                    <p data-fr="Langue principale pour la recherche scientifique, la documentation de code, la vidéo UVP et mes projets au Japon et en Chine." data-en="Primary language for scientific papers, code documentation, the UVP video, and my mobility projects in Japan and China.">Langue principale pour la recherche scientifique, la documentation de code, la vidéo UVP et mes projets au Japon et en Chine.</p>
+                  </li>
+                  <li>
+                    <div class="lang-head"><strong>🇫🇷 Français & 🇲🇦 Arabe</strong><span class="mono-badge">C2 / Bilingue Natif</span></div>
+                    <p data-fr="Maîtrise académique complète du français scientifique (CPGE MPSI/MP et N7) et langue maternelle arabe." data-en="Full academic command of scientific French (MPSI/MP CPGE and N7) and native Arabic proficiency.">Maîtrise académique complète du français scientifique (CPGE MPSI/MP et N7) et langue maternelle arabe.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="skill-box">
+                <h3 data-fr="Trajectoire Internationale Déjà Réalisée" data-en="Completed International Trajectory">Trajectoire Internationale Déjà Réalisée</h3>
+                <p data-fr="Mon parcours illustre déjà une première mobilité internationale réussie entre le Maroc (Agadir) et la France (Toulouse) après les concours d'entrée aux Grandes Écoles :" data-en="My background already demonstrates a successful international transition from Morocco (Agadir) to France (Toulouse) following competitive engineering entrance exams:">
+                  Mon parcours illustre déjà une première mobilité internationale réussie entre le Maroc (Agadir) et la France (Toulouse) après les concours d'entrée aux Grandes Écoles :
+                </p>
                 <ul class="course-list">
-                  <li data-fr="<b>Pitch RSE en Anglais (S5) :</b> Proposition de projet RSE (Pitch de 5 minutes + diaporama en anglais)." data-en="<b>CSR Pitch in English (S5):</b> CSR project proposal (5-minute oral pitch + slideshow in English)."><b>Pitch RSE en Anglais (S5) :</b> Proposition de projet RSE (Pitch de 5 minutes + diaporama en anglais).</li>
-                  <li data-fr="<b>Professional Communication & English (S7) :</b> Pitch de 5 minutes + diaporama en anglais." data-en="<b>Professional Communication & English (S7):</b> 5-minute pitch + slideshow in English."><b>Professional Communication & English (S7) :</b> Pitch de 5 minutes + diaporama en anglais.</li>
+                  <li data-fr="<b>Adaptation académique rapide :</b> Transition directe des CPGE marocaines (Lycée Reda Slaoui & Groupe Scolaire Al Qalam) vers Toulouse INP-ENSEEIHT." data-en="<b>Fast Academic Adaptation:</b> Seamless transition from Moroccan CPGEs (Lycée Reda Slaoui & Al Qalam) to Toulouse INP-ENSEEIHT."><b>Adaptation académique rapide :</b> Transition directe des CPGE marocaines (Lycée Reda Slaoui & Groupe Scolaire Al Qalam) vers Toulouse INP-ENSEEIHT.</li>
+                  <li data-fr="<b>Compétitions internationales FIDE :</b> Participation aux tournois d'échecs homologués par la Fédération Internationale des Échecs." data-en="<b>FIDE International Competitions:</b> Participation in official tournaments rated by the International Chess Federation."><b>Compétitions internationales FIDE :</b> Participation aux tournois d'échecs homologués par la Fédération Internationale des Échecs.</li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -526,51 +539,42 @@
     <!-- ==================== ONGLET 4 : SUSTAINABILITY & CIVIC ENGAGEMENT (#sustainability) ==================== -->
     <section id="sustainability" class="tab-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">ENGAGEMENT CITOYEN & DÉMARCHE TEDDn7 · VALIDATION 40H S9</span>
-          <h2 class="section-title" data-fr="Développement Durable & Engagement Civique" data-en="Sustainability & Civic Engagement">Développement Durable & Engagement Civique</h2>
-          <p class="section-desc" data-fr="L'obtention du diplôme d'ingénieur de l'ENSEEIHT requiert la validation de 40 heures d'engagement civique d'ici le semestre S9. En tant que futur ingénieur du numérique, j'articule mon engagement autour de la solidarité citoyenne et de la responsabilité environnementale." data-en="Graduating from ENSEEIHT requires validating 40 hours of civic engagement by semester S9. As a future digital sciences engineer, I structure my commitment around civic solidarity and environmental stewardship.">
-            L'obtention du diplôme d'ingénieur de l'ENSEEIHT requiert la validation de 40 heures d'engagement civique d'ici le semestre S9. En tant que futur ingénieur du numérique, j'articule mon engagement autour de la solidarité citoyenne et de la responsabilité environnementale.
-          </p>
+        <div class="section-header anim-stagger-1">
+          <span class="section-eyebrow">SOBRIÉTÉ ALGORITHMIQUE & ENGAGEMENT CITOYEN · QUOTA 40H S9</span>
+          <h2 class="section-title" data-fr="Numérique Durable, Optimisation Énergétique & Engagement Civique" data-en="Sustainable Computing, Energy Optimization & Civic Engagement">Numérique Durable, Optimisation Énergétique & Engagement Civique</h2>
         </div>
 
-        <!-- Barre de suivi du quota de 40h -->
-        <div class="quota-tracker-card">
-          <div class="quota-info">
-            <span class="mono-label">VALIDATION DIPLÔME N7 · QUOTA D'ENGAGEMENT CIVIQUE (S5 → S9)</span>
-            <h3 data-fr="Objectif Réglementaire : 40 Heures d'Engagement Citoyen" data-en="Regulatory Requirement: 40 Hours of Civic Engagement">Objectif Réglementaire : 40 Heures d'Engagement Citoyen</h3>
+        <div class="framed-subsection anim-stagger-2">
+          <div class="subsection-topbar">
+            <span class="topbar-code">04 // FEUILLE DE ROUTE DES 40 HEURES D'ENGAGEMENT (PLAN S5 → S9)</span>
+            <span class="topbar-status" data-fr="Plan d'Action : Sobriété Algorithmique & Tutorat" data-en="Action Plan: Algorithmic Sobriety & Mentoring">Plan d'Action : Sobriété Algorithmique & Tutorat</span>
           </div>
-          <div class="quota-badge-box">
-            <span class="quota-number" data-fr="[À COMPLÉTER : ex. En cours / 40h]" data-en="[TO COMPLETE: e.g. In progress / 40h]">[À COMPLÉTER : ex. En cours / 40h]</span>
+
+          <div class="cards-grid-3">
+            <article class="civic-card">
+              <span class="card-number">01 // SOBRIÉTÉ PAR L'OPTIMISATION</span>
+              <h3 data-fr="Éco-Conception Mathématique & Green IT" data-en="Mathematical Eco-Design & Green IT">Éco-Conception Mathématique & Green IT</h3>
+              <p data-fr="Optimiser mathématiquement un modèle d'IA ou une boucle d'asservissement ne vise pas seulement la précision : réduire la complexité algorithmique diminue directement le temps CPU/GPU et l'empreinte énergétique des systèmes embarqués." data-en="Mathematically optimizing an AI model or control loop is not only about accuracy: reducing algorithmic complexity directly lowers CPU/GPU compute time and the energy footprint of embedded systems.">
+                Optimiser mathématiquement un modèle d'IA ou une boucle d'asservissement ne vise pas seulement la précision : réduire la complexité algorithmique diminue directement le temps CPU/GPU et l'empreinte énergétique des systèmes embarqués.
+              </p>
+            </article>
+
+            <article class="civic-card">
+              <span class="card-number">02 // TRANSMISSION SCIENTIFIQUE</span>
+              <h3 data-fr="Entraide Mathématique & Partage Échiquéen" data-en="Mathematical Mentoring & Chess Coaching">Entraide Mathématique & Partage Échiquéen</h3>
+              <p data-fr="Partage de méthodes de démonstration mathématique et d'initiation stratégique aux échecs auprès des jeunes étudiants, favorisant l'égalité des chances dans l'accès aux filières scientifiques exigeantes." data-en="Sharing mathematical proof methodologies and strategic chess training with younger students, promoting equal opportunity in accessing demanding STEM tracks.">
+                Partage de méthodes de démonstration mathématique et d'initiation stratégique aux échecs auprès des jeunes étudiants, favorisant l'égalité des chances dans l'accès aux filières scientifiques exigeantes.
+              </p>
+            </article>
+
+            <article class="civic-card">
+              <span class="card-number">03 // FIABILITÉ & ÉTHIQUE</span>
+              <h3 data-fr="Sûreté des Systèmes d'Asservissement" data-en="Safety of Critical Control Systems">Sûreté des Systèmes d'Asservissement</h3>
+              <p data-fr="Dans les transports et l'industrie, la stabilisation précise d'un programme d'estimation est un enjeu de sécurité humaine. J'applique une rigueur formelle (Ada/C) garantissant la fiabilité des systèmes." data-en="In transportation and industry, precise stabilization of estimation software is a human safety imperative. I apply formal rigor (Ada/C) to guarantee system reliability.">
+                Dans les transports et l'industrie, la stabilisation précise d'un programme d'estimation est un enjeu de sécurité humaine. J'applique une rigueur formelle (Ada/C) garantissant la fiabilité des systèmes.
+              </p>
+            </article>
           </div>
-        </div>
-
-        <div class="cards-grid-3">
-          
-          <article class="civic-card">
-            <span class="card-number">01 // GREEN IT & TEDDn7</span>
-            <h3 data-fr="Vision du Numérique Durable" data-en="Sustainable Digital Engineering Vision">Vision du Numérique Durable</h3>
-            <p data-fr="En cohérence avec le projet <b>TEDDn7</b> de Toulouse INP-ENSEEIHT et la compétence <i>Environmental Stewardship</i> (Top 10 WEF 2030), j'intègre les enjeux de sobriété numérique et d'optimisation des ressources de calcul dans mes projets. [À COMPLÉTER : Ajoutez votre vision personnelle ou sujet de pitch RSE S5]." data-en="In line with Toulouse INP-ENSEEIHT's <b>TEDDn7</b> initiative and <i>Environmental Stewardship</i> (WEF Top 10 skill by 2030), I integrate digital sobriety and computing resource optimization into my projects. [TO COMPLETE: Add your personal vision or S5 CSR pitch topic].">
-              En cohérence avec le projet <b>TEDDn7</b> de Toulouse INP-ENSEEIHT et la compétence <i>Environmental Stewardship</i> (Top 10 WEF 2030), j'intègre les enjeux de sobriété numérique et d'optimisation des ressources de calcul dans mes projets. [À COMPLÉTER : Ajoutez votre vision personnelle ou sujet de pitch RSE S5].
-            </p>
-          </article>
-
-          <article class="civic-card">
-            <span class="card-number">02 // SOLIDARITÉ & ÉDUCATION</span>
-            <h3 data-fr="Tutorat Académique & Bénévolat" data-en="Academic Tutoring & Volunteering">Tutorat Académique & Bénévolat</h3>
-            <p data-fr="[À COMPLÉTER : Décrivez vos actions d'engagement citoyen passées ou actuelles : tutorat scientifique / soutien scolaire, engagement au sein d'associations étudiantes comme HUMAN7, collectes solidaires ou bénévolat local]." data-en="[TO COMPLETE: Describe your past or current civic engagement actions: STEM tutoring / academic mentoring, involvement in student humanitarian associations such as HUMAN7, charity drives, or local volunteering].">
-              [À COMPLÉTER : Décrivez vos actions d'engagement citoyen passées ou actuelles : tutorat scientifique / soutien scolaire, engagement au sein d'associations étudiantes comme HUMAN7, collectes solidaires ou bénévolat local].
-            </p>
-          </article>
-
-          <article class="civic-card">
-            <span class="card-number">03 // INCLUSION & CITOYENNETÉ</span>
-            <h3 data-fr="Diversité, Inclusion & Éthique" data-en="Diversity, Inclusion & Ethics">Diversité, Inclusion & Éthique</h3>
-            <p data-fr="[À COMPLÉTER : Retour réflexif sur les actions de sensibilisation à l'N7 (ex. pièce de théâtre sur la diversité et l'inclusion en début d'études, éthique du numérique et travail inclusif en équipe)]." data-en="[TO COMPLETE: Reflective feedback on N7 awareness initiatives (e.g. diversity & inclusion theater play at the start of studies, digital ethics, and inclusive teamwork)].">
-              [À COMPLÉTER : Retour réflexif sur les actions de sensibilisation à l'N7 (ex. pièce de théâtre sur la diversité et l'inclusion en début d'études, éthique du numérique et travail inclusif en équipe)].
-            </p>
-          </article>
-
         </div>
       </div>
     </section>
@@ -578,43 +582,81 @@
     <!-- ==================== ONGLET 5 : SPORT & OTHER ACTIVITIES (#activities) ==================== -->
     <section id="activities" class="tab-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">ÉQUILIBRE DE VIE, VIE ASSOCIATIVE N7 & SOFT SKILLS</span>
-          <h2 class="section-title" data-fr="Activités Sportives, Associatives & Centres d'Intérêt" data-en="Sports, Extracurricular Activities & Interests">Activités Sportives, Associatives & Centres d'Intérêt</h2>
-          <p class="section-desc" data-fr="La pratique sportive régulière et l'investissement associatif sur le campus de Toulouse nourrissent directement mes qualités d'ingénieur : constance dans l'effort, gestion de la pression et intelligence collective." data-en="Regular athletic practice and student club involvement on the Toulouse campus directly strengthen my core engineering traits: consistency, pressure management, and collective intelligence.">
-            La pratique sportive régulière et l'investissement associatif sur le campus de Toulouse nourrissent directement mes qualités d'ingénieur : constance dans l'effort, gestion de la pression et intelligence collective.
+        <div class="section-header anim-stagger-1">
+          <span class="section-eyebrow">COMPÉTITION INTERNATIONALE FIDE & PRATIQUE MULTISPORT</span>
+          <h2 class="section-title" data-fr="Échecs de Compétition (FIDE) & Discipline Athlétique" data-en="Competitive Chess (FIDE) & Athletic Discipline">Échecs de Compétition (FIDE) & Discipline Athlétique</h2>
+          <p class="section-desc" data-fr="L'alliance entre le sport cérébral de haut niveau (Échecs FIDE) et l'engagement physique en club (Football à l'Olympique Dcheira, Natation, Basketball, Volleyball) forge mon équilibre et ma résistance à la pression." data-en="Combining competitive mind sports (FIDE Chess) with physical club commitment (Football at Olympique Dcheira, Swimming, Basketball, Volleyball) builds my resilience under pressure.">
+            L'alliance entre le sport cérébral de haut niveau (Échecs FIDE) et l'engagement physique en club (Football à l'Olympique Dcheira, Natation, Basketball, Volleyball) forge mon équilibre et ma résistance à la pression.
           </p>
         </div>
 
-        <div class="cards-grid-3">
-          
-          <article class="activity-card">
-            <div class="activity-icon">⚽ / 🏃‍♂️</div>
-            <h3 data-fr="[Sport 1 : ex. Football / Course à pied / Sport collectif]" data-en="[Sport 1: e.g. Football / Running / Team Sport]">[Sport 1 : ex. Football / Course à pied / Sport collectif]</h3>
-            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : COHÉSION & PRISE DE DÉCISION" data-en="TRANSFERRABLE SKILLS: TEAMWORK & FAST DECISION-MAKING">COMPÉTENCES TRANSVERSALES : COHÉSION & PRISE DE DÉCISION</p>
-            <p data-fr="[À COMPLÉTER : Décrivez votre pratique sportive (en EPS à l'N7 ou en club), votre régularité et ce que cette discipline vous apporte dans la réussite de projets collectifs]." data-en="[TO COMPLETE: Describe your athletic practice (at N7 sports classes or in a club), consistency, and how this discipline helps you succeed in team projects].">
-              [À COMPLÉTER : Décrivez votre pratique sportive (en EPS à l'N7 ou en club), votre régularité et ce que cette discipline vous apporte dans la réussite de projets collectifs].
-            </p>
-          </article>
+        <!-- SOUS-PARTIE ENCADRÉE 5.1 : PROFIL OFFICIEL FIDE ÉCHECS -->
+        <div class="framed-subsection anim-stagger-2">
+          <div class="subsection-topbar">
+            <span class="topbar-code">5.1 // SPORT CÉRÉBRAL & THÉORIE DES JEUX — PROFIL OFFICIEL FIDE #9047077</span>
+            <span class="topbar-status">Fédération Marocaine (MAR) · Classé International</span>
+          </div>
 
-          <article class="activity-card">
-            <div class="activity-icon">🏋️‍♂️ / 🏓</div>
-            <h3 data-fr="[Sport 2 / Discipline : ex. Musculation / Tennis / Natation]" data-en="[Sport 2 / Discipline: e.g. Fitness / Tennis / Swimming]">[Sport 2 / Discipline : ex. Musculation / Tennis / Natation]</h3>
-            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : RIGUEUR & PROGRESSION ITÉRATIVE" data-en="TRANSFERRABLE SKILLS: DISCIPLINE & ITERATIVE PROGRESS">COMPÉTENCES TRANSVERSALES : RIGUEUR & PROGRESSION ITÉRATIVE</p>
-            <p data-fr="[À COMPLÉTER : Expliquez comment la discipline personnelle, le suivi de la progression et la persévérance dans ce sport se traduisent dans votre méthode de travail d'ingénieur]." data-en="[TO COMPLETE: Explain how personal discipline, tracking progress, and perseverance in this sport translate into your engineering work ethic].">
-              [À COMPLÉTER : Expliquez comment la discipline personnelle, le suivi de la progression et la persévérance dans ce sport se traduisent dans votre méthode de travail d'ingénieur].
-            </p>
-          </article>
+          <div class="chess-highlight-grid">
+            <div class="chess-info">
+              <h3 data-fr="Joueur d'Échecs Classé FIDE — Mohamed Bistarine" data-en="FIDE Rated Chess Player — Mohamed Bistarine">Joueur d'Échecs Classé FIDE — Mohamed Bistarine</h3>
+              <p data-fr="La compétition échiquéenne nourrit directement mes travaux en intelligence artificielle et en théorie des jeux : calcul de variantes profondes, évaluation positionnelle multicritère et prise de décision optimale sous contrainte de pendule." data-en="Competitive chess directly fuels my work in artificial intelligence and game theory: deep variation calculation, multi-criteria positional evaluation, and optimal decision-making under strict clock constraints.">
+                La compétition échiquéenne nourrit directement mes travaux en intelligence artificielle et en théorie des jeux : calcul de variantes profondes, évaluation positionnelle multicritère et prise de décision optimale sous contrainte de pendule.
+              </p>
+              <div class="cta-group" style="margin-top: 1rem;">
+                <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener" class="btn btn-primary">
+                  <span>♟️</span>
+                  <span data-fr="Vérifier mon Profil Officiel FIDE (ID 9047077) ↗" data-en="Verify Official FIDE Profile (ID 9047077) ↗">Vérifier mon Profil Officiel FIDE (ID 9047077) ↗</span>
+                </a>
+              </div>
+            </div>
 
-          <article class="activity-card">
-            <div class="activity-icon">🚀 / 🤝</div>
-            <h3 data-fr="[Vie Associative N7 & Loisirs : ex. Net7, TVn7, Clubs N7]" data-en="[N7 Student Clubs & Hobbies: e.g. Net7, TVn7, N7 Clubs]">[Vie Associative N7 & Loisirs : ex. Net7, TVn7, Clubs N7]</h3>
-            <p class="mono-label" data-fr="COMPÉTENCES TRANSVERSALES : ENGAGEMENT & CRÉATIVITÉ" data-en="TRANSFERRABLE SKILLS: COMMITMENT & CREATIVITY">COMPÉTENCES TRANSVERSALES : ENGAGEMENT & CRÉATIVITÉ</p>
-            <p data-fr="[À COMPLÉTER : Précisez les clubs de l'ENSEEIHT ou associations que vous avez rejoints ainsi que vos centres d'intérêt personnels]." data-en="[TO COMPLETE: Specify the ENSEEIHT clubs or associations you joined as well as your personal hobbies and interests].">
-              [À COMPLÉTER : Précisez les clubs de l'ENSEEIHT ou associations que vous avez rejoints ainsi que vos centres d'intérêt personnels].
-            </p>
-          </article>
+            <div class="elo-cards-row">
+              <div class="elo-box">
+                <span class="elo-type">STANDARD / CLASSICAL</span>
+                <span class="elo-score">1643</span>
+                <span class="elo-sub">FIDE Rating</span>
+              </div>
+              <div class="elo-box">
+                <span class="elo-type">RAPID</span>
+                <span class="elo-score">1616</span>
+                <span class="elo-sub">FIDE Rating</span>
+              </div>
+              <div class="elo-box">
+                <span class="elo-type">BLITZ</span>
+                <span class="elo-score">1642</span>
+                <span class="elo-sub">FIDE Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- SOUS-PARTIE ENCADRÉE 5.2 : SPORTS COLLECTIFS & INDIVIDUELS -->
+        <div class="framed-subsection anim-stagger-3">
+          <div class="subsection-topbar">
+            <span class="topbar-code">5.2 // PARCOURS SPORTIF : FORMATION EN CLUB & PRATIQUE MULTISPORT</span>
+            <span class="topbar-status" data-fr="Football (Club OD) · Natation · Basketball · Volleyball" data-en="Football (OD Club) · Swimming · Basketball · Volleyball">Football (Club OD) · Natation · Basketball · Volleyball</span>
+          </div>
+
+          <div class="cards-grid-2">
+            <article class="activity-card">
+              <div class="activity-icon">⚽</div>
+              <h3 data-fr="Football — Formation au Club Olympique Dcheira (OD)" data-en="Football — Trained at Olympique Dcheira Club (OD)">Football — Formation au Club Olympique Dcheira (OD)</h3>
+              <p class="mono-label" data-fr="EXIGENCE DE CLUB · COHÉSION & LECTURE TACTIQUE" data-en="CLUB TRAINING · TEAM COHESION & TACTICAL VISION">EXIGENCE DE CLUB · COHÉSION & LECTURE TACTIQUE</p>
+              <p data-fr="Formé au sein du club historique de l'<b>Olympique Dcheira (OD)</b> au Maroc. Cet encadrement exigeant m'a appris la discipline collective, la synchronisation tactique en temps réel et l'endurance physique et mentale." data-en="Trained within the historic Moroccan football club <b>Olympique Dcheira (OD)</b>. This demanding athletic environment taught me collective discipline, real-time tactical synchronization, and physical stamina.">
+                Formé au sein du club historique de l'<b>Olympique Dcheira (OD)</b> au Maroc. Cet encadrement exigeant m'a appris la discipline collective, la synchronisation tactique en temps réel et l'endurance physique et mentale.
+              </p>
+            </article>
+
+            <article class="activity-card">
+              <div class="activity-icon">🏊‍♂️ · 🏀 · 🏐</div>
+              <h3 data-fr="Natation, Basketball & Volleyball (Pratique Amateur Régulière)" data-en="Swimming, Basketball & Volleyball (Regular Amateur Practice)">Natation, Basketball & Volleyball (Pratique Amateur Régulière)</h3>
+              <p class="mono-label" data-fr="POLYVALENCE ATHLÉTIQUE · RÉGULARITÉ & EXPLOSIVITÉ" data-en="ATHLETIC VERSATILITY · CONSISTENCY & AGILITY">POLYVALENCE ATHLÉTIQUE · RÉGULARITÉ & EXPLOSIVITÉ</p>
+              <p data-fr="La <b>natation</b> entretient ma gestion du souffle et ma persévérance individuelle, tandis que le <b>basketball</b> et le <b>volleyball</b> développent ma réactivité, ma communication instantanée et mon esprit d'équipe." data-en="<b>Swimming</b> builds my breathing control and individual perseverance, while <b>basketball</b> and <b>volleyball</b> sharpen my reflexes, instant communication, and team spirit.">
+                La <b>natation</b> entretient ma gestion du souffle et ma persévérance individuelle, tandis que le <b>basketball</b> et le <b>volleyball</b> développent ma réactivité, ma communication instantanée et mon esprit d'équipe.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -622,153 +664,173 @@
     <!-- ==================== ONGLET 6 : CAREER DEVELOPMENT (#career) ==================== -->
     <section id="career" class="tab-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">LIVRABLE ÉVALUÉ CAM L3-S5 · DÉPÔT MOODLE 1ER NOVEMBRE</span>
-          <h2 class="section-title" data-fr="Développement de Carrière & Projet Professionnel (CAREER PROJECT)" data-en="Career Development & Professional Project (CAREER PROJECT)">Développement de Carrière & Projet Professionnel (CAREER PROJECT)</h2>
-          <p class="section-desc" data-fr="Cette section regroupe l'ensemble des livrables exigés pour l'évaluation du Module 1 de Marketing (Self-Branding) : mon Projet Professionnel (PEP), l'analyse de 3 profils de Role Models associés à mes 3 projets de mobilité internationale, mes stages (S6, S8, S10) et mes CV en français et en anglais." data-en="This section consolidates all evaluated deliverables required for Marketing Module 1 (Self-Branding): my Career Project (PEP), the analysis of 3 Role Model profiles aligned with my 3 international mobility projects, my internships (S6, S8, S10), and my CVs in English and French.">
-            Cette section regroupe l'ensemble des livrables exigés pour l'évaluation du Module 1 de Marketing (Self-Branding) : mon Projet Professionnel (PEP), l'analyse de 3 profils de Role Models associés à mes 3 projets de mobilité internationale, mes stages (S6, S8, S10) et mes CV en français et en anglais.
+        <div class="section-header anim-stagger-1">
+          <span class="section-eyebrow">PROJET PROFESSIONNEL PERSONNALISÉ (PEP) · CAM L3-S5</span>
+          <h2 class="section-title" data-fr="Développement de Carrière : Optimisation d'Asservissement, Estimation & IA" data-en="Career Development: Control Optimization, State Estimation & AI">Développement de Carrière : Optimisation d'Asservissement, Estimation & IA</h2>
+          <p class="section-desc" data-fr="Utilisez les boutons élargis ci-dessous pour consulter mon Projet Professionnel (PEP) et mes 3 Role Models, ma feuille de route des stages (Allemagne, Japon, Chine, France) ou mes CV." data-en="Use the wide buttons below to explore my Career Project (PEP) and 3 Role Models, my internship roadmap (Germany, Japan, China, France), or my resumes.">
+            Utilisez les boutons élargis ci-dessous pour consulter mon Projet Professionnel (PEP) et mes 3 Role Models, ma feuille de route des stages (Allemagne, Japon, Chine, France) ou mes CV.
           </p>
         </div>
 
-        <!-- Sous-onglets Career Development (Exigence diapo 23 : + sub-tabs for internships, PEP, etc.) -->
-        <div class="subtab-nav" data-subtab-group="car">
-          <button class="subtab-btn active" data-subtab-target="car-rolemodels" data-fr="Projet Pro (PEP) & 3 Role Models (My Job Glasses)" data-en="Career Project (PEP) & 3 Role Models (My Job Glasses)">Projet Pro (PEP) & 3 Role Models (My Job Glasses)</button>
-          <button class="subtab-btn" data-subtab-target="car-internships" data-fr="Stages (S6, S8, S10) & Expériences" data-en="Internships (S6, S8, S10) & Experience">Stages (S6, S8, S10) & Expériences</button>
-          <button class="subtab-btn" data-subtab-target="car-cvs" data-fr="CVs (FR / EN) & Stratégie Réseau" data-en="Resumes (EN / FR) & Networking Strategy">CVs (FR / EN) & Stratégie Réseau</button>
+        <!-- BOUTONS DE SOUS-PAGES ÉLARGIS CARRIÈRE -->
+        <div class="subtab-wide-nav anim-stagger-2" data-subtab-group="car">
+          <button class="subtab-wide-btn active" data-subtab-target="car-rolemodels">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 6.1</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Projet Pro (PEP) & 3 Role Models Alignés" data-en="Career Project (PEP) & 3 Aligned Role Models">Projet Pro (PEP) & 3 Role Models Alignés</strong>
+            <span class="swb-desc" data-fr="Optimisation de la stabilisation des programmes d'asservissement/estimation + 3 profils d'experts reliés à TUM, Japon et Chine" data-en="Stabilization optimization of control/estimation programs + 3 expert profiles linked to TUM, Japan, and China">Optimisation de la stabilisation des programmes d'asservissement/estimation + 3 profils d'experts reliés à TUM, Japon et Chine</span>
+          </button>
+
+          <button class="subtab-wide-btn" data-subtab-target="car-internships">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 6.2</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="Plan de Stages (S6, S8, S10) — International" data-en="Internship Roadmap (S6, S8, S10) — International">Plan de Stages (S6, S8, S10) — International</strong>
+            <span class="swb-desc" data-fr="Cibles de stages R&D en Allemagne, au Japon et en Chine dans l'optimisation mathématique, la robotique et l'IA" data-en="R&D internship targets in Germany, Japan, and China in mathematical optimization, robotics, and AI">Cibles de stages R&D en Allemagne, au Japon et en Chine dans l'optimisation mathématique, la robotique et l'IA</span>
+          </button>
+
+          <button class="subtab-wide-btn" data-subtab-target="car-cvs">
+            <div class="swb-top">
+              <span class="swb-code">SOUS-PAGE 6.3</span>
+              <span class="swb-arrow">➔</span>
+            </div>
+            <strong class="swb-title" data-fr="CVs (FR / EN) & Réseaux Officiels" data-en="Resumes (EN / FR) & Official Profiles">CVs (FR / EN) & Réseaux Officiels</strong>
+            <span class="swb-desc" data-fr="Téléchargement direct de mes CV au format STAR et liens vers GitHub, LinkedIn et FIDE" data-en="Direct download of my STAR-formatted resumes and links to GitHub, LinkedIn, and FIDE">Téléchargement direct de mes CV au format STAR et liens vers GitHub, LinkedIn et FIDE</span>
+          </button>
         </div>
 
-        <!-- SOUS-ONGLET 6.1 : CAREER PROJECT & 3 ROLE MODELS ANALYZED -->
+        <!-- SOUS-ONGLET 6.1 : PEP & 3 ROLE MODELS -->
         <div id="car-rolemodels" class="subtab-panel active-subpanel" data-subtab-parent="car">
-          
-          <div class="pep-vision-banner">
-            <h3 data-fr="Mon Projet Professionnel Personnalisé (PEP) en Sciences du Numérique" data-en="My Personal Professional Project (PEP) in Digital Sciences">Mon Projet Professionnel Personnalisé (PEP) en Sciences du Numérique</h3>
-            <p data-fr="[À COMPLÉTER : Résumez en 3-4 lignes votre objectif de carrière : quel métier d'ingénieur du numérique visez-vous (ex. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) et dans quels secteurs partenaires de l'N7 (Aéronautique & Espace, Défense, Éditeurs Logiciels, ESN/Conseil, Télécoms, Énergie) ?]" data-en="[TO COMPLETE: Summarize in 3-4 lines your career goal: what digital engineering role are you targeting (e.g. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) and in which N7 partner sectors (Aerospace, Defense, Software Editors, IT Consulting, Telecoms, Energy)?]">
-              [À COMPLÉTER : Résumez en 3-4 lignes votre objectif de carrière : quel métier d'ingénieur du numérique visez-vous (ex. Software Engineer, Data Scientist / AI Engineer, Cloud Architect, Cybersecurity Specialist) et dans quels secteurs partenaires de l'N7 (Aéronautique & Espace, Défense, Éditeurs Logiciels, ESN/Conseil, Télécoms, Énergie) ?]
-            </p>
-          </div>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">6.1 // VISION PROFESSIONNELLE & ANALYSE DES 3 ROLE MODELS</span>
+              <span class="topbar-status" data-fr="Livrable CAM Module 1" data-en="CAM Module 1 Deliverable">Livrable CAM Module 1</span>
+            </div>
 
-          <h3 class="subsection-heading" data-fr="Analyse de 3 Profils de Role Models & Alignement Mobilité Internationale" data-en="3 Analyzed Role Model Profiles & International Mobility Alignment">Analyse de 3 Profils de Role Models & Alignement Mobilité Internationale</h3>
-          <div class="cards-grid-3">
-            
-            <!-- Role Model 1 -->
-            <article class="rolemodel-card">
-              <div class="rm-header">
-                <span class="mono-badge">ROLE MODEL #1 · MY JOB GLASSES / ALUMNI</span>
-                <h4 data-fr="[Nom Prénom ou Profil #1]" data-en="[Full Name or Profile #1]">[Nom Prénom ou Profil #1]</h4>
-                <p class="rm-role" data-fr="[Poste actuel : ex. Ingénieur IA / Data Scientist chez Airbus ou Thales]" data-en="[Current Role: e.g. AI Engineer / Data Scientist at Airbus or Thales]">[Poste actuel : ex. Ingénieur IA / Data Scientist chez Airbus ou Thales]</p>
-              </div>
-              <ul class="rm-details">
-                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Diplômé N7 SN ou équivalent, spécialisation suivie et évolution professionnelle]." data-en="<b>Education & Path:</b> [TO COMPLETE: N7 SN graduate or equivalent, specialization track, and career progression]."><b>Parcours & Formation :</b> [À COMPLÉTER : Diplômé N7 SN ou équivalent, spécialisation suivie et évolution professionnelle].</li>
-                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Compétences techniques et humaines soulignées lors de l'entretien]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Technical and soft skills highlighted during the interview]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Compétences techniques et humaines soulignées lors de l'entretien].</li>
-                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Ce que cet échange My Job Glasses / Alumni apporte à votre propre projet]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: How this My Job Glasses / Alumni interview informs your own career plan]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Ce que cet échange My Job Glasses / Alumni apporte à votre propre projet].</li>
-              </ul>
-              <div class="rm-mobility-link">
-                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#1)" data-en="ALIGNED INTERNATIONAL MOBILITY (#1)">MOBILITÉ INTERNATIONALE ALIGNÉE (#1)</span>
-                <p data-fr="➔ <b>[Destination #1 : ex. EPFL / Georgia Tech / Imperial College]</b> : Alignement direct avec l'expertise académique requise pour ce profil." data-en="➔ <b>[Destination #1: e.g. EPFL / Georgia Tech / Imperial College]</b>: Direct alignment with the academic expertise required for this profile.">➔ <b>[Destination #1 : ex. EPFL / Georgia Tech / Imperial College]</b> : Alignement direct avec l'expertise académique requise pour ce profil.</p>
-              </div>
-            </article>
+            <div class="pep-vision-banner">
+              <h3 data-fr="Mon Projet Professionnel : Optimisation de la Stabilisation des Programmes d'Asservissement & d'Estimation" data-en="My Career Goal: High-Precision Stabilization Optimization for Control & Estimation Systems">Mon Projet Professionnel : Optimisation de la Stabilisation des Programmes d'Asservissement & d'Estimation</h3>
+              <p data-fr="Mon ambition est d'exercer comme <b>Ingénieur R&D en Optimisation Mathématique, Commande et Estimation</b>. Je conçois des algorithmes capables d'optimiser avec une haute précision la stabilisation des programmes d'asservissement et d'estimation d'état (filtrage optimal, commande prédictive) en exploitant rigoureusement les contraintes physiques et les données disponibles." data-en="My goal is to work as an <b>R&D Engineer in Mathematical Optimization, Control, and State Estimation</b>. I design algorithms that achieve high-precision stabilization of control and estimation software (optimal filtering, model predictive control) by rigorously leveraging physical constraints and available sensor data.">
+                Mon ambition est d'exercer comme <b>Ingénieur R&D en Optimisation Mathématique, Commande et Estimation</b>. Je conçois des algorithmes capables d'optimiser avec une haute précision la stabilisation des programmes d'asservissement et d'estimation d'état (filtrage optimal, commande prédictive) en exploitant rigoureusement les contraintes physiques et les données disponibles.
+              </p>
+            </div>
 
-            <!-- Role Model 2 -->
-            <article class="rolemodel-card">
-              <div class="rm-header">
-                <span class="mono-badge">ROLE MODEL #2 · MY JOB GLASSES / ALUMNI</span>
-                <h4 data-fr="[Nom Prénom ou Profil #2]" data-en="[Full Name or Profile #2]">[Nom Prénom ou Profil #2]</h4>
-                <p class="rm-role" data-fr="[Poste actuel : ex. Software & Cloud Architect chez Amadeus ou Capgemini]" data-en="[Current Role: e.g. Software & Cloud Architect at Amadeus or Capgemini]">[Poste actuel : ex. Software & Cloud Architect chez Amadeus ou Capgemini]</p>
-              </div>
-              <ul class="rm-details">
-                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Formation d'ingénieur informatique, mobilité académique et évolution]." data-en="<b>Education & Path:</b> [TO COMPLETE: Computer engineering degree, academic exchange, and career progression]."><b>Parcours & Formation :</b> [À COMPLÉTER : Formation d'ingénieur informatique, mobilité académique et évolution].</li>
-                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Architecture logicielle, systèmes distribués, gestion de projet Agile]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Software architecture, distributed systems, Agile project management]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Architecture logicielle, systèmes distribués, gestion de projet Agile].</li>
-                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Conseils reçus sur le choix des stages et l'ouverture internationale]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: Advice received regarding internship selection and international exposure]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Conseils reçus sur le choix des stages et l'ouverture internationale].</li>
-              </ul>
-              <div class="rm-mobility-link">
-                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#2)" data-en="ALIGNED INTERNATIONAL MOBILITY (#2)">MOBILITÉ INTERNATIONALE ALIGNÉE (#2)</span>
-                <p data-fr="➔ <b>[Destination #2 : ex. Politecnico di Torino / UPM Madrid]</b> : Semestre Erasmus+ orienté génie logiciel et systèmes distribués." data-en="➔ <b>[Destination #2: e.g. Politecnico di Torino / UPM Madrid]</b>: Erasmus+ semester focused on software engineering and distributed systems.">➔ <b>[Destination #2 : ex. Politecnico di Torino / UPM Madrid]</b> : Semestre Erasmus+ orienté génie logiciel et systèmes distribués.</p>
-              </div>
-            </article>
+            <div class="cards-grid-3">
+              <!-- Role Model 1 : Entretien International Allemand #1 -->
+              <article class="rolemodel-card">
+                <div class="rm-header">
+                  <span class="mono-badge" data-fr="ENTRETIEN RÉALISÉ #1 · MEMBRE INTERNATIONAL ALLEMAND 🇩🇪" data-en="COMPLETED INTERVIEW #1 · GERMAN INTERNATIONAL MEMBER 🇩🇪">ENTRETIEN RÉALISÉ #1 · MEMBRE INTERNATIONAL ALLEMAND 🇩🇪</span>
+                  <h4 data-fr="Ingénieur R&D Optimisation, Automatique & Systèmes" data-en="Optimization, Control & Systems R&D Engineer">Ingénieur R&D Optimisation, Automatique & Systèmes</h4>
+                  <p class="rm-role" data-fr="Écosystème Technologique & Industriel Allemand" data-en="German Technological & Industrial Ecosystem">Écosystème Technologique & Industriel Allemand</p>
+                </div>
+                <ul class="rm-details">
+                  <li data-fr="<b>Enseignements de l'interview :</b> Importance de la rigueur mathématique dans la stabilisation des boucles d'asservissement et de l'intégration logicielle robuste (C/Ada/MATLAB)." data-en="<b>Interview Takeaways:</b> Importance of mathematical rigor in control loop stabilization and robust software integration (C/Ada/MATLAB)."><b>Enseignements de l'interview :</b> Importance de la rigueur mathématique dans la stabilisation des boucles d'asservissement et de l'intégration logicielle robuste (C/Ada/MATLAB).</li>
+                  <li data-fr="<b>Préparation :</b> Renforce ma motivation à perfectionner mon allemand (LV2 à l'N7) pour évoluer en R&D outre-Rhin." data-en="<b>Preparation:</b> Reinforces my commitment to mastering German (LV2 at N7) for R&D engineering in Germany."><b>Préparation :</b> Renforce ma motivation à perfectionner mon allemand (LV2 à l'N7) pour évoluer en R&D outre-Rhin.</li>
+                </ul>
+                <div class="rm-mobility-link">
+                  <span class="mono-label" data-fr="MOBILITÉ ALIGNÉE (#1)" data-en="ALIGNED MOBILITY (#1)">MOBILITÉ ALIGNÉE (#1)</span>
+                  <p data-fr="➔ <b>TUM Munich (Allemagne 🇩🇪)</b> : Semestre académique ou stage R&D en optimisation mathématique et commande." data-en="➔ <b>TUM Munich (Germany 🇩🇪)</b>: Academic semester or R&D internship in mathematical optimization and control.">➔ <b>TUM Munich (Allemagne 🇩🇪)</b> : Semestre académique ou stage R&D en optimisation mathématique et commande.</p>
+                </div>
+              </article>
 
-            <!-- Role Model 3 -->
-            <article class="rolemodel-card">
-              <div class="rm-header">
-                <span class="mono-badge">ROLE MODEL #3 · MY JOB GLASSES / ALUMNI</span>
-                <h4 data-fr="[Nom Prénom ou Profil #3]" data-en="[Full Name or Profile #3]">[Nom Prénom ou Profil #3]</h4>
-                <p class="rm-role" data-fr="[Poste actuel : ex. Cybersecurity / Embedded Systems Engineer chez Collins Aerospace ou Sopra Steria]" data-en="[Current Role: e.g. Cybersecurity / Embedded Systems Engineer at Collins Aerospace or Sopra Steria]">[Poste actuel : ex. Cybersecurity / Embedded Systems Engineer chez Collins Aerospace ou Sopra Steria]</p>
-              </div>
-              <ul class="rm-details">
-                <li data-fr="<b>Parcours & Formation :</b> [À COMPLÉTER : Parcours SN réseaux/sécurité ou systèmes embarqués, expérience internationale]." data-en="<b>Education & Path:</b> [TO COMPLETE: SN networks/security or embedded systems track, international experience]."><b>Parcours & Formation :</b> [À COMPLÉTER : Parcours SN réseaux/sécurité ou systèmes embarqués, expérience internationale].</li>
-                <li data-fr="<b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Sécurité des réseaux, systèmes temps réel, normes industrielles]." data-en="<b>Key Identified Skills:</b> [TO COMPLETE: Network security, real-time systems, industrial standards]."><b>Compétences Clés Identifiées :</b> [À COMPLÉTER : Sécurité des réseaux, systèmes temps réel, normes industrielles].</li>
-                <li data-fr="<b>Enseignements Tirés :</b> [À COMPLÉTER : Vision des enjeux de cybersécurité et de fiabilité des systèmes]." data-en="<b>Key Takeaways:</b> [TO COMPLETE: Insights into cybersecurity and critical systems reliability]."><b>Enseignements Tirés :</b> [À COMPLÉTER : Vision des enjeux de cybersécurité et de fiabilité des systèmes].</li>
-              </ul>
-              <div class="rm-mobility-link">
-                <span class="mono-label" data-fr="MOBILITÉ INTERNATIONALE ALIGNÉE (#3)" data-en="ALIGNED INTERNATIONAL MOBILITY (#3)">MOBILITÉ INTERNATIONALE ALIGNÉE (#3)</span>
-                <p data-fr="➔ <b>[Destination #3 : ex. Stage R&D International en Entreprise ou au NII Japon]</b> : Immersion industrielle ou académique à l'international." data-en="➔ <b>[Destination #3: e.g. International R&D Internship in Industry or NII Japan]</b>: Industrial or academic R&D immersion abroad.">➔ <b>[Destination #3 : ex. Stage R&D International en Entreprise ou au NII Japon]</b> : Immersion industrielle ou académique à l'international.</p>
-              </div>
-            </article>
+              <!-- Role Model 2 : Entretien International Allemand #2 -->
+              <article class="rolemodel-card">
+                <div class="rm-header">
+                  <span class="mono-badge" data-fr="ENTRETIEN RÉALISÉ #2 · MEMBRE INTERNATIONAL ALLEMAND 🇩🇪" data-en="COMPLETED INTERVIEW #2 · GERMAN INTERNATIONAL MEMBER 🇩🇪">ENTRETIEN RÉALISÉ #2 · MEMBRE INTERNATIONAL ALLEMAND 🇩🇪</span>
+                  <h4 data-fr="Spécialiste Modélisation Data-Driven & IA Décisionnelle" data-en="Data-Driven Modeling & Decision AI Specialist">Spécialiste Modélisation Data-Driven & IA Décisionnelle</h4>
+                  <p class="rm-role" data-fr="Recherche & Innovation Internationale (Allemagne / Europe)" data-en="International Research & Innovation (Germany / Europe)">Recherche & Innovation Internationale (Allemagne / Europe)</p>
+                </div>
+                <ul class="rm-details">
+                  <li data-fr="<b>Enseignements de l'interview :</b> Méthodes de travail allemandes alliant preuves théoriques, analyse de données capteurs et optimisation d'algorithmes de décision." data-en="<b>Interview Takeaways:</b> German engineering methods combining theoretical proofs, sensor data analysis, and decision algorithm optimization."><b>Enseignements de l'interview :</b> Méthodes de travail allemandes alliant preuves théoriques, analyse de données capteurs et optimisation d'algorithmes de décision.</li>
+                  <li data-fr="<b>Ouverture :</b> Valorisation des profils capables de relier la théorie des jeux (TIPE moteur d'échecs) à l'optimisation industrielle." data-en="<b>Perspective:</b> High value placed on engineers bridging game theory (chess engine TIPE) and industrial optimization."><b>Ouverture :</b> Valorisation des profils capables de relier la théorie des jeux (TIPE moteur d'échecs) à l'optimisation industrielle.</li>
+                </ul>
+                <div class="rm-mobility-link">
+                  <span class="mono-label" data-fr="MOBILITÉ ALIGNÉE (#2)" data-en="ALIGNED MOBILITY (#2)">MOBILITÉ ALIGNÉE (#2)</span>
+                  <p data-fr="➔ <b>Japon 🇯🇵 (NII Tokyo) & Allemagne 🇩🇪</b> : Recherche internationale en informatique décisionnelle et robotique." data-en="➔ <b>Japan 🇯🇵 (NII Tokyo) & Germany 🇩🇪</b>: International research in decision computing and robotics.">➔ <b>Japon 🇯🇵 (NII Tokyo) & Allemagne 🇩🇪</b> : Recherche internationale en informatique décisionnelle et robotique.</p>
+                </div>
+              </article>
 
+              <!-- Role Model 3 : Profil Cible Asie (Japon / Chine) -->
+              <article class="rolemodel-card">
+                <div class="rm-header">
+                  <span class="mono-badge" data-fr="PROFIL CIBLE #3 · R&D HAUTE TECHNOLOGIE ASIE" data-en="TARGET PROFILE #3 · ASIAN HIGH-TECH R&D">PROFIL CIBLE #3 · R&D HAUTE TECHNOLOGIE ASIE</span>
+                  <h4 data-fr="Ingénieur Optimisation Haute Échelle & Systèmes Autonomes" data-en="Large-Scale Optimization & Autonomous Systems Engineer">Ingénieur Optimisation Haute Échelle & Systèmes Autonomes</h4>
+                  <p class="rm-role" data-fr="Pôles Technologiques Internationaux (Japon / Chine)" data-en="International Tech Powerhouses (Japan / China)">Pôles Technologiques Internationaux (Japon / Chine)</p>
+                </div>
+                <ul class="rm-details">
+                  <li data-fr="<b>Missions clés :</b> Synthèse de modèles mathématiques optimisés à partir de données massives pour l'estimation d'état et le contrôle de systèmes complexes." data-en="<b>Core Missions:</b> Synthesizing optimized mathematical models from massive datasets for state estimation and complex system control."><b>Missions clés :</b> Synthèse de modèles mathématiques optimisés à partir de données massives pour l'estimation d'état et le contrôle de systèmes complexes.</li>
+                  <li data-fr="<b>Outils :</b> Statistiques hautes dimensions, optimisation sous contraintes, C/MATLAB/Python." data-en="<b>Tools:</b> High-dimensional statistics, constrained optimization, C/MATLAB/Python."><b>Outils :</b> Statistiques hautes dimensions, optimisation numérique, C/MATLAB/Python.</li>
+                </ul>
+                <div class="rm-mobility-link">
+                  <span class="mono-label" data-fr="MOBILITÉ ALIGNÉE (#3)" data-en="ALIGNED MOBILITY (#3)">MOBILITÉ ALIGNÉE (#3)</span>
+                  <p data-fr="➔ <b>Chine 🇨🇳 & Japon 🇯🇵 (Stage R&D)</b> : Immersion dans les métropoles technologiques asiatiques en IA et contrôle." data-en="➔ <b>China 🇨🇳 & Japan 🇯🇵 (R&D Internship)</b>: Immersion in Asian technological hubs in AI and control.">➔ <b>Chine 🇨🇳 & Japon 🇯🇵 (Stage R&D)</b> : Immersion dans les métropoles technologiques asiatiques en IA et contrôle.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
 
-        <!-- SOUS-ONGLET 6.2 : STAGES S6, S8, S10 & EXPÉRIENCES -->
+        <!-- SOUS-ONGLET 6.2 : STAGES S6, S8, S10 -->
         <div id="car-internships" class="subtab-panel" data-subtab-parent="car">
-          <div class="cards-grid-3">
-            
-            <div class="internship-card">
-              <span class="mono-badge">STAGE 1A (SEMESTRE 6) · 6 SEMAINES MIN.</span>
-              <h4 data-fr="[Stage S6 : En recherche / À venir]" data-en="[S6 Internship: Seeking / Upcoming]">[Stage S6 : En recherche / À venir]</h4>
-              <p data-fr="<b>Objectif :</b> Première expérience en entreprise ou laboratoire (6 semaines minimum en fin de 1A) pour appliquer les fondamentaux du département SN." data-en="<b>Objective:</b> First corporate or lab experience (minimum 6 weeks at the end of Year 1) to apply Digital Sciences fundamentals.">
-                <b>Objectif :</b> Première expérience en entreprise ou laboratoire (6 semaines minimum en fin de 1A) pour appliquer les fondamentaux du département SN.
-              </p>
-              <p data-fr="<b>Expériences Antérieures :</b> [À COMPLÉTER : Ajoutez ici vos stages passés, jobs étudiants ou projets professionnels déjà réalisés avec la méthode STAR]." data-en="<b>Prior Experience:</b> [TO COMPLETE: Add your past internships, student jobs, or professional projects here using the STAR method].">
-                <b>Expériences Antérieures :</b> [À COMPLÉTER : Ajoutez ici vos stages passés, jobs étudiants ou projets professionnels déjà réalisés avec la méthode STAR].
-              </p>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">6.2 // PLANIFICATION DES STAGES INGÉNIEUR (ALLEMAGNE · JAPON · CHINE · FRANCE)</span>
+              <span class="topbar-status" data-fr="S6 (6 sem.) · S8 (8 sem.) · S10 (6 mois)" data-en="S6 (6 wks) · S8 (8 wks) · S10 (6 mos)">S6 (6 sem.) · S8 (8 sem.) · S10 (6 mois)</span>
             </div>
 
-            <div class="internship-card">
-              <span class="mono-badge">STAGE 2A (SEMESTRE 8) · 8 SEMAINES MIN.</span>
-              <h4 data-fr="Stage d'Application Ingénieur (2ème Année)" data-en="Engineering Application Internship (Year 2)">Stage d'Application Ingénieur (2ème Année)</h4>
-              <p data-fr="<b>Objectif :</b> Stage technique d'au moins 8 semaines en France ou à l'étranger, ciblant une équipe R&D ou d'ingénierie logicielle (tests, intégration continue, revue de code)." data-en="<b>Objective:</b> Minimum 8-week technical internship in France or abroad, targeting an R&D or software engineering team (testing, CI/CD, code reviews).">
-                <b>Objectif :</b> Stage technique d'au moins 8 semaines en France ou à l'étranger, ciblant une équipe R&D ou d'ingénierie logicielle (tests, intégration continue, revue de code).
-              </p>
-            </div>
+            <div class="cards-grid-3">
+              <div class="internship-card">
+                <span class="mono-badge">STAGE 1A (S6) · 6 SEMAINES MIN.</span>
+                <h4 data-fr="Initiation R&D & Modélisation Numérique" data-en="R&D Initiation & Numerical Modeling">Initiation R&D & Modélisation Numérique</h4>
+                <p data-fr="Application de mes compétences en <b>Ada, C et MATLAB</b> sur un sujet d'analyse de données ou de simulation mathématique." data-en="Applying my skills in <b>Ada, C, and MATLAB</b> to a data analysis or mathematical simulation topic.">Application de mes compétences en <b>Ada, C et MATLAB</b> sur un sujet d'analyse de données ou de simulation mathématique.</p>
+              </div>
 
-            <div class="internship-card">
-              <span class="mono-badge">STAGE 3A PFE (SEMESTRE 10) · 5 À 6 MOIS</span>
-              <h4 data-fr="Stage de Fin d'Études Ingénieur (3ème Année)" data-en="Final Year Engineering Internship (Year 3)">Stage de Fin d'Études Ingénieur (3ème Année)</h4>
-              <p data-fr="<b>Objectif :</b> Stage de fin d'études de 5 à 6 mois (mars à septembre en S10) en entreprise ou laboratoire, en France ou à l'étranger, validant le diplôme d'ingénieur Grade de Master (Bac+5)." data-en="<b>Objective:</b> 5-to-6-month final-year internship (March to September in S10) in industry or a research lab, in France or abroad, validating the Master's level Engineering degree (Bac+5).">
-                <b>Objectif :</b> Stage de fin d'études de 5 à 6 mois (mars à septembre en S10) en entreprise ou laboratoire, en France ou à l'étranger, validant le diplôme d'ingénieur Grade de Master (Bac+5).
-              </p>
-            </div>
+              <div class="internship-card">
+                <span class="mono-badge">STAGE 2A (S8) · 8 SEMAINES MIN.</span>
+                <h4 data-fr="Stage International : Allemagne, Japon ou Chine" data-en="International Internship: Germany, Japan, or China">Stage International : Allemagne, Japon ou Chine</h4>
+                <p data-fr="Immersion dans un laboratoire ou centre R&D international sur l'optimisation de modèles, la théorie des jeux ou le contrôle-commande." data-en="Immersion in an international lab or R&D center focusing on model optimization, game theory, or control engineering.">Immersion dans un laboratoire ou centre R&D international sur l'optimisation de modèles, la théorie des jeux ou le contrôle-commande.</p>
+              </div>
 
+              <div class="internship-card">
+                <span class="mono-badge">STAGE PFE 3A (S10) · 5 À 6 MOIS</span>
+                <h4 data-fr="Projet de Fin d'Études : Stabilisation & Estimation Avancée" data-en="Final Year Thesis: Advanced Stabilization & Estimation">Projet de Fin d'Études : Stabilisation & Estimation Avancée</h4>
+                <p data-fr="Conception complète et preuve de stabilité d'algorithmes d'asservissement et d'estimation sous contraintes critiques." data-en="Full design and stability proof of control and estimation algorithms under critical constraints.">Conception complète et preuve de stabilité d'algorithmes d'asservissement et d'estimation sous contraintes critiques.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- SOUS-ONGLET 6.3 : CVs (FR / EN) & STRATÉGIE RÉSEAU -->
+        <!-- SOUS-ONGLET 6.3 : CVS & RÉSEAUX -->
         <div id="car-cvs" class="subtab-panel" data-subtab-parent="car">
-          <div class="cards-grid-2">
-            
-            <div class="cv-download-box">
-              <span class="mono-badge">CURRICULUM VITAE · FORMAT STAR</span>
-              <h3 data-fr="Mes CV en Anglais et en Français" data-en="My Resumes in English and French">Mes CV en Anglais et en Français</h3>
-              <p data-fr="Mes deux CV sont conçus sur une page, adaptés aux mots-clés techniques du secteur numérique et rédigés selon la méthode STAR enseignée au Soft Skills Center." data-en="Both of my one-page resumes are tailored with technical keywords for the digital sector and written using the STAR method taught at the Soft Skills Center.">
-                Mes deux CV sont conçus sur une page, adaptés aux mots-clés techniques du secteur numérique et rédigés selon la méthode STAR enseignée au Soft Skills Center.
-              </p>
-              <div class="cta-group">
-                <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">📄 Download English CV (PDF)</a>
-                <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">📄 Télécharger CV Français (PDF)</a>
-              </div>
+          <div class="framed-subsection">
+            <div class="subsection-topbar">
+              <span class="topbar-code">6.3 // DOCUMENTS OFFICIELS & LIENS VÉRIFIÉS</span>
+              <span class="topbar-status" data-fr="Prêts pour le dépôt Moodle" data-en="Ready for Moodle Submission">Prêts pour le dépôt Moodle</span>
             </div>
 
-            <div class="cv-download-box">
-              <span class="mono-badge">E-REPUTATION & PROFESSIONAL NETWORKING</span>
-              <h3 data-fr="Présence en Ligne & Réseau Professionnel" data-en="Online Presence & Professional Networking">Présence en Ligne & Réseau Professionnel</h3>
-              <p data-fr="Retrouvez mon profil LinkedIn bilingue (FR/EN), mes dépôts de code sur GitHub et ma démarche de réseautage via My Job Glasses et les alumni N7." data-en="Connect with me via my bilingual LinkedIn profile (EN/FR), explore my code repositories on GitHub, and follow my networking initiatives via My Job Glasses and N7 alumni.">
-                Retrouvez mon profil LinkedIn bilingue (FR/EN), mes dépôts de code sur GitHub et ma démarche de réseautage via My Job Glasses et les alumni N7.
-              </p>
-              <div class="cta-group">
-                <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-outline">🔗 LinkedIn Profile (EN/FR)</a>
-                <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">💻 GitHub Portfolio Repo</a>
+            <div class="cards-grid-2">
+              <div class="cv-download-box">
+                <span class="mono-badge">CURRICULUM VITAE · FORMAT STAR</span>
+                <h3 data-fr="Télécharger mes CV (Anglais & Français)" data-en="Download My Resumes (English & French)">Télécharger mes CV (Anglais & Français)</h3>
+                <p data-fr="CVs synthétiques d'une page mettant en valeur mon parcours CPGE (Reda Slaoui / Al Qalam), ma formation N7 SN et mon classement FIDE." data-en="One-page resumes highlighting my CPGE trajectory (Reda Slaoui / Al Qalam), N7 SN coursework, and FIDE chess rating.">CVs synthétiques d'une page mettant en valeur mon parcours CPGE (Reda Slaoui / Al Qalam), ma formation N7 SN et mon classement FIDE.</p>
+                <div class="cta-group">
+                  <a href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" class="btn btn-primary">📄 Resume (English PDF)</a>
+                  <a href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" class="btn btn-secondary">📄 CV (Français PDF)</a>
+                </div>
+              </div>
+
+              <div class="cv-download-box">
+                <span class="mono-badge">PREUVES & PROFILS PUBLICS</span>
+                <h3 data-fr="Vérification Académique, Code & Échecs" data-en="Academic, Code & Chess Verification">Vérification Académique, Code & Échecs</h3>
+                <p data-fr="Accès direct à mon dépôt GitHub et à ma fiche officielle auprès de la Fédération Internationale des Échecs (FIDE)." data-en="Direct access to my GitHub repository and my official International Chess Federation (FIDE) record.">Accès direct à mon dépôt GitHub et à ma fiche officielle auprès de la Fédération Internationale des Échecs (FIDE).</p>
+                <div class="cta-group">
+                  <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener" class="btn btn-outline">💻 GitHub Repository</a>
+                  <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener" class="btn btn-outline">♟️ FIDE ID #9047077</a>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -777,7 +839,7 @@
 
   </main>
 
-  <!-- ==================== PIED DE PAGE & CONTACT ==================== -->
+  <!-- ==================== PIED DE PAGE ==================== -->
   <footer class="site-footer" id="contact">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -785,29 +847,30 @@
           <span class="logo-badge">MB</span>
           <span class="logo-name">Mohamed Bistarine</span>
         </div>
-        <p class="footer-desc" data-fr="Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). e-Portfolio conforme au référentiel CAM 2026-2027." data-en="Digital Sciences Engineering Student at Toulouse INP - ENSEEIHT (N7). e-Portfolio compliant with the 2026-2027 CAM framework.">
-          Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). e-Portfolio conforme au référentiel CAM 2026-2027.
+        <p class="footer-desc" data-fr="Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). Spécialisé en Optimisation Mathématique, Asservissement et IA." data-en="Digital Sciences Engineering Student at Toulouse INP - ENSEEIHT (N7). Specializing in Mathematical Optimization, Control Systems, and AI.">
+          Élève-Ingénieur en Sciences du Numérique à Toulouse INP - ENSEEIHT (N7). Spécialisé en Optimisation Mathématique, Asservissement et IA.
         </p>
       </div>
 
       <div class="footer-contact">
-        <h4 class="mono-label" data-fr="COORDONNÉES DIRECTES" data-en="DIRECT CONTACT">COORDONNÉES DIRECTES</h4>
+        <h4 class="mono-label" data-fr="LIENS DIRECTS & CONTACT" data-en="DIRECT LINKS & CONTACT">LIENS DIRECTS & CONTACT</h4>
         <ul class="contact-list">
-          <li>📍 <span>Toulouse, France (Toulouse INP - ENSEEIHT)</span></li>
-          <li>📧 <a href="mailto:mohamed.bistarine@etu.inp-n7.fr">mohamed.bistarine@etu.inp-n7.fr</a> <span class="small-note" data-fr="[À VÉRIFIER]" data-en="[TO VERIFY]">[À VÉRIFIER]</span></li>
-          <li>🔗 <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">github.com/medbistarine-ship-it/Mohamed_Bistarine</a></li>
+          <li>📍 <span>Toulouse, France (ENSEEIHT N7) & Agadir, Maroc</span></li>
+          <li>📧 <a href="mailto:mohamed.bistarine@etu.inp-n7.fr">mohamed.bistarine@etu.inp-n7.fr</a></li>
+          <li>♟️ <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener">ratings.fide.com/profile/9047077</a></li>
+          <li>💻 <a href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">github.com/medbistarine-ship-it/Mohamed_Bistarine</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026–2027 Mohamed Bistarine · Toulouse INP - ENSEEIHT (N7) · Hosted on GitHub Pages (GDPR Friendly, Zero Tracking).</p>
+      <p>© 2026–2027 Mohamed Bistarine · Toulouse INP - ENSEEIHT (N7) · Architecture Légère & Économe en Données.</p>
     </div>
   </footer>
 
-  <!-- ==================== SCRIPT JAVASCRIPT : NAVIGATION, SOUS-ONGLETS, LANGUE FR/EN & THÈME ==================== -->
+  <!-- ==================== SCRIPT JAVASCRIPT LÉGER ==================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Gestion de la langue Bilingue (FR / EN)
+      // 1. Commutateur Bilingue FR / EN
       const langToggleBtn = document.getElementById('langToggleBtn');
       const indFr = document.getElementById('ind-fr');
       const indEn = document.getElementById('ind-en');
@@ -817,35 +880,26 @@
         currentLang = lang;
         document.documentElement.lang = lang;
         localStorage.setItem('mb_portfolio_lang', lang);
-
         indFr.classList.toggle('active-lang', lang === 'fr');
         indEn.classList.toggle('active-lang', lang === 'en');
-
-        const translatableElements = document.querySelectorAll('[data-fr][data-en]');
-        translatableElements.forEach(el => {
+        document.querySelectorAll('[data-fr][data-en]').forEach(el => {
           el.innerHTML = el.getAttribute(`data-${lang}`);
         });
       }
-
-      langToggleBtn.addEventListener('click', () => {
-        applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
-      });
-
+      langToggleBtn.addEventListener('click', () => applyLanguage(currentLang === 'fr' ? 'en' : 'fr'));
       applyLanguage(currentLang);
 
-      // 2. Gestion du Thème Clair / Sombre (Dark Mode)
+      // 2. Commutateur Thème Sombre / Clair (Sombre par défaut pour un rendu pro)
       const themeToggleBtn = document.getElementById('themeToggleBtn');
-      let currentTheme = localStorage.getItem('mb_portfolio_theme') || 'light';
+      let currentTheme = localStorage.getItem('mb_portfolio_theme') || 'dark';
       document.documentElement.setAttribute('data-theme', currentTheme);
-
       themeToggleBtn.addEventListener('click', () => {
-        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', currentTheme);
         localStorage.setItem('mb_portfolio_theme', currentTheme);
       });
 
-      // 3. Navigation par Onglets Principaux (#home, #engineering, #mobility, #sustainability, #activities, #career)
-      const navLinks = document.querySelectorAll('[data-tab-target]');
+      // 3. Navigation par Onglets avec relance des effets visuels d'entrée
       const sections = document.querySelectorAll('.tab-section');
       const mainNav = document.getElementById('mainNav');
       const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -853,19 +907,18 @@
       function activateTab(tabId) {
         const targetSection = document.getElementById(tabId);
         if (!targetSection) return;
-
         sections.forEach(sec => sec.classList.remove('active-section'));
+        void targetSection.offsetWidth; // Relance fluide des animations CSS d'entrée
         targetSection.classList.add('active-section');
 
         document.querySelectorAll('.nav-link').forEach(link => {
           link.classList.toggle('active', link.getAttribute('data-tab-target') === tabId);
         });
-
         mainNav.classList.remove('nav-open');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      navLinks.forEach(link => {
+      document.querySelectorAll('[data-tab-target]').forEach(link => {
         link.addEventListener('click', (e) => {
           const target = link.getAttribute('data-tab-target');
           if (target) {
@@ -884,27 +937,20 @@
         });
       });
 
-      function handleHashChange() {
-        const hash = window.location.hash.replace('#', '') || 'home';
-        activateTab(hash);
-      }
-      window.addEventListener('hashchange', handleHashChange);
-      handleHashChange();
-
-      mobileMenuBtn.addEventListener('click', () => {
-        mainNav.classList.toggle('nav-open');
+      window.addEventListener('hashchange', () => {
+        activateTab(window.location.hash.replace('#', '') || 'home');
       });
+      activateTab(window.location.hash.replace('#', '') || 'home');
 
-      // 4. Gestion des Sous-Onglets (Sub-tabs dans Engineering, Mobility, Career)
-      const subtabButtons = document.querySelectorAll('.subtab-btn');
-      subtabButtons.forEach(btn => {
+      mobileMenuBtn.addEventListener('click', () => mainNav.classList.toggle('nav-open'));
+
+      // 4. Gestion des Boutons Élargis de Sous-Pages
+      document.querySelectorAll('.subtab-wide-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const group = btn.parentElement.getAttribute('data-subtab-group');
           const targetId = btn.getAttribute('data-subtab-target');
-
-          btn.parentElement.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+          btn.parentElement.querySelectorAll('.subtab-wide-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-
           document.querySelectorAll(`.subtab-panel[data-subtab-parent="${group}"]`).forEach(panel => {
             panel.classList.toggle('active-subpanel', panel.id === targetId);
           });
