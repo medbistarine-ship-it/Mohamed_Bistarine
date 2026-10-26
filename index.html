@@ -1,493 +1,528 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Bistarine | Élève-Ingénieur 1A Toulouse INP-ENSEEIHT (SN)</title>
-    <meta name="description" content="E-Portfolio académique et professionnel de Mohamed Bistarine, élève-ingénieur en 1ère année à Toulouse INP-ENSEEIHT, département Sciences du Numérique (SN).">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mohamed Bistarine | Sciences du Numérique — N7</title>
+  <meta name="description" content="e-Portfolio de Mohamed Bistarine, élève-ingénieur ENSEEIHT (N7) : optimisation, asservissement, IA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #fff;
+      --text: #141a22;
+      --muted: #556070;
+      --line: #e1e5ea;
+      --accent: #0b6b63;
+      --accent-ink: #fff;
+      --tint: #e3f2f0;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+      --s1: .5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2.5rem; --s5: 4.5rem;
+      --r: 14px;
+      --fs-s: .875rem; --fs-b: 1rem; --fs-l: clamp(1.1rem, 1rem + .6vw, 1.35rem);
+      --fs-h2: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem);
+      --fs-h1: clamp(2.4rem, 1.6rem + 4vw, 4.2rem);
+      color-scheme: light;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0d1218; --surface: #151c25; --text: #e8edf2; --muted: #9aa6b4;
+        --line: #243040; --accent: #5eead4; --accent-ink: #06201c; --tint: #12302e;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0d1218; --surface: #151c25; --text: #e8edf2; --muted: #9aa6b4;
+      --line: #243040; --accent: #5eead4; --accent-ink: #06201c; --tint: #12302e;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 var(--fs-b)/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); }
+    .wrap { max-width: 62rem; margin: 0 auto; padding: var(--s4) var(--s3) 0; }
     
-    <!-- Polices professionnelles Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    .bar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: var(--s2); padding: .7rem var(--s3); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .brand { font: 500 1rem var(--mono); text-decoration: none; color: var(--accent-ink); background: var(--accent); padding: .25rem .6rem; border-radius: 8px; }
     
-    <!-- Feuille de style principale -->
-    <link rel="stylesheet" href="style.css">
+    nav { display: flex; gap: var(--s2); margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: var(--fs-s); font-weight: 500; white-space: nowrap; padding: .25rem 0; }
+    nav a:hover { color: var(--text); }
+    nav a[aria-current="page"] { color: var(--accent); box-shadow: 0 2px 0 var(--accent); }
+    
+    #theme, #lang { border: 1px solid var(--line); background: var(--surface); color: var(--text); height: 2.25rem; border-radius: 99px; cursor: pointer; font: 500 .8rem var(--mono); display: flex; align-items: center; justify-content: center; }
+    #theme { width: 2.25rem; font-size: 1rem; border-radius: 50%; }
+    #lang { padding: 0 .7rem; }
+    
+    html[data-lang="fr"] [lang="en"], html[data-lang="en"] [lang="fr"] { display: none; }
+    [data-page] { display: none; }
+    [data-page].on { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero { padding-top: var(--s4); }
+    .kicker { font: 500 var(--fs-s) var(--mono); color: var(--accent); margin: 0 0 var(--s2); }
+    h1 { font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 var(--s2); font-weight: 700; }
+    h2 { font-size: var(--fs-h2); letter-spacing: -.02em; margin: 0 0 var(--s3); font-weight: 700; display: flex; align-items: baseline; gap: var(--s2); }
+    .num { font: 500 var(--fs-s) var(--mono); color: var(--accent); }
+    .lead { font-size: var(--fs-l); color: var(--muted); max-width: 38rem; margin: 0 0 var(--s3); }
+    
+    .actions { display: flex; flex-wrap: wrap; gap: var(--s1); margin-bottom: var(--s4); }
+    .btn { display: inline-block; padding: .65rem 1.1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); text-decoration: none; font-weight: 600; font-size: var(--fs-s); transition: transform .15s, border-color .15s; }
+    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .btn.off { opacity: .55; cursor: default; }
+
+    .stats { list-style: none; margin: 0 0 var(--s4); padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: var(--s2); }
+    .stats li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: var(--s2) var(--s3); }
+    .stats b { display: block; font: 700 1.3rem/1.3 var(--sans); color: var(--accent); }
+    .stats span { font-size: var(--fs-s); color: var(--muted); }
+
+    .video { margin: 0; }
+    .video video, .uvp-video { width: 100%; aspect-ratio: 16/9; background: var(--tint); border: 1px solid var(--line); border-radius: var(--r); object-fit: cover; }
+    .uvp-video { margin-top: .5rem; border-radius: 10px; }
+    figcaption, .note { font-size: var(--fs-s); color: var(--muted); margin-top: var(--s1); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: var(--s2); margin-bottom: var(--s3); }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: var(--s3); transition: border-color .15s; display: flex; flex-direction: column; }
+    .card:hover { border-color: var(--accent); }
+    .card h3 { margin: .4rem 0 0; font-size: var(--fs-l); }
+    .card p { margin: .75rem 0 0; color: var(--muted); font-size: .95rem; line-height: 1.6; }
+    .card a.more { display: inline-block; margin-top: auto; padding-top: var(--s2); font-weight: 600; font-size: var(--fs-s); }
+    
+    .tag { align-self: flex-start; font: 500 .72rem var(--mono); color: var(--accent); background: var(--tint); padding: .15rem .55rem; border-radius: 99px; margin-bottom: .5rem; }
+    
+    .ph { position: relative; margin: 0 0 var(--s2); aspect-ratio: 16/9; border-radius: var(--r); border: 1px solid var(--line); background: var(--tint); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .ph.contain-img { background: #ffffff; }
+    .ph.contain-img img { object-fit: contain; padding: 1rem; }
+    .ph figcaption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: .4rem .8rem; color: #fff; background: linear-gradient(transparent, rgba(0, 0, 0, .72)); font-size: .78rem; z-index: 2; }
+    .ph.sq { aspect-ratio: 1/1; max-width: 16rem; }
+    
+    .pagehead { padding-top: var(--s4); }
+    .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--s3); align-items: start; }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .chips span { font-size: var(--fs-s); padding: .3rem .8rem; border-radius: 99px; background: var(--tint); color: var(--text); }
+    
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s1); padding-top: var(--s5); padding-bottom: var(--s4); font-size: var(--fs-s); color: var(--muted); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    @media (max-width: 40rem) { .wrap { padding-top: var(--s3); } .two { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
 </head>
 <body>
 
-    <!-- En-tête et Barre d'Onglets (Navigation par vues séparées) -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="brand" onclick="switchTab('accueil')" role="button" tabindex="0">
-                <div class="brand-badge">MB</div>
-                <div class="brand-info">
-                    <span class="brand-name">Mohamed Bistarine</span>
-                    <span class="brand-sub">Toulouse INP-ENSEEIHT · 1A Sciences du Numérique (SN)</span>
-                </div>
-            </div>
+  <header class="bar">
+    <a class="brand" href="#index">MB</a>
+    <nav aria-label="Sections">
+      <a href="#index" aria-current="page" data-k="index">
+        <span lang="fr">Accueil</span><span lang="en">Home</span>
+      </a>
+      <a href="#projets" data-k="projets">
+        <span lang="fr">Parcours ingénieur</span><span lang="en">Engineering course</span>
+      </a>
+      <a href="#mobilite" data-k="mobilite">
+        <span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span>
+      </a>
+      <a href="#engagement" data-k="engagement">
+        <span lang="fr">Durabilité et engagement</span><span lang="en">Sustainability and engagement</span>
+      </a>
+      <a href="#echecs" data-k="echecs">
+        <span lang="fr">Sport et autres activités</span><span lang="en">Sport and other activities</span>
+      </a>
+      <a href="#carriere" data-k="carriere">
+        <span lang="fr">Développement de carrière</span><span lang="en">Career development</span>
+      </a>
+    </nav>
+    <button id="lang" type="button">FR/EN</button>
+    <button id="theme" type="button" aria-label="Thème">◐</button>
+  </header>
 
-            <nav class="tabs-nav" aria-label="Navigation principale">
-                <button class="tab-btn active" data-target="accueil" onclick="switchTab('accueil')">Accueil</button>
-                <button class="tab-btn" data-target="parcours" onclick="switchTab('parcours')">Parcours & Compétences</button>
-                <button class="tab-btn" data-target="projets" onclick="switchTab('projets')">Projets & Supports</button>
-                <button class="tab-btn" data-target="carriere" onclick="switchTab('carriere')">Projet Professionnel</button>
-                <button class="tab-btn" data-target="mobilite" onclick="switchTab('mobilite')">Mobilité Internationale</button>
-                <button class="tab-btn" data-target="engagement" onclick="switchTab('engagement')">Engagement & Clubs</button>
-            </nav>
+  <main>
+    <!-- ONGLET 0 : ACCUEIL -->
+    <div data-page="index" class="on">
+      <section class="hero wrap">
+        <p class="kicker">
+          <span lang="fr">Élève-ingénieur · Toulouse INP-ENSEEIHT (N7) · Promo 2026–2029</span>
+          <span lang="en">Engineering student · Toulouse INP-ENSEEIHT (N7) · Class of 2026–2029</span>
+        </p>
+        <h1>Mohamed Bistarine</h1>
+        <p class="lead">
+          <span lang="fr">Optimisation, asservissement et IA : je transforme la rigueur mathématique en algorithmes fiables.</span>
+          <span lang="en">Optimisation, control and AI: turning mathematical rigour into reliable algorithms.</span>
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank">
+            <span lang="fr">CV Français</span><span lang="en">CV (French)</span>
+          </a>
+          <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank">Resume (EN)</a>
+          <a class="btn" href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener">FIDE</a>
         </div>
-    </header>
 
-    <!-- Conteneur principal des Onglets (Un seul onglet visible à la fois) -->
-    <main class="main-content container">
+        <ul class="stats">
+          <li><b>1643</b><span>Elo FIDE</span></li>
+          <li>
+            <b>Ada · C · MATLAB · Python</b>
+            <span><span lang="fr">socle technique</span><span lang="en">technical core</span></span>
+          </li>
+          <li>
+            <b>DE · JP · CN</b>
+            <span><span lang="fr">cibles de mobilité</span><span lang="en">mobility targets</span></span>
+          </li>
+        </ul>
 
-        <!-- =================================================================
-             ONGLET 1 : ACCUEIL
-             ================================================================= -->
-        <section id="accueil" class="tab-panel active">
-            <div class="hero-layout">
-                <div class="hero-text">
-                    <div class="institution-pill">
-                        <span class="dot"></span>
-                        Toulouse INP-ENSEEIHT (N7) — 1ère Année Sciences du Numérique (SN)
-                    </div>
-                    <h1 class="hero-title">Mohamed Bistarine</h1>
-                    <p class="hero-lead">
-                        Élève-ingénieur en première année du cycle ingénieur à <strong>Toulouse INP-ENSEEIHT</strong> au sein du département <strong>Sciences du Numérique (SN)</strong>. Issu des Classes Préparatoires aux Grandes Écoles (filière MP), je développe mes compétences en algorithmique, programmation système, automatique et intelligence artificielle.
-                    </p>
-
-                    <div class="hero-actions">
-                        <button class="btn-primary" onclick="switchTab('projets')">
-                            Consulter mes Projets & Supports
-                        </button>
-                        <button class="btn-secondary" onclick="switchTab('parcours')">
-                            Voir mon Parcours Académique
-                        </button>
-                    </div>
-
-                    <div class="key-facts-grid">
-                        <div class="fact-box">
-                            <span class="fact-label">Établissement actuel</span>
-                            <strong class="fact-value">Toulouse INP-ENSEEIHT</strong>
-                            <span class="fact-detail">1ère année (1A) — Tronc commun SN</span>
-                        </div>
-                        <div class="fact-box">
-                            <span class="fact-label">Formation préparatoire</span>
-                            <strong class="fact-value">CPGE MPSI / MP</strong>
-                            <span class="fact-detail">Lycée Reda Slaoui & Groupe Scolaire Al Qalam</span>
-                        </div>
-                        <div class="fact-box">
-                            <span class="fact-label">Fédération Internationale des Échecs</span>
-                            <strong class="fact-value">FIDE ID #9047077</strong>
-                            <span class="fact-detail">Compétition & étude algorithmique</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-image-card">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=1000" 
-                         alt="Entrée du campus Toulouse INP-ENSEEIHT" 
-                         class="real-photo">
-                    <div class="photo-caption">
-                        <strong>Campus Toulouse INP-ENSEEIHT (N7)</strong>
-                        <span>2 rue Charles Camichel, Toulouse — Département Sciences du Numérique</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =================================================================
-             ONGLET 2 : PARCOURS ACADÉMIQUE & COMPÉTENCES (SANS POURCENTAGES)
-             ================================================================= -->
-        <section id="parcours" class="tab-panel">
-            <div class="panel-header">
-                <span class="panel-category">Formation & Socle Technique</span>
-                <h2 class="panel-title">Parcours Académique & Compétences</h2>
-                <p class="panel-desc">
-                    Cursus d'études scientifiques et compétences techniques acquises en classes préparatoires et en première année à l'ENSEEIHT.
-                </p>
-            </div>
-
-            <div class="timeline-grid">
-                <!-- ENSEEIHT 1A -->
-                <article class="edu-card">
-                    <div class="edu-img-wrap">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_02.jpg?width=800" 
-                             alt="Bâtiment de l'ENSEEIHT Toulouse">
-                        <span class="edu-date">Depuis 2026</span>
-                    </div>
-                    <div class="edu-body">
-                        <span class="edu-place">Toulouse, France</span>
-                        <h3>Toulouse INP-ENSEEIHT (N7)</h3>
-                        <p class="edu-program">Cycle Ingénieur — 1ère Année (1A), Département Sciences du Numérique (SN)</p>
-                        <p class="edu-text">
-                            Formation de tronc commun en Sciences du Numérique couvrant l'algorithmique, la programmation impérative, l'architecture des systèmes, l'automatique, le traitement du signal et les mathématiques appliquées.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- CPGE MP & MPSI -->
-                <article class="edu-card">
-                    <div class="edu-img-wrap">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=800" 
-                             alt="Formation scientifique CPGE">
-                        <span class="edu-date">2024 – 2026</span>
-                    </div>
-                    <div class="edu-body">
-                        <span class="edu-place">Agadir, Maroc</span>
-                        <h3>Classes Préparatoires aux Grandes Écoles (MPSI / MP)</h3>
-                        <p class="edu-program">1ère année (MPSI) au Lycée Reda Slaoui · 2ème année (MP) au Groupe Scolaire Al Qalam</p>
-                        <p class="edu-text">
-                            Formation intensive en mathématiques approfondies (algèbre linéaire, analyse, probabilités), physique théorique, sciences industrielles de l'ingénieur (SII) et informatique.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Baccalauréat -->
-                <article class="edu-card">
-                    <div class="edu-img-wrap">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/LaTeX_logo.svg" 
-                             alt="Sciences Mathématiques" class="contain-logo-bg">
-                        <span class="edu-date">2024</span>
-                    </div>
-                    <div class="edu-body">
-                        <span class="edu-place">Maroc</span>
-                        <h3>Lycée Mohamed Al Baqali</h3>
-                        <p class="edu-program">Baccalauréat Sciences Mathématiques B</p>
-                        <p class="edu-text">
-                            Enseignement secondaire spécialisé en mathématiques, physique-chimie et sciences de l'ingénieur.
-                        </p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Langues (Présentées par qualification factuelle, sans pourcentages) -->
-            <div class="subsection-block">
-                <h3 class="subsection-title">Compétences Linguistiques</h3>
-                <div class="languages-grid">
-                    <div class="lang-card">
-                        <span class="lang-title">Arabe</span>
-                        <span class="lang-status">Langue maternelle</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-title">Français</span>
-                        <span class="lang-status">Bilingue · Usage académique et professionnel</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-title">Anglais</span>
-                        <span class="lang-status">Maîtrise professionnelle et scientifique</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-title">Allemand</span>
-                        <span class="lang-status">Langue vivante · Préparation à la mobilité académique</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =================================================================
-             ONGLET 3 : PROJETS & SUPPORTS TECHNIQUES
-             ================================================================= -->
-        <section id="projets" class="tab-panel">
-            <div class="panel-header">
-                <span class="panel-category">Supports de Cours & Réalisations</span>
-                <h2 class="panel-title">Supports Techniques & Projets d'Ingénierie</h2>
-                <p class="panel-desc">
-                    Langages de programmation, environnements de calcul scientifique utilisés en 1A SN à l'ENSEEIHT et travaux de recherche personnelle.
-                </p>
-            </div>
-
-            <!-- Grille des Supports Officiels (Logos réels Wikimedia Commons) -->
-            <div class="supports-grid">
-                <div class="support-card">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ada_2022_logo-800.svg" alt="Logo officiel Ada">
-                    <div class="support-info">
-                        <h4>Langage Ada</h4>
-                        <p>Programmation impérative, typage fort, modularité et fiabilité logicielle (Enseignement 1A SN ENSEEIHT).</p>
-                    </div>
-                </div>
-
-                <div class="support-card">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_C_Programming_Language_logo.svg" alt="Logo officiel Langage C">
-                    <div class="support-info">
-                        <h4>Langage C</h4>
-                        <p>Algorithmique bas niveau, gestion explicite de la mémoire, pointeurs et programmation système.</p>
-                    </div>
-                </div>
-
-                <div class="support-card">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Matlab_Logo.png" alt="Logo officiel MATLAB">
-                    <div class="support-info">
-                        <h4>MATLAB</h4>
-                        <p>Calcul matriciel, analyse numérique et modélisation de systèmes asservis (Travaux Pratiques d'Automatique).</p>
-                    </div>
-                </div>
-
-                <div class="support-card">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Python-logo-notext.svg" alt="Logo officiel Python">
-                    <div class="support-info">
-                        <h4>Python</h4>
-                        <p>Algorithmique, structures de données, calcul scientifique et développement de modèles d'intelligence artificielle.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Réalisations et Travaux -->
-            <div class="projects-list">
-                <article class="project-item">
-                    <div class="project-visual">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chess_board.jpg?width=800" alt="Échiquier et algorithmique de décision">
-                    </div>
-                    <div class="project-details">
-                        <span class="project-badge">Algorithmique & Intelligence Artificielle</span>
-                        <h3>Conception d'Algorithmes d'Évaluation et de Décision pour un Moteur d'Échecs</h3>
-                        <p>
-                            Étude et développement d'algorithmes de prise de décision appliqués au jeu d'échecs. Modélisation binaire efficace de l'état du jeu (Bitboards), table de transposition par hachage de Zobrist, exploration d'arbres de recherche et fonction d'évaluation numérique des positions.
-                        </p>
-                        <div class="tag-row">
-                            <span>Bitboards</span>
-                            <span>Hachage de Zobrist</span>
-                            <span>Arbres de recherche</span>
-                            <span>Évaluation numérique</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-item">
-                    <div class="project-visual logo-visual">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ada_2022_logo-800.svg" alt="Support Ada et C ENSEEIHT">
-                    </div>
-                    <div class="project-details">
-                        <span class="project-badge">Supports de Travaux Pratiques — 1A SN ENSEEIHT</span>
-                        <h3>Programmation Impérative en Ada, Langage C & Automatique sous MATLAB</h3>
-                        <p>
-                            Réalisation des travaux pratiques et projets académiques de première année à l'ENSEEIHT : conception de programmes structurés et vérifiés en <strong>Ada</strong> et en <strong>C</strong>, ainsi que l'étude, la simulation et la rédaction de rapports techniques d'<strong>Automatique</strong> (modélisation et commande de systèmes dynamiques sous <strong>MATLAB</strong>).
-                        </p>
-                        <div class="tag-row">
-                            <span>Ada (GNAT)</span>
-                            <span>Langage C</span>
-                            <span>MATLAB</span>
-                            <span>TP Automatique 1A</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- =================================================================
-             ONGLET 4 : PROJET PROFESSIONNEL (SANS CASES D'ENTRETIENS)
-             ================================================================= -->
-        <section id="carriere" class="tab-panel">
-            <div class="panel-header">
-                <span class="panel-category">Ambitions & Perspectives</span>
-                <h2 class="panel-title">Projet Professionnel</h2>
-                <p class="panel-desc">
-                    Construction progressive de mon parcours d'ingénieur au sein du département Sciences du Numérique de l'ENSEEIHT vers la recherche et le développement.
-                </p>
-            </div>
-
-            <div class="career-cards">
-                <div class="career-card">
-                    <div class="career-step">Axe 01</div>
-                    <h3>Consolidation du Socle en Sciences du Numérique (1A)</h3>
-                    <p>
-                        Maîtriser l'ensemble des enseignements fondamentaux de première année à l'ENSEEIHT (algorithmique, génie logiciel en Ada et C, automatique, mathématiques appliquées et architecture matérielle) afin d'effectuer un choix éclairé de filière de spécialisation en deuxième année.
-                    </p>
-                </div>
-
-                <div class="career-card">
-                    <div class="career-step">Axe 02</div>
-                    <h3>Intelligence Artificielle & Optimisation Algorithmique</h3>
-                    <p>
-                        Approfondir la conception d'algorithmes de décision, d'apprentissage automatique et d'optimisation combinatoire, dans la continuité de mes travaux sur les moteurs d'évaluation stratégique.
-                    </p>
-                </div>
-
-                <div class="career-card">
-                    <div class="career-step">Axe 03</div>
-                    <h3>Ingénierie des Systèmes & Recherche Appliquée</h3>
-                    <p>
-                        Exercer en tant qu'ingénieur en Recherche & Développement (R&D) sur des systèmes logiciels fiables, la modélisation mathématique et le contrôle de systèmes complexes à l'échelle internationale.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =================================================================
-             ONGLET 5 : MOBILITÉ INTERNATIONALE
-             ================================================================= -->
-        <section id="mobilite" class="tab-panel">
-            <div class="panel-header">
-                <span class="panel-category">Ouverture Internationale</span>
-                <h2 class="panel-title">Projet de Mobilité Académique & Stages Internationaux</h2>
-                <p class="panel-desc">
-                    Objectifs d'échanges universitaires et de stages à l'international dans le cadre de mon cursus d'ingénieur à Toulouse INP-ENSEEIHT.
-                </p>
-            </div>
-
-            <div class="mobility-grid">
-                <!-- Allemagne - TUM -->
-                <article class="mobility-card">
-                    <div class="mobility-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Technische_Universitaet_Muenchen-1.jpg?width=800" 
-                             alt="Campus de la Technische Universität München (TUM)">
-                        <span class="mobility-type">Mobilité Académique & Stage</span>
-                    </div>
-                    <div class="mobility-body">
-                        <h3>Allemagne — Technische Universität München (TUM)</h3>
-                        <p>
-                            Objectif principal d'échange académique au sein de la <strong>Technische Universität München (TUM)</strong> à Munich, université de référence européenne en informatique, mathématiques appliquées et ingénierie des systèmes, appuyé par mon apprentissage de la langue allemande.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Japon -->
-                <article class="mobility-card">
-                    <div class="mobility-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Skyline.jpg?width=800" 
-                             alt="Panorama de Tokyo, Japon">
-                        <span class="mobility-type">Stage International</span>
-                    </div>
-                    <div class="mobility-body">
-                        <h3>Japon — Recherche & Haute Technologie</h3>
-                        <p>
-                            Projet de stage en laboratoire ou en entreprise technologique au Japon, pôle mondialement reconnu en robotique, automatique avancée, systèmes embarqués et algorithmique.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Chine -->
-                <article class="mobility-card">
-                    <div class="mobility-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Skyline_2020.jpg?width=800" 
-                             alt="Panorama de Shanghai, Chine">
-                        <span class="mobility-type">Stage International</span>
-                    </div>
-                    <div class="mobility-body">
-                        <h3>Chine — Innovation Numérique & IA</h3>
-                        <p>
-                            Ouverture vers des opportunités de stage international dans les grands pôles technologiques chinois spécialisés en intelligence artificielle, science des données et infrastructures numériques.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- =================================================================
-             ONGLET 6 : ENGAGEMENT CIVIL, CLUBS & ACTIVITÉS SPORTIVES
-             ================================================================= -->
-        <section id="engagement" class="tab-panel">
-            <div class="panel-header">
-                <span class="panel-category">Citoyenneté, Clubs & Sport</span>
-                <h2 class="panel-title">Engagement Civil, Compétition Échiquéenne & Sport</h2>
-                <p class="panel-desc">
-                    Implication associative, pratique compétitive des échecs et activités sportives collectives et individuelles.
-                </p>
-            </div>
-
-            <div class="clubs-grid">
-                <!-- Échecs FIDE -->
-                <article class="club-card">
-                    <div class="club-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/TataSteelChess2023-13-Vaishali.jpg?width=800" 
-                             alt="Tournoi d'échecs FIDE">
-                        <span class="club-badge">FIDE ID : 9047077</span>
-                    </div>
-                    <div class="club-content">
-                        <h3>Échecs en Compétition & Clubs</h3>
-                        <p>
-                            Joueur affilié à la Fédération Internationale des Échecs (<strong>FIDE #9047077</strong>). Entraînement approfondi en club à Toulouse (stratégie, tactique et étude des finales) avec pour objectif la participation régulière aux tournois homologués nationaux et internationaux.
-                        </p>
-                        <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener" class="club-link">
-                            Consulter le profil officiel FIDE #9047077 →
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Sports : Football Olympique Dcheira, Natation, Basketball, Volleyball -->
-                <article class="club-card">
-                    <div class="club-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_02.jpg?width=800" 
-                             alt="Activités sportives et clubs">
-                        <span class="club-badge">Clubs & Pratique Sportive</span>
-                    </div>
-                    <div class="club-content">
-                        <h3>Football en Club & Sports Collectifs / Individuels</h3>
-                        <p>
-                            Parcours de formation sportive en football au sein du club <strong>Olympique Dcheira</strong>. Pratique régulière en amateur de la <strong>natation</strong>, du <strong>basketball</strong> et du <strong>volleyball</strong>, favorisant l'esprit d'équipe, l'endurance physique et la rigueur.
-                        </p>
-                        <div class="tag-row">
-                            <span>Olympique Dcheira (Football)</span>
-                            <span>Natation</span>
-                            <span>Basketball</span>
-                            <span>Volleyball</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Engagement Civil & Sobriété Numérique -->
-                <article class="club-card">
-                    <div class="club-photo">
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=800" 
-                             alt="Engagement citoyen et sobriété numérique">
-                        <span class="club-badge">Engagement Civil</span>
-                    </div>
-                    <div class="club-content">
-                        <h3>Engagement Citoyen & Sobriété Numérique</h3>
-                        <p>
-                            Sensibilisation aux enjeux du développement durable dans l'ingénierie numérique : conception d'architectures logicielles sobres et économes en données (comme cet e-portfolio léger codé sans bibliothèque superflue), respect de la confidentialité des données et entraide académique.
-                        </p>
-                        <div class="tag-row">
-                            <span>Sobriété numérique</span>
-                            <span>Protection des données</span>
-                            <span>Entraide étudiante</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Pied de page -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div>
-                <strong>Mohamed Bistarine</strong> — Élève-Ingénieur 1A Toulouse INP-ENSEEIHT (Sciences du Numérique)
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/medbistarine-ship-it" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener">Profil FIDE #9047077</a>
-                <a href="mailto:mohamed.bistarine@etu.inp-toulouse.fr">Contact Email</a>
-            </div>
+        <div class="two">
+          <figure class="ph sq" data-file="profil.jpg">
+            <img src="assets/img/profil.jpg" alt="Mohamed Bistarine" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_02.jpg?width=800';">
+          </figure>
+          <figure class="video">
+            <video controls preload="none" poster="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=1000" src="assets/uvp_pitch.mp4"></video>
+            <figcaption>
+              <span lang="fr">Vidéo de présentation (UVP) · anglais · 2 à 3 min</span>
+              <span lang="en">Unique value proposition video · English · 2–3 min</span>
+            </figcaption>
+          </figure>
         </div>
-    </footer>
+      </section>
 
-    <!-- Script léger pour séparer strictement l'affichage des onglets -->
-    <script>
-        function switchTab(tabId) {
-            // Masquer tous les panneaux d'onglets
-            const panels = document.querySelectorAll('.tab-panel');
-            panels.forEach(panel => {
-                panel.classList.remove('active');
-            });
+      <section class="wrap">
+        <div class="grid">
+          <div class="card">
+            <span class="tag">01</span>
+            <h3><span lang="fr">Parcours ingénieur</span><span lang="en">Engineering course</span></h3>
+            <p><span lang="fr">TIPE échecs, autoformation en langues asiatiques, parcours Maroc → France (CPGE MP).</span><span lang="en">Chess TIPE, self-taught Asian languages, Morocco → France path (CPGE MP).</span></p>
+            <a class="more" href="#projets">→</a>
+          </div>
+          <div class="card">
+            <span class="tag">02</span>
+            <h3><span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span></h3>
+            <p><span lang="fr">TUM (Allemagne), NII (Japon), Shanghai (Chine) : immersion technologique.</span><span lang="en">TUM (Germany), NII (Japan), Shanghai (China): technological immersion.</span></p>
+            <a class="more" href="#mobilite">→</a>
+          </div>
+          <div class="card">
+            <span class="tag">03</span>
+            <h3><span lang="fr">Durabilité et engagement</span><span lang="en">Sustainability and engagement</span></h3>
+            <p><span lang="fr">Sobriété algorithmique, transmission mathématique, fiabilité logicielle.</span><span lang="en">Algorithmic sobriety, math tutoring, software reliability.</span></p>
+            <a class="more" href="#engagement">→</a>
+          </div>
+          <div class="card">
+            <span class="tag">04</span>
+            <h3><span lang="fr">Sport et activités</span><span lang="en">Sport and activities</span></h3>
+            <p><span lang="fr">Échecs de compétition (FIDE #9047077), Najah Souss, discipline sportive collective.</span><span lang="en">Competitive chess (FIDE #9047077), Najah Souss, team sports discipline.</span></p>
+            <a class="more" href="#echecs">→</a>
+          </div>
+          <div class="card">
+            <span class="tag">05</span>
+            <h3><span lang="fr">Développement de carrière</span><span lang="en">Career development</span></h3>
+            <p><span lang="fr">Projet professionnel, role models, feuille de route de stages R&D.</span><span lang="en">Career project, role models, R&D internship roadmap.</span></p>
+            <a class="more" href="#carriere">→</a>
+          </div>
+        </div>
+      </section>
+    </div>
 
-            // Désactiver tous les boutons du menu
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-target') === tabId) {
-                    btn.classList.add('active');
-                }
-            });
+    <!-- ONGLET 1 : PARCOURS INGÉNIEUR -->
+    <div data-page="projets">
+      <div class="pagehead wrap">
+        <h2><span class="num">01</span><span lang="fr">Parcours ingénieur</span><span lang="en">Engineering course</span></h2>
+        <p class="lead"><span lang="fr">Une progression académique forgée entre le Maroc et Toulouse, complétée par des projets personnels structurants.</span><span lang="en">An academic progression built between Morocco and Toulouse, complemented by structuring personal projects.</span></p>
+      </div>
 
-            // Afficher uniquement l'onglet sélectionné
-            const activePanel = document.getElementById(tabId);
-            if (activePanel) {
-                activePanel.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-    </script>
+      <div class="wrap">
+        <div class="two">
+          <article class="card">
+            <span class="tag">Théorie des jeux · IA</span>
+            <h3><span lang="fr">Évaluation et décision dans un moteur d’échecs</span><span lang="en">Evaluation and decision in a chess engine</span></h3>
+            <p>
+              <span lang="fr">En tant que joueur FIDE, j'ai souhaité formaliser mathématiquement les processus de calcul à l'œuvre lors d'une partie. Dans le cadre de mon TIPE en CPGE MP, j'ai conçu et développé un algorithme décisionnel s'appuyant sur une représentation binaire optimisée de l'échiquier (bitboards) et une table de transposition par hachage de Zobrist. Cette approche m'a permis d'explorer efficacement les arbres de recherche et d'optimiser l'évaluation numérique des positions, posant ainsi les bases d'une réflexion plus large sur l'IA générique appliquée aux jeux de stratégie.</span>
+              <span lang="en">As a FIDE player, I wanted to mathematically formalize the calculation processes at work during a game. As part of my TIPE project in CPGE MP, I designed and developed a decision-making algorithm based on an optimized binary representation of the chessboard (bitboards) and a Zobrist hashing transposition table. This approach allowed me to efficiently explore search trees and optimize the numerical evaluation of positions, laying the groundwork for broader thinking on generic AI applied to strategy games.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Langues · Autoformation</span>
+            <h3><span lang="fr">Apprentissage autonome du chinois et du japonais</span><span lang="en">Self-taught Chinese and Japanese learning</span></h3>
+            <p>
+              <span lang="fr">Afin de préparer concrètement mes futurs projets de mobilité internationale vers la Chine et le Japon—pôles mondiaux majeurs de l'IA et de la robotique—j'ai entrepris une démarche d'autoformation rigoureuse en chinois et en japonais. Cet apprentissage, mené en parallèle de mon cursus ingénieur, repose sur une étude régulière du vocabulaire, de la compréhension orale et de la maîtrise progressive des systèmes d'écriture (Hanzi, Kana, Kanji), avec pour objectif de m'intégrer efficacement dans des environnements de R&D multiculturels.</span>
+              <span lang="en">To tangibly prepare for my future international mobility projects to China and Japan—major global hubs for AI and robotics—I undertook a rigorous self-teaching process in Chinese and Japanese. This learning, conducted alongside my engineering studies, relies on the regular study of vocabulary, oral comprehension, and the progressive mastery of writing systems (Hanzi, Kana, Kanji), with the goal of integrating effectively into multicultural R&D environments.</span>
+            </p>
+          </article>
+        </div>
+
+        <h2 style="margin-top:var(--s4)"><span lang="fr">Parcours académique</span><span lang="en">Academic path</span></h2>
+        <div class="grid">
+          <div class="card">
+            <strong>2026–2029 · ENSEEIHT (N7)</strong>
+            <p><span lang="fr">1re année, filière Sciences du Numérique (SN) à Toulouse. Socle technique en programmation (Ada, C, Python), MATLAB, automatique, analyse de données et probabilités. Orientation visée pour le cycle master : optimisation, HPC, IA décisionnelle et contrôle des systèmes complexes.</span><span lang="en">1st year, Digital Sciences (SN) track in Toulouse. Technical core in programming (Ada, C, Python), MATLAB, control systems, data analysis, and probabilities. Targeted orientation for master's cycle: optimization, HPC, decision AI, and control of complex systems.</span></p>
+          </div>
+          <div class="card">
+            <strong>2025–2026 · CPGE MP · Al-Qalam</strong>
+            <p><span lang="fr">Deuxième année de Classe Préparatoire aux Grandes Écoles, filière Mathématiques et Physique (MP) au Groupe Scolaire Al-Qalam (Agadir). Préparation intensive aux concours ingénieurs, réalisation du projet TIPE et approfondissement en sciences industrielles.</span><span lang="en">Second year of Preparatory Classes (CPGE), Mathematics and Physics (MP) track at Groupe Scolaire Al-Qalam (Agadir). Intensive preparation for engineering entrance exams, completion of the TIPE project, and advanced study in industrial sciences.</span></p>
+          </div>
+          <div class="card">
+            <strong>2024–2025 · CPGE MPSI · Reda Slaoui</strong>
+            <p><span lang="fr">Première année de CPGE MPSI au Lycée Reda Slaoui (Agadir). Acquisition d'une base théorique solide et exigeante en algèbre, analyse mathématique, physique fondamentale et algorithmique classique.</span><span lang="en">First year of CPGE MPSI at Lycée Reda Slaoui (Agadir). Acquisition of a solid and demanding theoretical foundation in algebra, mathematical analysis, fundamental physics, and classical algorithms.</span></p>
+          </div>
+          <div class="card">
+            <strong>Juin 2024 · Bac SMB · Mohamed El-Bakali</strong>
+            <p><span lang="fr">Obtention du Baccalauréat Sciences Mathématiques B au Lycée Mohamed El-Bakali (Aït Melloul). Cursus d'excellence focalisé sur l'analyse, l'arithmétique et les sciences de l'ingénieur, validant la fin du parcours secondaire au Maroc.</span><span lang="en">Graduated with a Baccalaureate in Mathematical Sciences B at Lycée Mohamed El-Bakali (Aït Melloul). Excellence track focused on analysis, arithmetic, and engineering sciences, concluding secondary education in Morocco.</span></p>
+          </div>
+        </div>
+        <div class="chips" style="margin-top:var(--s3)">
+          <span>Ada</span><span>C</span><span>MATLAB / Simulink</span><span>Python</span><span>Linux / Bash</span><span>Git</span><span>LaTeX</span><span>Optimisation</span><span>Statistiques</span><span>Théorie des jeux</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONGLET 2 : MOBILITÉ INTERNATIONALE -->
+    <div data-page="mobilite">
+      <div class="pagehead wrap">
+        <h2><span class="num">02</span><span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span></h2>
+        <p class="lead"><span lang="fr">Trois pôles technologiques ciblés pour m’inspirer de leurs méthodes avancées en optimisation, automatique et intelligence artificielle.</span><span lang="en">Three targeted technology hubs to draw inspiration from their advanced methods in optimization, control, and artificial intelligence.</span></p>
+      </div>
+
+      <div class="wrap">
+        <div class="two">
+          <article class="card">
+            <figure class="ph" data-file="tum.jpg">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Technische_Universitaet_Muenchen-1.jpg?width=800" alt="Campus de la TUM, Munich" loading="lazy">
+              <figcaption>TUM, Munich · Wikimedia Commons</figcaption>
+            </figure>
+            <span class="tag">DE</span>
+            <h3><span lang="fr">TUM, Munich (Allemagne)</span><span lang="en">TUM, Munich (Germany)</span></h3>
+            <p>
+              <span lang="fr">Visant un semestre d'échange académique (S9) ou un stage de Recherche & Développement, la Technische Universität München (TUM) représente pour moi l'excellence européenne. Mon objectif est d'y approfondir mes connaissances en mathématiques appliquées, optimisation et commande automatique, des domaines où l'industrie allemande excelle. Je prépare activement cette mobilité en suivant l'enseignement de l'allemand (LV2) au sein de l'ENSEEIHT.</span>
+              <span lang="en">Aiming for an academic exchange semester (S9) or an R&D internship, the Technische Universität München (TUM) represents European excellence for me. My goal is to deepen my knowledge in applied mathematics, optimization, and automatic control—fields where the German industry excels. I am actively preparing for this mobility by studying German as a second language at ENSEEIHT.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <figure class="ph" data-file="tokyo.jpg">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/NII_-_National_Center_of_Sciences_Build.jpg?width=800" alt="National Institute of Informatics, Tokyo" loading="lazy">
+              <figcaption>NII, Tokyo · Wikimedia Commons</figcaption>
+            </figure>
+            <span class="tag">JP</span>
+            <h3><span lang="fr">NII, Tokyo (Japon)</span><span lang="en">NII, Tokyo (Japan)</span></h3>
+            <p>
+              <span lang="fr">Le Japon est un acteur incontournable et historique en robotique, asservissement de précision et systèmes intelligents. J'ambitionne d'y effectuer un stage de recherche de fin d'études (S10) au sein du National Institute of Informatics (NII) ou d'un laboratoire partenaire. Pour m'intégrer au mieux dans ce tissu technologique, je consolide mon anglais scientifique tout en poursuivant mon autoformation en langue japonaise.</span>
+              <span lang="en">Japan is a key and historical player in robotics, precision control, and intelligent systems. I aim to complete my final-year research internship (S10) at the National Institute of Informatics (NII) or a partner laboratory. To best integrate into this technological fabric, I am consolidating my scientific English while continuing my self-taught Japanese language studies.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <figure class="ph" data-file="shanghai.jpg">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pudong_Skyline_from_The_Bund_20260417.jpg?width=800" alt="Panorama de Shanghai" loading="lazy">
+              <figcaption>Shanghai · Wikimedia Commons</figcaption>
+            </figure>
+            <span class="tag">CN</span>
+            <h3><span lang="fr">Pôles technologiques (Chine)</span><span lang="en">Technology hubs (China)</span></h3>
+            <p>
+              <span lang="fr">Afin de m'immerger dans un écosystème asiatique pionnier de l'IA à grande échelle, de la théorie des jeux et de l'optimisation guidée par les données, je projette de réaliser un stage R&D ou un semestre de césure dans un pôle d'innovation tel que Shanghai ou Shenzhen. Cette ambition motive mon choix d'étudier le mandarin en parallèle de mon cursus, afin d'appréhender au mieux cette culture de l'innovation rapide.</span>
+              <span lang="en">In order to immerse myself in a pioneering Asian ecosystem for large-scale AI, game theory, and data-driven optimization, I plan to complete an R&D internship or a gap semester in an innovation hub such as Shanghai or Shenzhen. This ambition drives my choice to study Mandarin alongside my coursework, in order to fully grasp this culture of rapid innovation.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONGLET 3 : DURABILITÉ ET ENGAGEMENT -->
+    <div data-page="engagement">
+      <div class="pagehead wrap">
+        <h2><span class="num">03</span><span lang="fr">Durabilité et engagement civique</span><span lang="en">Sustainability and civic engagement</span></h2>
+        <p class="lead"><span lang="fr">Une vision responsable de l'ingénierie, alliant sobriété algorithmique, éthique logicielle et transmission des savoirs.</span><span lang="en">A responsible vision of engineering, combining algorithmic sobriety, software ethics, and knowledge sharing.</span></p>
+      </div>
+
+      <div class="wrap">
+        <div class="two">
+          <article class="card">
+            <span class="tag">Green IT</span>
+            <h3><span lang="fr">La sobriété par l'optimisation algorithmique</span><span lang="en">Sobriety through algorithmic optimization</span></h3>
+            <p>
+              <span lang="fr">Conscient de l'impact environnemental croissant du numérique, je m'intéresse particulièrement à la réduction de l'empreinte énergétique des systèmes embarqués et des modèles de calcul intensif. Mon approche d'ingénieur consiste à optimiser finement la complexité algorithmique et l'efficacité des boucles d'asservissement afin de diminuer significativement la charge et le temps d'exécution CPU/GPU. Cette recherche d'efficacité pure permet d'allier haute performance technique et sobriété énergétique matérielle.</span>
+              <span lang="en">Aware of the growing environmental impact of digital technology, I am particularly interested in reducing the energy footprint of embedded systems and intensive computing models. My engineering approach consists of finely optimizing algorithmic complexity and the efficiency of control loops to significantly decrease CPU/GPU load and execution time. This quest for pure efficiency makes it possible to combine high technical performance with hardware energy sobriety.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Transmission</span>
+            <h3><span lang="fr">Entraide mathématique et pédagogie par les échecs</span><span lang="en">Math tutoring and chess pedagogy</span></h3>
+            <p>
+              <span lang="fr">Profondément attaché aux valeurs d'entraide et à l'égalité des chances dans les filières scientifiques exigeantes, je m'engage activement dans la transmission des savoirs. Je partage régulièrement mes méthodes de démonstration et de résolution mathématique avec mes pairs pour favoriser la réussite collective. En parallèle, j'initie les plus jeunes à la pratique des échecs, convaincu qu'il s'agit d'un outil pédagogique puissant pour développer la concentration, la rigueur et la réflexion analytique de manière ludique.</span>
+              <span lang="en">Deeply committed to the values of mutual aid and equal opportunity in demanding scientific tracks, I actively engage in knowledge sharing. I regularly share my mathematical demonstration and resolution methods with my peers to foster collective success. At the same time, I introduce younger people to chess, convinced that it is a powerful educational tool for developing concentration, rigor, and analytical thinking in a fun way.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Éthique</span>
+            <h3><span lang="fr">Fiabilité et sûreté des systèmes d'asservissement</span><span lang="en">Reliability and safety of control systems</span></h3>
+            <p>
+              <span lang="fr">La sécurité humaine étant un enjeu critique et absolu dans les secteurs de pointe tels que l'industrie, l'aéronautique ou les transports automatisés, j'accorde une importance primordiale à l'éthique de la fiabilité logicielle. Je m'attache à appliquer une rigueur formelle stricte, notamment via l'utilisation des langages Ada et C, dans la conception et la vérification des programmes d'estimation et de contrôle, garantissant ainsi un comportement prédictible et sans faille des systèmes critiques.</span>
+              <span lang="en">Since human safety is a critical and absolute issue in high-tech sectors such as industry, aeronautics, or automated transport, I attach paramount importance to the ethics of software reliability. I strive to apply strict formal rigor, notably through the use of Ada and C languages, in the design and verification of estimation and control programs, thereby guaranteeing predictable and flawless behavior of critical systems.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONGLET 4 : SPORT ET ACTIVITÉS -->
+    <div data-page="echecs">
+      <div class="pagehead wrap">
+        <h2><span class="num">04</span><span lang="fr">Sport et autres activités</span><span lang="en">Sport and other activities</span></h2>
+        <p class="lead"><span lang="fr">La complémentarité entre le sport cérébral de haut niveau et la discipline physique pour maintenir endurance et lucidité.</span><span lang="en">The complementarity between high-level mind sports and physical discipline to maintain endurance and lucidity.</span></p>
+      </div>
+
+      <div class="wrap">
+        <ul class="stats">
+          <li><b>1643</b><span>Elo Standard</span></li>
+          <li><b>1616</b><span>Elo Rapid</span></li>
+          <li><b>1642</b><span>Elo Blitz</span></li>
+        </ul>
+
+        <div class="grid">
+          <div class="card">
+            <figure class="ph contain-img" data-file="image_6cf319.png">
+              <!-- Utilisation de l'image de Najah Souss demandée -->
+              <img src="image_6cf319.png" alt="Club Najah Souss Agadir" loading="lazy" onerror="this.onerror=null;this.src='https://fr.wikipedia.org/wiki/Special:FilePath/Logo_najah_souss.jpg';">
+            </figure>
+            <strong>Club d'Échecs Najah Souss</strong>
+            <p>
+              <span lang="fr">Engagement de longue date au sein de l'Association Najah Souss Agadir Échecs. Participation active aux tournois sous l'égide de la fédération marocaine et inscription au classement mondial officiel (Profil FIDE 9047077). Cette pratique exigeante forge ma résistance au stress et ma capacité d'anticipation.</span>
+              <span lang="en">Long-standing commitment within the Najah Souss Agadir Chess Association. Active participation in tournaments under the aegis of the Moroccan federation and registration in the official world ranking (FIDE Profile 9047077). This demanding practice builds my stress resistance and anticipation skills.</span>
+            </p>
+            <a class="more" href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener">Consulter le profil FIDE ↗</a>
+          </div>
+
+          <div class="card">
+            <figure class="ph contain-img" data-file="od-dcheira.jpg">
+              <img src="assets/img/od-dcheira.jpg" alt="Olympique Dcheira" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Olympique_dcheira_logo.jpg?width=800';">
+            </figure>
+            <strong><span lang="fr">Football au sein de l'Olympique Dcheira</span><span lang="en">Football at Olympique Dcheira</span></strong>
+            <p>
+              <span lang="fr">Formation et pratique du football en club. Le sport collectif m'a inculqué la valeur de la discipline commune, l'importance du positionnement tactique sur le terrain et la nécessité d'une endurance physique soutenue pour atteindre des objectifs partagés avec l'équipe.</span>
+              <span lang="en">Training and club football practice. Team sports have instilled in me the value of shared discipline, the importance of tactical positioning on the field, and the need for sustained physical endurance to achieve shared goals with the team.</span>
+            </p>
+          </div>
+
+          <div class="card">
+            <figure class="ph" data-file="sports.jpg">
+              <img src="assets/img/sports.jpg" alt="Natation, basket, volley" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Stadtbad_Sch%C3%B6neberg_2026_Schwimmerbecken_2.jpg?width=800';">
+            </figure>
+            <strong><span lang="fr">Pratique multisport (Natation, Basket, Volley)</span><span lang="en">Multisport practice (Swimming, Basketball, Volleyball)</span></strong>
+            <p>
+              <span lang="fr">Au-delà du football, la pratique régulière de la natation, du basketball et du volleyball constitue mon équilibre de vie. Ces disciplines me permettent de développer à la fois le souffle personnel, la persévérance dans l'effort et la réactivité communicative indispensable lors des échanges de balle rapides.</span>
+              <span lang="en">Beyond football, the regular practice of swimming, basketball, and volleyball forms my life balance. These disciplines allow me to develop cardiovascular endurance, perseverance in effort, and the communicative reactivity essential during fast ball exchanges.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONGLET 5 : CARRIÈRE -->
+    <div data-page="carriere">
+      <div class="pagehead wrap">
+        <h2><span class="num">05</span><span lang="fr">Développement de carrière</span><span lang="en">Career development</span></h2>
+        <p class="lead"><span lang="fr">Structuration de mon projet professionnel vers l'ingénierie R&D en optimisation, commande et intelligence artificielle.</span><span lang="en">Structuring my professional project towards R&D engineering in optimization, control, and artificial intelligence.</span></p>
+      </div>
+
+      <div class="wrap">
+        <div class="two">
+          <article class="card">
+            <span class="tag">PEP · Role Models</span>
+            <h3><span lang="fr">Profils de référence inspirants</span><span lang="en">Inspiring Reference Profiles</span></h3>
+            <p>
+              <span lang="fr">J'articule ma progression autour de trois profils de référence (Role Models) identifiés lors de mes recherches et entretiens, qui guident mes choix d'orientation technologique. Le premier correspond au rôle d'ingénieur R&D au sein de l'industrie allemande, exigeant une rigueur mathématique absolue et une maîtrise de l'intégration logicielle via C, Ada et MATLAB. Le second cible l'expertise européenne en IA décisionnelle, combinant théorie fondamentale, fusion de données capteurs et optimisation en temps réel. Enfin, le troisième profil s'oriente vers l'ingénierie des systèmes autonomes et l'optimisation à très grande échelle, particulièrement dynamique au sein des pôles technologiques asiatiques (Japon, Chine).</span>
+              <span lang="en">I structure my progression around three reference profiles (Role Models) identified during my research and interviews, which guide my technological orientation choices. The first corresponds to the role of an R&D engineer in the German industry, requiring absolute mathematical rigor and mastery of software integration via C, Ada, and MATLAB. The second targets European expertise in decision AI, combining fundamental theory, sensor data fusion, and real-time optimization. Finally, the third profile is oriented towards autonomous systems engineering and very large-scale optimization, which is particularly dynamic in Asian technology hubs (Japan, China).</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Feuille de route</span>
+            <h3><span lang="fr">Stratégie et plan de stages</span><span lang="en">Strategy and internship plan</span></h3>
+            <p>
+              <span lang="fr">Mon parcours professionnalisant en école d'ingénieur se structure autour de trois étapes clés d'immersion en entreprise ou en laboratoire. La première étape (S6) prendra la forme d'une mission de 6 semaines dédiée à la modélisation numérique et à l'analyse de données afin de consolider mon socle d'exécution technique. La seconde (S8) consistera en une expérience de 8 semaines, idéalement à l'international, axée sur l'optimisation de modèles complexes. Ce cheminement aboutira, en fin de cursus (S10), à un Projet de Fin d'Études (PFE) de 5 à 6 mois centré sur l'innovation logicielle et la recherche en algorithmique d'estimation avancée.</span>
+              <span lang="en">My professionalizing path in engineering school is structured around three key stages of immersion in a company or laboratory. The first stage (S6) will take the form of a 6-week mission dedicated to numerical modeling and data analysis to consolidate my technical execution foundation. The second (S8) will consist of an 8-week experience, ideally international, focused on optimizing complex models. This journey will culminate at the end of the curriculum (S10) in a 5 to 6-month Final Year Project (PFE) centered on software innovation and research in advanced estimation algorithms.</span>
+            </p>
+          </article>
+        </div>
+
+        <h2 style="margin-top:var(--s4)"><span lang="fr">Livrables et Projet professionnel</span><span lang="en">Deliverables and Career Project</span></h2>
+
+        <div class="grid">
+          <div class="card" style="align-items: center; text-align: center;">
+            <strong>Curriculum Vitae</strong>
+            <p><span lang="fr">Documents mis à jour et disponibles au téléchargement en version française et anglaise.</span><span lang="en">Updated documents available for download in French and English versions.</span></p>
+            <div class="actions" style="margin-top: 1rem; justify-content: center; width: 100%;">
+              <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank">CV FR</a>
+              <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank">Resume EN</a>
+            </div>
+          </div>
+
+          <div class="card" style="align-items: center; text-align: center;">
+            <strong>Réseau LinkedIn</strong>
+            <p><span lang="fr">Présence professionnelle numérique détaillant mon parcours et mes projets en cours.</span><span lang="en">Digital professional presence detailing my background and current projects.</span></p>
+            <div class="actions" style="margin-top: 1rem; justify-content: center; width: 100%;">
+              <span class="btn off">LinkedIn FR</span>
+              <span class="btn off">LinkedIn EN</span>
+            </div>
+          </div>
+
+          <div class="card" style="align-items: center; text-align: center;">
+            <strong><span lang="fr">Présentation Vidéo (UVP)</span><span lang="en">UVP Video Pitch</span></strong>
+            <p>
+              <span lang="fr">Elevator pitch en anglais (Unique Value Proposition) détaillant mon positionnement et mes objectifs professionnels.</span>
+              <span lang="en">English elevator pitch (Unique Value Proposition) detailing my positioning and professional goals.</span>
+            </p>
+            <video controls preload="none" poster="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=1000" src="assets/uvp_pitch.mp4" class="uvp-video"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <span>© 2026 Mohamed Bistarine · Toulouse INP-ENSEEIHT</span>
+    <a href="mailto:mohamed.bistarine@etu.inp-n7.fr">mohamed.bistarine@etu.inp-n7.fr</a>
+  </footer>
+
+  <script>
+    var r = document.documentElement;
+    try {
+      var a = localStorage.getItem("theme"), b = localStorage.getItem("lang");
+      if (a) r.dataset.theme = a;
+      if (b) { r.dataset.lang = b; r.lang = b; }
+    } catch (e) {}
+
+    document.getElementById("theme").onclick = function () {
+      var d = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      r.dataset.theme = d ? "light" : "dark";
+      try { localStorage.setItem("theme", r.dataset.theme); } catch (e) {}
+    };
+
+    document.getElementById("lang").onclick = function () {
+      r.dataset.lang = r.dataset.lang === "fr" ? "en" : "fr";
+      r.lang = r.dataset.lang;
+      try { localStorage.setItem("lang", r.dataset.lang); } catch (e) {}
+    };
+
+    function go() {
+      var k = (location.hash || "#index").slice(1);
+      if (!document.querySelector('[data-page="' + k + '"]')) k = "index";
+      document.querySelectorAll("[data-page]").forEach(function (e) {
+        e.classList.toggle("on", e.dataset.page === k);
+      });
+      document.querySelectorAll("nav a").forEach(function (e) {
+        if(e.dataset.k) e.toggleAttribute("aria-current", e.dataset.k === k);
+      });
+      scrollTo(0, 0);
+    }
+    addEventListener("hashchange", go);
+    go();
+  </script>
 </body>
 </html>
