@@ -1,12 +1,14 @@
 :root {
-  --bg: #f6f7f9;
+  /* Nouvelle palette : Bleu professionnel au lieu de vert */
+  --bg: #f8fafc;
   --surface: #ffffff;
-  --text: #141a22;
-  --muted: #556070;
-  --line: #e1e5ea;
-  --accent: #0b6b63;
-  --accent-ink: #fff;
-  --tint: #e3f2f0;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --accent: #2563eb;       /* Bleu principal */
+  --accent-ink: #ffffff;
+  --tint: #eff6ff;         /* Fond bleuté léger pour les éléments actifs */
+  
   --sans: "Inter", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", monospace;
   --s1: .5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2.5rem; --s5: 4.5rem;
@@ -19,15 +21,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0d1218; --surface: #151c25; --text: #e8edf2; --muted: #9aa6b4;
-    --line: #243040; --accent: #5eead4; --accent-ink: #06201c; --tint: #12302e;
+    --bg: #0f172a; --surface: #1e293b; --text: #f1f5f9; --muted: #94a3b8;
+    --line: #334155; --accent: #3b82f6; --accent-ink: #ffffff; --tint: #1e3a8a;
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0d1218; --surface: #151c25; --text: #e8edf2; --muted: #9aa6b4;
-  --line: #243040; --accent: #5eead4; --accent-ink: #06201c; --tint: #12302e;
+  --bg: #0f172a; --surface: #1e293b; --text: #f1f5f9; --muted: #94a3b8;
+  --line: #334155; --accent: #3b82f6; --accent-ink: #ffffff; --tint: #1e3a8a;
   color-scheme: dark;
 }
 
@@ -55,17 +57,24 @@ nav a { color: var(--muted); text-decoration: none; font-size: var(--fs-s); font
 nav a:hover { color: var(--text); }
 nav a[aria-current="page"] { color: var(--accent); box-shadow: 0 2px 0 var(--accent); }
 
-#theme, #lang { border: 1px solid var(--line); background: var(--surface); color: var(--text); height: 2.25rem; border-radius: 99px; cursor: pointer; font: 500 .8rem var(--mono); display: flex; align-items: center; justify-content: center; }
+#theme, #lang { border: 1px solid var(--line); background: var(--surface); color: var(--text); height: 2.25rem; border-radius: 99px; cursor: pointer; font: 500 .8rem var(--mono); display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
 #theme { width: 2.25rem; border-radius: 50%; font-size: 1rem; }
 #lang { padding: 0 .8rem; }
+#theme:hover, #lang:hover { border-color: var(--accent); }
 
 html[data-lang="fr"] [lang="en"], html[data-lang="en"] [lang="fr"], [data-page] { display: none; }
 [data-page].on { display: block; animation: fadeIn 0.3s ease-in-out; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-h1 { font-size: var(--fs-h1); letter-spacing: -.03em; margin: 0 0 1rem; font-weight: 800; text-align: center; }
-h2 { font-size: var(--fs-h2); letter-spacing: -.02em; margin: 0 0 2rem; font-weight: 700; display: flex; align-items: baseline; gap: 1rem; }
-.num { font: 500 var(--fs-s) var(--mono); color: var(--accent); }
+/* NUMÉROTATION RECTANGLE PRO */
+h2 { font-size: var(--fs-h2); margin: 0 0 2rem; font-weight: 700; display: flex; align-items: center; }
+.num {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 0.3rem 0.6rem; border-radius: 6px;
+  font: 700 1.2rem var(--mono); margin-right: 0.8rem;
+}
+
 .section-subtitle { margin: 2rem 0 1rem; font-size: 1.2rem; color: var(--text); font-weight: 600; }
 
 .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
@@ -117,7 +126,7 @@ h2 { font-size: var(--fs-h2); letter-spacing: -.02em; margin: 0 0 2rem; font-wei
   border-color: var(--accent);
   background: var(--tint);
   color: var(--accent);
-  box-shadow: 0 4px 12px rgba(11, 107, 99, 0.15);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15); /* Ombre ajustée au bleu */
 }
 
 /* LISTE DE COMPÉTENCES */
@@ -128,6 +137,9 @@ h2 { font-size: var(--fs-h2); letter-spacing: -.02em; margin: 0 0 2rem; font-wei
 .status.mastered { background: rgba(16, 185, 129, 0.1); color: #10B981; }
 .status.training { background: var(--tint); color: var(--accent); }
 .status.auto { background: rgba(245, 158, 11, 0.1); color: #F59E0B; }
+
+.video video, .uvp-video { width: 100%; aspect-ratio: 16/9; background: var(--tint); border: 1px solid var(--line); border-radius: var(--r); object-fit: cover; }
+.uvp-video { border-radius: 10px; }
 
 @media (max-width: 60rem) {
   .header-controls { position: relative; right: auto; top: auto; margin-top: 1rem; justify-content: center; }
