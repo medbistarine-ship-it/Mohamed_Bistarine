@@ -17,16 +17,31 @@
   <header class="bar centered-header">
     <div class="header-top">
       <span class="brand">MB</span>
-      <span class="header-title">Mohamed Bistarine — 1re année Sciences du Numérique</span>
+      <span class="header-title">
+        <span lang="fr">Mohamed Bistarine — 1re année Sciences du Numérique</span>
+        <span lang="en">Mohamed Bistarine — 1st Year Digital Sciences</span>
+      </span>
     </div>
     
     <nav aria-label="Sections">
-      <a href="#index" aria-current="page" data-k="index">Accueil</a>
-      <a href="#projets" data-k="projets">Parcours</a>
-      <a href="#mobilite" data-k="mobilite">Mobilité</a>
-      <a href="#engagement" data-k="engagement">Engagement</a>
-      <a href="#echecs" data-k="echecs">Sport</a>
-      <a href="#carriere" data-k="carriere">Carrière</a>
+      <a href="#index" aria-current="page" data-k="index">
+        <span lang="fr">Accueil</span><span lang="en">Home</span>
+      </a>
+      <a href="#projets" data-k="projets">
+        <span lang="fr">Parcours</span><span lang="en">Path</span>
+      </a>
+      <a href="#mobilite" data-k="mobilite">
+        <span lang="fr">Mobilité</span><span lang="en">Mobility</span>
+      </a>
+      <a href="#engagement" data-k="engagement">
+        <span lang="fr">Engagement</span><span lang="en">Engagement</span>
+      </a>
+      <a href="#echecs" data-k="echecs">
+        <span lang="fr">Sport</span><span lang="en">Sport</span>
+      </a>
+      <a href="#carriere" data-k="carriere">
+        <span lang="fr">Carrière</span><span lang="en">Career</span>
+      </a>
     </nav>
     
     <div class="header-controls">
@@ -47,8 +62,12 @@
         </p>
 
         <div class="actions" style="justify-content: center;">
-          <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank">CV (FR)</a>
-          <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank">Resume (EN)</a>
+          <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank">
+            <span lang="fr">CV (FR)</span><span lang="en">CV (FR)</span>
+          </a>
+          <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank">
+            <span lang="fr">Resume (EN)</span><span lang="en">Resume (EN)</span>
+          </a>
           <a class="btn" href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="#" target="_blank" rel="noopener">My Job Glasses</a>
         </div>
@@ -65,16 +84,13 @@
          ========================================================== -->
     <div data-page="projets">
       <div class="pagehead wrap">
-        <!-- NOUVEAU STYLE DE NUMÉRO : RECTANGLE PRO -->
         <h2><span class="num">01</span><span lang="fr">Parcours & Compétences</span><span lang="en">Path & Skills</span></h2>
       </div>
 
       <div class="wrap">
-        
-        <!-- 1. PARCOURS CHRONOLOGIQUE (Boutons AU-DESSUS, Texte EN DESSOUS) -->
+        <!-- 1. PARCOURS CHRONOLOGIQUE -->
         <h3 class="section-subtitle"><span lang="fr">Parcours chronologique</span><span lang="en">Chronological Path</span></h3>
         
-        <!-- Boutons horizontaux d'abord -->
         <div class="sub-tabs">
           <button class="sub-tab-btn" data-group="parcours" data-target="parc-1" onclick="openSubTab('parcours', 'parc-1')"><span lang="fr">2024 : Bac SMB</span><span lang="en">2024: Bac SMB</span></button>
           <button class="sub-tab-btn" data-group="parcours" data-target="parc-2" onclick="openSubTab('parcours', 'parc-2')"><span lang="fr">2024–2025 : MPSI</span><span lang="en">2024–2025: MPSI</span></button>
@@ -82,10 +98,12 @@
           <button class="sub-tab-btn" data-group="parcours" data-target="parc-4" onclick="openSubTab('parcours', 'parc-4')"><span lang="fr">2026–2029 : ENSEEIHT</span><span lang="en">2026–2029: ENSEEIHT</span></button>
         </div>
 
-        <!-- Zone d'affichage du texte en dessous -->
         <div class="sub-display">
           <div id="parc-1" class="sub-pane" data-group="parcours">
-            <h4 class="pane-title">Baccalauréat Sciences Mathématiques B</h4>
+            <h4 class="pane-title">
+              <span lang="fr">Baccalauréat Sciences Mathématiques B</span>
+              <span lang="en">Mathematical Sciences B Baccalaureate</span>
+            </h4>
             <p><span lang="fr">Obtention du Baccalauréat Sciences Mathématiques B au Lycée Mohamed El-Bakali. Cursus d'excellence focalisé sur l'analyse, l'arithmétique et les sciences de l'ingénieur.</span><span lang="en">Graduated with a Baccalaureate in Mathematical Sciences B. Excellence track focused on analysis, arithmetic, and engineering sciences.</span></p>
           </div>
           <div id="parc-2" class="sub-pane" data-group="parcours">
@@ -97,34 +115,37 @@
             <p><span lang="fr">Deuxième année de CPGE, filière Mathématiques et Physique (MP). Préparation intensive aux concours ingénieurs, réalisation du projet TIPE (Moteur d'échecs IA) et approfondissement en sciences industrielles.</span><span lang="en">Second year of CPGE, Mathematics and Physics (MP) track. Intensive preparation for engineering exams, completion of the TIPE project, and advanced study in industrial sciences.</span></p>
           </div>
           <div id="parc-4" class="sub-pane" data-group="parcours">
-            <h4 class="pane-title">1re année Cycle Ingénieur (Toulouse INP-ENSEEIHT)</h4>
+            <h4 class="pane-title">
+              <span lang="fr">1re année Cycle Ingénieur (Toulouse INP-ENSEEIHT)</span>
+              <span lang="en">1st Year Engineering Cycle (Toulouse INP-ENSEEIHT)</span>
+            </h4>
             <p><span lang="fr">Filière Sciences du Numérique (SN). Socle technique en programmation, automatique, analyse de données et probabilités. Orientation visée : optimisation, HPC, IA décisionnelle.</span><span lang="en">Digital Sciences (SN) track. Technical core in programming, control systems, data analysis. Targeted orientation: optimization, HPC, decision AI.</span></p>
           </div>
         </div>
 
-        <!-- 2. COMPÉTENCES ACQUISES (Texte AU-DESSUS, Boutons EN DESSOUS) -->
+        <!-- 2. COMPÉTENCES ACQUISES -->
         <h3 class="section-subtitle" style="margin-top: 3rem;"><span lang="fr">Compétences acquises & Projets</span><span lang="en">Acquired Skills & Projects</span></h3>
         
         <div class="sub-display">
           <div id="comp-1" class="sub-pane active" data-group="competences">
             <h4 class="pane-title"><span lang="fr">Ingénierie & Informatique</span><span lang="en">Engineering & IT</span></h4>
             <ul class="skills-list">
-              <li><strong>Python :</strong> <span class="status mastered">Maîtrisé</span> (Programmation acquise et perfectionnée en CPGE)</li>
-              <li><strong>MATLAB :</strong> <span class="status training">En formation</span> (Simulation de systèmes dynamiques)</li>
-              <li><strong>CoqIDE :</strong> <span class="status training">En formation</span> (Langage logique, modélisation formelle)</li>
-              <li><strong>Ada & Langage C :</strong> <span class="status training">En formation</span> (Programmation impérative bas niveau)</li>
-              <li><strong>LaTeX :</strong> <span class="status training">En formation</span> (Rédaction académique)</li>
-              <li><strong>Théorie des jeux :</strong> <span class="status auto">Auto-formation</span> (Algorithmique décisionnelle, Moteur d'échecs IA via Bitboards et Zobrist).</li>
+              <li><strong>Python :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Programmation acquise en CPGE</span><span lang="en">Programming acquired in CPGE</span>)</li>
+              <li><strong>MATLAB :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Simulation de systèmes dynamiques</span><span lang="en">Dynamic systems simulation</span>)</li>
+              <li><strong>CoqIDE :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Langage logique, modélisation formelle</span><span lang="en">Logic programming, formal modeling</span>)</li>
+              <li><strong>Ada & Langage C :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Programmation impérative bas niveau</span><span lang="en">Low-level imperative programming</span>)</li>
+              <li><strong>LaTeX :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Rédaction académique</span><span lang="en">Academic drafting</span>)</li>
+              <li><strong><span lang="fr">Théorie des jeux</span><span lang="en">Game Theory</span> :</strong> <span class="status auto"><span lang="fr">Auto-formation</span><span lang="en">Self-taught</span></span> (<span lang="fr">Algorithmique décisionnelle, Moteur d'échecs IA</span><span lang="en">Decision algorithms, AI Chess Engine</span>).</li>
             </ul>
           </div>
           <div id="comp-2" class="sub-pane" data-group="competences">
             <h4 class="pane-title"><span lang="fr">Langues</span><span lang="en">Languages</span></h4>
             <ul class="skills-list">
-              <li><strong>Arabe :</strong> <span class="status mastered">Maîtrisé</span> (Langue maternelle)</li>
-              <li><strong>Français :</strong> <span class="status mastered">Maîtrisé</span> (Usage académique et courant)</li>
-              <li><strong>Anglais :</strong> <span class="status training">En cours de formation</span> (Niveau C1)</li>
-              <li><strong>Allemand :</strong> <span class="status training">En cours de formation</span> (Niveau A1)</li>
-              <li><strong>Chinois & Japonais :</strong> <span class="status auto">En cours d'auto-formation</span> (Niveau A1 Débutant : structures et mots de base pour préparer les mobilités).</li>
+              <li><strong><span lang="fr">Arabe</span><span lang="en">Arabic</span> :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Langue maternelle</span><span lang="en">Native language</span>)</li>
+              <li><strong><span lang="fr">Français</span><span lang="en">French</span> :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Usage académique et courant</span><span lang="en">Academic and fluent use</span>)</li>
+              <li><strong><span lang="fr">Anglais</span><span lang="en">English</span> :</strong> <span class="status training"><span lang="fr">En cours de formation</span><span lang="en">In training</span></span> (<span lang="fr">Niveau C1</span><span lang="en">Level C1</span>)</li>
+              <li><strong><span lang="fr">Allemand</span><span lang="en">German</span> :</strong> <span class="status training"><span lang="fr">En cours de formation</span><span lang="en">In training</span></span> (<span lang="fr">Niveau A1</span><span lang="en">Level A1</span>)</li>
+              <li><strong><span lang="fr">Chinois & Japonais</span><span lang="en">Chinese & Japanese</span> :</strong> <span class="status auto"><span lang="fr">En cours d'auto-formation</span><span lang="en">Self-teaching</span></span> (<span lang="fr">Niveau A1 Débutant : structures et mots de base</span><span lang="en">Level A1 Beginner: basic structures and words</span>).</li>
             </ul>
           </div>
         </div>
@@ -133,7 +154,6 @@
           <button class="sub-tab-btn active" data-group="competences" data-target="comp-1" onclick="openSubTab('competences', 'comp-1')"><span lang="fr">Ingénierie & Info</span><span lang="en">Engineering & IT</span></button>
           <button class="sub-tab-btn" data-group="competences" data-target="comp-2" onclick="openSubTab('competences', 'comp-2')"><span lang="fr">Langues</span><span lang="en">Languages</span></button>
         </div>
-
       </div>
     </div>
 
@@ -146,25 +166,32 @@
       </div>
 
       <div class="wrap">
-        <!-- Boutons d'abord -->
         <div class="sub-tabs">
           <button class="sub-tab-btn active" data-group="mobilite" data-target="mob-1" onclick="openSubTab('mobilite', 'mob-1')">Munich (DE)</button>
           <button class="sub-tab-btn" data-group="mobilite" data-target="mob-2" onclick="openSubTab('mobilite', 'mob-2')">Tokyo (JP)</button>
           <button class="sub-tab-btn" data-group="mobilite" data-target="mob-3" onclick="openSubTab('mobilite', 'mob-3')">Shanghai (CN)</button>
         </div>
 
-        <!-- Texte en dessous -->
         <div class="sub-display">
           <div id="mob-1" class="sub-pane active" data-group="mobilite">
-            <h4 class="pane-title">TUM, Munich (Allemagne)</h4>
+            <h4 class="pane-title">
+              <span lang="fr">TUM, Munich (Allemagne)</span>
+              <span lang="en">TUM, Munich (Germany)</span>
+            </h4>
             <p><span lang="fr">Visant un échange académique ou un stage R&D, la Technische Universität München (TUM) représente pour moi l'excellence européenne. Mon objectif est d'y approfondir mes compétences en mathématiques appliquées et en commande automatique.</span><span lang="en">Aiming for an academic exchange or an R&D internship, TUM represents European excellence. My goal is to deepen my skills in applied mathematics and automatic control.</span></p>
           </div>
           <div id="mob-2" class="sub-pane" data-group="mobilite">
-            <h4 class="pane-title">NII, Tokyo (Japon)</h4>
+            <h4 class="pane-title">
+              <span lang="fr">NII, Tokyo (Japon)</span>
+              <span lang="en">NII, Tokyo (Japan)</span>
+            </h4>
             <p><span lang="fr">Le Japon étant un acteur historique en systèmes intelligents, j'ambitionne d'effectuer mon stage de recherche au sein du National Institute of Informatics (NII).</span><span lang="en">As Japan is a historical player in intelligent systems, I aim to complete my research internship at the National Institute of Informatics (NII).</span></p>
           </div>
           <div id="mob-3" class="sub-pane" data-group="mobilite">
-            <h4 class="pane-title">Pôles technologiques (Chine)</h4>
+            <h4 class="pane-title">
+              <span lang="fr">Pôles technologiques (Chine)</span>
+              <span lang="en">Technology hubs (China)</span>
+            </h4>
             <p><span lang="fr">Afin de m'immerger dans un écosystème asiatique pionnier de l'IA à grande échelle et de l'optimisation, je projette de réaliser un stage R&D dans un pôle d'innovation comme Shanghai.</span><span lang="en">To immerse myself in a pioneering Asian ecosystem of large-scale AI and optimization, I plan to complete an R&D internship in an innovation hub like Shanghai.</span></p>
           </div>
         </div>
@@ -180,25 +207,32 @@
       </div>
 
       <div class="wrap">
-        <!-- Boutons d'abord -->
         <div class="sub-tabs">
           <button class="sub-tab-btn active" data-group="engagement" data-target="eng-1" onclick="openSubTab('engagement', 'eng-1')">Green IT</button>
-          <button class="sub-tab-btn" data-group="engagement" data-target="eng-2" onclick="openSubTab('engagement', 'eng-2')">Transmission</button>
-          <button class="sub-tab-btn" data-group="engagement" data-target="eng-3" onclick="openSubTab('engagement', 'eng-3')">Éthique</button>
+          <button class="sub-tab-btn" data-group="engagement" data-target="eng-2" onclick="openSubTab('engagement', 'eng-2')"><span lang="fr">Transmission</span><span lang="en">Knowledge Sharing</span></button>
+          <button class="sub-tab-btn" data-group="engagement" data-target="eng-3" onclick="openSubTab('engagement', 'eng-3')"><span lang="fr">Éthique</span><span lang="en">Ethics</span></button>
         </div>
 
-        <!-- Texte en dessous -->
         <div class="sub-display">
           <div id="eng-1" class="sub-pane active" data-group="engagement">
-            <h4 class="pane-title">Green IT : Sobriété algorithmique</h4>
+            <h4 class="pane-title">
+              <span lang="fr">Green IT : Sobriété algorithmique</span>
+              <span lang="en">Green IT: Algorithmic Sobriety</span>
+            </h4>
             <p><span lang="fr">Conscient de l'impact environnemental croissant du numérique, je m'intéresse à la réduction de l'empreinte énergétique des systèmes embarqués via l'optimisation de la complexité algorithmique.</span><span lang="en">Aware of the environmental impact of digital tech, I focus on reducing the energy footprint of embedded systems via algorithmic optimization.</span></p>
           </div>
           <div id="eng-2" class="sub-pane" data-group="engagement">
-            <h4 class="pane-title">Transmission des savoirs</h4>
+            <h4 class="pane-title">
+              <span lang="fr">Transmission des savoirs</span>
+              <span lang="en">Knowledge sharing</span>
+            </h4>
             <p><span lang="fr">Attaché à l'égalité des chances dans les filières scientifiques, je m'engage dans l'entraide mathématique avec mes pairs et l'initiation des plus jeunes à la réflexion analytique.</span><span lang="en">Committed to equal opportunity, I engage in mathematical tutoring with my peers and introduce younger students to analytical thinking.</span></p>
           </div>
           <div id="eng-3" class="sub-pane" data-group="engagement">
-            <h4 class="pane-title">Éthique : Fiabilité des systèmes</h4>
+            <h4 class="pane-title">
+              <span lang="fr">Éthique : Fiabilité des systèmes</span>
+              <span lang="en">Ethics: System Reliability</span>
+            </h4>
             <p><span lang="fr">La sécurité humaine étant critique (industrie, aéronautique), j'accorde une importance primordiale à la fiabilité logicielle (utilisation rigoureuse de C et Ada).</span><span lang="en">Since human safety is critical, I prioritize software reliability (rigorous use of C and Ada).</span></p>
           </div>
         </div>
@@ -214,33 +248,32 @@
       </div>
 
       <div class="wrap">
-        <!-- Boutons d'abord -->
         <div class="sub-tabs">
           <button class="sub-tab-btn active" data-group="sport" data-target="sport-1" onclick="openSubTab('sport', 'sport-1')"><span lang="fr">Jeu d'échecs</span><span lang="en">Chess game</span></button>
           <button class="sub-tab-btn" data-group="sport" data-target="sport-2" onclick="openSubTab('sport', 'sport-2')">Football</button>
           <button class="sub-tab-btn" data-group="sport" data-target="sport-3" onclick="openSubTab('sport', 'sport-3')">Multisport</button>
         </div>
 
-        <!-- Texte en dessous avec intégration des LOGOS -->
         <div class="sub-display" style="min-height: 280px;">
-          
           <div id="sport-1" class="sub-pane active" data-group="sport">
             <h4 class="pane-title"><span lang="fr">Jeu d'échecs</span><span lang="en">Chess game</span></h4>
             <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px;">
                 <p>
-                  <strong>Scores ELO :</strong> Standard (1643) | Rapide (1616) | Blitz (1642)<br><br>
+                  <strong><span lang="fr">Scores ELO :</span><span lang="en">ELO Scores:</span></strong> Standard (1643) | <span lang="fr">Rapide</span><span lang="en">Rapid</span> (1616) | Blitz (1642)<br><br>
                   <span lang="fr">Engagement de longue date au sein de l'Association Najah Souss Agadir Échecs. Cette pratique exigeante forge ma résistance à la pression, mon objectivité dans l'évaluation des positions et ma capacité d'anticipation stratégique.</span>
                   <span lang="en">Long-standing commitment within the Najah Souss Agadir Chess Association. This demanding practice builds my resistance to pressure, objectivity in position evaluation, and strategic anticipation.</span>
                 </p>
-                <a class="btn primary" style="margin-top: 1rem;" href="https://ratings.fide.com/profile/9047077" target="_blank">Profil FIDE international</a>
+                <a class="btn primary" style="margin-top: 1rem;" href="https://ratings.fide.com/profile/9047077" target="_blank">
+                  <span lang="fr">Profil FIDE international</span><span lang="en">International FIDE Profile</span>
+                </a>
               </div>
               <img src="image_6c15e0.png" alt="Association Najah Souss" style="max-width: 150px; background: white; padding: 10px; border-radius: 8px;">
             </div>
           </div>
           
           <div id="sport-2" class="sub-pane" data-group="sport">
-            <h4 class="pane-title"><span lang="fr">Football (Olympique Dcheira)</span><span lang="en">Football (Olympique Dcheira)</span></h4>
+            <h4 class="pane-title"><span lang="fr">Football</span><span lang="en">Football</span></h4>
             <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px;">
                 <p><span lang="fr">Formation et parcours sportif au sein de l'équipe de l'Olympique Dcheira. Ce sport collectif structuré m'a inculqué la valeur de la discipline commune et l'importance du positionnement tactique.</span><span lang="en">Training and sports journey within the Olympique Dcheira team. This team sport instilled in me the value of shared discipline and tactical positioning.</span></p>
@@ -255,99 +288,4 @@
               <div style="flex: 1; min-width: 250px;">
                 <p><span lang="fr">La pratique régulière de la natation, du basketball et du volleyball constitue mon équilibre de vie physique. Ces disciplines développent l'endurance et la réactivité communicative.</span><span lang="en">The regular practice of swimming, basketball, and volleyball forms my physical balance, developing endurance and communicative reactivity.</span></p>
               </div>
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stadtbad_Sch%C3%B6neberg_2026_Schwimmerbecken_2.jpg?width=400" onerror="this.src='assets/img/sports.jpg';" alt="Sports" style="max-width: 200px; border-radius: 8px; object-fit: cover;">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ==========================================================
-         ONGLET 5 : CARRIÈRE
-         ========================================================== -->
-    <div data-page="carriere">
-      <div class="pagehead wrap">
-        <h2><span class="num">05</span><span lang="fr">Développement de carrière</span><span lang="en">Career development</span></h2>
-      </div>
-
-      <div class="wrap">
-        <!-- Boutons d'abord -->
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" data-group="carriere" data-target="car-1" onclick="openSubTab('carriere', 'car-1')"><span lang="fr">Plan de stages</span><span lang="en">Internships Plan</span></button>
-          <button class="sub-tab-btn" data-group="carriere" data-target="car-2" onclick="openSubTab('carriere', 'car-2')">My Job Glasses</button>
-        </div>
-
-        <!-- Texte en dessous -->
-        <div class="sub-display">
-          <div id="car-1" class="sub-pane active" data-group="carriere">
-            <h4 class="pane-title"><span lang="fr">Plan de stages et R&D</span><span lang="en">Internships and R&D</span></h4>
-            <p><span lang="fr">Ma trajectoire vers l'ingénierie R&D s'articule autour d'immersions progressives : modélisation numérique/analyse de données, optimisation de modèles complexes à l'international, puis projet de recherche en innovation logicielle.</span><span lang="en">My trajectory towards R&D engineering relies on progressive immersions: numerical modeling/data analysis, international optimization of complex models, and research project in software innovation.</span></p>
-          </div>
-          <div id="car-2" class="sub-pane" data-group="carriere">
-            <h4 class="pane-title"><span lang="fr">Profil My Job Glasses (Mohamed Bistarine)</span><span lang="en">My Job Glasses Profile</span></h4>
-            <p>
-              <span lang="fr">Profil d'échange et d'orientation. Je privilégie les entretiens sur cette plateforme pour m'inspirer des parcours d'ingénieurs et d'Alumni, recueillir des conseils et comprendre les réalités de l'IA et de l'optimisation.</span>
-              <span lang="en">Exchange and orientation profile. I favor interviews on this platform to draw inspiration from Alumni, gather advice, and understand the realities of AI and optimization.</span>
-            </p>
-            <a class="btn primary" style="margin-top: 1rem;" href="#" target="_blank">Profil My Job Glasses</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="wrap foot" style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--line);">
-    <span>© 2026 Mohamed Bistarine · Toulouse INP-ENSEEIHT</span>
-    <a href="mailto:mohamed.bistarine@etu.inp-n7.fr">mohamed.bistarine@etu.inp-n7.fr</a>
-  </footer>
-
-  <script>
-    var r = document.documentElement;
-    try {
-      var a = localStorage.getItem("theme"), b = localStorage.getItem("lang");
-      if (a) r.dataset.theme = a;
-      if (b) { r.dataset.lang = b; r.lang = b; }
-    } catch (e) {}
-
-    document.getElementById("theme").onclick = function () {
-      var d = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-      r.dataset.theme = d ? "light" : "dark";
-      try { localStorage.setItem("theme", r.dataset.theme); } catch (e) {}
-    };
-
-    document.getElementById("lang").onclick = function () {
-      r.dataset.lang = r.dataset.lang === "fr" ? "en" : "fr";
-      r.lang = r.dataset.lang;
-      try { localStorage.setItem("lang", r.dataset.lang); } catch (e) {}
-    };
-
-    // Navigation des onglets principaux (Haut de page)
-    function go() {
-      var k = (location.hash || "#index").slice(1);
-      if (!document.querySelector('[data-page="' + k + '"]')) k = "index";
-      document.querySelectorAll("[data-page]").forEach(function (e) {
-        e.classList.toggle("on", e.dataset.page === k);
-      });
-      document.querySelectorAll("nav a").forEach(function (e) {
-        if(e.dataset.k) e.toggleAttribute("aria-current", e.dataset.k === k);
-      });
-      scrollTo(0, 0);
-    }
-    addEventListener("hashchange", go);
-    go();
-
-    // Navigation des sous-onglets horizontaux (Dynamique de la zone d'affichage)
-    function openSubTab(group, tabId) {
-      // Masquer tous les textes de ce groupe
-      document.querySelectorAll('.sub-pane[data-group="' + group + '"]').forEach(el => el.classList.remove('active'));
-      // Désactiver tous les boutons de ce groupe
-      document.querySelectorAll('.sub-tab-btn[data-group="' + group + '"]').forEach(el => el.classList.remove('active'));
-      
-      // Afficher le bon texte et activer le bouton
-      document.getElementById(tabId).classList.add('active');
-      document.querySelector('.sub-tab-btn[data-target="' + tabId + '"]').classList.add('active');
-    }
-  </script>
-</body>
-</html>
+              <img src="
