@@ -4,78 +4,111 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mohamed Bistarine | Sciences du Numérique — N7</title>
-  <meta name="description" content="e-Portfolio de Mohamed Bistarine, élève-ingénieur ENSEEIHT (N7)">
+  <meta name="description" content="E-portfolio de Mohamed Bistarine, élève-ingénieur en première année à Toulouse INP-ENSEEIHT (N7), département Sciences du Numérique : parcours, mobilité internationale, engagement, sport et projet professionnel.">
+  <meta name="author" content="Mohamed Bistarine">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://medbistarine-ship-it.github.io/Mohamed_Bistarine/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Bistarine | E-portfolio">
+  <meta property="og:description" content="Élève-ingénieur 1A Sciences du Numérique, Toulouse INP-ENSEEIHT (N7).">
+  <meta property="og:url" content="https://medbistarine-ship-it.github.io/Mohamed_Bistarine/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EMB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <noscript>
+    <style>
+      [data-page], .sub-pane { display: block !important; }
+      .sub-tabs, #lang, #theme { display: none !important; }
+      html[data-lang="fr"] [lang="en"] { display: none !important; }
+    </style>
+  </noscript>
 </head>
 <body>
+  <!--
+    GUIDE RAPIDE
+    - Dans chaque bloc, le cadre pointillé « À compléter… » (<div class="to-fill">) est un espace réservé
+      pour tes propres descriptions. Supprime-le une fois rempli, ou ajoute class="final" sur la balise <html>
+      pour tous les masquer d'un coup.
+    - Chaque texte existe en français (lang="fr") et en anglais (lang="en") : modifie les deux.
+    - Fichiers à déposer dans le dépôt GitHub (dossier assets/) :
+        assets/CV_Mohamed_Bistarine_FR.pdf   assets/CV_Mohamed_Bistarine_EN.pdf   assets/uvp_pitch.mp4
+        assets/img/logo-najah-souss.png      assets/img/logo-od-dcheira.png   (logos des clubs, onglet Sport)
+    - Le bouton « My Job Glasses » est en commentaire dans la page d'accueil : décommente-le et colle ton lien.
+  -->
+
+  <a class="skip" href="#contenu"><span lang="fr">Aller au contenu</span><span lang="en">Skip to content</span></a>
 
   <!-- EN-TÊTE CENTRÉ -->
   <header class="bar centered-header">
     <div class="header-top">
-      <span class="brand">MB</span>
+      <span class="brand" aria-hidden="true">MB</span>
       <span class="header-title">
         <span lang="fr">Mohamed Bistarine — 1re année Sciences du Numérique</span>
         <span lang="en">Mohamed Bistarine — 1st Year Digital Sciences</span>
       </span>
     </div>
-    
+
     <nav aria-label="Sections">
       <a href="#index" aria-current="page" data-k="index">
         <span lang="fr">Accueil</span><span lang="en">Home</span>
       </a>
       <a href="#projets" data-k="projets">
-        <span lang="fr">Parcours</span><span lang="en">Path</span>
+        <span lang="fr">Parcours &amp; Compétences</span><span lang="en">Path &amp; Skills</span>
       </a>
       <a href="#mobilite" data-k="mobilite">
-        <span lang="fr">Mobilité</span><span lang="en">Mobility</span>
+        <span lang="fr">Mobilité internationale</span><span lang="en">International mobility</span>
       </a>
       <a href="#engagement" data-k="engagement">
-        <span lang="fr">Engagement</span><span lang="en">Engagement</span>
+        <span lang="fr">Durabilité &amp; engagement</span><span lang="en">Sustainability &amp; engagement</span>
       </a>
       <a href="#echecs" data-k="echecs">
-        <span lang="fr">Sport</span><span lang="en">Sport</span>
+        <span lang="fr">Sport &amp; activités</span><span lang="en">Sport &amp; activities</span>
       </a>
       <a href="#carriere" data-k="carriere">
-        <span lang="fr">Carrière</span><span lang="en">Career</span>
+        <span lang="fr">Projet professionnel</span><span lang="en">Career plan</span>
       </a>
     </nav>
-    
+
     <div class="header-controls">
-      <button id="lang" type="button">FR/EN</button>
-      <button id="theme" type="button" aria-label="Thème">◐</button>
+      <button id="lang" type="button" aria-label="Changer de langue / Switch language" title="Changer de langue / Switch language">EN</button>
+      <button id="theme" type="button" aria-label="Changer de thème clair ou sombre"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button>
     </div>
   </header>
 
-  <main>
+  <main id="contenu" tabindex="-1">
+
     <!-- ==========================================================
          ONGLET 0 : ACCUEIL
          ========================================================== -->
     <div data-page="index" class="on">
       <section class="hero wrap">
-        <p class="lead" style="max-width: 800px; margin: 0 auto 2rem auto; text-align: center; font-size: 1.15rem; line-height: 1.7;">
-          <span lang="fr">Élève ingénieur en première année du cycle ingénieur à Toulouse INP-ENSEEIHT, au sein du département Sciences du Numérique. Issu de classe préparatoire des grandes écoles, filière MP. Je développe mes compétences en algorithmique, programmation de systèmes automatiques et intelligence artificielle.</span>
-          <span lang="en">First-year engineering student at Toulouse INP-ENSEEIHT, in the Digital Sciences department. Coming from preparatory classes for Grandes Écoles, MP track. I am developing my skills in algorithms, automated systems programming, and artificial intelligence.</span>
+        <h1>Mohamed Bistarine</h1>
+        <p class="lead">
+          <span lang="fr">Élève-ingénieur en première année à Toulouse INP-ENSEEIHT, au sein du département Sciences du Numérique. Issu des classes préparatoires aux grandes écoles (MPSI puis MP), je développe mes compétences en algorithmique, automatique et intelligence artificielle.</span>
+          <span lang="en">First-year engineering student at Toulouse INP-ENSEEIHT, in the Digital Sciences department. Coming from preparatory classes for the Grandes Écoles (MPSI then MP), I am developing my skills in algorithms, control systems and artificial intelligence.</span>
         </p>
 
-        <div class="actions" style="justify-content: center;">
-          <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank">
+        <div class="actions center">
+          <a class="btn primary" href="assets/CV_Mohamed_Bistarine_FR.pdf" target="_blank" rel="noopener">
             <span lang="fr">CV (FR)</span><span lang="en">CV (FR)</span>
           </a>
-          <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank">
+          <a class="btn" href="assets/CV_Mohamed_Bistarine_EN.pdf" target="_blank" rel="noopener">
             <span lang="fr">Resume (EN)</span><span lang="en">Resume (EN)</span>
           </a>
-          <a class="btn" href="https://github.com/medbistarine-ship-it/Mohamed_Bistarine" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">My Job Glasses</a>
+          <a class="btn" href="https://github.com/medbistarine-ship-it" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <!-- <a class="btn" href="COLLE-ICI-TON-LIEN-MY-JOB-GLASSES" target="_blank" rel="noopener noreferrer">My Job Glasses</a> -->
         </div>
 
-        <div style="margin-top: 3rem; text-align: center;">
-          <video controls preload="none" poster="https://commons.wikimedia.org/wiki/Special:FilePath/ENSEEIHT_-_01.jpg?width=1000" src="assets/uvp_pitch.mp4" class="uvp-video" style="max-width: 600px; margin: 0 auto;"></video>
-          <figcaption style="margin-top: 1rem;"><span lang="fr">Vidéo de présentation (UVP)</span><span lang="en">UVP Video Pitch</span></figcaption>
-        </div>
+        <figure class="video-card">
+          <video controls preload="none" src="assets/uvp_pitch.mp4" class="uvp-video">
+            <span lang="fr">Votre navigateur ne peut pas lire cette vidéo.</span><span lang="en">Your browser cannot play this video.</span>
+          </video>
+          <figcaption><span lang="fr">Vidéo de présentation (UVP)</span><span lang="en">UVP video pitch</span></figcaption>
+        </figure>
+
+        <div class="to-fill" role="presentation"></div>
       </section>
     </div>
 
@@ -84,75 +117,82 @@
          ========================================================== -->
     <div data-page="projets">
       <div class="pagehead wrap">
-        <h2><span class="num">01</span><span lang="fr">Parcours & Compétences</span><span lang="en">Path & Skills</span></h2>
+        <h2><span class="num">01</span><span lang="fr">Parcours &amp; Compétences</span><span lang="en">Path &amp; Skills</span></h2>
       </div>
 
       <div class="wrap">
         <!-- 1. PARCOURS CHRONOLOGIQUE -->
-        <h3 class="section-subtitle"><span lang="fr">Parcours chronologique</span><span lang="en">Chronological Path</span></h3>
-        
-        <div class="sub-tabs">
-          <button class="sub-tab-btn" data-group="parcours" data-target="parc-1" onclick="openSubTab('parcours', 'parc-1')"><span lang="fr">2024 : Bac SMB</span><span lang="en">2024: Bac SMB</span></button>
-          <button class="sub-tab-btn" data-group="parcours" data-target="parc-2" onclick="openSubTab('parcours', 'parc-2')"><span lang="fr">2024–2025 : MPSI</span><span lang="en">2024–2025: MPSI</span></button>
-          <button class="sub-tab-btn active" data-group="parcours" data-target="parc-3" onclick="openSubTab('parcours', 'parc-3')"><span lang="fr">2025–2026 : MP</span><span lang="en">2025–2026: MP</span></button>
-          <button class="sub-tab-btn" data-group="parcours" data-target="parc-4" onclick="openSubTab('parcours', 'parc-4')"><span lang="fr">2026–2029 : ENSEEIHT</span><span lang="en">2026–2029: ENSEEIHT</span></button>
+        <h3 class="section-subtitle"><span lang="fr">Parcours chronologique</span><span lang="en">Chronological path</span></h3>
+
+        <div class="sub-tabs" aria-label="Parcours">
+          <button class="sub-tab-btn" type="button" data-group="parcours" data-target="parc-1"><span lang="fr">2024 : Bac SMB</span><span lang="en">2024: Bac SMB</span></button>
+          <button class="sub-tab-btn" type="button" data-group="parcours" data-target="parc-2"><span lang="fr">2024–2025 : MPSI</span><span lang="en">2024–2025: MPSI</span></button>
+          <button class="sub-tab-btn active" type="button" data-group="parcours" data-target="parc-3"><span lang="fr">2025–2026 : MP</span><span lang="en">2025–2026: MP</span></button>
+          <button class="sub-tab-btn" type="button" data-group="parcours" data-target="parc-4"><span lang="fr">2026–2029 : ENSEEIHT</span><span lang="en">2026–2029: ENSEEIHT</span></button>
         </div>
 
         <div class="sub-display">
           <div id="parc-1" class="sub-pane" data-group="parcours">
             <h4 class="pane-title">
-              <span lang="fr">Baccalauréat Sciences Mathématiques B</span>
-              <span lang="en">Mathematical Sciences B Baccalaureate</span>
+              <span lang="fr">Baccalauréat Sciences Mathématiques B (SMB)</span>
+              <span lang="en">Mathematical Sciences B Baccalaureate (SMB)</span>
             </h4>
-            <p><span lang="fr">Obtention du Baccalauréat Sciences Mathématiques B au Lycée Mohamed El-Bakali. Cursus d'excellence focalisé sur l'analyse, l'arithmétique et les sciences de l'ingénieur.</span><span lang="en">Graduated with a Baccalaureate in Mathematical Sciences B. Excellence track focused on analysis, arithmetic, and engineering sciences.</span></p>
+            <p><span lang="fr">Baccalauréat marocain obtenu en 2024 au Lycée Mohammed Al Baqali. Cursus centré sur l'analyse, l'arithmétique et les sciences de l'ingénieur.</span><span lang="en">Moroccan baccalaureate obtained in 2024 at Lycée Mohammed Al Baqali. Curriculum focused on analysis, arithmetic and engineering sciences.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="parc-2" class="sub-pane" data-group="parcours">
-            <h4 class="pane-title">CPGE MPSI (Lycée Reda Slaoui)</h4>
-            <p><span lang="fr">Première année de CPGE MPSI. Acquisition d'une base théorique solide et exigeante en algèbre, analyse mathématique, physique fondamentale et algorithmique classique.</span><span lang="en">First year of CPGE MPSI. Acquisition of a solid and demanding theoretical foundation in algebra, mathematical analysis, fundamental physics, and algorithms.</span></p>
+            <h4 class="pane-title"><span lang="fr">CPGE MPSI — Lycée Réda Slawi</span><span lang="en">MPSI preparatory class — Réda Slawi High School</span></h4>
+            <p><span lang="fr">Première année de CPGE MPSI. Acquisition d'une base théorique solide et exigeante en algèbre, analyse mathématique, physique fondamentale et algorithmique classique.</span><span lang="en">First year of CPGE MPSI. Acquisition of a solid and demanding theoretical foundation in algebra, mathematical analysis, fundamental physics and classical algorithms.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="parc-3" class="sub-pane active" data-group="parcours">
-            <h4 class="pane-title">CPGE MP (Groupe Scolaire Al-Qalam)</h4>
-            <p><span lang="fr">Deuxième année de CPGE, filière Mathématiques et Physique (MP). Préparation intensive aux concours ingénieurs, réalisation du projet TIPE (Moteur d'échecs IA) et approfondissement en sciences industrielles.</span><span lang="en">Second year of CPGE, Mathematics and Physics (MP) track. Intensive preparation for engineering exams, completion of the TIPE project, and advanced study in industrial sciences.</span></p>
+            <h4 class="pane-title"><span lang="fr">CPGE MP — Groupe Scolaire Al Qalam</span><span lang="en">MP preparatory class — Al Qalam School Group</span></h4>
+            <p><span lang="fr">Deuxième année de CPGE, filière Mathématiques et Physique (MP). Préparation intensive aux concours ingénieurs, réalisation du projet TIPE (moteur d'échecs IA) et approfondissement en sciences industrielles.</span><span lang="en">Second year of CPGE, Mathematics and Physics (MP) track. Intensive preparation for engineering entrance exams, completion of the TIPE project (AI chess engine) and advanced study in industrial sciences.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="parc-4" class="sub-pane" data-group="parcours">
             <h4 class="pane-title">
-              <span lang="fr">1re année Cycle Ingénieur (Toulouse INP-ENSEEIHT)</span>
-              <span lang="en">1st Year Engineering Cycle (Toulouse INP-ENSEEIHT)</span>
+              <span lang="fr">1re année du cycle ingénieur — Toulouse INP-ENSEEIHT</span>
+              <span lang="en">1st year of the engineering cycle — Toulouse INP-ENSEEIHT</span>
             </h4>
-            <p><span lang="fr">Filière Sciences du Numérique (SN). Socle technique en programmation, automatique, analyse de données et probabilités. Orientation visée : optimisation, HPC, IA décisionnelle.</span><span lang="en">Digital Sciences (SN) track. Technical core in programming, control systems, data analysis. Targeted orientation: optimization, HPC, decision AI.</span></p>
+            <p><span lang="fr">Filière Sciences du Numérique (SN). Socle technique en programmation, automatique, analyse de données et probabilités. Orientation visée : optimisation, calcul haute performance (HPC) et IA décisionnelle.</span><span lang="en">Digital Sciences (SN) track. Technical core in programming, control systems, data analysis and probability. Targeted orientation: optimization, high-performance computing (HPC) and decision-making AI.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
         </div>
 
         <!-- 2. COMPÉTENCES ACQUISES -->
-        <h3 class="section-subtitle" style="margin-top: 3rem;"><span lang="fr">Compétences acquises & Projets</span><span lang="en">Acquired Skills & Projects</span></h3>
-        
+        <h3 class="section-subtitle section-gap"><span lang="fr">Compétences acquises</span><span lang="en">Acquired skills</span></h3>
+
+        <div class="sub-tabs" aria-label="Compétences">
+          <button class="sub-tab-btn active" type="button" data-group="competences" data-target="comp-1"><span lang="fr">Ingénierie &amp; Informatique</span><span lang="en">Engineering &amp; IT</span></button>
+          <button class="sub-tab-btn" type="button" data-group="competences" data-target="comp-2"><span lang="fr">Langues</span><span lang="en">Languages</span></button>
+        </div>
+
         <div class="sub-display">
           <div id="comp-1" class="sub-pane active" data-group="competences">
-            <h4 class="pane-title"><span lang="fr">Ingénierie & Informatique</span><span lang="en">Engineering & IT</span></h4>
+            <h4 class="pane-title"><span lang="fr">Ingénierie &amp; Informatique</span><span lang="en">Engineering &amp; IT</span></h4>
             <ul class="skills-list">
               <li><strong>Python :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Programmation acquise en CPGE</span><span lang="en">Programming acquired in CPGE</span>)</li>
+              <li><strong>Ada :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Programmation impérative, typage fort, fiabilité logicielle</span><span lang="en">Imperative programming, strong typing, software reliability</span>)</li>
+              <li><strong>C :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Gestion de la mémoire, pointeurs, programmation système</span><span lang="en">Memory management, pointers, systems programming</span>)</li>
               <li><strong>MATLAB :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Simulation de systèmes dynamiques</span><span lang="en">Dynamic systems simulation</span>)</li>
-              <li><strong>CoqIDE :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Langage logique, modélisation formelle</span><span lang="en">Logic programming, formal modeling</span>)</li>
-              <li><strong>Ada & Langage C :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Programmation impérative bas niveau</span><span lang="en">Low-level imperative programming</span>)</li>
-              <li><strong>LaTeX :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Rédaction académique</span><span lang="en">Academic drafting</span>)</li>
-              <li><strong><span lang="fr">Théorie des jeux</span><span lang="en">Game Theory</span> :</strong> <span class="status auto"><span lang="fr">Auto-formation</span><span lang="en">Self-taught</span></span> (<span lang="fr">Algorithmique décisionnelle, Moteur d'échecs IA</span><span lang="en">Decision algorithms, AI Chess Engine</span>).</li>
+              <li><strong>Coq :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Assistant de preuve, modélisation formelle</span><span lang="en">Proof assistant, formal modeling</span>)</li>
+              <li><strong>LaTeX :</strong> <span class="status training"><span lang="fr">En formation</span><span lang="en">In training</span></span> (<span lang="fr">Rédaction académique</span><span lang="en">Academic writing</span>)</li>
+              <li><strong><span lang="fr">Théorie des jeux</span><span lang="en">Game theory</span> :</strong> <span class="status auto"><span lang="fr">Auto-formation</span><span lang="en">Self-taught</span></span> (<span lang="fr">Algorithmique décisionnelle, moteur d'échecs IA</span><span lang="en">Decision algorithms, AI chess engine</span>)</li>
             </ul>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="comp-2" class="sub-pane" data-group="competences">
             <h4 class="pane-title"><span lang="fr">Langues</span><span lang="en">Languages</span></h4>
             <ul class="skills-list">
               <li><strong><span lang="fr">Arabe</span><span lang="en">Arabic</span> :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Langue maternelle</span><span lang="en">Native language</span>)</li>
-              <li><strong><span lang="fr">Français</span><span lang="en">French</span> :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Usage académique et courant</span><span lang="en">Academic and fluent use</span>)</li>
-              <li><strong><span lang="fr">Anglais</span><span lang="en">English</span> :</strong> <span class="status training"><span lang="fr">En cours de formation</span><span lang="en">In training</span></span> (<span lang="fr">Niveau C1</span><span lang="en">Level C1</span>)</li>
-              <li><strong><span lang="fr">Allemand</span><span lang="en">German</span> :</strong> <span class="status training"><span lang="fr">En cours de formation</span><span lang="en">In training</span></span> (<span lang="fr">Niveau A1</span><span lang="en">Level A1</span>)</li>
-              <li><strong><span lang="fr">Chinois & Japonais</span><span lang="en">Chinese & Japanese</span> :</strong> <span class="status auto"><span lang="fr">En cours d'auto-formation</span><span lang="en">Self-teaching</span></span> (<span lang="fr">Niveau A1 Débutant : structures et mots de base</span><span lang="en">Level A1 Beginner: basic structures and words</span>).</li>
+              <li><strong><span lang="fr">Français</span><span lang="en">French</span> :</strong> <span class="status mastered"><span lang="fr">Maîtrisé</span><span lang="en">Mastered</span></span> (<span lang="fr">Usage académique et professionnel</span><span lang="en">Academic and professional use</span>)</li>
+              <li><strong><span lang="fr">Anglais</span><span lang="en">English</span> :</strong> <span class="status mastered"><span lang="fr">Courant</span><span lang="en">Fluent</span></span> (<span lang="fr">Niveau C1</span><span lang="en">Level C1</span>)</li>
+              <li><strong><span lang="fr">Allemand</span><span lang="en">German</span> :</strong> <span class="status training"><span lang="fr">En cours de formation</span><span lang="en">In training</span></span> (<span lang="fr">Niveau A1, LV2 à l'ENSEEIHT</span><span lang="en">Level A1, second foreign language at ENSEEIHT</span>)</li>
+              <li><strong><span lang="fr">Chinois &amp; japonais</span><span lang="en">Chinese &amp; Japanese</span> :</strong> <span class="status auto"><span lang="fr">En cours d'auto-formation</span><span lang="en">Self-teaching</span></span> (<span lang="fr">Niveau A1 débutant : structures et mots de base</span><span lang="en">Level A1 beginner: basic structures and words</span>)</li>
             </ul>
+            <div class="to-fill" role="presentation"></div>
           </div>
-        </div>
-
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" data-group="competences" data-target="comp-1" onclick="openSubTab('competences', 'comp-1')"><span lang="fr">Ingénierie & Info</span><span lang="en">Engineering & IT</span></button>
-          <button class="sub-tab-btn" data-group="competences" data-target="comp-2" onclick="openSubTab('competences', 'comp-2')"><span lang="fr">Langues</span><span lang="en">Languages</span></button>
         </div>
       </div>
     </div>
@@ -166,33 +206,36 @@
       </div>
 
       <div class="wrap">
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" data-group="mobilite" data-target="mob-1" onclick="openSubTab('mobilite', 'mob-1')">Munich (DE)</button>
-          <button class="sub-tab-btn" data-group="mobilite" data-target="mob-2" onclick="openSubTab('mobilite', 'mob-2')">Tokyo (JP)</button>
-          <button class="sub-tab-btn" data-group="mobilite" data-target="mob-3" onclick="openSubTab('mobilite', 'mob-3')">Shanghai (CN)</button>
+        <div class="sub-tabs" aria-label="Pays visés">
+          <button class="sub-tab-btn active" type="button" data-group="mobilite" data-target="mob-1"><span lang="fr">Allemagne (DE)</span><span lang="en">Germany (DE)</span></button>
+          <button class="sub-tab-btn" type="button" data-group="mobilite" data-target="mob-2"><span lang="fr">Japon (JP)</span><span lang="en">Japan (JP)</span></button>
+          <button class="sub-tab-btn" type="button" data-group="mobilite" data-target="mob-3"><span lang="fr">Chine (CN)</span><span lang="en">China (CN)</span></button>
         </div>
 
         <div class="sub-display">
           <div id="mob-1" class="sub-pane active" data-group="mobilite">
             <h4 class="pane-title">
-              <span lang="fr">TUM, Munich (Allemagne)</span>
-              <span lang="en">TUM, Munich (Germany)</span>
+              <span lang="fr">Allemagne : échange académique ou stage R&amp;D</span>
+              <span lang="en">Germany: academic exchange or R&amp;D internship</span>
             </h4>
-            <p><span lang="fr">Visant un échange académique ou un stage R&D, la Technische Universität München (TUM) représente pour moi l'excellence européenne. Mon objectif est d'y approfondir mes compétences en mathématiques appliquées et en commande automatique.</span><span lang="en">Aiming for an academic exchange or an R&D internship, TUM represents European excellence. My goal is to deepen my skills in applied mathematics and automatic control.</span></p>
+            <p><span lang="fr">Visant un échange académique ou un stage de R&amp;D, je souhaite approfondir mes compétences en mathématiques appliquées et en commande automatique au sein d'une université technique de référence européenne, en m'appuyant sur l'apprentissage de l'allemand (LV2).</span><span lang="en">Aiming for an academic exchange or an R&amp;D internship, I want to deepen my skills in applied mathematics and automatic control at a leading European technical university, building on my German studies (second foreign language).</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="mob-2" class="sub-pane" data-group="mobilite">
             <h4 class="pane-title">
-              <span lang="fr">NII, Tokyo (Japon)</span>
-              <span lang="en">NII, Tokyo (Japan)</span>
+              <span lang="fr">Japon : stage de recherche</span>
+              <span lang="en">Japan: research internship</span>
             </h4>
-            <p><span lang="fr">Le Japon étant un acteur historique en systèmes intelligents, j'ambitionne d'effectuer mon stage de recherche au sein du National Institute of Informatics (NII).</span><span lang="en">As Japan is a historical player in intelligent systems, I aim to complete my research internship at the National Institute of Informatics (NII).</span></p>
+            <p><span lang="fr">Le Japon étant un acteur historique en systèmes intelligents, en robotique et en systèmes embarqués, j'ambitionne d'y effectuer un stage de recherche, en laboratoire ou en entreprise technologique.</span><span lang="en">As Japan is a historical player in intelligent systems, robotics and embedded systems, I aim to complete a research internship there, in a laboratory or a technology company.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="mob-3" class="sub-pane" data-group="mobilite">
             <h4 class="pane-title">
-              <span lang="fr">Pôles technologiques (Chine)</span>
-              <span lang="en">Technology hubs (China)</span>
+              <span lang="fr">Chine : pôles technologiques</span>
+              <span lang="en">China: technology hubs</span>
             </h4>
-            <p><span lang="fr">Afin de m'immerger dans un écosystème asiatique pionnier de l'IA à grande échelle et de l'optimisation, je projette de réaliser un stage R&D dans un pôle d'innovation comme Shanghai.</span><span lang="en">To immerse myself in a pioneering Asian ecosystem of large-scale AI and optimization, I plan to complete an R&D internship in an innovation hub like Shanghai.</span></p>
+            <p><span lang="fr">Afin de m'immerger dans un écosystème pionnier de l'IA à grande échelle et de l'optimisation, je projette de réaliser un stage de R&amp;D dans un pôle d'innovation numérique.</span><span lang="en">To immerse myself in a pioneering ecosystem of large-scale AI and optimization, I plan to complete an R&amp;D internship in a digital innovation hub.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
         </div>
       </div>
@@ -207,33 +250,36 @@
       </div>
 
       <div class="wrap">
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" data-group="engagement" data-target="eng-1" onclick="openSubTab('engagement', 'eng-1')">Green IT</button>
-          <button class="sub-tab-btn" data-group="engagement" data-target="eng-2" onclick="openSubTab('engagement', 'eng-2')"><span lang="fr">Transmission</span><span lang="en">Knowledge Sharing</span></button>
-          <button class="sub-tab-btn" data-group="engagement" data-target="eng-3" onclick="openSubTab('engagement', 'eng-3')"><span lang="fr">Éthique</span><span lang="en">Ethics</span></button>
+        <div class="sub-tabs" aria-label="Engagements">
+          <button class="sub-tab-btn active" type="button" data-group="engagement" data-target="eng-1"><span lang="fr">Numérique responsable</span><span lang="en">Green IT</span></button>
+          <button class="sub-tab-btn" type="button" data-group="engagement" data-target="eng-2"><span lang="fr">Transmission</span><span lang="en">Knowledge sharing</span></button>
+          <button class="sub-tab-btn" type="button" data-group="engagement" data-target="eng-3"><span lang="fr">Éthique</span><span lang="en">Ethics</span></button>
         </div>
 
         <div class="sub-display">
           <div id="eng-1" class="sub-pane active" data-group="engagement">
             <h4 class="pane-title">
-              <span lang="fr">Green IT : Sobriété algorithmique</span>
-              <span lang="en">Green IT: Algorithmic Sobriety</span>
+              <span lang="fr">Green IT : sobriété algorithmique</span>
+              <span lang="en">Green IT: algorithmic sobriety</span>
             </h4>
-            <p><span lang="fr">Conscient de l'impact environnemental croissant du numérique, je m'intéresse à la réduction de l'empreinte énergétique des systèmes embarqués via l'optimisation de la complexité algorithmique.</span><span lang="en">Aware of the environmental impact of digital tech, I focus on reducing the energy footprint of embedded systems via algorithmic optimization.</span></p>
+            <p><span lang="fr">Conscient de l'impact environnemental croissant du numérique, je m'intéresse à la réduction de l'empreinte énergétique des systèmes embarqués grâce à l'optimisation de la complexité algorithmique.</span><span lang="en">Aware of the growing environmental impact of digital technology, I focus on reducing the energy footprint of embedded systems through the optimization of algorithmic complexity.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="eng-2" class="sub-pane" data-group="engagement">
             <h4 class="pane-title">
               <span lang="fr">Transmission des savoirs</span>
               <span lang="en">Knowledge sharing</span>
             </h4>
-            <p><span lang="fr">Attaché à l'égalité des chances dans les filières scientifiques, je m'engage dans l'entraide mathématique avec mes pairs et l'initiation des plus jeunes à la réflexion analytique.</span><span lang="en">Committed to equal opportunity, I engage in mathematical tutoring with my peers and introduce younger students to analytical thinking.</span></p>
+            <p><span lang="fr">Attaché à l'égalité des chances dans les filières scientifiques, je m'engage dans l'entraide mathématique avec mes pairs et l'initiation des plus jeunes à la réflexion analytique.</span><span lang="en">Committed to equal opportunities in scientific fields, I take part in peer mathematical tutoring and introduce younger students to analytical thinking.</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
           <div id="eng-3" class="sub-pane" data-group="engagement">
             <h4 class="pane-title">
-              <span lang="fr">Éthique : Fiabilité des systèmes</span>
-              <span lang="en">Ethics: System Reliability</span>
+              <span lang="fr">Éthique : fiabilité des systèmes</span>
+              <span lang="en">Ethics: system reliability</span>
             </h4>
-            <p><span lang="fr">La sécurité humaine étant critique (industrie, aéronautique), j'accorde une importance primordiale à la fiabilité logicielle (utilisation rigoureuse de C et Ada).</span><span lang="en">Since human safety is critical, I prioritize software reliability (rigorous use of C and Ada).</span></p>
+            <p><span lang="fr">La sécurité des personnes étant critique (industrie, aéronautique), j'accorde une importance primordiale à la fiabilité logicielle (utilisation rigoureuse d'Ada et de C).</span><span lang="en">Since human safety is critical (industry, aeronautics), I give primary importance to software reliability (rigorous use of Ada and C).</span></p>
+            <div class="to-fill" role="presentation"></div>
           </div>
         </div>
       </div>
@@ -248,44 +294,357 @@
       </div>
 
       <div class="wrap">
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" data-group="sport" data-target="sport-1" onclick="openSubTab('sport', 'sport-1')"><span lang="fr">Jeu d'échecs</span><span lang="en">Chess game</span></button>
-          <button class="sub-tab-btn" data-group="sport" data-target="sport-2" onclick="openSubTab('sport', 'sport-2')">Football</button>
-          <button class="sub-tab-btn" data-group="sport" data-target="sport-3" onclick="openSubTab('sport', 'sport-3')">Multisport</button>
+        <div class="sub-tabs" aria-label="Activités">
+          <button class="sub-tab-btn active" type="button" data-group="sport" data-target="sport-1"><span lang="fr">Échecs</span><span lang="en">Chess</span></button>
+          <button class="sub-tab-btn" type="button" data-group="sport" data-target="sport-2"><span lang="fr">Football</span><span lang="en">Soccer</span></button>
+          <button class="sub-tab-btn" type="button" data-group="sport" data-target="sport-3"><span lang="fr">Multisport</span><span lang="en">Multi-sport</span></button>
         </div>
 
-        <div class="sub-display" style="min-height: 280px;">
+        <div class="sub-display">
+          <!-- Logos des clubs : dépose tes fichiers dans assets/img/ avec ces noms (png, jpg, jpeg, svg ou webp) :
+                 logo-najah-souss.png   et   logo-od-dcheira.png
+               Le site les affiche automatiquement. Tant qu'un fichier est absent, une illustration d'attente (dessin intégré) s'affiche à sa place. -->
           <div id="sport-1" class="sub-pane active" data-group="sport">
-            <h4 class="pane-title"><span lang="fr">Jeu d'échecs</span><span lang="en">Chess game</span></h4>
-            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 250px;">
+            <h4 class="pane-title"><span lang="fr">Échecs en compétition</span><span lang="en">Competitive chess</span></h4>
+            <div class="pane-flex">
+              <div class="pane-text">
                 <p>
-                  <strong><span lang="fr">Scores ELO :</span><span lang="en">ELO Scores:</span></strong> Standard (1643) | <span lang="fr">Rapide</span><span lang="en">Rapid</span> (1616) | Blitz (1642)<br><br>
-                  <span lang="fr">Engagement de longue date au sein de l'Association Najah Souss Agadir Échecs. Cette pratique exigeante forge ma résistance à la pression, mon objectivité dans l'évaluation des positions et ma capacité d'anticipation stratégique.</span>
-                  <span lang="en">Long-standing commitment within the Najah Souss Agadir Chess Association. This demanding practice builds my resistance to pressure, objectivity in position evaluation, and strategic anticipation.</span>
+                  <strong><span lang="fr">Classements Elo FIDE :</span><span lang="en">FIDE Elo ratings:</span></strong>
+                  <span lang="fr">Standard</span><span lang="en">Standard</span> (1643) · <span lang="fr">Rapide</span><span lang="en">Rapid</span> (1616) · Blitz (1642)
                 </p>
-                <a class="btn primary" style="margin-top: 1rem;" href="https://ratings.fide.com/profile/9047077" target="_blank">
-                  <span lang="fr">Profil FIDE international</span><span lang="en">International FIDE Profile</span>
+                <p class="note"><span lang="fr">Valeurs indicatives, la référence reste le profil FIDE.</span><span lang="en">Indicative values; the FIDE profile remains the reference.</span></p>
+                <p>
+                  <span lang="fr">Engagement de longue date au sein de l'Association Najah Souss Agadir Échecs, avec participation à des tournois nationaux et internationaux. Cette pratique exigeante forge ma résistance à la pression, mon objectivité dans l'évaluation des positions et ma capacité d'anticipation stratégique.</span>
+                  <span lang="en">Long-standing commitment within the Najah Souss Agadir Chess Association, with participation in national and international tournaments. This demanding practice builds my resistance to pressure, my objectivity in position evaluation and my strategic anticipation.</span>
+                </p>
+                <a class="btn primary" href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener noreferrer">
+                  <span lang="fr">Profil FIDE international</span><span lang="en">International FIDE profile</span>
                 </a>
+                <div class="to-fill" role="presentation"></div>
               </div>
-              <img src="image_6c15e0.png" alt="Association Najah Souss" style="max-width: 150px; background: white; padding: 10px; border-radius: 8px;">
+              <div class="logo-slot" data-logo="assets/img/logo-najah-souss" data-alt="Logo de l'Association Najah Souss Agadir Échecs">
+              <svg class="art" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+                <defs><clipPath id="board-clip"><rect width="160" height="160" rx="16"/></clipPath></defs>
+                <g clip-path="url(#board-clip)">
+                  <rect width="160" height="160" class="sq-light"/>
+                  <rect x="40" y="0" width="40" height="40" class="sq-dark"/><rect x="120" y="0" width="40" height="40" class="sq-dark"/>
+                  <rect x="0" y="40" width="40" height="40" class="sq-dark"/><rect x="80" y="40" width="40" height="40" class="sq-dark"/>
+                  <rect x="40" y="80" width="40" height="40" class="sq-dark"/><rect x="120" y="80" width="40" height="40" class="sq-dark"/>
+                  <rect x="0" y="120" width="40" height="40" class="sq-dark"/><rect x="80" y="120" width="40" height="40" class="sq-dark"/>
+                </g>
+                <text x="80" y="120" text-anchor="middle" font-size="108" class="glyph">♞</text>
+                <rect x="1" y="1" width="158" height="158" rx="15" class="frame"/>
+              </svg>
+              </div>
             </div>
           </div>
-          
+
           <div id="sport-2" class="sub-pane" data-group="sport">
-            <h4 class="pane-title"><span lang="fr">Football</span><span lang="en">Football</span></h4>
-            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 250px;">
-                <p><span lang="fr">Formation et parcours sportif au sein de l'équipe de l'Olympique Dcheira. Ce sport collectif structuré m'a inculqué la valeur de la discipline commune et l'importance du positionnement tactique.</span><span lang="en">Training and sports journey within the Olympique Dcheira team. This team sport instilled in me the value of shared discipline and tactical positioning.</span></p>
+            <h4 class="pane-title"><span lang="fr">Football en club</span><span lang="en">Club football</span></h4>
+            <div class="pane-flex">
+              <div class="pane-text">
+                <p><span lang="fr">Formation et parcours sportif au sein de l'équipe de l'Olympique Dcheira. Ce sport collectif structuré m'a inculqué la valeur de la discipline commune et l'importance du positionnement tactique.</span><span lang="en">Training and sporting career within the Olympique Dcheira team. This structured team sport instilled in me the value of shared discipline and the importance of tactical positioning.</span></p>
+                <div class="to-fill" role="presentation"></div>
               </div>
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Olympique_dcheira_logo.jpg?width=200" onerror="this.src='assets/img/od-dcheira.jpg';" alt="Olympique Dcheira" style="max-width: 120px; background: white; padding: 10px; border-radius: 8px;">
+              <div class="logo-slot" data-logo="assets/img/logo-od-dcheira" data-alt="Logo de l'Olympique Dcheira">
+              <svg class="art" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+                <defs><clipPath id="ball-clip"><circle cx="80" cy="80" r="64"/></clipPath></defs>
+                <circle cx="80" cy="80" r="64" class="ball"/>
+                <g class="ball-patch" clip-path="url(#ball-clip)">
+                  <polygon points="80.0,34.0 59.1,18.8 67.1,-5.8 92.9,-5.8 100.9,18.8"/>
+                  <polygon points="123.7,65.8 131.7,41.2 157.6,41.2 165.6,65.8 144.7,81.0"/>
+                  <polygon points="107.0,117.2 132.9,117.2 140.9,141.8 120.0,157.0 99.0,141.8"/>
+                  <polygon points="53.0,117.2 61.0,141.8 40.0,157.0 19.1,141.8 27.1,117.2"/>
+                  <polygon points="36.3,65.8 15.3,81.0 -5.6,65.8 2.4,41.2 28.3,41.2"/>
+                </g>
+                <polygon points="80.0,58.0 100.9,73.2 92.9,97.8 67.1,97.8 59.1,73.2" class="ball-patch"/>
+                <g class="ball-seam">
+                  <line x1="80.0" y1="58.0" x2="80.0" y2="34.0"/>
+                  <line x1="100.9" y1="73.2" x2="123.7" y2="65.8"/>
+                  <line x1="92.9" y1="97.8" x2="107.0" y2="117.2"/>
+                  <line x1="67.1" y1="97.8" x2="53.0" y2="117.2"/>
+                  <line x1="59.1" y1="73.2" x2="36.3" y2="65.8"/>
+                </g>
+                <circle cx="80" cy="80" r="64" class="ball-edge"/>
+              </svg>
+              </div>
             </div>
           </div>
-          
+
           <div id="sport-3" class="sub-pane" data-group="sport">
-            <h4 class="pane-title">Multisport (Natation, Basket, Volley)</h4>
-            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 250px;">
-                <p><span lang="fr">La pratique régulière de la natation, du basketball et du volleyball constitue mon équilibre de vie physique. Ces disciplines développent l'endurance et la réactivité communicative.</span><span lang="en">The regular practice of swimming, basketball, and volleyball forms my physical balance, developing endurance and communicative reactivity.</span></p>
+            <h4 class="pane-title"><span lang="fr">Multisport : natation, basketball, volleyball</span><span lang="en">Multisport: swimming, basketball, volleyball</span></h4>
+            <div class="pane-flex">
+              <div class="pane-text">
+                <p><span lang="fr">La pratique régulière de la natation, du basketball et du volleyball constitue mon équilibre de vie physique. Ces disciplines développent l'endurance, la réactivité et l'esprit d'équipe.</span><span lang="en">The regular practice of swimming, basketball and volleyball forms my physical balance, developing endurance, reactivity and team spirit.</span></p>
+                <div class="to-fill" role="presentation"></div>
               </div>
-              <img src="
+              <svg class="art wide" viewBox="0 0 240 90" aria-hidden="true" focusable="false">
+                <g class="line-art">
+                  <path d="M10 34 q7 -9 14 0 t14 0 t14 0 t14 0"/>
+                  <path d="M10 50 q7 -9 14 0 t14 0 t14 0 t14 0"/>
+                  <path d="M10 66 q7 -9 14 0 t14 0 t14 0 t14 0"/>
+                  <circle cx="120" cy="45" r="30"/>
+                  <line x1="120" y1="15" x2="120" y2="75"/>
+                  <line x1="90" y1="45" x2="150" y2="45"/>
+                  <path d="M98 23 Q116 45 98 67"/>
+                  <path d="M142 23 Q124 45 142 67"/>
+                  <circle cx="200" cy="45" r="30"/>
+                  <path d="M200 15 A 34 34 0 0 0 186 52"/>
+                  <path d="M200 15 A 34 34 0 0 0 186 52" transform="rotate(120 200 45)"/>
+                  <path d="M200 15 A 34 34 0 0 0 186 52" transform="rotate(240 200 45)"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         ONGLET 5 : PROJET PROFESSIONNEL
+         ========================================================== -->
+    <div data-page="carriere">
+      <div class="pagehead wrap">
+        <h2><span class="num">05</span><span lang="fr">Projet professionnel</span><span lang="en">Career plan</span></h2>
+      </div>
+
+      <div class="wrap">
+        <!-- 1. PROJETS -->
+        <h3 class="section-subtitle"><span lang="fr">Projets personnels et travaux</span><span lang="en">Personal projects and coursework</span></h3>
+
+        <div class="sub-tabs" aria-label="Projets">
+          <button class="sub-tab-btn active" type="button" data-group="projets" data-target="proj-1"><span lang="fr">IA d'échecs</span><span lang="en">Chess AI</span></button>
+          <button class="sub-tab-btn" type="button" data-group="projets" data-target="proj-2"><span lang="fr">Stabilité asymptotique</span><span lang="en">Asymptotic stability</span></button>
+          <button class="sub-tab-btn" type="button" data-group="projets" data-target="proj-3"><span lang="fr">TP de 1re année</span><span lang="en">1st-year labs</span></button>
+        </div>
+
+        <div class="sub-display">
+          <div id="proj-1" class="sub-pane active" data-group="projets">
+            <h4 class="pane-title"><span lang="fr">Modèle d'IA pour les échecs</span><span lang="en">AI model for chess</span></h4>
+            <p class="status-line"><span class="status training"><span lang="fr">En cours</span><span lang="en">In progress</span></span> <span lang="fr">Projet personnel</span><span lang="en">Personal project</span></p>
+            <p><span lang="fr">Conception d'un modèle d'intelligence artificielle capable de jouer aux échecs de façon optimale : représentation de l'état du jeu, exploration d'arbres de recherche et fonction d'évaluation numérique des positions.</span><span lang="en">Design of an artificial intelligence model able to play chess optimally: game state representation, search tree exploration and numerical position evaluation function.</span></p>
+            <ul class="tags" aria-label="Mots-clés"><li>Bitboards</li><li><span lang="fr">Hachage de Zobrist</span><span lang="en">Zobrist hashing</span></li><li><span lang="fr">Arbres de recherche</span><span lang="en">Search trees</span></li><li><span lang="fr">Évaluation de positions</span><span lang="en">Position evaluation</span></li></ul>
+            <!-- <p><a href="https://github.com/medbistarine-ship-it/NOM-DU-DEPOT" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a></p> -->
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="proj-2" class="sub-pane" data-group="projets">
+            <h4 class="pane-title"><span lang="fr">Optimisation de modèles de stabilité asymptotique</span><span lang="en">Optimization of asymptotic stability models</span></h4>
+            <p class="status-line"><span class="status training"><span lang="fr">En cours</span><span lang="en">In progress</span></span> <span lang="fr">Projet personnel</span><span lang="en">Personal project</span></p>
+            <p><span lang="fr">Étude et optimisation de modèles existants de stabilité asymptotique appliqués aux systèmes complexes.</span><span lang="en">Study and optimization of existing asymptotic stability models applied to complex systems.</span></p>
+            <ul class="tags" aria-label="Mots-clés"><li><span lang="fr">Systèmes dynamiques</span><span lang="en">Dynamical systems</span></li><li><span lang="fr">Stabilité asymptotique</span><span lang="en">Asymptotic stability</span></li><li>Optimisation</li></ul>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="proj-3" class="sub-pane" data-group="projets">
+            <h4 class="pane-title"><span lang="fr">Travaux pratiques : Ada, C et automatique</span><span lang="en">Labs: Ada, C and control systems</span></h4>
+            <p class="status-line"><span class="status mastered"><span lang="fr">1A SN</span><span lang="en">Year 1 SN</span></span> <span lang="fr">Travaux de l'ENSEEIHT</span><span lang="en">ENSEEIHT coursework</span></p>
+            <p><span lang="fr">Programmes structurés et vérifiés en Ada et en C, simulation et commande de systèmes dynamiques sous MATLAB, rédaction de rapports techniques d'automatique.</span><span lang="en">Structured and verified programs in Ada and C, simulation and control of dynamic systems in MATLAB, writing of technical control-systems reports.</span></p>
+            <ul class="tags" aria-label="Mots-clés"><li>Ada</li><li>C</li><li>MATLAB</li><li><span lang="fr">Automatique</span><span lang="en">Control systems</span></li></ul>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+        </div>
+
+        <!-- 2. AXES -->
+        <h3 class="section-subtitle section-gap"><span lang="fr">Axes de développement</span><span lang="en">Development axes</span></h3>
+
+        <div class="sub-tabs" aria-label="Axes">
+          <button class="sub-tab-btn active" type="button" data-group="axes" data-target="axe-1"><span lang="fr">Axe 1 : socle</span><span lang="en">Axis 1: foundations</span></button>
+          <button class="sub-tab-btn" type="button" data-group="axes" data-target="axe-2"><span lang="fr">Axe 2 : IA &amp; optimisation</span><span lang="en">Axis 2: AI &amp; optimization</span></button>
+          <button class="sub-tab-btn" type="button" data-group="axes" data-target="axe-3"><span lang="fr">Axe 3 : systèmes fiables</span><span lang="en">Axis 3: reliable systems</span></button>
+        </div>
+
+        <div class="sub-display">
+          <div id="axe-1" class="sub-pane active" data-group="axes">
+            <h4 class="pane-title"><span lang="fr">Consolider le socle en Sciences du Numérique</span><span lang="en">Consolidate the Digital Sciences foundations</span></h4>
+            <p><span lang="fr">Maîtriser les enseignements fondamentaux de 1A (algorithmique, génie logiciel en Ada et C, automatique, mathématiques appliquées) afin de choisir en connaissance de cause ma spécialisation de 2A.</span><span lang="en">Master the core 1st-year subjects (algorithms, software engineering in Ada and C, control systems, applied mathematics) in order to make an informed choice of specialization for the 2nd year.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="axe-2" class="sub-pane" data-group="axes">
+            <h4 class="pane-title"><span lang="fr">Intelligence artificielle décisionnelle et optimisation</span><span lang="en">Decision-making AI and optimization</span></h4>
+            <p><span lang="fr">Approfondir la conception d'algorithmes de décision, d'apprentissage automatique et d'optimisation, dans la continuité de mes projets personnels.</span><span lang="en">Deepen the design of decision, machine learning and optimization algorithms, as a continuation of my personal projects.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="axe-3" class="sub-pane" data-group="axes">
+            <h4 class="pane-title"><span lang="fr">Systèmes fiables et recherche appliquée</span><span lang="en">Reliable systems and applied research</span></h4>
+            <p><span lang="fr">Travailler en R&amp;D sur des systèmes logiciels fiables, la modélisation mathématique et le contrôle de systèmes complexes.</span><span lang="en">Work in R&amp;D on reliable software systems, mathematical modeling and control of complex systems.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+        </div>
+
+        <!-- 3. STAGES -->
+        <h3 class="section-subtitle section-gap"><span lang="fr">Stages visés</span><span lang="en">Targeted internships</span></h3>
+
+        <div class="sub-tabs" aria-label="Stages visés">
+          <button class="sub-tab-btn active" type="button" data-group="stages" data-target="stage-1"><span lang="fr">Gestion des données</span><span lang="en">Data management</span></button>
+          <button class="sub-tab-btn" type="button" data-group="stages" data-target="stage-2"><span lang="fr">Optimisation des modèles</span><span lang="en">Model optimization</span></button>
+          <button class="sub-tab-btn" type="button" data-group="stages" data-target="stage-3"><span lang="fr">Innovation logicielle</span><span lang="en">Software innovation</span></button>
+        </div>
+
+        <div class="sub-display">
+          <div id="stage-1" class="sub-pane active" data-group="stages">
+            <h4 class="pane-title"><span lang="fr">Gestion des données</span><span lang="en">Data management</span></h4>
+            <p><span lang="fr">Collecte, structuration et exploitation de données pour aider la décision.</span><span lang="en">Collecting, structuring and exploiting data to support decision-making.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="stage-2" class="sub-pane" data-group="stages">
+            <h4 class="pane-title"><span lang="fr">Optimisation des modèles</span><span lang="en">Model optimization</span></h4>
+            <p><span lang="fr">Amélioration de modèles mathématiques et d'apprentissage : performance, robustesse et coût de calcul.</span><span lang="en">Improving mathematical and learning models: performance, robustness and computational cost.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+          <div id="stage-3" class="sub-pane" data-group="stages">
+            <h4 class="pane-title"><span lang="fr">Innovation logicielle</span><span lang="en">Software innovation</span></h4>
+            <p><span lang="fr">Conception et développement de solutions logicielles nouvelles, fiables et maintenables.</span><span lang="en">Design and development of new, reliable and maintainable software solutions.</span></p>
+            <div class="to-fill" role="presentation"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>Mohamed Bistarine</strong> · <span lang="fr">Élève-ingénieur 1A, Toulouse INP-ENSEEIHT (Sciences du Numérique)</span><span lang="en">1st-year engineering student, Toulouse INP-ENSEEIHT (Digital Sciences)</span></p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/medbistarine-ship-it" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://ratings.fide.com/profile/9047077" target="_blank" rel="noopener noreferrer"><span lang="fr">Profil FIDE</span><span lang="en">FIDE profile</span></a></li>
+        <!-- <li><a href="mailto:ton.adresse@exemple.fr">Contact</a></li> -->
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var pages = Array.prototype.slice.call(document.querySelectorAll('[data-page]'));
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav a[data-k]'));
+      var keys = pages.map(function (p) { return p.getAttribute('data-page'); });
+
+      /* ----- Pages (onglets du haut) ----- */
+      function showPage(k, moveFocus) {
+        if (keys.indexOf(k) === -1) { k = keys[0]; }
+        pages.forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-page') === k); });
+        navLinks.forEach(function (a) {
+          if (a.getAttribute('data-k') === k) { a.setAttribute('aria-current', 'page'); }
+          else { a.removeAttribute('aria-current'); }
+        });
+        window.scrollTo(0, 0);
+        if (moveFocus) { document.getElementById('contenu').focus({ preventScroll: true }); }
+      }
+      function keyFromHash() { return (location.hash || '').replace('#', '') || keys[0]; }
+      window.addEventListener('hashchange', function () { showPage(keyFromHash(), true); });
+      showPage(keyFromHash(), false);
+
+      /* ----- Sous-onglets horizontaux ----- */
+      function openSubTab(group, id) {
+        Array.prototype.forEach.call(document.querySelectorAll('.sub-tab-btn[data-group="' + group + '"]'), function (b) {
+          var on = b.getAttribute('data-target') === id;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+          b.setAttribute('tabindex', on ? '0' : '-1');
+        });
+        Array.prototype.forEach.call(document.querySelectorAll('.sub-pane[data-group="' + group + '"]'), function (p) {
+          p.classList.toggle('active', p.id === id);
+        });
+      }
+      window.openSubTab = openSubTab;
+
+      Array.prototype.forEach.call(document.querySelectorAll('.sub-tabs'), function (c) { c.setAttribute('role', 'tablist'); });
+      Array.prototype.forEach.call(document.querySelectorAll('.sub-tab-btn'), function (b) {
+        var t = b.getAttribute('data-target');
+        var pane = document.getElementById(t);
+        b.setAttribute('role', 'tab');
+        b.setAttribute('id', 'tab-' + t);
+        b.setAttribute('aria-controls', t);
+        if (pane) { pane.setAttribute('role', 'tabpanel'); pane.setAttribute('aria-labelledby', 'tab-' + t); }
+      });
+      var groups = {};
+      Array.prototype.forEach.call(document.querySelectorAll('.sub-tab-btn'), function (b) {
+        var g = b.getAttribute('data-group');
+        if (!groups[g]) { groups[g] = b.getAttribute('data-target'); }
+        if (b.classList.contains('active')) { groups[g] = b.getAttribute('data-target'); }
+      });
+      Object.keys(groups).forEach(function (g) { openSubTab(g, groups[g]); });
+
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('.sub-tab-btn') : null;
+        if (b) { openSubTab(b.getAttribute('data-group'), b.getAttribute('data-target')); }
+      });
+      document.addEventListener('keydown', function (e) {
+        var b = e.target.closest ? e.target.closest('.sub-tab-btn') : null;
+        if (!b) { return; }
+        var group = b.getAttribute('data-group');
+        var tabs = Array.prototype.slice.call(document.querySelectorAll('.sub-tab-btn[data-group="' + group + '"]'));
+        var i = tabs.indexOf(b), n = null;
+        if (e.key === 'ArrowRight') { n = (i + 1) % tabs.length; }
+        else if (e.key === 'ArrowLeft') { n = (i - 1 + tabs.length) % tabs.length; }
+        else if (e.key === 'Home') { n = 0; }
+        else if (e.key === 'End') { n = tabs.length - 1; }
+        if (n !== null) {
+          e.preventDefault();
+          openSubTab(group, tabs[n].getAttribute('data-target'));
+          tabs[n].focus();
+        }
+      });
+
+      /* ----- Logos des clubs : le vrai fichier remplace l'illustration s'il existe ----- */
+      Array.prototype.forEach.call(document.querySelectorAll('.logo-slot[data-logo]'), function (slot) {
+        var base = slot.getAttribute('data-logo');
+        var exts = ['png', 'jpg', 'jpeg', 'svg', 'webp'];
+        (function tryNext(i) {
+          if (i >= exts.length) { return; }
+          var probe = new Image();
+          probe.onload = function () {
+            var img = document.createElement('img');
+            img.className = 'logo';
+            img.src = probe.src;
+            img.alt = slot.getAttribute('data-alt') || '';
+            slot.insertBefore(img, slot.firstChild);
+            slot.classList.add('has-logo');
+          };
+          probe.onerror = function () { tryNext(i + 1); };
+          probe.src = base + '.' + exts[i];
+        })(0);
+      });
+
+      /* ----- Langue FR / EN ----- */
+      var titles = {
+        fr: 'Mohamed Bistarine | Sciences du Numérique — N7',
+        en: 'Mohamed Bistarine | Digital Sciences — N7'
+      };
+      var descs = {
+        fr: "E-portfolio de Mohamed Bistarine, élève-ingénieur en première année à Toulouse INP-ENSEEIHT (N7), département Sciences du Numérique : parcours, mobilité internationale, engagement, sport et projet professionnel.",
+        en: "E-portfolio of Mohamed Bistarine, first-year engineering student at Toulouse INP-ENSEEIHT (N7), Digital Sciences department: path, international mobility, engagement, sport and career plan."
+      };
+      function setLang(l) {
+        root.setAttribute('data-lang', l);
+        root.setAttribute('lang', l);
+        document.title = titles[l];
+        var lb = document.getElementById('lang');
+        lb.textContent = (l === 'fr') ? 'EN' : 'FR';
+        lb.setAttribute('aria-label', l === 'fr' ? 'Switch to English' : 'Passer en français');
+        var md = document.querySelector('meta[name="description"]');
+        if (md) md.setAttribute('content', descs[l]);
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      var savedLang = null;
+      try { savedLang = localStorage.getItem('lang'); } catch (e) {}
+      setLang((savedLang === 'fr' || savedLang === 'en') ? savedLang : (root.getAttribute('data-lang') || 'fr'));
+      document.getElementById('lang').addEventListener('click', function () {
+        setLang(root.getAttribute('data-lang') === 'fr' ? 'en' : 'fr');
+      });
+
+      /* ----- Thème clair / sombre ----- */
+      var savedTheme = null;
+      try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+      if (savedTheme === 'light' || savedTheme === 'dark') { root.setAttribute('data-theme', savedTheme); }
+      document.getElementById('theme').addEventListener('click', function () {
+        var current = root.getAttribute('data-theme');
+        var dark = current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var next = dark ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
