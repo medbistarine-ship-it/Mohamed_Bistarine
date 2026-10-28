@@ -8,7 +8,7 @@
   --accent: #2563eb;       /* Bleu principal */
   --accent-ink: #ffffff;
   --tint: #eff6ff;         /* Fond bleuté léger pour les éléments actifs */
-  
+
   --sans: "Inter", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", monospace;
   --s1: .5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2.5rem; --s5: 4.5rem;
@@ -145,4 +145,86 @@ h2 { font-size: var(--fs-h2); margin: 0 0 2rem; font-weight: 700; display: flex;
   .header-controls { position: relative; right: auto; top: auto; margin-top: 1rem; justify-content: center; }
   .sub-tabs { flex-direction: column; }
   .sub-tab-btn { min-width: 100%; }
+}
+
+/* ==========================================================
+   AJOUTS : tout ce qui est au-dessus est le style d'origine.
+   Ci-dessous, uniquement ce qui sert aux nouveaux éléments.
+   ========================================================== */
+
+main { padding-bottom: 3rem; outline: none; }
+
+/* Accès clavier */
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 200; background: var(--accent); color: var(--accent-ink); padding: .6rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: top .15s; }
+.skip:focus { top: 1rem; }
+a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+
+/* Accueil */
+.hero h1 { font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -.02em; font-weight: 800; text-align: center; margin: 1rem 0 1.4rem; }
+.lead { max-width: 800px; margin: 0 auto 2rem; text-align: center; font-size: 1.15rem; line-height: 1.7; color: var(--muted); }
+.actions.center { justify-content: center; }
+.video-card { margin: 3rem auto 0; max-width: 600px; text-align: center; }
+.video-card .uvp-video { display: block; max-width: 600px; margin: 0 auto; }
+.video-card figcaption { margin-top: 1rem; color: var(--muted); font-size: var(--fs-s); }
+
+.section-gap { margin-top: 3rem; }
+
+/* Texte + illustration côte à côte (onglet Sport) */
+.pane-flex { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+.pane-text { flex: 1; min-width: 250px; }
+.pane-text > :last-child { margin-bottom: 0; }
+.note { color: var(--muted); font-size: var(--fs-s); margin-top: -.4rem; }
+
+/* Illustrations intégrées (aucun fichier image) */
+.art { flex: none; width: 160px; height: auto; align-self: center; }
+.logo-slot { flex: none; align-self: center; display: flex; justify-content: center; }
+.logo { display: block; width: 200px; height: 200px; object-fit: contain; background: #fff; padding: 10px; border: 1px solid var(--line); border-radius: 8px; }
+.logo-slot.has-logo .art { display: none; }
+.art.wide { width: 240px; }
+.sq-light { fill: var(--tint); }
+.sq-dark { fill: var(--accent); opacity: .9; }
+.frame { fill: none; stroke: var(--line); stroke-width: 2; }
+.glyph { fill: var(--text); stroke: var(--surface); stroke-width: 3; paint-order: stroke; font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "Apple Symbols", "DejaVu Sans", sans-serif; }
+.ball { fill: var(--surface); }
+.ball-edge { fill: none; stroke: var(--text); stroke-width: 3; }
+.ball-patch { fill: var(--text); }
+.ball-seam line { stroke: var(--text); stroke-width: 3; stroke-linecap: round; }
+.line-art * { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Projets : statut et mots-clés */
+.status-line { display: flex; align-items: center; flex-wrap: wrap; gap: .3rem; color: var(--muted); font-size: var(--fs-s); margin: -.4rem 0 .8rem; }
+.status-line .status { margin-left: 0; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; padding: 0; }
+.tags li { background: var(--tint); color: var(--accent); border: 1px solid var(--line); border-radius: 6px; padding: .15rem .6rem; font: 500 .8rem var(--mono); }
+
+/* Espaces à compléter */
+.to-fill { min-height: 3.2rem; margin-top: 1.2rem; display: flex; align-items: center; padding: .6rem .9rem; border: 1.5px dashed var(--line); border-radius: 10px; color: var(--muted); font-size: var(--fs-s); font-style: italic; }
+.to-fill::before { content: "À compléter…"; }
+html[data-lang="en"] .to-fill::before { content: "To be completed…"; }
+html.final .to-fill { display: none; }
+
+/* Pied de page */
+.site-footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 2rem; padding: 1.4rem 0; }
+.site-footer .wrap { padding-top: 0; padding-bottom: 0; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; }
+.footer-inner p { margin: 0; color: var(--muted); font-size: var(--fs-s); }
+.footer-links { display: flex; gap: 1.2rem; list-style: none; margin: 0; padding: 0; font-size: var(--fs-s); font-weight: 600; }
+
+@media (max-width: 60rem) {
+  .centered-header { position: static; } /* l'en-tête, très haut sur mobile, ne reste plus collé en haut */
+  .art, .art.wide, .logo-slot { margin: 0 auto; }
+  .hero h1 { margin-top: .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-page].on, .sub-pane { animation: none; }
+  .btn, .sub-tab-btn, nav a { transition: none; }
+}
+
+@media print {
+  .centered-header, .skip, .actions, .to-fill, .sub-tabs, .header-controls { display: none !important; }
+  [data-page], .sub-pane { display: block !important; }
+  html[data-lang="fr"] [lang="en"], html[data-lang="en"] [lang="fr"] { display: none !important; }
+  body { background: #fff; color: #000; }
 }
