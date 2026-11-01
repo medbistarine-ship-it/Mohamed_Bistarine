@@ -98,10 +98,39 @@
         </div>
 
         <figure class="video-card">
-          <video controls preload="none" src="assets/uvp_pitch.mp4" class="uvp-video">
-            <span lang="fr">Votre navigateur ne peut pas lire cette vidéo.</span><span lang="en">Your browser cannot play this video.</span>
-          </video>
-          <figcaption><span lang="fr">Vidéo de présentation (UVP)</span><span lang="en">UVP video pitch</span></figcaption>
+          <div class="vp" id="vp" data-state="paused" data-idle="false" tabindex="0" role="group" aria-label="Elevator pitch">
+            <video class="uvp-video" id="vpv" preload="metadata" playsinline poster="assets/uvp_poster.jpg" src="assets/uvp_pitch.mp4">
+              <span lang="fr">Votre navigateur ne peut pas lire cette vidéo.</span><span lang="en">Your browser cannot play this video.</span>
+            </video>
+            <button type="button" class="vp-big" id="vpBig" aria-label="Play">
+              <svg class="i-p" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="i-r" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+            </button>
+            <div class="vp-bar" id="vpBar">
+              <div class="vp-track" id="vpTrack" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="vp-buf" id="vpBuf"></div><div class="vp-fill" id="vpFill"></div><div class="vp-knob" id="vpKnob"></div>
+                <div class="vp-tip" id="vpTip">0:00</div>
+              </div>
+              <div class="vp-row">
+                <button type="button" class="vp-btn" id="vpPlay" aria-label="Play">
+                  <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                  <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                  <svg class="i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+                </button>
+                <span class="vp-time" id="vpTime">0:00 / 0:00</span>
+                <span class="vp-sp"></span>
+                <button type="button" class="vp-btn" id="vpMute" aria-label="Mute">
+                  <svg class="i-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+                  <svg class="i-mute" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9zm12.6 3 2.4-2.4-1.4-1.4-2.4 2.4-2.4-2.4-1.4 1.4 2.4 2.4-2.4 2.4 1.4 1.4 2.4-2.4 2.4 2.4 1.4-1.4z"/></svg>
+                </button>
+                <input type="range" class="vp-vol" id="vpVol" min="0" max="1" step="0.05" value="1" aria-label="Volume">
+                <button type="button" class="vp-btn" id="vpFs" aria-label="Fullscreen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h5v2H7v3H5zm9 0h5v5h-2V7h-3zM5 14h2v3h3v2H5zm12 0h2v5h-5v-2h3z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <figcaption><span lang="fr">Vidéo de présentation (elevator pitch)</span><span lang="en">Elevator pitch video</span></figcaption>
         </figure>
 
         <div class="to-fill" role="presentation"></div>
@@ -604,6 +633,139 @@
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (e) {}
       });
+
+      /* ----- Lecteur vidéo (pause, barre de progression, masquage automatique) ----- */
+      (function () {
+        var box = document.getElementById('vp'); if (!box) { return; }
+        var v = document.getElementById('vpv'), big = document.getElementById('vpBig'),
+            bar = document.getElementById('vpBar'), track = document.getElementById('vpTrack'),
+            fill = document.getElementById('vpFill'), knob = document.getElementById('vpKnob'),
+            buf = document.getElementById('vpBuf'), tip = document.getElementById('vpTip'),
+            playB = document.getElementById('vpPlay'), muteB = document.getElementById('vpMute'),
+            vol = document.getElementById('vpVol'), fsB = document.getElementById('vpFs'),
+            time = document.getElementById('vpTime');
+        var IDLE_MS = 2500, idleTimer = null, dragging = false;
+        var L = {
+          fr: { play: 'Lecture', pause: 'Pause', replay: 'Revoir', mute: 'Couper le son', unmute: 'Activer le son', fs: 'Plein écran', vol: 'Volume', seek: 'Position de la vidéo', group: 'Lecteur vidéo : elevator pitch' },
+          en: { play: 'Play', pause: 'Pause', replay: 'Replay', mute: 'Mute', unmute: 'Unmute', fs: 'Fullscreen', vol: 'Volume', seek: 'Video position', group: 'Video player: elevator pitch' }
+        };
+        function t(k) { var lg = root.getAttribute('data-lang') === 'en' ? 'en' : 'fr'; return L[lg][k]; }
+        function fmt(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+
+        function setState(s) { box.setAttribute('data-state', s); labels(); }
+        function labels() {
+          var s = box.getAttribute('data-state');
+          var a = s === 'playing' ? t('pause') : (s === 'ended' ? t('replay') : t('play'));
+          playB.setAttribute('aria-label', a); big.setAttribute('aria-label', a);
+          muteB.setAttribute('aria-label', (v.muted || v.volume === 0) ? t('unmute') : t('mute'));
+          fsB.setAttribute('aria-label', t('fs')); vol.setAttribute('aria-label', t('vol'));
+          track.setAttribute('aria-label', t('seek')); box.setAttribute('aria-label', t('group'));
+        }
+        function render() {
+          var d = v.duration || 0, p = d ? v.currentTime / d : 0;
+          fill.style.width = (p * 100) + '%'; knob.style.left = (p * 100) + '%';
+          track.setAttribute('aria-valuenow', Math.round(p * 100));
+          track.setAttribute('aria-valuetext', fmt(v.currentTime) + ' / ' + fmt(d));
+          time.textContent = fmt(v.currentTime) + ' / ' + fmt(d);
+          if (v.buffered && v.buffered.length && d) { buf.style.width = (v.buffered.end(v.buffered.length - 1) / d * 100) + '%'; }
+        }
+        function toggle() {
+          if (v.ended) { v.currentTime = 0; }
+          if (v.paused || v.ended) { var pr = v.play(); if (pr && pr.catch) { pr.catch(function () {}); } } else { v.pause(); }
+        }
+        function seekBy(sec) { v.currentTime = Math.min(Math.max(0, v.currentTime + sec), v.duration || 0); wake(); }
+
+        /* Masquage : la barre et le curseur disparaissent si la souris reste immobile pendant la lecture */
+        function wake() {
+          box.setAttribute('data-idle', 'false');
+          clearTimeout(idleTimer);
+          if (!v.paused && !v.ended) { idleTimer = setTimeout(sleep, IDLE_MS); }
+        }
+        function sleep() {
+          if (v.paused || v.ended || dragging) { return; }
+          if (box.matches(':focus-within') && box.classList.contains('kbd')) { /* clavier : on laisse visible */ return; }
+          if (bar.matches(':hover')) { idleTimer = setTimeout(sleep, IDLE_MS); return; }
+          box.setAttribute('data-idle', 'true');
+        }
+        box.addEventListener('mousemove', function () { wake(); });
+        box.addEventListener('pointerdown', function () { box.classList.remove('kbd'); wake(); });
+        box.addEventListener('touchstart', function () { wake(); }, { passive: true });
+        box.addEventListener('mouseleave', function () { if (!v.paused && !v.ended) { clearTimeout(idleTimer); idleTimer = setTimeout(sleep, 800); } });
+        box.addEventListener('focusin', function () { wake(); });
+
+        v.addEventListener('click', function () { toggle(); wake(); });
+        v.addEventListener('dblclick', function () { fsB.click(); });
+        big.addEventListener('click', function () { toggle(); });
+        playB.addEventListener('click', function () { toggle(); wake(); });
+        v.addEventListener('play', function () { setState('playing'); wake(); });
+        v.addEventListener('pause', function () { if (!v.ended) { setState('paused'); } box.setAttribute('data-idle', 'false'); clearTimeout(idleTimer); });
+        v.addEventListener('ended', function () { setState('ended'); box.setAttribute('data-idle', 'false'); clearTimeout(idleTimer); });
+        v.addEventListener('waiting', function () { box.classList.add('loading'); });
+        v.addEventListener('playing', function () { box.classList.remove('loading'); });
+        v.addEventListener('canplay', function () { box.classList.remove('loading'); });
+        ['timeupdate', 'loadedmetadata', 'durationchange', 'progress'].forEach(function (e) { v.addEventListener(e, render); });
+
+        /* Barre de progression : clic, glisser, survol (temps), clavier */
+        function posFromEvent(e) {
+          var r = track.getBoundingClientRect();
+          return Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+        }
+        track.addEventListener('pointerdown', function (e) {
+          dragging = true; box.classList.add('scrub'); track.setPointerCapture(e.pointerId);
+          if (v.duration) { v.currentTime = posFromEvent(e) * v.duration; }
+          render(); e.preventDefault();
+        });
+        track.addEventListener('pointermove', function (e) {
+          var p = posFromEvent(e);
+          tip.style.left = (p * 100) + '%'; tip.textContent = fmt(p * (v.duration || 0));
+          if (dragging && v.duration) { v.currentTime = p * v.duration; render(); }
+        });
+        function endDrag() { dragging = false; box.classList.remove('scrub'); wake(); }
+        track.addEventListener('pointerup', endDrag); track.addEventListener('pointercancel', endDrag);
+        track.addEventListener('keydown', function (e) {
+          var k = e.key, d = v.duration || 0, ok = true;
+          if (k === 'ArrowLeft' || k === 'ArrowDown') { seekBy(-5); }
+          else if (k === 'ArrowRight' || k === 'ArrowUp') { seekBy(5); }
+          else if (k === 'Home') { v.currentTime = 0; }
+          else if (k === 'End') { v.currentTime = d; }
+          else { ok = false; }
+          if (ok) { e.preventDefault(); e.stopPropagation(); box.classList.add('kbd'); }
+        });
+
+        /* Volume / son */
+        function syncVol() { vol.value = v.muted ? 0 : v.volume; box.setAttribute('data-muted', (v.muted || v.volume === 0) ? 'true' : 'false'); labels(); }
+        muteB.addEventListener('click', function () { v.muted = !v.muted; if (!v.muted && v.volume === 0) { v.volume = 0.6; } syncVol(); });
+        vol.addEventListener('input', function () { v.muted = false; v.volume = parseFloat(vol.value); syncVol(); });
+        v.addEventListener('volumechange', syncVol);
+
+        /* Plein écran */
+        fsB.addEventListener('click', function () {
+          var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+          if (fsEl) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+          var rq = box.requestFullscreen || box.webkitRequestFullscreen;
+          if (rq) { rq.call(box); } else if (v.webkitEnterFullscreen) { v.webkitEnterFullscreen(); }
+        });
+
+        /* Raccourcis clavier quand le lecteur a le focus */
+        box.addEventListener('keydown', function (e) {
+          if (e.target !== box && e.target !== v && e.target !== playB && e.target !== big) { return; }
+          var k = e.key, ok = true;
+          if (k === ' ' || k === 'k' || k === 'K') { toggle(); }
+          else if (k === 'ArrowLeft') { seekBy(-5); } else if (k === 'ArrowRight') { seekBy(5); }
+          else if (k === 'j' || k === 'J') { seekBy(-10); } else if (k === 'l' || k === 'L') { seekBy(10); }
+          else if (k === 'm' || k === 'M') { muteB.click(); } else if (k === 'f' || k === 'F') { fsB.click(); }
+          else if (k >= '0' && k <= '9' && v.duration) { v.currentTime = v.duration * (parseInt(k, 10) / 10); }
+          else { ok = false; }
+          if (ok) { e.preventDefault(); box.classList.add('kbd'); wake(); }
+        });
+
+        /* Met la vidéo en pause quand on change d'onglet du site ou de page */
+        document.addEventListener('visibilitychange', function () { if (document.hidden && !v.paused) { v.pause(); } });
+        window.addEventListener('hashchange', function () { if (!v.paused) { v.pause(); } });
+        new MutationObserver(labels).observe(root, { attributes: true, attributeFilter: ['data-lang'] });
+
+        labels(); syncVol(); render();
+      })();
     })();
   </script>
 </body>
