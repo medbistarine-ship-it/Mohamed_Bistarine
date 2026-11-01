@@ -280,3 +280,26 @@ html[data-lang="fr"] #lang .lg-fr, html[data-lang="en"] #lang .lg-en { opacity: 
 .vp-big .i-r { display: none; margin-left: 0; }
 .vp[data-state="ended"] .vp-big .i-p { display: none; }
 .vp[data-state="ended"] .vp-big .i-r { display: block; }
+
+/* Couverture avant lecture : aucune image du visage ; suit le thème clair / sombre */
+.vp[data-cover="true"] .uvp-video { visibility: hidden; cursor: default; }
+.vp[data-cover="true"] { background: var(--surface); border: 1px solid var(--line); }
+.vp-cover { position: absolute; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; text-align: center; padding: 1rem 1.5rem 6.2rem;
+  background: radial-gradient(120% 90% at 50% 0%, var(--tint) 0%, var(--surface) 62%); color: var(--text); pointer-events: none; }
+.vp[data-cover="true"] .vp-cover { display: flex; }
+.vp-logo { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font: 800 1.05rem/1 var(--sans); letter-spacing: .02em; margin-bottom: .3rem; }
+.vp-ct { font: 800 clamp(1.4rem, 1rem + 2vw, 2.1rem)/1.1 var(--sans); letter-spacing: -.02em; }
+.vp-cs { font: 500 .95rem/1.3 var(--mono); color: var(--muted); }
+.vp-cl { font-size: var(--fs-s); color: var(--muted); }
+.vp[data-cover="true"] .vp-bar { opacity: 0; pointer-events: none; }
+.vp[data-cover="true"] .vp-big { inset: auto auto 1.6rem 50%; margin: 0 0 0 -38px; background: var(--accent); color: var(--accent-ink); }
+.vp[data-cover="true"] .vp-big:hover { background: var(--accent); filter: brightness(1.1); }
+@media (max-width: 520px) {
+  .vp-logo, .vp-cl { display: none; }
+  .vp-cover { padding: .8rem 1rem 4.6rem; }
+  .vp[data-cover="true"] .vp-big { width: 56px; height: 56px; margin-left: -28px; bottom: 1rem; }
+  .vp-big svg { width: 26px; height: 26px; }
+}
+.vp-big .i-r { display: none; margin-left: 0; }
+.vp[data-state="ended"] .vp-big .i-p { display: none; }
+.vp[data-state="ended"] .vp-big .i-r { display: block; }

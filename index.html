@@ -98,10 +98,16 @@
         </div>
 
         <figure class="video-card">
-          <div class="vp" id="vp" data-state="paused" data-idle="false" tabindex="0" role="group" aria-label="Elevator pitch">
-            <video class="uvp-video" id="vpv" preload="metadata" playsinline poster="assets/uvp_poster.jpg" src="assets/uvp_pitch.mp4">
+          <div class="vp" id="vp" data-state="paused" data-idle="false" data-cover="true" tabindex="0" role="group" aria-label="Elevator pitch">
+            <video class="uvp-video" id="vpv" preload="metadata" playsinline src="assets/uvp_pitch.mp4">
               <span lang="fr">Votre navigateur ne peut pas lire cette vidéo.</span><span lang="en">Your browser cannot play this video.</span>
             </video>
+            <div class="vp-cover" id="vpCover" aria-hidden="true">
+              <span class="vp-logo">MB</span>
+              <span class="vp-ct"><span lang="fr">Elevator pitch</span><span lang="en">Elevator pitch</span></span>
+              <span class="vp-cs">Mohamed Bistarine · <span id="vpDur">2:36</span></span>
+              <span class="vp-cl"><span lang="fr">Cliquer pour lancer la vidéo</span><span lang="en">Click to play the video</span></span>
+            </div>
             <button type="button" class="vp-big" id="vpBig" aria-label="Play">
               <svg class="i-p" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
               <svg class="i-r" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
@@ -652,7 +658,7 @@
         function t(k) { var lg = root.getAttribute('data-lang') === 'en' ? 'en' : 'fr'; return L[lg][k]; }
         function fmt(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
 
-        function setState(s) { box.setAttribute('data-state', s); labels(); }
+        function setState(s) { box.setAttribute('data-state', s); box.setAttribute('data-cover', s === 'ended' ? 'true' : (s === 'playing' ? 'false' : box.getAttribute('data-cover'))); labels(); }
         function labels() {
           var s = box.getAttribute('data-state');
           var a = s === 'playing' ? t('pause') : (s === 'ended' ? t('replay') : t('play'));
@@ -667,6 +673,7 @@
           track.setAttribute('aria-valuenow', Math.round(p * 100));
           track.setAttribute('aria-valuetext', fmt(v.currentTime) + ' / ' + fmt(d));
           time.textContent = fmt(v.currentTime) + ' / ' + fmt(d);
+          var dur = document.getElementById('vpDur'); if (dur && d) { dur.textContent = fmt(d); }
           if (v.buffered && v.buffered.length && d) { buf.style.width = (v.buffered.end(v.buffered.length - 1) / d * 100) + '%'; }
         }
         function toggle() {
