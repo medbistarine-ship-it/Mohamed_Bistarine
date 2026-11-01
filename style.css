@@ -299,3 +299,6 @@ html[data-lang="fr"] #lang .lg-fr, html[data-lang="en"] #lang .lg-en { opacity: 
 .vp-big .i-r { display: none; margin-left: 0; }
 .vp[data-state="ended"] .vp-big .i-p { display: none; }
 .vp[data-state="ended"] .vp-big .i-r { display: block; }
+.vp[data-cover="true"] { aspect-ratio: 16/9; }
+.vp[data-cover="true"] .uvp-video { display: none; }
+.vp-cover { z-index: 1; } .vp-big, .vp-bar { z-index: 2; }

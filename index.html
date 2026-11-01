@@ -96,7 +96,7 @@
 
         <figure class="video-card">
           <div class="vp" id="vp" data-state="paused" data-idle="false" data-cover="true" tabindex="0" role="group" aria-label="Elevator pitch">
-            <video class="uvp-video" id="vpv" preload="metadata" playsinline src="assets/uvp_pitch.mp4">
+            <video class="uvp-video" id="vpv" preload="none" playsinline data-src="assets/uvp_pitch.mp4">
               <span lang="fr">Votre navigateur ne peut pas lire cette vidéo.</span><span lang="en">Your browser cannot play this video.</span>
             </video>
             <div class="vp-cover" id="vpCover" aria-hidden="true">
@@ -653,6 +653,7 @@
           if (v.buffered && v.buffered.length && d) { buf.style.width = (v.buffered.end(v.buffered.length - 1) / d * 100) + '%'; }
         }
         function toggle() {
+          if (!v.getAttribute('src')) { v.setAttribute('src', v.getAttribute('data-src')); v.load(); }
           if (v.ended) { v.currentTime = 0; }
           if (v.paused || v.ended) { var pr = v.play(); if (pr && pr.catch) { pr.catch(function () {}); } } else { v.pause(); }
         }
