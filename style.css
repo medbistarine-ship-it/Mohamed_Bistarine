@@ -198,10 +198,6 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
 .tags li { background: var(--tint); color: var(--accent); border: 1px solid var(--line); border-radius: 6px; padding: .15rem .6rem; font: 500 .8rem var(--mono); }
 
 /* Espaces à compléter */
-.to-fill { min-height: 3.2rem; margin-top: 1.2rem; display: flex; align-items: center; padding: .6rem .9rem; border: 1.5px dashed var(--line); border-radius: 10px; color: var(--muted); font-size: var(--fs-s); font-style: italic; }
-.to-fill::before { content: "À compléter…"; }
-html[data-lang="en"] .to-fill::before { content: "To be completed…"; }
-html.final .to-fill { display: none; }
 
 /* Pied de page */
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 2rem; padding: 1.4rem 0; }
@@ -223,7 +219,7 @@ html.final .to-fill { display: none; }
 }
 
 @media print {
-  .centered-header, .skip, .actions, .to-fill, .sub-tabs, .header-controls { display: none !important; }
+  .centered-header, .skip, .actions, .sub-tabs, .header-controls { display: none !important; }
   [data-page], .sub-pane { display: block !important; }
   html[data-lang="fr"] [lang="en"], html[data-lang="en"] [lang="fr"] { display: none !important; }
   body { background: #fff; color: #000; }
